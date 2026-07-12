@@ -66,16 +66,34 @@
   --radius: 14px;
   --radius-pill: 999px;
   --radius-lg: 22px;
+  --radius-sm: 8px;
+
+  /* --- الارتفاع/الظلال (توسيع للنظام، لا Rebrand) — ظل ناعم متعدد الطبقات بدل ظل واحد فج --- */
+  --shadow-sm: 0 1px 2px rgba(20, 34, 25, .04), 0 2px 6px rgba(20, 34, 25, .05);
+  --shadow-md: 0 2px 4px rgba(20, 34, 25, .05), 0 8px 22px rgba(20, 34, 25, .09);
+  --shadow-lg: 0 6px 14px rgba(20, 34, 25, .08), 0 22px 48px rgba(20, 34, 25, .14);
+  --shadow-primary: 0 8px 24px rgba(32, 79, 63, .28);
+
+  /* --- ملمس حبيبي خفيف جدا (SVG noise كـ data-uri) لكسر مسطّحية التدرّجات الكبيرة --- */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 
   /* --- 9.2 الحركة --- */
   --motion-fast: 150ms ease;
   --motion-dropdown: 180ms ease-out;
   --motion-theme: 200ms ease;
+  --ease-out-soft: cubic-bezier(.22, .61, .36, 1);
 
   /* --- 8.1 الحاوية --- */
   --container-max: 1180px;
 
   color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .3), 0 2px 6px rgba(0, 0, 0, .3);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, .3), 0 8px 22px rgba(0, 0, 0, .4);
+  --shadow-lg: 0 6px 14px rgba(0, 0, 0, .4), 0 22px 48px rgba(0, 0, 0, .55);
+  --shadow-primary: 0 8px 24px rgba(0, 0, 0, .5);
 }
 
 :root[data-theme="dark"] {

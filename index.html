@@ -131,24 +131,65 @@
 <main id="main">
 
 <section class="hero">
-  <svg class="hero-strata" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-  <path d="M0 500 L0 420 Q300 390 600 420 T1200 410 L1200 500 Z" fill="#3C7A63" opacity=".35"/>
-  <path d="M0 500 L0 460 Q300 440 600 465 T1200 455 L1200 500 Z" fill="#C17A2E" opacity=".3"/>
-  <path d="M0 500 L0 485 Q300 475 600 490 T1200 480 L1200 500 Z" fill="#8B4A2B" opacity=".35"/>
+  <svg class="hero-strata" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="strataTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3C7A63" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2C5344" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- تلاشٍ لطيف من الأخضر العلوي نحو حدّ التربة -->
+  <rect x="0" y="0" width="1440" height="620" fill="url(#strataTop)"/>
+
+  <!-- طبقة العشب/الحدّ الحيوي (أعلى الطبقات) -->
+  <path d="M0 300 C 240 268, 420 322, 720 300 S 1200 272, 1440 302 L1440 620 L0 620 Z" fill="#2F5140" opacity=".92"/>
+  <!-- خط الأفق الرفيع حيث تلتقي الحياة بالأرض -->
+  <path d="M0 300 C 240 268, 420 322, 720 300 S 1200 272, 1440 302" fill="none" stroke="#5AAE8C" stroke-width="2" opacity=".5"/>
+
+  <!-- التربة العليا -->
+  <path d="M0 356 C 300 330, 520 384, 800 358 S 1220 336, 1440 360 L1440 620 L0 620 Z" fill="#3B5A2E" opacity=".85"/>
+
+  <!-- رواسب أوكر -->
+  <path d="M0 410 C 260 388, 500 436, 760 414 S 1200 392, 1440 416 L1440 620 L0 620 Z" fill="#C17A2E" opacity=".82"/>
+
+  <!-- طبقة رملية فاتحة (تمييز) -->
+  <path d="M0 452 C 320 434, 560 476, 820 456 S 1240 436, 1440 458 L1440 620 L0 620 Z" fill="#D99A56" opacity=".55"/>
+
+  <!-- طبقة الطين/الصدأ -->
+  <path d="M0 500 C 280 482, 520 520, 800 502 S 1220 484, 1440 504 L1440 620 L0 620 Z" fill="#8B4A2B" opacity=".9"/>
+
+  <!-- الصخر السفلي العميق -->
+  <path d="M0 552 C 300 538, 560 570, 840 554 S 1240 540, 1440 556 L1440 620 L0 620 Z" fill="#4B2F1D"/>
+
+  <!-- رواسب دقيقة: خطوط طبقية رفيعة -->
+  <g stroke="#3a2417" stroke-width="1" opacity=".25" fill="none">
+    <path d="M40 476 C 320 462, 560 490, 900 476 S 1300 466, 1420 478"/>
+    <path d="M20 528 C 340 516, 620 540, 980 528 S 1320 520, 1430 530"/>
+  </g>
+
+  <!-- حصى/رواسب متناثرة -->
+  <g fill="#3a2417" opacity=".3">
+    <circle cx="210" cy="524" r="4"/><circle cx="470" cy="540" r="3"/><circle cx="690" cy="516" r="5"/>
+    <circle cx="960" cy="536" r="3.5"/><circle cx="1180" cy="522" r="4"/><circle cx="1320" cy="544" r="3"/>
+  </g>
+
+  <!-- خط صدع خفيف يقطع الطبقات -->
+  <path d="M1040 306 L1012 620" stroke="#1b120b" stroke-width="2" opacity=".18"/>
 </svg>
   <div class="hero-content">
-    <span class="chip"><span data-lang="ar">منصة تعليمية مجانية · المغرب</span><span data-lang="fr">Plateforme éducative gratuite · Maroc</span></span>
+    <span class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span><span data-lang="ar">منصة تعليمية مجانية · المغرب</span><span data-lang="fr">Plateforme éducative gratuite · Maroc</span></span>
     <h1>
-      <span data-lang="ar">مرجعك الكامل لعلوم الحياة والأرض</span>
-      <span data-lang="fr">Votre référence complète en SVT</span>
+      <span data-lang="ar">مرجعك الكامل<br><em>لعلوم الحياة والأرض</em></span>
+      <span data-lang="fr">Votre référence complète<br><em>en SVT</em></span>
     </h1>
     <p class="lead">
       <span data-lang="ar">دروس، فروض، امتحانات، مختبر افتراضي وموسوعة علمية — بالعربية والفرنسية، مطابقة للمنهاج الرسمي المغربي.</span>
       <span data-lang="fr">Leçons, devoirs, examens, labo virtuel et encyclopédie — en arabe et en français, conformes au programme officiel marocain.</span>
     </p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="/lecons/"><span data-lang="ar">ابدأ التعلّم</span><span data-lang="fr">Commencer</span></a>
-      <a class="btn btn-ghost" href="/labo-virtuel/" style="color:#fff;border-color:rgba(255,255,255,.5)"><span data-lang="ar">جرّب المختبر الافتراضي</span><span data-lang="fr">Essayer le labo virtuel</span></a>
+      <a class="btn btn-primary btn-lg" href="/lecons/"><span data-lang="ar">ابدأ التعلّم</span><span data-lang="fr">Commencer</span> <svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a class="btn btn-glass btn-lg" href="/labo-virtuel/"><span data-lang="ar">جرّب المختبر الافتراضي</span><span data-lang="fr">Essayer le labo virtuel</span></a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><strong>100%</strong><span data-lang="ar">مجاني بدون تسجيل</span><span data-lang="fr">Gratuit, sans inscription</span></div>
@@ -158,85 +199,156 @@
   </div>
 </section>
 
-<section class="level-picker container">
+<section class="level-picker container section">
   <div class="section-head">
-    <h2><span data-lang="ar">أنا في...</span><span data-lang="fr">Je suis en...</span></h2>
+    <div class="section-head-titles">
+      <span class="eyebrow section-eyebrow"><span class="eyebrow-tick" aria-hidden="true"></span><span data-lang="ar">ابدأ من مستواك</span><span data-lang="fr">Choisis ton niveau</span></span>
+      <h2><span data-lang="ar">أنا في...</span><span data-lang="fr">Je suis en...</span></h2>
+    </div>
+    
   </div>
   <div class="level-picker-grid">
-    <a class="level-btn" href="/lecons/#1ac"><strong data-lang="ar">الإعدادي</strong><strong data-lang="fr">Collège</strong><span>1AC · 2AC · 3AC</span></a>
-    <a class="level-btn" href="/lecons/#tc"><strong data-lang="ar">الجذع المشترك</strong><strong data-lang="fr">Tronc commun</strong><span>TCS · TCL</span></a>
-    <a class="level-btn" href="/lecons/#1bac"><strong data-lang="ar">الأولى باك</strong><strong data-lang="fr">1re Bac</strong><span>SE · L · SM</span></a>
-    <a class="level-btn" href="/lecons/#2bac"><strong data-lang="ar">الثانية باك</strong><strong data-lang="fr">2e Bac</strong><span>SVT · PC · SM · SA</span></a>
+    <a class="level-btn" href="/lecons/#1ac"><span class="level-btn-code">1·2·3 AC</span><strong data-lang="ar">الإعدادي</strong><strong data-lang="fr">Collège</strong><span class="level-btn-sub">1AC · 2AC · 3AC</span></a>
+    <a class="level-btn" href="/lecons/#tc"><span class="level-btn-code">TC</span><strong data-lang="ar">الجذع المشترك</strong><strong data-lang="fr">Tronc commun</strong><span class="level-btn-sub">TCS · TCL</span></a>
+    <a class="level-btn" href="/lecons/#1bac"><span class="level-btn-code">1 BAC</span><strong data-lang="ar">الأولى باك</strong><strong data-lang="fr">1re Bac</strong><span class="level-btn-sub">SE · L · SM</span></a>
+    <a class="level-btn" href="/lecons/#2bac"><span class="level-btn-code">2 BAC</span><strong data-lang="ar">الثانية باك</strong><strong data-lang="fr">2e Bac</strong><span class="level-btn-sub">SVT · PC · SM · SA</span></a>
   </div>
 </section>
 
 <section class="section section-alt">
   <div class="container">
     <div class="section-head">
-      <h2><span data-lang="ar">كل ما تحتاجه في مكان واحد</span><span data-lang="fr">Tout ce dont vous avez besoin</span></h2>
+    <div class="section-head-titles">
+      <span class="eyebrow section-eyebrow"><span class="eyebrow-tick" aria-hidden="true"></span><span data-lang="ar">منصة واحدة</span><span data-lang="fr">Une seule plateforme</span></span>
+      <h2><span data-lang="ar">كل ما تحتاجه في مكان واحد</span><span data-lang="fr">Tout au même endroit</span></h2>
     </div>
-    <div class="grid grid-5">
-      <a class="card card-link" href="/lecons/"><span aria-hidden="true" style="font-size:var(--fs-28)">📘</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_lecons"></h4></a>
-      <a class="card card-link" href="/devoirs-examens/"><span aria-hidden="true" style="font-size:var(--fs-28)">📝</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_exams"></h4></a>
-      <a class="card card-link" href="/labo-virtuel/"><span aria-hidden="true" style="font-size:var(--fs-28)">🔬</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_labo"></h4></a>
-      <a class="card card-link" href="/encyclopedie/"><span aria-hidden="true" style="font-size:var(--fs-28)">📚</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_encyclopedie"></h4></a>
-      <a class="card card-link" href="/revision/"><span aria-hidden="true" style="font-size:var(--fs-28)">🗂️</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_revision"></h4></a>
+    
+  </div>
+    <div class="quick-grid">
+      <a class="quick-card card-link" href="/lecons/">
+        <span class="quick-icon" data-spec="genetique"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C10.5 5 8 4.5 4.5 5v12c3.5-.5 6 0 7.5 1.5"/><path d="M12 6.5C13.5 5 16 4.5 19.5 5v12c-3.5-.5-6 0-7.5 1.5"/><line x1="12" y1="6.5" x2="12" y2="18.5"/></svg></span>
+        <span class="quick-body">
+          <span class="quick-title" data-i18n="nav_lecons"></span>
+          <span class="quick-desc"><span data-lang="ar">دروس مفصّلة لكل المستويات</span><span data-lang="fr">Leçons détaillées, tous niveaux</span></span>
+        </span>
+        <span class="quick-arrow" aria-hidden="true"><svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a><a class="quick-card card-link" href="/devoirs-examens/">
+        <span class="quick-icon" data-spec="physiologie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/><path d="M8.5 13l1.8 1.8L14 11"/></svg></span>
+        <span class="quick-body">
+          <span class="quick-title" data-i18n="nav_exams"></span>
+          <span class="quick-desc"><span data-lang="ar">فروض وامتحانات مع التصحيح</span><span data-lang="fr">Devoirs et examens corrigés</span></span>
+        </span>
+        <span class="quick-arrow" aria-hidden="true"><svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a><a class="quick-card card-link" href="/labo-virtuel/">
+        <span class="quick-icon" data-spec="microbiologie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6"/><path d="M10 3v6l-4.5 8a1.6 1.6 0 0 0 1.4 2.4h10.2A1.6 1.6 0 0 0 18.5 17L14 9V3"/><path d="M7.3 14h9.4"/></svg></span>
+        <span class="quick-body">
+          <span class="quick-title" data-i18n="nav_labo"></span>
+          <span class="quick-desc"><span data-lang="ar">تجارب تفاعلية وفيديوهات</span><span data-lang="fr">Expériences interactives</span></span>
+        </span>
+        <span class="quick-arrow" aria-hidden="true"><svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a><a class="quick-card card-link" href="/encyclopedie/">
+        <span class="quick-icon" data-spec="taxonomie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="4" height="16" rx="1"/><rect x="9.5" y="4" width="4" height="16" rx="1"/><path d="M16.5 5.4l3.2.9 -3.3 12.6 -3.2-.9z"/><line x1="6" y1="8" x2="6" y2="9"/><line x1="11.5" y1="8" x2="11.5" y2="9"/></svg></span>
+        <span class="quick-body">
+          <span class="quick-title" data-i18n="nav_encyclopedie"></span>
+          <span class="quick-desc"><span data-lang="ar">علماء، اكتشافات ومعجم</span><span data-lang="fr">Scientifiques, découvertes, glossaire</span></span>
+        </span>
+        <span class="quick-arrow" aria-hidden="true"><svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a><a class="quick-card card-link" href="/revision/">
+        <span class="quick-icon" data-spec="ecologie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v10"/><line x1="7" y1="11" x2="13" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/></svg></span>
+        <span class="quick-body">
+          <span class="quick-title" data-i18n="nav_revision"></span>
+          <span class="quick-desc"><span data-lang="ar">ملخصات وبطاقات مراجعة</span><span data-lang="fr">Résumés et fiches de révision</span></span>
+        </span>
+        <span class="quick-arrow" aria-hidden="true"><svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="container">
+<section class="section container">
+  <div class="section-head">
+    <div class="section-head-titles">
+      <span class="eyebrow section-eyebrow"><span class="eyebrow-tick" aria-hidden="true"></span><span data-lang="ar">مجالان، منهج واحد</span><span data-lang="fr">Deux domaines</span></span>
+      <h2><span data-lang="ar">علوم الحياة وعلوم الأرض</span><span data-lang="fr">Vie et Terre</span></h2>
+    </div>
+    
+  </div>
   <div class="dual-cards">
     <a class="dual-card bio card-link" href="/lecons/#biologie">
-      <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="6" fill="#fff" stroke="none"/></svg>
-      <h3><span data-lang="ar">علوم الحياة</span><span data-lang="fr">Biologie</span></h3>
-      <p><span data-lang="ar">من الخلية إلى الأنظمة البيئية</span><span data-lang="fr">De la cellule aux écosystèmes</span></p>
-      <span><svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg> <span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span></span>
+      <span class="dual-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><circle cx="8" cy="8.5" r="1"/><circle cx="16.2" cy="15" r="1.2"/><circle cx="15.5" cy="8" r="0.9"/></svg></span>
+      <div class="dual-card-body">
+        <h3><span data-lang="ar">علوم الحياة</span><span data-lang="fr">Biologie</span></h3>
+        <p><span data-lang="ar">من الخلية إلى الأنظمة البيئية: الوراثة، المناعة، التنفّس والتركيب الضوئي.</span><span data-lang="fr">De la cellule aux écosystèmes : génétique, immunité, respiration et photosynthèse.</span></p>
+        <span class="dual-card-link"><span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span> <svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
     </a>
     <a class="dual-card geo card-link" href="/lecons/#geologie">
-      <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2"><path d="M4 38l10-16 8 10 6-8 16 14z"/></svg>
-      <h3><span data-lang="ar">علوم الأرض</span><span data-lang="fr">Géologie</span></h3>
-      <p><span data-lang="ar">الصخور، الصفائح، والمخاطر الطبيعية</span><span data-lang="fr">Roches, plaques et risques naturels</span></p>
-      <span><svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg> <span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span></span>
+      <span class="dual-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19l5-8 3.5 4.5L15 10l6 9z"/><path d="M3 19h18"/><circle cx="8.5" cy="6.5" r="1.6"/></svg></span>
+      <div class="dual-card-body">
+        <h3><span data-lang="ar">علوم الأرض</span><span data-lang="fr">Géologie</span></h3>
+        <p><span data-lang="ar">الصخور، تكتونية الصفائح، الزلازل والبراكين والمخاطر الطبيعية.</span><span data-lang="fr">Roches, tectonique des plaques, séismes, volcans et risques naturels.</span></p>
+        <span class="dual-card-link"><span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span> <svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
     </a>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-head">
+<section class="section container">
+  <div class="section-head">
+    <div class="section-head-titles">
+      <span class="eyebrow section-eyebrow"><span class="eyebrow-tick" aria-hidden="true"></span><span data-lang="ar">محتوى حقيقي</span><span data-lang="fr">Contenu réel</span></span>
       <h2><span data-lang="ar">أحدث الدروس</span><span data-lang="fr">Dernières leçons</span></h2>
-      <a href="/lecons/"><span data-lang="ar">كل الدروس ←</span><span data-lang="fr">Toutes les leçons ←</span></a>
     </div>
-    <div class="tabs" role="tablist" style="margin-bottom:var(--sp-5)">
-      <button class="tab" data-home-tab="1ac" aria-selected="false">1AC</button>
-      <button class="tab" data-home-tab="3ac" aria-selected="false">3AC</button>
-      <button class="tab" data-home-tab="tc" aria-selected="false">TC</button>
-      <button class="tab" data-home-tab="1bac" aria-selected="false">1BAC</button>
-      <button class="tab" data-home-tab="2bac" aria-selected="true">2BAC</button>
-    </div>
-    <div class="grid grid-3" data-latest-lecons></div>
+    <a class="section-head-link" href="/lecons/"><span data-lang="ar">كل الدروس</span><span data-lang="fr">Toutes les leçons</span> <svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
   </div>
+  <div class="tabs" role="tablist" style="margin-bottom:var(--sp-6)">
+    <button class="tab" data-home-tab="1ac" aria-selected="false">1AC</button>
+    <button class="tab" data-home-tab="3ac" aria-selected="false">3AC</button>
+    <button class="tab" data-home-tab="tc" aria-selected="false">TC</button>
+    <button class="tab" data-home-tab="1bac" aria-selected="false">1BAC</button>
+    <button class="tab" data-home-tab="2bac" aria-selected="true">2BAC</button>
+  </div>
+  <div class="grid grid-3" data-latest-lecons></div>
 </section>
 
 <section class="section section-alt">
   <div class="container">
     <div class="section-head">
-      <h2><span data-lang="ar">من الموسوعة العلمية</span><span data-lang="fr">De l'encyclopédie scientifique</span></h2>
-      <a href="/encyclopedie/"><span data-lang="ar">استكشف الموسوعة ←</span><span data-lang="fr">Explorer ←</span></a>
+    <div class="section-head-titles">
+      <span class="eyebrow section-eyebrow"><span class="eyebrow-tick" aria-hidden="true"></span><span data-lang="ar">فضول علمي</span><span data-lang="fr">Curiosité</span></span>
+      <h2><span data-lang="ar">من الموسوعة العلمية</span><span data-lang="fr">De l'encyclopédie</span></h2>
     </div>
+    <a class="section-head-link" href="/encyclopedie/"><span data-lang="ar">استكشف الموسوعة</span><span data-lang="fr">Explorer</span> <svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
     <div class="encyclopedia-scroller" data-ency-scroller></div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-head"><h2><span data-lang="ar">لماذا Nova SVT؟</span><span data-lang="fr">Pourquoi Nova SVT ?</span></h2></div>
-    <div class="grid grid-5" style="grid-template-columns:repeat(4,1fr)">
-      <div class="card"><span aria-hidden="true" style="font-size:var(--fs-24)">💚</span><h4 style="margin-top:var(--sp-3)"><span data-lang="ar">مجاني بالكامل</span><span data-lang="fr">100% gratuit</span></h4></div>
-      <div class="card"><span aria-hidden="true" style="font-size:var(--fs-24)">🌐</span><h4 style="margin-top:var(--sp-3)"><span data-lang="ar">ثنائي اللغة كاملا</span><span data-lang="fr">Entièrement bilingue</span></h4></div>
-      <div class="card"><span aria-hidden="true" style="font-size:var(--fs-24)">🎓</span><h4 style="margin-top:var(--sp-3)"><span data-lang="ar">مطابق للمنهاج الرسمي</span><span data-lang="fr">Conforme au programme</span></h4></div>
-      <div class="card"><span aria-hidden="true" style="font-size:var(--fs-24)">🔒</span><h4 style="margin-top:var(--sp-3)"><span data-lang="ar">بدون تسجيل</span><span data-lang="fr">Sans inscription</span></h4></div>
+<section class="section container">
+  <div class="section-head">
+    <div class="section-head-titles">
+      <span class="eyebrow section-eyebrow"><span class="eyebrow-tick" aria-hidden="true"></span><span data-lang="ar">لماذا نحن</span><span data-lang="fr">Pourquoi nous</span></span>
+      <h2><span data-lang="ar">لماذا Nova SVT؟</span><span data-lang="fr">Pourquoi Nova SVT ?</span></h2>
+    </div>
+    
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-9.2-8.4A4.4 4.4 0 0 1 12 6.5 4.4 4.4 0 0 1 21.2 11.6C19 15.6 12 20 12 20z"/></svg></span>
+      <h4><span data-lang="ar">مجاني بالكامل</span><span data-lang="fr">100% gratuit</span></h4>
+      <p><span data-lang="ar">لا اشتراكات، لا إعلانات مزعجة</span><span data-lang="fr">Sans abonnement ni publicité</span></p>
+    </div><div class="feature-card">
+      <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z"/></svg></span>
+      <h4><span data-lang="ar">ثنائي اللغة كاملا</span><span data-lang="fr">Entièrement bilingue</span></h4>
+      <p><span data-lang="ar">العربية والفرنسية بنفس الجودة</span><span data-lang="fr">Arabe et français, même qualité</span></p>
+    </div><div class="feature-card">
+      <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 4-9 4-9-4 9-4z"/><path d="M6.5 10v4.5c0 1.4 2.5 2.8 5.5 2.8s5.5-1.4 5.5-2.8V10"/><line x1="21" y1="8" x2="21" y2="13"/></svg></span>
+      <h4><span data-lang="ar">مطابق للمنهاج الرسمي</span><span data-lang="fr">Conforme au programme</span></h4>
+      <p><span data-lang="ar">كل درس مرتبط ببند من المنهاج</span><span data-lang="fr">Aligné au programme officiel</span></p>
+    </div><div class="feature-card">
+      <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8-7 10-4-2-7-5.4-7-10V6l7-3z"/><path d="M9.3 12l1.9 1.9 3.6-3.8"/></svg></span>
+      <h4><span data-lang="ar">بدون تسجيل</span><span data-lang="fr">Sans inscription</span></h4>
+      <p><span data-lang="ar">تقدّمك محفوظ محليا في متصفّحك</span><span data-lang="fr">Progression locale, dans le navigateur</span></p>
     </div>
   </div>
 </section>

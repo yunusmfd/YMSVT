@@ -1,6 +1,49 @@
-// العنصر البصري المميز "القطاع الطبقي" (القسم 4.5) — خلفية زخرفية خفيفة خلف نص الهيرو فقط
-export const HERO_STRATA_SVG = `<svg class="hero-strata" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-  <path d="M0 500 L0 420 Q300 390 600 420 T1200 410 L1200 500 Z" fill="#3C7A63" opacity=".35"/>
-  <path d="M0 500 L0 460 Q300 440 600 465 T1200 455 L1200 500 Z" fill="#C17A2E" opacity=".3"/>
-  <path d="M0 500 L0 485 Q300 475 600 490 T1200 480 L1200 500 Z" fill="#8B4A2B" opacity=".35"/>
+// العنصر البصري المميّز "القطاع الطبقي" (القسم 4.5) — قطاع جيولوجي متعدّد الطبقات خلف الهيرو.
+// مرسوم أصليا: طبقات متموّجة متمايزة بألوان التربة/الصخر + رواسب دقيقة + خط صدع خفيف،
+// يجسّد "الحياة فوق الأرض" (هوية اللوغو). الألوان بقيم ثابتة لأنه يظهر فوق هيرو داكن في الوضعين.
+export const HERO_STRATA_SVG = `<svg class="hero-strata" viewBox="0 0 1440 620" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="strataTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3C7A63" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2C5344" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- تلاشٍ لطيف من الأخضر العلوي نحو حدّ التربة -->
+  <rect x="0" y="0" width="1440" height="620" fill="url(#strataTop)"/>
+
+  <!-- طبقة العشب/الحدّ الحيوي (أعلى الطبقات) -->
+  <path d="M0 300 C 240 268, 420 322, 720 300 S 1200 272, 1440 302 L1440 620 L0 620 Z" fill="#2F5140" opacity=".92"/>
+  <!-- خط الأفق الرفيع حيث تلتقي الحياة بالأرض -->
+  <path d="M0 300 C 240 268, 420 322, 720 300 S 1200 272, 1440 302" fill="none" stroke="#5AAE8C" stroke-width="2" opacity=".5"/>
+
+  <!-- التربة العليا -->
+  <path d="M0 356 C 300 330, 520 384, 800 358 S 1220 336, 1440 360 L1440 620 L0 620 Z" fill="#3B5A2E" opacity=".85"/>
+
+  <!-- رواسب أوكر -->
+  <path d="M0 410 C 260 388, 500 436, 760 414 S 1200 392, 1440 416 L1440 620 L0 620 Z" fill="#C17A2E" opacity=".82"/>
+
+  <!-- طبقة رملية فاتحة (تمييز) -->
+  <path d="M0 452 C 320 434, 560 476, 820 456 S 1240 436, 1440 458 L1440 620 L0 620 Z" fill="#D99A56" opacity=".55"/>
+
+  <!-- طبقة الطين/الصدأ -->
+  <path d="M0 500 C 280 482, 520 520, 800 502 S 1220 484, 1440 504 L1440 620 L0 620 Z" fill="#8B4A2B" opacity=".9"/>
+
+  <!-- الصخر السفلي العميق -->
+  <path d="M0 552 C 300 538, 560 570, 840 554 S 1240 540, 1440 556 L1440 620 L0 620 Z" fill="#4B2F1D"/>
+
+  <!-- رواسب دقيقة: خطوط طبقية رفيعة -->
+  <g stroke="#3a2417" stroke-width="1" opacity=".25" fill="none">
+    <path d="M40 476 C 320 462, 560 490, 900 476 S 1300 466, 1420 478"/>
+    <path d="M20 528 C 340 516, 620 540, 980 528 S 1320 520, 1430 530"/>
+  </g>
+
+  <!-- حصى/رواسب متناثرة -->
+  <g fill="#3a2417" opacity=".3">
+    <circle cx="210" cy="524" r="4"/><circle cx="470" cy="540" r="3"/><circle cx="690" cy="516" r="5"/>
+    <circle cx="960" cy="536" r="3.5"/><circle cx="1180" cy="522" r="4"/><circle cx="1320" cy="544" r="3"/>
+  </g>
+
+  <!-- خط صدع خفيف يقطع الطبقات -->
+  <path d="M1040 306 L1012 620" stroke="#1b120b" stroke-width="2" opacity=".18"/>
 </svg>`;

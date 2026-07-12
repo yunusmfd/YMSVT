@@ -1,24 +1,50 @@
 // قوالب أجسام الصفحات الساكنة (Shells) — القسم 7. المحتوى الديناميكي يُملأ عبر assets/js/pages/*.js وقت التصفح (fetch /manifest.json، القسم 12.2)
 import { HERO_STRATA_SVG } from "./hero-strata.js";
-import { ICON_ARROW } from "./icons.js";
+import { ICON_ARROW, uiIcon } from "./icons.js";
+
+// عنوان قسم موحّد: تسمية Mono صغيرة (eyebrow) + شرطة طبقية + عنوان — يعطي إيقاعا تحريريا متّسقا عبر الصفحة
+function sectionHead(eyebrowAr, eyebrowFr, titleAr, titleFr, linkHref, linkAr, linkFr) {
+  return `<div class="section-head">
+    <div class="section-head-titles">
+      <span class="eyebrow section-eyebrow"><span class="eyebrow-tick" aria-hidden="true"></span><span data-lang="ar">${eyebrowAr}</span><span data-lang="fr">${eyebrowFr}</span></span>
+      <h2><span data-lang="ar">${titleAr}</span><span data-lang="fr">${titleFr}</span></h2>
+    </div>
+    ${linkHref ? `<a class="section-head-link" href="${linkHref}"><span data-lang="ar">${linkAr}</span><span data-lang="fr">${linkFr}</span> ${ICON_ARROW}</a>` : ""}
+  </div>`;
+}
+
+const QUICK_ACCESS = [
+  { href: "/lecons/", icon: "lecons", i18n: "nav_lecons", spec: "genetique", descAr: "دروس مفصّلة لكل المستويات", descFr: "Leçons détaillées, tous niveaux" },
+  { href: "/devoirs-examens/", icon: "exams", i18n: "nav_exams", spec: "physiologie", descAr: "فروض وامتحانات مع التصحيح", descFr: "Devoirs et examens corrigés" },
+  { href: "/labo-virtuel/", icon: "labo", i18n: "nav_labo", spec: "microbiologie", descAr: "تجارب تفاعلية وفيديوهات", descFr: "Expériences interactives" },
+  { href: "/encyclopedie/", icon: "encyclopedie", i18n: "nav_encyclopedie", spec: "taxonomie", descAr: "علماء، اكتشافات ومعجم", descFr: "Scientifiques, découvertes, glossaire" },
+  { href: "/revision/", icon: "revision", i18n: "nav_revision", spec: "ecologie", descAr: "ملخصات وبطاقات مراجعة", descFr: "Résumés et fiches de révision" },
+];
+
+const FEATURES = [
+  { icon: "free", ar: "مجاني بالكامل", fr: "100% gratuit", subAr: "لا اشتراكات، لا إعلانات مزعجة", subFr: "Sans abonnement ni publicité" },
+  { icon: "bilingual", ar: "ثنائي اللغة كاملا", fr: "Entièrement bilingue", subAr: "العربية والفرنسية بنفس الجودة", subFr: "Arabe et français, même qualité" },
+  { icon: "curriculum", ar: "مطابق للمنهاج الرسمي", fr: "Conforme au programme", subAr: "كل درس مرتبط ببند من المنهاج", subFr: "Aligné au programme officiel" },
+  { icon: "secure", ar: "بدون تسجيل", fr: "Sans inscription", subAr: "تقدّمك محفوظ محليا في متصفّحك", subFr: "Progression locale, dans le navigateur" },
+];
 
 export function homeBody() {
   return `
 <section class="hero">
   ${HERO_STRATA_SVG}
   <div class="hero-content">
-    <span class="chip"><span data-lang="ar">منصة تعليمية مجانية · المغرب</span><span data-lang="fr">Plateforme éducative gratuite · Maroc</span></span>
+    <span class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span><span data-lang="ar">منصة تعليمية مجانية · المغرب</span><span data-lang="fr">Plateforme éducative gratuite · Maroc</span></span>
     <h1>
-      <span data-lang="ar">مرجعك الكامل لعلوم الحياة والأرض</span>
-      <span data-lang="fr">Votre référence complète en SVT</span>
+      <span data-lang="ar">مرجعك الكامل<br><em>لعلوم الحياة والأرض</em></span>
+      <span data-lang="fr">Votre référence complète<br><em>en SVT</em></span>
     </h1>
     <p class="lead">
       <span data-lang="ar">دروس، فروض، امتحانات، مختبر افتراضي وموسوعة علمية — بالعربية والفرنسية، مطابقة للمنهاج الرسمي المغربي.</span>
       <span data-lang="fr">Leçons, devoirs, examens, labo virtuel et encyclopédie — en arabe et en français, conformes au programme officiel marocain.</span>
     </p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="/lecons/"><span data-lang="ar">ابدأ التعلّم</span><span data-lang="fr">Commencer</span></a>
-      <a class="btn btn-ghost" href="/labo-virtuel/" style="color:#fff;border-color:rgba(255,255,255,.5)"><span data-lang="ar">جرّب المختبر الافتراضي</span><span data-lang="fr">Essayer le labo virtuel</span></a>
+      <a class="btn btn-primary btn-lg" href="/lecons/"><span data-lang="ar">ابدأ التعلّم</span><span data-lang="fr">Commencer</span> ${ICON_ARROW}</a>
+      <a class="btn btn-glass btn-lg" href="/labo-virtuel/"><span data-lang="ar">جرّب المختبر الافتراضي</span><span data-lang="fr">Essayer le labo virtuel</span></a>
     </div>
     <div class="hero-stats">
       <div class="hero-stat"><strong>100%</strong><span data-lang="ar">مجاني بدون تسجيل</span><span data-lang="fr">Gratuit, sans inscription</span></div>
@@ -28,86 +54,85 @@ export function homeBody() {
   </div>
 </section>
 
-<section class="level-picker container">
-  <div class="section-head">
-    <h2><span data-lang="ar">أنا في...</span><span data-lang="fr">Je suis en...</span></h2>
-  </div>
+<section class="level-picker container section">
+  ${sectionHead("ابدأ من مستواك", "Choisis ton niveau", "أنا في...", "Je suis en...", "", "", "", "")}
   <div class="level-picker-grid">
-    <a class="level-btn" href="/lecons/#1ac"><strong data-lang="ar">الإعدادي</strong><strong data-lang="fr">Collège</strong><span>1AC · 2AC · 3AC</span></a>
-    <a class="level-btn" href="/lecons/#tc"><strong data-lang="ar">الجذع المشترك</strong><strong data-lang="fr">Tronc commun</strong><span>TCS · TCL</span></a>
-    <a class="level-btn" href="/lecons/#1bac"><strong data-lang="ar">الأولى باك</strong><strong data-lang="fr">1re Bac</strong><span>SE · L · SM</span></a>
-    <a class="level-btn" href="/lecons/#2bac"><strong data-lang="ar">الثانية باك</strong><strong data-lang="fr">2e Bac</strong><span>SVT · PC · SM · SA</span></a>
+    <a class="level-btn" href="/lecons/#1ac"><span class="level-btn-code">1·2·3 AC</span><strong data-lang="ar">الإعدادي</strong><strong data-lang="fr">Collège</strong><span class="level-btn-sub">1AC · 2AC · 3AC</span></a>
+    <a class="level-btn" href="/lecons/#tc"><span class="level-btn-code">TC</span><strong data-lang="ar">الجذع المشترك</strong><strong data-lang="fr">Tronc commun</strong><span class="level-btn-sub">TCS · TCL</span></a>
+    <a class="level-btn" href="/lecons/#1bac"><span class="level-btn-code">1 BAC</span><strong data-lang="ar">الأولى باك</strong><strong data-lang="fr">1re Bac</strong><span class="level-btn-sub">SE · L · SM</span></a>
+    <a class="level-btn" href="/lecons/#2bac"><span class="level-btn-code">2 BAC</span><strong data-lang="ar">الثانية باك</strong><strong data-lang="fr">2e Bac</strong><span class="level-btn-sub">SVT · PC · SM · SA</span></a>
   </div>
 </section>
 
 <section class="section section-alt">
   <div class="container">
-    <div class="section-head">
-      <h2><span data-lang="ar">كل ما تحتاجه في مكان واحد</span><span data-lang="fr">Tout ce dont vous avez besoin</span></h2>
-    </div>
-    <div class="grid grid-5">
-      <a class="card card-link" href="/lecons/"><span aria-hidden="true" style="font-size:var(--fs-28)">📘</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_lecons"></h4></a>
-      <a class="card card-link" href="/devoirs-examens/"><span aria-hidden="true" style="font-size:var(--fs-28)">📝</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_exams"></h4></a>
-      <a class="card card-link" href="/labo-virtuel/"><span aria-hidden="true" style="font-size:var(--fs-28)">🔬</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_labo"></h4></a>
-      <a class="card card-link" href="/encyclopedie/"><span aria-hidden="true" style="font-size:var(--fs-28)">📚</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_encyclopedie"></h4></a>
-      <a class="card card-link" href="/revision/"><span aria-hidden="true" style="font-size:var(--fs-28)">🗂️</span><h4 style="margin-top:var(--sp-3)" data-i18n="nav_revision"></h4></a>
+    ${sectionHead("منصة واحدة", "Une seule plateforme", "كل ما تحتاجه في مكان واحد", "Tout au même endroit", "", "", "", "")}
+    <div class="quick-grid">
+      ${QUICK_ACCESS.map(
+        (q) => `<a class="quick-card card-link" href="${q.href}">
+        <span class="quick-icon" data-spec="${q.spec}">${uiIcon(q.icon)}</span>
+        <span class="quick-body">
+          <span class="quick-title" data-i18n="${q.i18n}"></span>
+          <span class="quick-desc"><span data-lang="ar">${q.descAr}</span><span data-lang="fr">${q.descFr}</span></span>
+        </span>
+        <span class="quick-arrow" aria-hidden="true">${ICON_ARROW}</span>
+      </a>`
+      ).join("")}
     </div>
   </div>
 </section>
 
-<section class="container">
+<section class="section container">
+  ${sectionHead("مجالان، منهج واحد", "Deux domaines", "علوم الحياة وعلوم الأرض", "Vie et Terre", "", "", "", "")}
   <div class="dual-cards">
     <a class="dual-card bio card-link" href="/lecons/#biologie">
-      <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="6" fill="#fff" stroke="none"/></svg>
-      <h3><span data-lang="ar">علوم الحياة</span><span data-lang="fr">Biologie</span></h3>
-      <p><span data-lang="ar">من الخلية إلى الأنظمة البيئية</span><span data-lang="fr">De la cellule aux écosystèmes</span></p>
-      <span>${ICON_ARROW} <span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span></span>
+      <span class="dual-card-icon">${uiIcon("bio")}</span>
+      <div class="dual-card-body">
+        <h3><span data-lang="ar">علوم الحياة</span><span data-lang="fr">Biologie</span></h3>
+        <p><span data-lang="ar">من الخلية إلى الأنظمة البيئية: الوراثة، المناعة، التنفّس والتركيب الضوئي.</span><span data-lang="fr">De la cellule aux écosystèmes : génétique, immunité, respiration et photosynthèse.</span></p>
+        <span class="dual-card-link"><span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span> ${ICON_ARROW}</span>
+      </div>
     </a>
     <a class="dual-card geo card-link" href="/lecons/#geologie">
-      <svg viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="2"><path d="M4 38l10-16 8 10 6-8 16 14z"/></svg>
-      <h3><span data-lang="ar">علوم الأرض</span><span data-lang="fr">Géologie</span></h3>
-      <p><span data-lang="ar">الصخور، الصفائح، والمخاطر الطبيعية</span><span data-lang="fr">Roches, plaques et risques naturels</span></p>
-      <span>${ICON_ARROW} <span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span></span>
+      <span class="dual-card-icon">${uiIcon("geo")}</span>
+      <div class="dual-card-body">
+        <h3><span data-lang="ar">علوم الأرض</span><span data-lang="fr">Géologie</span></h3>
+        <p><span data-lang="ar">الصخور، تكتونية الصفائح، الزلازل والبراكين والمخاطر الطبيعية.</span><span data-lang="fr">Roches, tectonique des plaques, séismes, volcans et risques naturels.</span></p>
+        <span class="dual-card-link"><span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span> ${ICON_ARROW}</span>
+      </div>
     </a>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2><span data-lang="ar">أحدث الدروس</span><span data-lang="fr">Dernières leçons</span></h2>
-      <a href="/lecons/"><span data-lang="ar">كل الدروس ←</span><span data-lang="fr">Toutes les leçons ←</span></a>
-    </div>
-    <div class="tabs" role="tablist" style="margin-bottom:var(--sp-5)">
-      <button class="tab" data-home-tab="1ac" aria-selected="false">1AC</button>
-      <button class="tab" data-home-tab="3ac" aria-selected="false">3AC</button>
-      <button class="tab" data-home-tab="tc" aria-selected="false">TC</button>
-      <button class="tab" data-home-tab="1bac" aria-selected="false">1BAC</button>
-      <button class="tab" data-home-tab="2bac" aria-selected="true">2BAC</button>
-    </div>
-    <div class="grid grid-3" data-latest-lecons></div>
+<section class="section container">
+  ${sectionHead("محتوى حقيقي", "Contenu réel", "أحدث الدروس", "Dernières leçons", "/lecons/", "كل الدروس", "Toutes les leçons")}
+  <div class="tabs" role="tablist" style="margin-bottom:var(--sp-6)">
+    <button class="tab" data-home-tab="1ac" aria-selected="false">1AC</button>
+    <button class="tab" data-home-tab="3ac" aria-selected="false">3AC</button>
+    <button class="tab" data-home-tab="tc" aria-selected="false">TC</button>
+    <button class="tab" data-home-tab="1bac" aria-selected="false">1BAC</button>
+    <button class="tab" data-home-tab="2bac" aria-selected="true">2BAC</button>
   </div>
+  <div class="grid grid-3" data-latest-lecons></div>
 </section>
 
 <section class="section section-alt">
   <div class="container">
-    <div class="section-head">
-      <h2><span data-lang="ar">من الموسوعة العلمية</span><span data-lang="fr">De l'encyclopédie scientifique</span></h2>
-      <a href="/encyclopedie/"><span data-lang="ar">استكشف الموسوعة ←</span><span data-lang="fr">Explorer ←</span></a>
-    </div>
+    ${sectionHead("فضول علمي", "Curiosité", "من الموسوعة العلمية", "De l'encyclopédie", "/encyclopedie/", "استكشف الموسوعة", "Explorer")}
     <div class="encyclopedia-scroller" data-ency-scroller></div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-head"><h2><span data-lang="ar">لماذا Nova SVT؟</span><span data-lang="fr">Pourquoi Nova SVT ?</span></h2></div>
-    <div class="grid grid-5" style="grid-template-columns:repeat(4,1fr)">
-      <div class="card"><span aria-hidden="true" style="font-size:var(--fs-24)">💚</span><h4 style="margin-top:var(--sp-3)"><span data-lang="ar">مجاني بالكامل</span><span data-lang="fr">100% gratuit</span></h4></div>
-      <div class="card"><span aria-hidden="true" style="font-size:var(--fs-24)">🌐</span><h4 style="margin-top:var(--sp-3)"><span data-lang="ar">ثنائي اللغة كاملا</span><span data-lang="fr">Entièrement bilingue</span></h4></div>
-      <div class="card"><span aria-hidden="true" style="font-size:var(--fs-24)">🎓</span><h4 style="margin-top:var(--sp-3)"><span data-lang="ar">مطابق للمنهاج الرسمي</span><span data-lang="fr">Conforme au programme</span></h4></div>
-      <div class="card"><span aria-hidden="true" style="font-size:var(--fs-24)">🔒</span><h4 style="margin-top:var(--sp-3)"><span data-lang="ar">بدون تسجيل</span><span data-lang="fr">Sans inscription</span></h4></div>
-    </div>
+<section class="section container">
+  ${sectionHead("لماذا نحن", "Pourquoi nous", "لماذا Nova SVT؟", "Pourquoi Nova SVT ?", "", "", "", "")}
+  <div class="features-grid">
+    ${FEATURES.map(
+      (f) => `<div class="feature-card">
+      <span class="feature-icon">${uiIcon(f.icon)}</span>
+      <h4><span data-lang="ar">${f.ar}</span><span data-lang="fr">${f.fr}</span></h4>
+      <p><span data-lang="ar">${f.subAr}</span><span data-lang="fr">${f.subFr}</span></p>
+    </div>`
+    ).join("")}
   </div>
 </section>`;
 }

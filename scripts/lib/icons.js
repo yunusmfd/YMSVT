@@ -13,3 +13,42 @@ export const LOGO_SVG = `<svg width="34" height="34" viewBox="0 0 40 40" fill="n
   <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
   <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
 </svg>`;
+
+/*
+  أيقونات الواجهة المخصّصة (خطّية موحّدة: 24×24، stroke-width 1.6، أطراف مدوّرة) —
+  تحلّ محل الـEmoji في شبكات الوصول السريع/الثقة/التخصصات لكسر الطابع القالبي (القسم 4.4).
+  كلها currentColor لتتكيّف مع الوضع الليلي والسياق اللوني تلقائيا.
+*/
+const I = (paths) =>
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+
+export const UI_ICONS = {
+  // درس — كتاب مفتوح
+  lecons: I(`<path d="M12 6.5C10.5 5 8 4.5 4.5 5v12c3.5-.5 6 0 7.5 1.5"/><path d="M12 6.5C13.5 5 16 4.5 19.5 5v12c-3.5-.5-6 0-7.5 1.5"/><line x1="12" y1="6.5" x2="12" y2="18.5"/>`),
+  // امتحان — ورقة بعلامة تحقّق
+  exams: I(`<path d="M6 3h9l3 3v15H6z"/><path d="M15 3v3h3"/><path d="M8.5 13l1.8 1.8L14 11"/>`),
+  // مختبر — قارورة
+  labo: I(`<path d="M9 3h6"/><path d="M10 3v6l-4.5 8a1.6 1.6 0 0 0 1.4 2.4h10.2A1.6 1.6 0 0 0 18.5 17L14 9V3"/><path d="M7.3 14h9.4"/>`),
+  // موسوعة — مجلّدات مرصوصة
+  encyclopedie: I(`<rect x="4" y="4" width="4" height="16" rx="1"/><rect x="9.5" y="4" width="4" height="16" rx="1"/><path d="M16.5 5.4l3.2.9 -3.3 12.6 -3.2-.9z"/><line x1="6" y1="8" x2="6" y2="9"/><line x1="11.5" y1="8" x2="11.5" y2="9"/>`),
+  // مراجعة — بطاقات متراكبة
+  revision: I(`<rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 4h11a2 2 0 0 1 2 2v10"/><line x1="7" y1="11" x2="13" y2="11"/><line x1="7" y1="15" x2="11" y2="15"/>`),
+  // مجاني — قلب
+  free: I(`<path d="M12 20s-7-4.4-9.2-8.4A4.4 4.4 0 0 1 12 6.5 4.4 4.4 0 0 1 21.2 11.6C19 15.6 12 20 12 20z"/>`),
+  // ثنائي اللغة — كرة أرضية
+  bilingual: I(`<circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.4 4 5.6 4 9s-1.4 6.6-4 9c-2.6-2.4-4-5.6-4-9s1.4-6.6 4-9z"/>`),
+  // منهاج رسمي — شهادة/قبعة تخرّج
+  curriculum: I(`<path d="M12 4l9 4-9 4-9-4 9-4z"/><path d="M6.5 10v4.5c0 1.4 2.5 2.8 5.5 2.8s5.5-1.4 5.5-2.8V10"/><line x1="21" y1="8" x2="21" y2="13"/>`),
+  // بدون تسجيل — درع
+  secure: I(`<path d="M12 3l7 3v5c0 4.6-3 8-7 10-4-2-7-5.4-7-10V6l7-3z"/><path d="M9.3 12l1.9 1.9 3.6-3.8"/>`),
+  // بيولوجيا — خلية
+  bio: I(`<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><circle cx="8" cy="8.5" r="1"/><circle cx="16.2" cy="15" r="1.2"/><circle cx="15.5" cy="8" r="0.9"/>`),
+  // جيولوجيا — طبقات/جبل
+  geo: I(`<path d="M3 19l5-8 3.5 4.5L15 10l6 9z"/><path d="M3 19h18"/><circle cx="8.5" cy="6.5" r="1.6"/>`),
+  // نقطة/شرارة معرفية (هل تعلم) — بريق
+  spark: I(`<path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7z"/>`),
+};
+
+export function uiIcon(name) {
+  return UI_ICONS[name] || "";
+}
