@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">النباتات الخضراء تصنع غذاءها بنفسها</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">المعادلة المبسطة للتركيب الضوئي</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">أهمية التركيب الضوئي</a></li>
@@ -333,14 +334,14 @@
       </div>
       <div class="quiz-justification" hidden><p>البلاستيدة الخضراء تحتوي على اليخضور الذي يلتقط الطاقة الضوئية اللازمة لعملية التركيب الضوئي.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. ما هي المخرجات الرئيسية لعملية التركيب الضوئي؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">ثاني أكسيد الكربون والماء</button><button type="button" class="quiz-option" data-option-index="1">مادة عضوية (غلوكوز) وثاني الأكسجين</button><button type="button" class="quiz-option" data-option-index="2">الطاقة الضوئية والأملاح المعدنية</button>
       </div>
       <div class="quiz-justification" hidden><p>ينتج عن التركيب الضوئي مادة عضوية (غلوكوز) تُستعمل أو تُخزَّن من طرف النبات، بالإضافة إلى ثاني الأكسجين الذي يُطرح إلى الهواء.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>3. لماذا تُعتبر النباتات الخضراء أساس السلاسل الغذائية؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">لأنها تتغذى على الحيوانات العاشبة</button><button type="button" class="quiz-option" data-option-index="1">لأنها الوحيدة القادرة على صنع مادتها العضوية بنفسها من مواد معدنية</button><button type="button" class="quiz-option" data-option-index="2">لأنها لا تحتاج إلى الماء أو الضوء</button>
@@ -530,14 +531,14 @@
       </div>
       <div class="quiz-justification" hidden><p>Le chloroplaste contient la chlorophylle qui capte l'énergie lumineuse nécessaire à la photosynthèse.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Quels sont les principaux produits de la photosynthèse ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Le dioxyde de carbone et l&#39;eau</button><button type="button" class="quiz-option" data-option-index="1">Une matière organique (glucose) et du dioxygène</button><button type="button" class="quiz-option" data-option-index="2">L&#39;énergie lumineuse et les sels minéraux</button>
       </div>
       <div class="quiz-justification" hidden><p>La photosynthèse produit une matière organique (glucose) utilisée ou stockée par la plante, ainsi que du dioxygène rejeté dans l'air.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>3. Pourquoi les plantes vertes sont-elles à la base des chaînes alimentaires ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Parce qu&#39;elles se nourrissent des herbivores</button><button type="button" class="quiz-option" data-option-index="1">Parce qu&#39;elles sont les seules capables de fabriquer leur matière organique à partir de matières minérales</button><button type="button" class="quiz-option" data-option-index="2">Parce qu&#39;elles n&#39;ont besoin ni d&#39;eau ni de lumière</button>
@@ -601,6 +602,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

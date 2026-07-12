@@ -1,7 +1,9 @@
 import { fetchManifest, showSkeleton, showError, showEmpty, escapeHtml } from "../list-page.js";
+import { t } from "../i18n.js";
 
 function card(l) {
   return `<a class="card card-link" href="${l.url}" data-item data-niveau="${l.niveau}" data-filiere="${l.filiere}">
+    ${l.vignette ? `<img src="/${l.vignette}" alt="${escapeHtml(l.titre.ar)}" loading="lazy" width="480" height="270" />` : ""}
     <span class="chip">${l.niveau.toUpperCase()}</span> ${l.domaine_specialite ? `<span class="chip chip-spec" data-spec="${l.domaine_specialite}">${l.domaine_specialite}</span>` : ""}
     <h4 style="margin-top:var(--sp-3)"><span data-lang="ar">${escapeHtml(l.titre.ar)}</span><span data-lang="fr">${escapeHtml(l.titre.fr)}</span></h4>
     <p style="font-size:var(--fs-14)"><span data-lang="ar">${escapeHtml(l.unite.ar)}</span><span data-lang="fr">${escapeHtml(l.unite.fr)}</span></p>
@@ -33,6 +35,15 @@ function renderGrouped(list) {
     .join("");
 }
 
+function currentLang() {
+  return document.documentElement.getAttribute("lang") === "fr" ? "fr" : "ar";
+}
+
+// المسلك يُتاح فقط لمستوى ثانوي تأهيلي (القسم 6.3.1)
+function isThanawi(niveau) {
+  return niveau && !["1ac", "2ac", "3ac"].includes(niveau);
+}
+
 async function init() {
   const grid = document.querySelector("[data-lecons-grid]");
   if (!grid) return;
@@ -41,12 +52,39 @@ async function init() {
     const manifest = await fetchManifest();
     const all = manifest.lecons;
 
-    // الفلاتر تعمل على مستوى الوحدات هنا: نُعيد الرسم المجمّع عند كل تغيير فلتر
-    const filterWrap = document.querySelector("[data-filters]");
-    const state = { niveau: "", filiere: "" };
+    const niveauSelect = document.querySelector('[data-filter-key="niveau"]');
+    const filiereSelect = document.querySelector('[data-filter-key="filiere"]');
+    const filiereGroup = document.querySelector('[data-filter-key="filiere-group"]');
+    const dorraSelect = document.querySelector('[data-filter-key="dorra"]');
+    const uniteSelect = document.querySelector('[data-filter-key="unite"]');
+    const state = { niveau: "", filiere: "", dorra: "", unite: "" };
+
+    // خيارات "الوحدة" تعتمد على بقية الفلاتر الحالية (المستوى/المسلك/الدورة)، فتُعاد بناؤها عند كل تغيير
+    function populateUnites() {
+      const scoped = all.filter(
+        (l) => (!state.niveau || l.niveau === state.niveau) && (!state.filiere || l.filiere === state.filiere) && (!state.dorra || String(l.dorra) === state.dorra)
+      );
+      const seen = new Map();
+      scoped.forEach((l) => {
+        if (!seen.has(l.uniteId)) seen.set(l.uniteId, { uniteId: l.uniteId, titre: l.unite, ordre: l.uniteOrdre || 0 });
+      });
+      const unites = [...seen.values()].sort((a, b) => a.ordre - b.ordre);
+      if (!unites.some((u) => u.uniteId === state.unite)) state.unite = "";
+      const lang = currentLang();
+      uniteSelect.innerHTML =
+        `<option value="">${t("filter_all", lang)}</option>` +
+        unites.map((u) => `<option value="${u.uniteId}">${escapeHtml(u.titre[lang] || u.titre.ar)}</option>`).join("");
+      uniteSelect.value = state.unite;
+    }
 
     function apply() {
-      let filtered = all.filter((l) => (!state.niveau || l.niveau === state.niveau) && (!state.filiere || l.filiere === state.filiere));
+      let filtered = all.filter(
+        (l) =>
+          (!state.niveau || l.niveau === state.niveau) &&
+          (!state.filiere || l.filiere === state.filiere) &&
+          (!state.dorra || String(l.dorra) === state.dorra) &&
+          (!state.unite || l.uniteId === state.unite)
+      );
       if (!filtered.length) {
         showEmpty(grid, "لا توجد دروس بعد لهذا الاختيار، جرّب مستوى آخر.", "Aucune leçon pour ce choix, essayez un autre niveau.");
         return;
@@ -54,39 +92,42 @@ async function init() {
       grid.innerHTML = renderGrouped(filtered);
     }
 
-    // ربط أزرار الفلاتر (المستوى/المسلك) — منطق مبسّط خاص بهذه الصفحة لأنها تُعيد بناء التجميع
-    filterWrap.querySelectorAll('[data-filter-key="niveau"] [data-filter-value]').forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const v = btn.getAttribute("data-filter-value");
-        state.niveau = state.niveau === v ? "" : v;
-        filterWrap.querySelectorAll('[data-filter-key="niveau"] [data-filter-value]').forEach((b) => b.setAttribute("aria-selected", String(b === btn && state.niveau === v)));
-        // فلتر المسلك يظهر فقط لمستوى ثانوي تأهيلي (القسم 6.3.1)
-        const isThanawi = state.niveau && !["1ac", "2ac", "3ac"].includes(state.niveau);
-        const filiereGroup = filterWrap.querySelector('[data-filter-key="filiere"]').closest(".filter-group");
-        filiereGroup.hidden = !isThanawi;
-        if (!isThanawi) {
-          state.filiere = "";
-          filterWrap.querySelectorAll('[data-filter-key="filiere"] [data-filter-value]').forEach((b) => b.setAttribute("aria-selected", "false"));
-        }
-        apply();
-      });
+    niveauSelect.addEventListener("change", () => {
+      state.niveau = niveauSelect.value;
+      filiereGroup.hidden = !isThanawi(state.niveau);
+      if (filiereGroup.hidden) {
+        state.filiere = "";
+        filiereSelect.value = "";
+      }
+      populateUnites();
+      apply();
     });
-    filterWrap.querySelectorAll('[data-filter-key="filiere"] [data-filter-value]').forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const v = btn.getAttribute("data-filter-value");
-        state.filiere = state.filiere === v ? "" : v;
-        filterWrap.querySelectorAll('[data-filter-key="filiere"] [data-filter-value]').forEach((b) => b.setAttribute("aria-selected", String(b === btn && state.filiere === v)));
-        apply();
-      });
+    filiereSelect.addEventListener("change", () => {
+      state.filiere = filiereSelect.value;
+      populateUnites();
+      apply();
+    });
+    dorraSelect.addEventListener("change", () => {
+      state.dorra = dorraSelect.value;
+      populateUnites();
+      apply();
+    });
+    uniteSelect.addEventListener("change", () => {
+      state.unite = uniteSelect.value;
+      apply();
     });
 
+    // تعاد أسماء الوحدات (نص عادي داخل <option>، لا يتبع تبديل data-lang) عند تغيير اللغة
+    new MutationObserver(() => populateUnites()).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+
+    populateUnites();
     apply();
 
     // فتح المستوى مباشرة من الرابط المرساة (#2bac مثلا) القادم من "أنا في..." بالرئيسية
     const hash = window.location.hash.replace("#", "");
-    if (hash) {
-      const chip = document.querySelector(`[data-filter-key="niveau"] [data-filter-value="${hash}"]`);
-      if (chip) chip.click();
+    if (hash && [...niveauSelect.options].some((o) => o.value === hash)) {
+      niveauSelect.value = hash;
+      niveauSelect.dispatchEvent(new Event("change"));
     }
   } catch (e) {
     showError(grid, init);

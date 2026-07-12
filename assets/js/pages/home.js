@@ -2,6 +2,7 @@ import { fetchManifest, renderGrid, showSkeleton, showError, escapeHtml } from "
 
 function leconCard(l) {
   return `<a class="card card-link" href="${l.url}" data-item>
+    ${l.vignette ? `<img src="/${l.vignette}" alt="${escapeHtml(l.titre.ar)}" loading="lazy" width="480" height="270" />` : ""}
     <span class="chip">${l.niveau.toUpperCase()}</span>
     <h4 style="margin-top:var(--sp-3)"><span data-lang="ar">${escapeHtml(l.titre.ar)}</span><span data-lang="fr">${escapeHtml(l.titre.fr)}</span></h4>
     <p style="font-size:var(--fs-14)"><span data-lang="ar">${escapeHtml(l.unite.ar)}</span><span data-lang="fr">${escapeHtml(l.unite.fr)}</span></p>

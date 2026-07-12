@@ -63,6 +63,8 @@ function main() {
           ogType: "article",
           url,
           latestBlogPost,
+          // يفعّل تفاعلية الدرس (اختبار/فهرس محاور/شريط تقدم القراءة) — القسم 12.2.1 نقطة 5
+          extraScripts: '<script type="module" src="/assets/js/render-engine.js"></script>',
         })
       );
       generated++;

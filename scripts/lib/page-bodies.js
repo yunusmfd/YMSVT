@@ -155,13 +155,33 @@ export function leconsListBody() {
   </div>
   <div class="layout-with-sidebar" data-filters data-filters-target="[data-lecons-grid]" data-filters-empty="[data-lecons-grid-empty]">
     <aside class="filters-sidebar">
-      <div class="filter-group" data-filter-key="niveau">
+      <div class="filter-group">
         <h4><span data-lang="ar">المستوى</span><span data-lang="fr">Niveau</span></h4>
-        <div class="tabs">${NIVEAU_CHIPS.map((c) => `<button class="tab" data-filter-value="${c.v}" aria-selected="false">${c.l}</button>`).join("")}</div>
+        <select class="filter-select" data-filter-key="niveau">
+          <option value="" data-i18n="filter_all"></option>
+          ${NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
+        </select>
       </div>
-      <div class="filter-group" data-filter-key="filiere" hidden>
+      <div class="filter-group" data-filter-key="filiere-group" hidden>
         <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
-        <div class="tabs">${FILIERE_CHIPS.map((c) => `<button class="tab" data-filter-value="${c.v}" aria-selected="false">${c.l}</button>`).join("")}</div>
+        <select class="filter-select" data-filter-key="filiere">
+          <option value="" data-i18n="filter_all"></option>
+          ${FILIERE_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
+        </select>
+      </div>
+      <div class="filter-group">
+        <h4><span data-lang="ar">الدورة</span><span data-lang="fr">Semestre</span></h4>
+        <select class="filter-select" data-filter-key="dorra">
+          <option value="" data-i18n="filter_all"></option>
+          <option value="1" data-i18n="semester_1"></option>
+          <option value="2" data-i18n="semester_2"></option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <h4><span data-lang="ar">الوحدة</span><span data-lang="fr">Unité</span></h4>
+        <select class="filter-select" data-filter-key="unite">
+          <option value="" data-i18n="filter_all"></option>
+        </select>
       </div>
     </aside>
     <div>

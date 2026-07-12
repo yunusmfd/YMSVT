@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">الجهاز التناسلي الذكري</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">الجهاز التناسلي الأنثوي</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">الإخصاب وبداية الحمل</a></li><li><a href="#sec-4-ar" data-toc-link="sec-4-ar">خلاصة</a></li>
@@ -270,14 +271,14 @@
       </div>
       <div class="quiz-justification" hidden><p>المبيضان هما العضوان المسؤولان عن إنتاج البويضة (المشيج الأنثوي) بشكل دوري.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="2">
+    </div><div class="quiz-question" data-quiz-question data-correct="2" hidden>
       <p><strong>2. أين يحدث الإخصاب عادةً؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">في المبيض</button><button type="button" class="quiz-option" data-option-index="1">في الرحم</button><button type="button" class="quiz-option" data-option-index="2">في قناة البيض</button>
       </div>
       <div class="quiz-justification" hidden><p>تلتقي النطفة بالبويضة عادة على مستوى قناة البيض، حيث يحدث اتحاد نواتيهما فيتكون خلية-بيضة.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>3. ما الذي يُشكّل بداية الحمل؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">إنتاج البويضة من طرف المبيض</button><button type="button" class="quiz-option" data-option-index="1">انغراس الخلية-البيضة في جدار الرحم</button><button type="button" class="quiz-option" data-option-index="2">خروج النطاف من الخصيتين</button>
@@ -404,14 +405,14 @@
       </div>
       <div class="quiz-justification" hidden><p>Les ovaires sont les organes responsables de la production cyclique de l'ovule (gamète féminin).</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="2">
+    </div><div class="quiz-question" data-quiz-question data-correct="2" hidden>
       <p><strong>2. Où la fécondation se déroule-t-elle habituellement ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Dans l&#39;ovaire</button><button type="button" class="quiz-option" data-option-index="1">Dans l&#39;utérus</button><button type="button" class="quiz-option" data-option-index="2">Dans la trompe</button>
       </div>
       <div class="quiz-justification" hidden><p>Le spermatozoïde rencontre habituellement l'ovule au niveau de la trompe, où leurs noyaux s'unissent pour former une cellule-œuf.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>3. Qu&#39;est-ce qui marque le début de la grossesse ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">La production de l&#39;ovule par l&#39;ovaire</button><button type="button" class="quiz-option" data-option-index="1">L&#39;implantation de la cellule-œuf dans la paroi de l&#39;utérus</button><button type="button" class="quiz-option" data-option-index="2">La sortie des spermatozoïdes des testicules</button>
@@ -475,6 +476,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

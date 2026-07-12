@@ -85,6 +85,7 @@ export function lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, tra
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar">${tocAr}</div>
         <div data-lang="fr">${tocFr}</div>

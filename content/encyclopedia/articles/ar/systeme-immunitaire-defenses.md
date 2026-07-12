@@ -5,7 +5,7 @@ titre_fr: "Le système immunitaire : comment le corps se défend-il ?"
 categorie: biologie
 date: 2026-03-05
 auteur: "الأستاذ يونس المرابط"
-image_cover: null
+image_cover: assets/images/thumbs/article-systeme-immunitaire-defenses.png
 ---
 
 ## جيش خفي في حالة تأهب دائم

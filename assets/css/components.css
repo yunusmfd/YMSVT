@@ -1,11 +1,7 @@
 /* Nova SVT — مكوّنات الواجهة (القسم 4.4 وما يتفرّع عنه في القسم 7) */
 
 /* ============ 1. الشريط العلوي (Navbar) ============
-   معمارية التباين (إصلاح): النافبار Sticky يأخذ مساحته، لذا الحالة الافتراضية
-   *صلبة مقروءة* (نص --ink) على كل الصفحات. الحالة الشفّافة (نص أبيض فوق تدرّج داكن)
-   محصورة في الصفحة الرئيسية فقط عبر .navbar-over-hero، حيث يُسحب الهيرو خلف النافبار
-   (body.has-hero) فيصبح النص الأبيض فوق خلفية داكنة فعلا. عند التمرير (is-scrolled)
-   يعود الجميع للحالة الصلبة. */
+   النافبار Sticky وصلب مقروء دوما (لا حالة شفّافة) على كل الصفحات، بما فيها الرئيسية. */
 .navbar {
   position: sticky; top: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
@@ -17,24 +13,6 @@
   border-bottom: 1px solid var(--line);
   transition: background-color var(--motion-theme), box-shadow var(--motion-theme), border-color var(--motion-theme);
 }
-/* الرئيسية تسحب الهيرو خلف النافبار (تعويض ارتفاع النافبار) ليعمل التأثير الشفّاف فعلا */
-body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
-
-/* الحالة الشفّافة — الرئيسية فقط وقبل التمرير */
-.navbar-over-hero:not(.is-scrolled) {
-  color: #fff;
-  background: transparent;
-  backdrop-filter: none;
-  border-bottom-color: transparent;
-}
-.navbar-over-hero:not(.is-scrolled)::before {
-  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: linear-gradient(to bottom, rgba(8, 16, 11, .72), rgba(8, 16, 11, .2) 70%, transparent);
-}
-.navbar-over-hero:not(.is-scrolled) .nav-link,
-.navbar-over-hero:not(.is-scrolled) .nav-more-trigger,
-.navbar-over-hero:not(.is-scrolled) .icon-btn { color: #fff; }
-.navbar-over-hero:not(.is-scrolled) .icon-btn { border-color: rgba(255,255,255,.35); }
 .navbar.is-scrolled { box-shadow: var(--shadow-sm); }
 
 .navbar-inner { display: flex; align-items: center; gap: var(--sp-6); width: 100%; max-width: var(--container-max); margin-inline: auto; }
@@ -55,20 +33,15 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
 .nav-link:hover { color: var(--ink); text-decoration: none; }
 .nav-link[aria-current="page"] { color: var(--ink); font-weight: 600; }
 .nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); }
-/* في الحالة الشفّافة يكون الخط أبيض ليظهر فوق الداكن */
-.navbar-over-hero:not(.is-scrolled) .nav-link { color: rgba(255,255,255,.82); }
-.navbar-over-hero:not(.is-scrolled) .nav-link:hover,
-.navbar-over-hero:not(.is-scrolled) .nav-link[aria-current="page"] { color: #fff; }
-.navbar-over-hero:not(.is-scrolled) .nav-link::after { background: #fff; }
 
 .nav-actions { display: flex; align-items: center; gap: var(--sp-2); }
 .nav-divider-bar { display: none; }
 
 /* الشعار صورة ثابتة الألوان (لا يمكنها التكيّف مع الوضع الليلي) — لذا تُوضع دوما فوق شارة فاتحة
    لضمان التباين على كل الخلفيات (النافبار الداكن، الفوتر، حالة الهيرو الشفّافة). */
-.nova-logo { display: flex; align-items: center; background: #fdfdfa; padding: 5px 12px; border-radius: var(--radius-sm, 10px); box-shadow: var(--shadow-sm); }
+.nova-logo { display: flex; align-items: center; background: #fdfdfa; padding: 3px 10px; border-radius: var(--radius-sm, 10px); box-shadow: var(--shadow-sm); }
 .nova-logo:hover { text-decoration: none; }
-.nova-logo-img { display: block; height: 30px; width: auto; }
+.nova-logo-img { display: block; height: 22px; width: auto; }
 
 /* ============ 2. الأزرار ============ */
 .btn {
@@ -211,6 +184,7 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
   box-shadow: 0 30px 60px rgba(0,0,0,.35);
 }
 .search-box-header { display: flex; align-items: center; gap: var(--sp-3); border-bottom: 1px solid var(--line); padding-bottom: var(--sp-3); margin-bottom: var(--sp-4); }
+.search-box-header svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--ink-soft); }
 .search-box-header input { flex: 1; border: none; background: transparent; outline: none; font-size: var(--fs-18); color: var(--ink); font-family: var(--font-body); }
 .search-suggestions { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-4); }
 .search-results { display: flex; flex-direction: column; gap: var(--sp-2); max-height: 50vh; overflow-y: auto; }
@@ -232,7 +206,6 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
   transition: color var(--motion-fast);
 }
 .nav-more-trigger:hover { color: var(--ink); }
-.navbar-over-hero:not(.is-scrolled) .nav-more-trigger:hover { color: #fff; }
 .nav-more-trigger .arrow { font-size: 10px; transition: transform var(--motion-dropdown); display: inline-block; opacity: .8; }
 .nav-more-trigger[aria-expanded="true"] .arrow { transform: rotate(180deg); }
 .nav-more-menu {
@@ -268,16 +241,17 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
   margin: var(--sp-5) 0;
   background: var(--bg-alt);
 }
-.encadre-icon { font-size: var(--fs-18); margin-bottom: var(--sp-2); display: block; }
-.encadre-titre { font-weight: 700; margin-bottom: var(--sp-2); font-family: var(--font-display); }
+/* الأيقونة والعنوان معا في سطر واحد (inline-block متجاوران) بدل تكديسهما عموديا */
+.encadre-icon { font-size: var(--fs-18); display: inline-block; vertical-align: middle; margin-inline-end: var(--sp-2); }
+.encadre-titre { display: inline-block; vertical-align: middle; font-weight: 700; margin-bottom: var(--sp-2); font-family: var(--font-display); }
 .encadre p:last-child { margin-bottom: 0; }
 
 .encadre-molahada { border-inline-start-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--card-bg)); }
 .encadre-tanbih { border-inline-start-color: var(--rust); background: color-mix(in srgb, var(--rust) 10%, var(--card-bg)); }
 .encadre-qaida { border-inline-start-width: 6px; border-inline-start-color: var(--primary); background: color-mix(in srgb, var(--primary) 8%, var(--card-bg)); }
 .encadre-istintaj { border-inline-start-color: var(--primary-light); background: color-mix(in srgb, var(--primary-light) 10%, var(--card-bg)); }
-.encadre-khoulasa { background: var(--ink); color: #F9FAF7; border-inline-start-color: var(--ink); }
-.encadre-khoulasa p, .encadre-khoulasa .encadre-titre { color: inherit; }
+/* خلاصة: تمييز أقوى بلون العلامة التجارية بدل خلفية سوداء تقريبا */
+.encadre-khoulasa { border-inline-start-width: 6px; border-inline-start-color: var(--primary); background: color-mix(in srgb, var(--primary) 16%, var(--card-bg)); }
 .encadre-maaloumaMouhima { border-inline-start-color: var(--secondary); background: color-mix(in srgb, var(--secondary) 10%, var(--card-bg)); }
 .encadre-taarif { border-inline-start: 2px double var(--accent); background: color-mix(in srgb, var(--accent) 6%, var(--card-bg)); }
 
@@ -299,6 +273,8 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
   padding: var(--sp-3) var(--sp-4); border-radius: var(--radius);
   font-size: var(--fs-14); box-shadow: 0 12px 30px rgba(0,0,0,.3);
 }
+/* بدون هذا التصريح يرث نص التعريف لون "p" العام (--ink-soft) الباهت المصمَّم لخلفية فاتحة، فيفقد التباين هنا */
+.glossary-tooltip p { color: rgba(255,255,255,.88); margin-bottom: var(--sp-2); }
 .glossary-tooltip a { color: var(--accent); }
 .glossary-tooltip[hidden] { display: none; }
 
@@ -309,7 +285,7 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
 .breadcrumb .current { color: var(--ink); font-weight: 500; }
 
 /* ============ 14. الفوتر ============ */
-.site-footer { background: var(--ink); color: #E9ECE2; margin-top: var(--sp-9); padding: var(--sp-8) 0 var(--sp-5); }
+.site-footer { background: var(--surface-dark); color: #E9ECE2; margin-top: var(--sp-9); padding: var(--sp-8) 0 var(--sp-5); }
 .site-footer a { color: #cfd8d0; }
 .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-6); margin-bottom: var(--sp-6); }
 .footer-grid h5 { color: #fff; font-size: var(--fs-15); margin-bottom: var(--sp-3); }
@@ -333,6 +309,18 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
 .filters-sidebar { position: sticky; top: 90px; align-self: start; display: flex; flex-direction: column; gap: var(--sp-5); }
 .filter-group h4 { font-size: var(--fs-14); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); font-family: var(--font-mono); margin-bottom: var(--sp-2); }
 .filter-option { display: flex; align-items: center; gap: var(--sp-2); padding: 4px 0; cursor: pointer; }
+.filter-select {
+  width: 100%; appearance: none; -webkit-appearance: none;
+  font: inherit; font-size: var(--fs-15); color: var(--ink);
+  background-color: var(--card-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234D554E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: left 12px center; background-size: 16px;
+  border: 1px solid var(--line); border-radius: var(--radius); padding: var(--sp-2) var(--sp-3); padding-inline-start: var(--sp-7);
+  cursor: pointer; transition: border-color var(--motion-fast);
+}
+[dir="rtl"] .filter-select { background-position: right 12px center; }
+.filter-select:hover { border-color: color-mix(in srgb, var(--primary) 40%, var(--line)); }
+.filter-select:focus-visible { outline: 2px solid var(--primary); outline-offset: 1px; }
 .layout-with-sidebar { display: grid; grid-template-columns: 240px 1fr; gap: var(--sp-6); align-items: start; }
 @media (max-width: 899px) {
   .layout-with-sidebar { grid-template-columns: 1fr; }
@@ -501,7 +489,9 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
 .lesson-info-bar .item strong { display: block; font-size: var(--fs-12); color: var(--ink-soft); font-family: var(--font-mono); text-transform: uppercase; }
 
 .lesson-layout { display: grid; grid-template-columns: 240px 1fr; gap: var(--sp-7); align-items: start; }
-.lesson-toc { position: sticky; top: 90px; }
+/* بطاقة مستقلة بخلفية وحواف واضحة حتى لا يختلط الفهرس بصريا بعناوين المحتوى المجاورة له */
+.lesson-toc { position: sticky; top: 90px; background: var(--bg-alt); border-radius: var(--radius); padding: var(--sp-4); }
+.lesson-toc-label { margin: 0 0 var(--sp-2); font-family: var(--font-mono); font-size: var(--fs-12); text-transform: uppercase; letter-spacing: .03em; color: var(--ink-soft); }
 .lesson-toc ul { list-style: none; padding: 0; margin: 0; border-inline-start: 2px solid var(--line); display: flex; flex-direction: column; }
 .lesson-toc a { display: block; padding: var(--sp-2) var(--sp-3); color: var(--ink-soft); border-inline-start: 2px solid transparent; margin-inline-start: -2px; }
 .lesson-toc a.active { color: var(--primary); border-inline-start-color: var(--primary); font-weight: 600; }

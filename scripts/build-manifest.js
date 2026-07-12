@@ -5,6 +5,12 @@ import path from "node:path";
 import { ROOT, listExams, listVirtualLab, listAllEncyclopedia, listAllRevision } from "./lib/content-loader.js";
 import { collectLessonRoutes, collectBlogRoutes } from "./lib/routes.js";
 
+// المصغّرات تُولَّد يدويا عبر scripts/build-lesson-thumbnails.js (SVG أول محور مرسوما بلغة واحدة)
+function leconVignette(leconId) {
+  const rel = `assets/images/thumbs/lecon-${leconId}.png`;
+  return fs.existsSync(path.join(ROOT, rel)) ? rel : null;
+}
+
 function main() {
   const lecons = collectLessonRoutes().map((r) => ({
     id: r.lecon.id,
@@ -21,6 +27,7 @@ function main() {
     tags: r.lecon.tags || [],
     domaine_specialite: r.lecon.domaine_specialite || null,
     date_maj: r.lecon.date_maj,
+    vignette: leconVignette(r.lecon.id),
     url: r.url,
   }));
 

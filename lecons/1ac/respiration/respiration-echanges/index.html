@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">أعضاء الجهاز التنفسي ومسار الهواء</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">الحركات التنفسية: الشهيق والزفير</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">التبادلات الغازية على مستوى الحويصلات الرئوية</a></li><li><a href="#sec-4-ar" data-toc-link="sec-4-ar">خلاصة</a></li>
@@ -327,14 +328,14 @@
       </div>
       <div class="quiz-justification" hidden><p>أثناء الشهيق ينقبض الحجاب الحاجز وينخفض نحو الأسفل، مما يزيد من حجم القفص الصدري ويسمح بدخول الهواء.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. أين تحدث التبادلات الغازية بين الهواء والدم؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">على مستوى القصبة الهوائية</button><button type="button" class="quiz-option" data-option-index="1">على مستوى الحويصلات الرئوية</button><button type="button" class="quiz-option" data-option-index="2">على مستوى البلعوم</button>
       </div>
       <div class="quiz-justification" hidden><p>الحويصلات الرئوية هي المكان الوحيد الذي يسمح جدارها الرقيق وتواجدها بجانب الشعيرات الدموية بحدوث التبادل الغازي.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. ما اتجاه انتقال ثنائي أكسيد الكربون (CO2) على مستوى الحويصلة الرئوية؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">من الدم إلى الحويصلة</button><button type="button" class="quiz-option" data-option-index="1">من الحويصلة إلى الدم</button><button type="button" class="quiz-option" data-option-index="2">لا ينتقل CO2 على هذا المستوى</button>
@@ -518,14 +519,14 @@
       </div>
       <div class="quiz-justification" hidden><p>Pendant l'inspiration, le diaphragme se contracte et s'abaisse, ce qui augmente le volume de la cage thoracique et permet l'entrée de l'air.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Où se déroulent les échanges gazeux entre l&#39;air et le sang ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Au niveau de la trachée</button><button type="button" class="quiz-option" data-option-index="1">Au niveau des alvéoles pulmonaires</button><button type="button" class="quiz-option" data-option-index="2">Au niveau du pharynx</button>
       </div>
       <div class="quiz-justification" hidden><p>Les alvéoles pulmonaires, grâce à leur paroi très fine et à leur proximité avec les capillaires sanguins, sont le seul site où se produit l'échange gazeux.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. Dans quel sens circule le dioxyde de carbone (CO2) au niveau de l&#39;alvéole pulmonaire ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Du sang vers l&#39;alvéole</button><button type="button" class="quiz-option" data-option-index="1">De l&#39;alvéole vers le sang</button><button type="button" class="quiz-option" data-option-index="2">Le CO2 ne circule pas à ce niveau</button>
@@ -589,6 +590,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">ما هو الزلزال؟</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">من البؤرة إلى السطح: الموجات الزلزالية</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">قياس الزلازل والوقاية من مخاطرها</a></li>
@@ -318,14 +319,14 @@
       </div>
       <div class="quiz-justification" hidden><p>الزلازل تنتج عن تحرر مفاجئ للطاقة عندما تتجاوز الإجهادات المتراكمة قدرة الصخور على التحمل، فتتحرك الكتلتان على جانبي الفالق.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>2. أين تقع البؤرة الزلزالية بالنسبة للمركز السطحي؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">في العمق، عموديا تحت المركز السطحي</button><button type="button" class="quiz-option" data-option-index="1">على السطح، بجانب المركز السطحي</button><button type="button" class="quiz-option" data-option-index="2">في الغلاف الجوي فوق منطقة الزلزال</button>
       </div>
       <div class="quiz-justification" hidden><p>البؤرة هي النقطة الحقيقية لانطلاق الزلزال في العمق، بينما المركز السطحي هو إسقاطها العمودي على سطح الأرض.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>3. أي وسيلة تُعتبر الأنسب حاليا للحد من مخاطر الزلازل؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">التنبؤ الدقيق بتاريخ وقوع الزلزال</button><button type="button" class="quiz-option" data-option-index="1">البناء المقاوم للزلازل والتوعية بسلوكيات الحماية</button><button type="button" class="quiz-option" data-option-index="2">إيقاف حركة الصفائح التكتونية</button>
@@ -500,14 +501,14 @@
       </div>
       <div class="quiz-justification" hidden><p>Les séismes résultent d'une libération soudaine d'énergie lorsque les contraintes accumulées dépassent la résistance des roches, provoquant le déplacement des deux blocs de part et d'autre de la faille.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>2. Où se situe le foyer sismique par rapport à l&#39;épicentre ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">En profondeur, à la verticale de l&#39;épicentre</button><button type="button" class="quiz-option" data-option-index="1">En surface, juste à côté de l&#39;épicentre</button><button type="button" class="quiz-option" data-option-index="2">Dans l&#39;atmosphère, au-dessus de la zone du séisme</button>
       </div>
       <div class="quiz-justification" hidden><p>Le foyer est le point réel de déclenchement du séisme en profondeur, tandis que l'épicentre est sa projection verticale à la surface terrestre.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>3. Quel moyen est actuellement le plus adapté pour réduire les risques sismiques ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Prédire précisément la date du séisme</button><button type="button" class="quiz-option" data-option-index="1">La construction parasismique et la sensibilisation aux bons réflexes</button><button type="button" class="quiz-option" data-option-index="2">Arrêter le mouvement des plaques tectoniques</button>
@@ -571,6 +572,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

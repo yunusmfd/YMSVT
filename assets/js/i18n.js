@@ -29,6 +29,9 @@ export const I18N = {
     menu_open: "القائمة",
     close: "إغلاق",
     blog_menu: "المدونة",
+    filter_all: "الكل",
+    semester_1: "الدورة الأولى",
+    semester_2: "الدورة الثانية",
   },
   fr: {
     nav_home: "Accueil",
@@ -59,6 +62,9 @@ export const I18N = {
     menu_open: "Menu",
     close: "Fermer",
     blog_menu: "Blog",
+    filter_all: "Tous",
+    semester_1: "1er semestre",
+    semester_2: "2e semestre",
   },
 };
 

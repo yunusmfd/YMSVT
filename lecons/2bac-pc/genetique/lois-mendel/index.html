@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">مصطلحات أساسية</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">التزاوج أحادي الهجونة</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -256,7 +257,7 @@
       </div>
       <div class="quiz-justification" hidden><p>كل فرد من F1 يأخذ أليلا A من الأب وأليلا a من الأم، فيكون مختلط الاقتران Aa (قانون التجانس).</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. ما نسبة الأنماط الظاهرية في الجيل الثاني F2؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">1 : 1</button><button type="button" class="quiz-option" data-option-index="1">3 : 1</button><button type="button" class="quiz-option" data-option-index="2">9 : 3 : 3 : 1</button>
@@ -353,7 +354,7 @@
       </div>
       <div class="quiz-justification" hidden><p>Chaque individu F1 reçoit A d'un parent et a de l'autre : il est hétérozygote Aa (loi d'uniformité).</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Quel est le rapport phénotypique en F2 ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">1 : 1</button><button type="button" class="quiz-option" data-option-index="1">3 : 1</button><button type="button" class="quiz-option" data-option-index="2">9 : 3 : 3 : 1</button>
@@ -417,6 +418,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

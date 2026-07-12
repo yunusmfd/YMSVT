@@ -24,6 +24,9 @@ export function initQuiz() {
           else if (i === idx) o.classList.add("incorrect");
         });
         if (justification) justification.hidden = false;
+        // إظهار السؤال التالي فقط بعد الإجابة على الحالي (سؤالا بعد سؤال بدل ظهورها دفعة واحدة)
+        const next = questionEl.nextElementSibling;
+        if (next && next.hasAttribute("data-quiz-question")) next.hidden = false;
         if (totalAnswered === questions.length) saveResult(correctCount, questions.length);
       });
     });

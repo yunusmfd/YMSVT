@@ -7,6 +7,6 @@
     "ar": "فيديو تعليمي يعرض مشاهدة عينة من الدم تحت المجهر الضوئي، مع التعرف على الكريات الحمراء والكريات البيضاء والصفائح الدموية.",
     "fr": "Vidéo pédagogique montrant l'observation d'un échantillon de sang au microscope optique, avec identification des globules rouges, des globules blancs et des plaquettes."
   },
-  "vignette": null,
+  "vignette": "assets/images/thumbs/labo-observation-microscope-sang.png",
   "video_src": "content/virtual-lab/observation-microscope-sang/placeholder.txt"
 }

@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">التلقيح: مناعة نشيطة وقائية</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">الاستمصال: مناعة سلبية إسعافية</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -261,7 +262,7 @@
       </div>
       <div class="quiz-justification" hidden><p>التلقيح يحفّز الجسم على إنتاج أضدائه وخلايا ذاكرة، فيمنح مناعة نشيطة ودائمة.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. متى نلجأ للاستمصال بدل التلقيح؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">للوقاية طويلة الأمد</button><button type="button" class="quiz-option" data-option-index="1">عند الحاجة لتدخّل سريع بعد التعرّض للخطر</button><button type="button" class="quiz-option" data-option-index="2">لتكوين ذاكرة مناعية</button>
@@ -365,7 +366,7 @@
       </div>
       <div class="quiz-justification" hidden><p>La vaccination stimule le corps à produire ses anticorps et des cellules mémoire, conférant une immunité active et durable.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Quand recourt-on à la sérothérapie plutôt qu&#39;à la vaccination ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Pour une prévention à long terme</button><button type="button" class="quiz-option" data-option-index="1">Pour une action rapide après exposition</button><button type="button" class="quiz-option" data-option-index="2">Pour créer une mémoire immunitaire</button>
@@ -429,6 +430,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

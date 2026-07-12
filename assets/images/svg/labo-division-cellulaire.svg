@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="الانقسام الخلوي">
+  <rect x="0" y="0" width="800" height="450" fill="#F9FAF7" />
+  <path d="M260 225 C260 150 340 150 400 200 C460 150 540 150 540 225 C540 300 460 300 400 250 C340 300 260 300 260 225 Z"
+        fill="#EDE9F5" stroke="#6B87C4" stroke-width="5" />
+  <g stroke="#3D5A96" stroke-width="6" stroke-linecap="round">
+    <line x1="320" y1="195" x2="345" y2="215" />
+    <line x1="345" y1="195" x2="320" y2="215" />
+    <line x1="360" y1="230" x2="385" y2="250" />
+    <line x1="385" y1="230" x2="360" y2="250" />
+  </g>
+  <g stroke="#3D5A96" stroke-width="6" stroke-linecap="round">
+    <line x1="455" y1="195" x2="480" y2="215" />
+    <line x1="480" y1="195" x2="455" y2="215" />
+    <line x1="415" y1="230" x2="440" y2="250" />
+    <line x1="440" y1="230" x2="415" y2="250" />
+  </g>
+  <circle cx="240" cy="225" r="6" fill="#6B87C4" />
+  <circle cx="560" cy="225" r="6" fill="#6B87C4" />
+</svg>

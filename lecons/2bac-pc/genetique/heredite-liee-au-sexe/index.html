@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">مورثات على الصبغيات الجنسية</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">انتقال مرض مرتبط بالصبغي X</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -254,7 +255,7 @@
       </div>
       <div class="quiz-justification" hidden><p>الذكر (XY) لا يملك إلا نسخة واحدة من الصبغي X، فأليل متنحٍّ واحد يكفي لظهور المرض، بخلاف الأنثى التي تحتاج نسختين.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. أب مصاب بمرض مرتبط بالصبغي X: من يرث منه الأليل المصاب مباشرة؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">كل أبنائه الذكور</button><button type="button" class="quiz-option" data-option-index="1">كل بناته (كنقل صامت)</button><button type="button" class="quiz-option" data-option-index="2">لا أحد</button>
@@ -349,7 +350,7 @@
       </div>
       <div class="quiz-justification" hidden><p>Le garçon (XY) ne possède qu'un X : un seul allèle récessif suffit à exprimer la maladie, contrairement à la fille qui en nécessite deux.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Un père atteint : qui hérite directement de son allèle muté ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Tous ses fils</button><button type="button" class="quiz-option" data-option-index="1">Toutes ses filles (portage)</button><button type="button" class="quiz-option" data-option-index="2">Personne</button>
@@ -413,6 +414,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

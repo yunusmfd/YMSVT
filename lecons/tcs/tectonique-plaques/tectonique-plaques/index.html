@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">من الانجراف القاري إلى تكتونية الصفائح</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">أنواع حدود الصفائح التكتونية</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">الصفائح والزلازل والبراكين</a></li>
@@ -307,14 +308,14 @@
       </div>
       <div class="quiz-justification" hidden><p>تطابق حدود القارات (مثل أمريكا الجنوبية وإفريقيا) ووجود نفس الأحافير والصخور في قارات متباعدة اليوم كانا من أهم الأدلة الأولى الداعمة لفكرة الانجراف القاري.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. ماذا يحدث عند حد متقارب بين صفيحتين؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">تبتعد الصفيحتان مع صعود الصهارة</button><button type="button" class="quiz-option" data-option-index="1">تغوص إحدى الصفيحتين تحت الأخرى (اندساس)</button><button type="button" class="quiz-option" data-option-index="2">تنزلق الصفيحتان أفقيا دون أي تفاعل رأسي</button>
       </div>
       <div class="quiz-justification" hidden><p>عند الحدود المتقاربة، تغوص إحدى الصفيحتين تحت الأخرى في ظاهرة الاندساس، مما يُنتج زلازل عنيفة وبراكين بسبب انصهار جزء من الصفيحة الغائصة.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. لماذا يتركز معظم النشاط الزلزالي والبركاني حول &#39;حزام النار في المحيط الهادئ&#39;؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">لوجود عدد كبير من حدود الاندساس (التقارب) في هذه المنطقة</button><button type="button" class="quiz-option" data-option-index="1">لأن المحيط الهادئ هو الأعمق في العالم فقط</button><button type="button" class="quiz-option" data-option-index="2">لأن التيارات البحرية تُسبب الزلازل مباشرة</button>
@@ -478,14 +479,14 @@
       </div>
       <div class="quiz-justification" hidden><p>L'emboîtement des côtes continentales (comme l'Amérique du Sud et l'Afrique) et la présence de fossiles et roches identiques sur des continents aujourd'hui distants furent parmi les premiers arguments majeurs en faveur de la dérive des continents.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Que se passe-t-il au niveau d&#39;une limite convergente entre deux plaques ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Les deux plaques s&#39;écartent avec remontée de magma</button><button type="button" class="quiz-option" data-option-index="1">L&#39;une des plaques plonge sous l&#39;autre (subduction)</button><button type="button" class="quiz-option" data-option-index="2">Les deux plaques glissent horizontalement sans interaction verticale</button>
       </div>
       <div class="quiz-justification" hidden><p>Aux limites convergentes, l'une des plaques plonge sous l'autre lors de la subduction, ce qui génère des séismes violents et des volcans par fusion partielle de la plaque plongeante.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. Pourquoi l&#39;essentiel de l&#39;activité sismique et volcanique se concentre-t-il sur la &#39;ceinture de feu du Pacifique&#39; ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">En raison du grand nombre de limites de subduction (convergentes) dans cette zone</button><button type="button" class="quiz-option" data-option-index="1">Parce que le Pacifique est simplement l&#39;océan le plus profond du monde</button><button type="button" class="quiz-option" data-option-index="2">Parce que les courants marins provoquent directement les séismes</button>
@@ -549,6 +550,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

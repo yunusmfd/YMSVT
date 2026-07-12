@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">حين يختلّ الجهاز المناعي</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">نقص المناعة: مثال داء السيدا</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -243,7 +244,7 @@
       </div>
       <div class="quiz-justification" hidden><p>يهاجم VIH اللمفاويات LT4 المنسّقة للاستجابة المناعية، ما يؤدي تدريجيا لانهيار الدفاع المناعي.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. أي اختلال يهاجم فيه الجهاز المناعي خلايا الجسم نفسه؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">فرط الحساسية</button><button type="button" class="quiz-option" data-option-index="1">المناعة الذاتية</button><button type="button" class="quiz-option" data-option-index="2">نقص المناعة</button>
@@ -329,7 +330,7 @@
       </div>
       <div class="quiz-justification" hidden><p>Le VIH attaque les lymphocytes LT4 coordinateurs de la réponse immunitaire, provoquant l'effondrement progressif de la défense.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Dans quel trouble le système immunitaire attaque-t-il les cellules du corps ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">L&#39;allergie</button><button type="button" class="quiz-option" data-option-index="1">L&#39;auto-immunité</button><button type="button" class="quiz-option" data-option-index="2">L&#39;immunodéficience</button>
@@ -393,6 +394,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

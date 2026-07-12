@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">بنية الخلية العصبية</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">من المنبه إلى الاستجابة: القوس الانعكاسي</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -340,14 +341,14 @@
       </div>
       <div class="quiz-justification" hidden><p>المعلومة العصبية تنطلق من المستقبل الذي يحوّل المنبه إلى سيالة عصبية، تنتقل عبر عصب حسي إلى المركز العصبي، ثم عبر عصب حركي إلى العضو المنفذ الذي ينتج الاستجابة.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. ما الذي يميز المنعكس العضلي (الوتري)؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">استجابة إرادية يتحكم فيها الدماغ بشكل واعٍ</button><button type="button" class="quiz-option" data-option-index="1">استجابة لا إرادية وسريعة وثابتة لنفس المنبه</button><button type="button" class="quiz-option" data-option-index="2">استجابة تتطلب معالجة معقدة في القشرة الدماغية</button>
       </div>
       <div class="quiz-justification" hidden><p>المنعكس العضلي استجابة لا إرادية وسريعة وثابتة النمط، لأنه يمر عبر مشبك مباشر بين العصبون الحسي والعصبون الحركي على مستوى النخاع الشوكي دون الحاجة إلى تدخل الدماغ.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. أين يوجد المستقبل الحسي والعضو المنفذ في حالة المنعكس العضلي الوتري؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">في نفس العضلة الباسطة المعنية بالمنعكس</button><button type="button" class="quiz-option" data-option-index="1">في الدماغ فقط</button><button type="button" class="quiz-option" data-option-index="2">في عضلتين مختلفتين ومتباعدتين</button>
@@ -544,14 +545,14 @@
       </div>
       <div class="quiz-justification" hidden><p>L'information nerveuse part du récepteur qui convertit le stimulus en influx nerveux, transite par le nerf sensitif jusqu'au centre nerveux, puis par le nerf moteur jusqu'à l'effecteur qui produit la réponse.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Qu&#39;est-ce qui caractérise le réflexe myotatique (rotulien) ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Une réponse volontaire contrôlée consciemment par le cerveau</button><button type="button" class="quiz-option" data-option-index="1">Une réponse involontaire, rapide et stéréotypée face au même stimulus</button><button type="button" class="quiz-option" data-option-index="2">Une réponse nécessitant un traitement complexe dans le cortex cérébral</button>
       </div>
       <div class="quiz-justification" hidden><p>Le réflexe myotatique est une réponse involontaire, rapide et stéréotypée, car elle passe par une synapse directe entre le neurone sensitif et le neurone moteur au niveau de la moelle épinière, sans nécessiter l'intervention du cerveau.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. Où se trouvent le récepteur sensoriel et l&#39;effecteur dans le cas du réflexe myotatique ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Dans le même muscle extenseur concerné par le réflexe</button><button type="button" class="quiz-option" data-option-index="1">Uniquement dans le cerveau</button><button type="button" class="quiz-option" data-option-index="2">Dans deux muscles différents et éloignés</button>
@@ -615,6 +616,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

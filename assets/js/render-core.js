@@ -154,7 +154,7 @@ export function renderQuiz(quiz, lang, deps) {
   const titre = quiz.titre[lang] || quiz.titre.ar;
   const questions = quiz.questions
     .map(
-      (q, qi) => `<div class="quiz-question" data-quiz-question data-correct="${q.reponse_correcte}">
+      (q, qi) => `<div class="quiz-question" data-quiz-question data-correct="${q.reponse_correcte}"${qi > 0 ? " hidden" : ""}>
       <p><strong>${qi + 1}. ${mdToSafeHtml(q.question[lang] || q.question.ar, lang, deps, true)}</strong></p>
       <div class="quiz-options" role="group">
         ${q.options

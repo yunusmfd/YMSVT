@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">بنية الصبغي</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">النمط النووي</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -248,7 +249,7 @@
       </div>
       <div class="quiz-justification" hidden><p>الخلية الجسدية ثنائية الصيغة الصبغية (2n) وتحتوي على 46 صبغيا موزّعة على 23 زوجا.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. ما الصيغة الصبغية الجنسية عند الذكر؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">XX</button><button type="button" class="quiz-option" data-option-index="1">XY</button><button type="button" class="quiz-option" data-option-index="2">YY</button>
@@ -337,7 +338,7 @@
       </div>
       <div class="quiz-justification" hidden><p>La cellule somatique est diploïde (2n) et contient 46 chromosomes en 23 paires.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Quelle est la formule des gonosomes chez l&#39;homme ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">XX</button><button type="button" class="quiz-option" data-option-index="1">XY</button><button type="button" class="quiz-option" data-option-index="2">YY</button>
@@ -401,6 +402,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

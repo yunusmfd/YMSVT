@@ -7,5 +7,5 @@
     "ar": "تجربة تفاعلية تتيح لك تتبع مراحل الانقسام الخلوي خطوة بخطوة، من خلية أم إلى خليتين بنتين، بالنقر على زر الانتقال بين المراحل.",
     "fr": "Une expérience interactive qui permet de suivre pas à pas les étapes de la division cellulaire, d'une cellule mère jusqu'aux cellules filles, en cliquant sur le bouton de passage à l'étape suivante."
   },
-  "vignette": null
+  "vignette": "assets/images/thumbs/labo-division-cellulaire.png"
 }

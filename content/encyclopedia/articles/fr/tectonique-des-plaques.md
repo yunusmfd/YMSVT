@@ -5,7 +5,7 @@ titre_fr: "La tectonique des plaques : comment les continents se déplacent-ils 
 categorie: geologie
 date: 2026-02-10
 auteur: "Prof. Younes El Mrabet"
-image_cover: null
+image_cover: assets/images/thumbs/article-tectonique-des-plaques.png
 ---
 
 ## Un puzzle qui a mis un siècle à se résoudre

@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">أعضاء الجهاز الهضمي ومسار الأغذية</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">دور الهضم: من الأغذية إلى المغذيات</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -260,14 +261,14 @@
       </div>
       <div class="quiz-justification" hidden><p>يسير الغذاء من الفم إلى المريء ثم المعدة فالأمعاء الدقيقة، وهو الترتيب الطبيعي لمسار الأغذية في الأنبوب الهضمي.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>2. لماذا يحتاج الجسم إلى تفكيك الأغذية إلى مغذيات بسيطة؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">لأن المغذيات البسيطة وحدها قادرة على اجتياز جدار الأمعاء والانتقال إلى الدم</button><button type="button" class="quiz-option" data-option-index="1">لتقليل حجم الأغذية فقط</button><button type="button" class="quiz-option" data-option-index="2">لأن المعدة لا تتحمل الأغذية الكبيرة</button>
       </div>
       <div class="quiz-justification" hidden><p>جدار الأمعاء الدقيقة لا يسمح إلا بمرور الجزيئات البسيطة (المغذيات) إلى الدم، لذلك يجب تفكيك الأغذية المعقدة أولا.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. ما دور الإنزيمات الهضمية؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">تسريع تفكيك الأغذية المعقدة إلى مغذيات بسيطة</button><button type="button" class="quiz-option" data-option-index="1">تخزين الأغذية في المعدة</button><button type="button" class="quiz-option" data-option-index="2">نقل المغذيات مباشرة إلى الخلايا</button>
@@ -384,14 +385,14 @@
       </div>
       <div class="quiz-justification" hidden><p>L'aliment progresse de la bouche vers l'œsophage, puis l'estomac, puis l'intestin grêle : c'est l'ordre naturel du trajet des aliments dans le tube digestif.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>2. Pourquoi l&#39;organisme a-t-il besoin de décomposer les aliments en nutriments simples ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Parce que seuls les nutriments simples peuvent traverser la paroi intestinale et passer dans le sang</button><button type="button" class="quiz-option" data-option-index="1">Uniquement pour réduire le volume des aliments</button><button type="button" class="quiz-option" data-option-index="2">Parce que l&#39;estomac ne supporte pas les grosses particules</button>
       </div>
       <div class="quiz-justification" hidden><p>La paroi de l'intestin grêle ne laisse passer vers le sang que les petites molécules (les nutriments), d'où la nécessité de décomposer d'abord les aliments complexes.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. Quel est le rôle des enzymes digestives ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Accélérer la décomposition des aliments complexes en nutriments simples</button><button type="button" class="quiz-option" data-option-index="1">Stocker les aliments dans l&#39;estomac</button><button type="button" class="quiz-option" data-option-index="2">Transporter directement les nutriments vers les cellules</button>
@@ -455,6 +456,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

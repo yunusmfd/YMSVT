@@ -7,6 +7,6 @@
     "ar": "رسم توضيحي تفاعلي يعرض مكونات الخلية النباتية الرئيسية: الجدار الخلوي، الغشاء الهيولي، النواة، البلاستيدات الخضراء، والفجوة العصارية.",
     "fr": "Une illustration interactive présentant les principaux constituants de la cellule végétale : paroi cellulaire, membrane plasmique, noyau, chloroplastes et vacuole."
   },
-  "vignette": null,
+  "vignette": "assets/images/thumbs/labo-dissection-cellule-vegetale.png",
   "animation_src": "assets/images/svg/dissection-cellule-vegetale-animation.svg"
 }

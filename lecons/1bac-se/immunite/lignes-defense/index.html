@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">الحواجز الطبيعية: خط الدفاع الأول</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">خط الدفاع الثاني: الاستجابة الالتهابية والبلعمة</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -282,14 +283,14 @@
       </div>
       <div class="quiz-justification" hidden><p>الجلد والأغشية المخاطية يُشكّلان حواجز طبيعية فيزيائية وكيميائية تمنع دخول الميكروبات، وهي خط الدفاع الأول قبل أي استجابة داخلية.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. ما ترتيب المراحل الثلاث للبلعمة؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">الهضم ← التعرف ← الالتهام</button><button type="button" class="quiz-option" data-option-index="1">التعرف ← الالتهام ← الهضم</button><button type="button" class="quiz-option" data-option-index="2">الالتهام ← الهضم ← التعرف</button>
       </div>
       <div class="quiz-justification" hidden><p>تبدأ البلعمة بتعرف البلعمية على الميكروب، ثم تلتهمه داخل حويصلة، وأخيرا تهضمه بإنزيمات هاضمة داخل فجوة هضمية.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>3. لماذا تُعتبر الحواجز الطبيعية والبلعمة آليات &#39;غير نوعية&#39;؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">لأنها تستهدف نوعا واحدا فقط من الميكروبات</button><button type="button" class="quiz-option" data-option-index="1">لأنها تعمل بنفس الطريقة ضد جميع الميكروبات دون تمييز دقيق بينها</button><button type="button" class="quiz-option" data-option-index="2">لأنها تترك ذاكرة مناعية دائمة</button>
@@ -428,14 +429,14 @@
       </div>
       <div class="quiz-justification" hidden><p>La peau et les muqueuses forment des barrières naturelles physiques et chimiques empêchant l'entrée des microbes ; elles constituent la première ligne de défense avant toute réponse interne.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Quel est l&#39;ordre des trois étapes de la phagocytose ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Digestion → reconnaissance → englobement</button><button type="button" class="quiz-option" data-option-index="1">Reconnaissance → englobement → digestion</button><button type="button" class="quiz-option" data-option-index="2">Englobement → digestion → reconnaissance</button>
       </div>
       <div class="quiz-justification" hidden><p>La phagocytose commence par la reconnaissance du microbe par le phagocyte, puis son englobement dans une vésicule, et enfin sa digestion par des enzymes dans une vacuole digestive.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>3. Pourquoi les barrières naturelles et la phagocytose sont-elles des mécanismes « non spécifiques » ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Parce qu&#39;elles ne ciblent qu&#39;un seul type de microbe</button><button type="button" class="quiz-option" data-option-index="1">Parce qu&#39;elles agissent de la même façon contre tous les microbes sans distinction précise</button><button type="button" class="quiz-option" data-option-index="2">Parce qu&#39;elles laissent une mémoire immunitaire durable</button>
@@ -499,6 +500,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

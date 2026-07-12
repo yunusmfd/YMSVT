@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">النظرية الخلوية: الخلية وحدة الحياة</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">الخلية الحيوانية والخلية النباتية: دراسة مقارنة</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">الأعضية الخلوية الرئيسية ووظائفها</a></li>
@@ -315,14 +316,14 @@
       </div>
       <div class="quiz-justification" hidden><p>النواة والميتوكوندري والغشاء الهيولي مكونات مشتركة بين الخليتين، بينما الجدار الخلوي والفجوة العصارية الكبيرة والبلاستيدات الخضراء خاصة بالخلية النباتية.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. ما وظيفة النواة داخل الخلية؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">إنتاج الطاقة اللازمة للخلية</button><button type="button" class="quiz-option" data-option-index="1">حفظ المادة الوراثية والتحكم في نشاط الخلية</button><button type="button" class="quiz-option" data-option-index="2">تنظيم دخول وخروج المواد عبر الغشاء</button>
       </div>
       <div class="quiz-justification" hidden><p>النواة تحتوي على ADN وتُعتبر مركز التحكم الذي يوجّه جميع الأنشطة داخل الخلية، بينما إنتاج الطاقة من مهام الميتوكوندري وتنظيم التبادلات من مهام الغشاء الهيولي.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. ما مضمون النظرية الخلوية؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">كل الكائنات الحية تتكون من خلايا، وكل خلية تنشأ عن خلية سابقة</button><button type="button" class="quiz-option" data-option-index="1">الخلايا النباتية فقط تتكاثر بالانقسام</button><button type="button" class="quiz-option" data-option-index="2">الخلايا الحيوانية أكبر دائما من الخلايا النباتية</button>
@@ -494,14 +495,14 @@
       </div>
       <div class="quiz-justification" hidden><p>Le noyau, la mitochondrie et la membrane plasmique sont communs aux deux types de cellules, tandis que la paroi, la grande vacuole et les chloroplastes sont spécifiques à la cellule végétale.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Quelle est la fonction du noyau dans la cellule ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Produire l&#39;énergie nécessaire à la cellule</button><button type="button" class="quiz-option" data-option-index="1">Conserver le matériel génétique et contrôler l&#39;activité cellulaire</button><button type="button" class="quiz-option" data-option-index="2">Réguler l&#39;entrée et la sortie des substances par la membrane</button>
       </div>
       <div class="quiz-justification" hidden><p>Le noyau contient l'ADN et constitue le centre de contrôle dirigeant toutes les activités cellulaires, alors que la production d'énergie relève de la mitochondrie et la régulation des échanges de la membrane plasmique.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="0">
+    </div><div class="quiz-question" data-quiz-question data-correct="0" hidden>
       <p><strong>3. Quel est le contenu de la théorie cellulaire ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">Tout être vivant est constitué de cellules, et toute cellule provient d&#39;une cellule préexistante</button><button type="button" class="quiz-option" data-option-index="1">Seules les cellules végétales se reproduisent par division</button><button type="button" class="quiz-option" data-option-index="2">Les cellules animales sont toujours plus grandes que les cellules végétales</button>
@@ -565,6 +566,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>

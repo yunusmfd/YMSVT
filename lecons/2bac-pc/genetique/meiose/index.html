@@ -141,6 +141,7 @@
       <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
         <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
       </button>
+      <p class="lesson-toc-label"><span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span></p>
       <div data-toc-list>
         <div data-lang="ar"><ul>
     <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">تذكير بالانقسام الخيطي</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">مراحل الانقسام المنصف</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
@@ -332,7 +333,7 @@
       </div>
       <div class="quiz-justification" hidden><p>الانقسام المنصف يتكون من انقسامين متتاليين ينتج عنهما 4 خلايا أحادية الصيغة الصبغية.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. ما الظاهرتان المسؤولتان عن تنوّع الأمشاج؟</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">التضاعف الذاتي والانقسام الخيطي</button><button type="button" class="quiz-option" data-option-index="1">العبور الصبغي والاصطفاف العشوائي</button><button type="button" class="quiz-option" data-option-index="2">الإخصاب والانقسام غير المباشر</button>
@@ -505,7 +506,7 @@
       </div>
       <div class="quiz-justification" hidden><p>La méiose comprend deux divisions successives produisant 4 cellules haploïdes.</p>
 </div>
-    </div><div class="quiz-question" data-quiz-question data-correct="1">
+    </div><div class="quiz-question" data-quiz-question data-correct="1" hidden>
       <p><strong>2. Quels sont les deux phénomènes responsables de la diversité des gamètes ?</strong></p>
       <div class="quiz-options" role="group">
         <button type="button" class="quiz-option" data-option-index="0">La réplication et la mitose</button><button type="button" class="quiz-option" data-option-index="1">Le crossing-over et l&#39;assortiment aléatoire</button><button type="button" class="quiz-option" data-option-index="2">La fécondation et la division indirecte</button>
@@ -569,6 +570,6 @@
 <script src="/assets/vendor/purify.min.js"></script>
 <script type="module" src="/assets/js/site.js"></script>
 <script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
-
+<script type="module" src="/assets/js/render-engine.js"></script>
 </body>
 </html>
