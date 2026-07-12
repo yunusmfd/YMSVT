@@ -1,0 +1,167 @@
+{
+  "id": "svt-1ac-digestion-appareil-digestif",
+  "slug": "digestion",
+  "cycle": "iaadadi",
+  "niveau": "1ac",
+  "unite_id": "unite-digestion-1ac",
+  "dorra": 2,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "الجهاز الهضمي ودور الهضم في التغذية", "fr": "L'appareil digestif et le rôle de la digestion dans la nutrition" },
+  "duree_estimee_min": 20,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": [
+      "التعرف على أعضاء الجهاز الهضمي ومسار الأغذية",
+      "شرح دور الهضم في تحويل الأغذية إلى مغذيات قابلة للامتصاص",
+      "التعرف على دور الإنزيمات الهضمية في تفكيك الأغذية"
+    ],
+    "fr": [
+      "Identifier les organes de l'appareil digestif et le trajet des aliments",
+      "Expliquer le rôle de la digestion dans la transformation des aliments en nutriments absorbables",
+      "Connaître le rôle des enzymes digestives dans la dégradation des aliments"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "أعضاء الجهاز الهضمي ومسار الأغذية", "fr": "Les organes de l'appareil digestif et le trajet des aliments" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتكون الجهاز الهضمي من أنبوب هضمي طويل يبدأ بالفم ويمر عبر المريء فالمعدة، ثم الأمعاء الدقيقة، فالأمعاء الغليظة، لينتهي عند فتحة الشرج. تسير الأغذية عبر هذا الأنبوب في اتجاه واحد، وتتعرض في كل عضو لتحولات ميكانيكية (مضغ، تقلصات) وكيميائية (إنزيمات).",
+            "fr": "L'appareil digestif est constitué d'un long tube digestif qui commence par la bouche, traverse l'œsophage puis l'estomac, l'intestin grêle, le gros intestin, et se termine par l'anus. Les aliments progressent dans ce tube dans un seul sens, subissant à chaque organe des transformations mécaniques (mastication, contractions) et chimiques (enzymes)."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/appareil-digestif-trajet.svg",
+          "legende": { "ar": "مخطط الأنبوب الهضمي ومسار الأغذية عبر أعضائه", "fr": "Schéma du tube digestif et du trajet des aliments à travers ses organes" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "بعض أعضاء الجهاز الهضمي ودورها", "fr": "Quelques organes de l'appareil digestif et leur rôle" },
+          "entetes": { "ar": ["العضو", "الدور الأساسي"], "fr": ["Organe", "Rôle principal"] },
+          "lignes": [
+            { "ar": ["الفم", "مضغ الأغذية وخلطها باللعاب"], "fr": ["Bouche", "Mastication des aliments et mélange avec la salive"] },
+            { "ar": ["المعدة", "خزن الأغذية ومزجها بالعصارة المعدية"], "fr": ["Estomac", "Stockage des aliments et mélange avec le suc gastrique"] },
+            { "ar": ["الأمعاء الدقيقة", "إتمام الهضم وامتصاص المغذيات"], "fr": ["Intestin grêle", "Achèvement de la digestion et absorption des nutriments"] },
+            { "ar": ["الأمعاء الغليظة", "امتصاص الماء وتكوين الفضلات"], "fr": ["Gros intestin", "Absorption de l'eau et formation des déchets"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "دور الهضم: من الأغذية إلى المغذيات", "fr": "Le rôle de la digestion : des aliments aux nutriments" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "الأغذية التي نتناولها معقدة التركيب ولا يمكن أن يستعملها الجسم كما هي. لذلك يقوم الجهاز الهضمي بتفكيكها تدريجيا إلى جزيئات بسيطة تسمى المغذيات (سكريات بسيطة، أحماض أمينية، أحماض دهنية...)، وهي وحدها القادرة على اجتياز جدار الأمعاء الدقيقة والانتقال إلى الدم.",
+            "fr": "Les aliments que nous consommons ont une structure complexe que l'organisme ne peut pas utiliser tels quels. L'appareil digestif les décompose donc progressivement en molécules simples appelées nutriments (sucres simples, acides aminés, acides gras...), seules capables de traverser la paroi de l'intestin grêle et de passer dans le sang."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتم هذا التفكيك بفضل {{terme:enzyme-digestive|الإنزيمات الهضمية}} التي تفرزها غدد مختلفة على طول الأنبوب الهضمي: الغدد اللعابية في الفم، وغدد المعدة، وكذا البنكرياس والأمعاء الدقيقة.",
+            "fr": "Cette décomposition est réalisée grâce aux {{terme:enzyme-digestive|enzymes digestives}} sécrétées par différentes glandes tout au long du tube digestif : les glandes salivaires dans la bouche, les glandes de l'estomac, ainsi que le pancréas et l'intestin grêle."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "taarif",
+          "titre": { "ar": "تعريف: الزغابات المعوية", "fr": "Définition : les villosités intestinales" },
+          "texte": {
+            "ar": "الزغابات المعوية هي نتوءات صغيرة جدا تغطي الجدار الداخلي للأمعاء الدقيقة، وتزيد من مساحة سطح الامتصاص بشكل كبير، مما يُسهّل مرور المغذيات إلى الدم.",
+            "fr": "Les villosités intestinales sont de minuscules replis qui tapissent la paroi interne de l'intestin grêle. Elles augmentent considérablement la surface d'absorption, facilitant le passage des nutriments dans le sang."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "istintaj",
+          "titre": { "ar": "استنتاج", "fr": "Déduction" },
+          "texte": {
+            "ar": "الهضم ليس مجرد تفتيت ميكانيكي للأغذية، بل هو تحويل كيميائي بواسطة الإنزيمات يجعل من الممكن امتصاص المغذيات على مستوى الأمعاء الدقيقة.",
+            "fr": "La digestion n'est pas une simple fragmentation mécanique des aliments, mais une transformation chimique par les enzymes qui rend possible l'absorption des nutriments au niveau de l'intestin grêle."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "يبلغ طول الأمعاء الدقيقة عند الإنسان البالغ ما يقارب 6 أمتار، وهو ما يفسر الوقت الطويل نسبيا الذي تستغرقه الأغذية للمرور عبرها وإتمام الهضم والامتصاص.",
+            "fr": "L'intestin grêle d'un adulte mesure environ 6 mètres de long, ce qui explique le temps relativement long que mettent les aliments à le traverser pour achever la digestion et l'absorption."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "يمر الغذاء عبر أنبوب هضمي يضم الفم والمريء والمعدة والأمعاء الدقيقة والأمعاء الغليظة. وبفضل الإنزيمات الهضمية، تتحول الأغذية المعقدة إلى مغذيات بسيطة تُمتص على مستوى الأمعاء الدقيقة لتصل إلى الدم وتُستعمل من طرف الجسم.",
+            "fr": "Les aliments traversent un tube digestif comprenant la bouche, l'œsophage, l'estomac, l'intestin grêle et le gros intestin. Grâce aux enzymes digestives, les aliments complexes sont transformés en nutriments simples qui sont absorbés au niveau de l'intestin grêle pour rejoindre le sang et être utilisés par l'organisme."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما ترتيب أعضاء الأنبوب الهضمي الصحيح؟", "fr": "Quel est l'ordre correct des organes du tube digestif ?" },
+        "options": [
+          { "ar": "الفم، المعدة، المريء، الأمعاء الدقيقة", "fr": "Bouche, estomac, œsophage, intestin grêle" },
+          { "ar": "الفم، المريء، المعدة، الأمعاء الدقيقة", "fr": "Bouche, œsophage, estomac, intestin grêle" },
+          { "ar": "المريء، الفم، الأمعاء الدقيقة، المعدة", "fr": "Œsophage, bouche, intestin grêle, estomac" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "يسير الغذاء من الفم إلى المريء ثم المعدة فالأمعاء الدقيقة، وهو الترتيب الطبيعي لمسار الأغذية في الأنبوب الهضمي.",
+          "fr": "L'aliment progresse de la bouche vers l'œsophage, puis l'estomac, puis l'intestin grêle : c'est l'ordre naturel du trajet des aliments dans le tube digestif."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "لماذا يحتاج الجسم إلى تفكيك الأغذية إلى مغذيات بسيطة؟", "fr": "Pourquoi l'organisme a-t-il besoin de décomposer les aliments en nutriments simples ?" },
+        "options": [
+          { "ar": "لأن المغذيات البسيطة وحدها قادرة على اجتياز جدار الأمعاء والانتقال إلى الدم", "fr": "Parce que seuls les nutriments simples peuvent traverser la paroi intestinale et passer dans le sang" },
+          { "ar": "لتقليل حجم الأغذية فقط", "fr": "Uniquement pour réduire le volume des aliments" },
+          { "ar": "لأن المعدة لا تتحمل الأغذية الكبيرة", "fr": "Parce que l'estomac ne supporte pas les grosses particules" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "جدار الأمعاء الدقيقة لا يسمح إلا بمرور الجزيئات البسيطة (المغذيات) إلى الدم، لذلك يجب تفكيك الأغذية المعقدة أولا.",
+          "fr": "La paroi de l'intestin grêle ne laisse passer vers le sang que les petites molécules (les nutriments), d'où la nécessité de décomposer d'abord les aliments complexes."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "ما دور الإنزيمات الهضمية؟", "fr": "Quel est le rôle des enzymes digestives ?" },
+        "options": [
+          { "ar": "تسريع تفكيك الأغذية المعقدة إلى مغذيات بسيطة", "fr": "Accélérer la décomposition des aliments complexes en nutriments simples" },
+          { "ar": "تخزين الأغذية في المعدة", "fr": "Stocker les aliments dans l'estomac" },
+          { "ar": "نقل المغذيات مباشرة إلى الخلايا", "fr": "Transporter directement les nutriments vers les cellules" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "الإنزيمات الهضمية موادّ تُسرّع التفاعلات الكيميائية التي تُحوّل الأغذية المعقدة إلى مغذيات بسيطة قابلة للامتصاص.",
+          "fr": "Les enzymes digestives sont des substances qui accélèrent les réactions chimiques transformant les aliments complexes en nutriments simples et absorbables."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": "svt-1ac-respiration-echanges-gazeux", "lecon_suivante": null },
+  "tags": ["هضم", "تغذية", "digestion", "nutrition"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

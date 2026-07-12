@@ -1,0 +1,9 @@
+{
+  "id": "unite-cellule-tc",
+  "slug": "la-cellule",
+  "niveau": "tc",
+  "dorra": 1,
+  "filieres": ["tcs"],
+  "numero_ordre": 1,
+  "titre": { "ar": "الخلية: الوحدة البنيوية للكائنات الحية", "fr": "La cellule : unité structurale du vivant" }
+}

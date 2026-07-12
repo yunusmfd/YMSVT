@@ -1,0 +1,13 @@
+{
+  "id": "schema-cellule-animale",
+  "titre": { "ar": "مخطط مبسط لخلية حيوانية", "fr": "Schéma simplifié d'une cellule animale" },
+  "domaine": "biologie",
+  "image": "assets/images/svg/galerie-schema-cellule-animale.svg",
+  "legendes": [
+    { "ar": "الغشاء الهيولي: غلاف رقيق يحيط بالخلية وينظم دخول وخروج المواد", "fr": "Membrane plasmique : fine enveloppe entourant la cellule et régulant les échanges de substances" },
+    { "ar": "الهيولى (السيتوبلازم): وسط هلامي يحتوي على مختلف العُضيات الخلوية", "fr": "Cytoplasme : milieu gélatineux contenant les différents organites cellulaires" },
+    { "ar": "النواة: تحتوي على المادة الوراثية (ADN) وتتحكم في نشاط الخلية", "fr": "Noyau : contient le matériel génétique (ADN) et contrôle l'activité cellulaire" },
+    { "ar": "الميتوكوندري: عضية مسؤولة عن إنتاج الطاقة اللازمة لعمل الخلية", "fr": "Mitochondrie : organite responsable de la production d'énergie nécessaire au fonctionnement cellulaire" }
+  ],
+  "lecons_liees": []
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title4 desc4">
+  <title id="title4">القلب والدورة الدموية المزدوجة</title>
+  <desc id="desc4">مخطط للقلب يبين الدورة الدموية الصغرى نحو الرئتين والدورة الدموية الكبرى نحو باقي أعضاء الجسم.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- القلب في الوسط -->
+  <path d="M340 220 C300 160 220 170 220 230 C220 280 300 320 340 350 C380 320 460 280 460 230 C460 170 380 160 340 220 Z"
+        fill="#8B4A2B" stroke="#1B241F" stroke-width="3" transform="translate(60,-30)" />
+  <text x="400" y="215" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" font-weight="bold" fill="#F9FAF7" data-lang="ar">القلب</text>
+  <text x="400" y="215" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="bold" fill="#F9FAF7" data-lang="fr">Cœur</text>
+
+  <!-- الدورة الصغرى (نحو الرئتين) - أعلى -->
+  <path d="M400 145 C400 90 280 70 250 110 C230 140 260 165 300 160" fill="none" stroke="#3B6E8F" stroke-width="6" marker-end="url(#arrowSmall)" />
+  <path d="M320 155 C280 175 260 130 300 105 C330 85 400 90 400 145" fill="none" stroke="#C17A2E" stroke-width="6" marker-end="url(#arrowSmallBack)" />
+  <ellipse cx="230" cy="95" rx="55" ry="38" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <text x="230" y="80" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="ar">الرئتان</text>
+  <text x="230" y="80" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="bold" fill="#204F3F" data-lang="fr">Poumons</text>
+  <text x="230" y="100" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#1B241F" data-lang="ar">تزوّد بـ O2</text>
+  <text x="230" y="100" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#1B241F" data-lang="fr">Oxygénation</text>
+  <text x="180" y="40" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#3B6E8F" data-lang="ar">الدورة الصغرى (الرئوية)</text>
+  <text x="180" y="40" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#3B6E8F" data-lang="fr">Petite circulation (pulmonaire)</text>
+
+  <!-- الدورة الكبرى (نحو الجسم) - أسفل -->
+  <path d="M400 350 C400 300 560 260 590 300 C610 330 580 355 540 345" fill="none" stroke="#3B6E8F" stroke-width="6" marker-end="url(#arrowBig)" />
+  <path d="M500 345 C540 330 580 300 550 270 C520 245 400 260 400 300" fill="none" stroke="#C17A2E" stroke-width="6" marker-end="url(#arrowBigBack)" />
+  <rect x="560" y="290" width="120" height="70" rx="10" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <text x="620" y="320" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="ar">أعضاء الجسم</text>
+  <text x="620" y="320" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="bold" fill="#204F3F" data-lang="fr">Organes du corps</text>
+  <text x="620" y="340" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#1B241F" data-lang="ar">استهلاك O2</text>
+  <text x="620" y="340" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="#1B241F" data-lang="fr">Consommation O2</text>
+  <text x="600" y="245" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#8B4A2B" data-lang="ar">الدورة الكبرى (الجسمية)</text>
+  <text x="600" y="245" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#8B4A2B" data-lang="fr">Grande circulation (systémique)</text>
+
+  <defs>
+    <marker id="arrowSmall" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3B6E8F" /></marker>
+    <marker id="arrowSmallBack" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#C17A2E" /></marker>
+    <marker id="arrowBig" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#3B6E8F" /></marker>
+    <marker id="arrowBigBack" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#C17A2E" /></marker>
+  </defs>
+
+  <!-- مفتاح الألوان -->
+  <line x1="60" y1="360" x2="90" y2="360" stroke="#3B6E8F" stroke-width="6" />
+  <text x="100" y="365" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">دم غني بـ O2</text>
+  <text x="100" y="365" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">Sang riche en O2</text>
+</svg>

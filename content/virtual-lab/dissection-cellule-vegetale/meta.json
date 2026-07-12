@@ -1,0 +1,12 @@
+{
+  "id": "dissection-cellule-vegetale",
+  "type": "animation",
+  "niveau": "tc",
+  "titre": { "ar": "شرّح خلية نباتية افتراضيا", "fr": "Dissection virtuelle d'une cellule végétale" },
+  "description": {
+    "ar": "رسم توضيحي تفاعلي يعرض مكونات الخلية النباتية الرئيسية: الجدار الخلوي، الغشاء الهيولي، النواة، البلاستيدات الخضراء، والفجوة العصارية.",
+    "fr": "Une illustration interactive présentant les principaux constituants de la cellule végétale : paroi cellulaire, membrane plasmique, noyau, chloroplastes et vacuole."
+  },
+  "vignette": null,
+  "animation_src": "assets/images/svg/dissection-cellule-vegetale-animation.svg"
+}

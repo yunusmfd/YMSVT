@@ -1,0 +1,194 @@
+{
+  "id": "svt-3ac-seismes",
+  "slug": "seismes",
+  "cycle": "iaadadi",
+  "niveau": "3ac",
+  "unite_id": "unite-geologie-interne-3ac",
+  "dorra": 1,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "الزلازل", "fr": "Les séismes" },
+  "duree_estimee_min": 20,
+  "domaine_specialite": "geologie",
+  "objectifs": {
+    "ar": [
+      "تحديد أسباب حدوث الزلازل وعلاقتها بحركة الصفائح والفوالق",
+      "التمييز بين البؤرة والمركز السطحي وموجات الزلازل",
+      "التعرف على مبدأ قياس شدة الزلازل ووسائل الوقاية من مخاطرها"
+    ],
+    "fr": [
+      "Identifier les causes des séismes et leur lien avec les failles et les plaques",
+      "Distinguer le foyer, l'épicentre et les ondes sismiques",
+      "Comprendre le principe de mesure de la magnitude et les moyens de prévention"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "ما هو الزلزال؟", "fr": "Qu'est-ce qu'un séisme ?" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "{{terme:seisme|الزلزال}} هو اهتزاز مفاجئ وعنيف لسطح الأرض. تنكسر الصخور في العمق عندما تتجاوز الضغوط المتراكمة قدرتها على التحمل، فتتحرك الكتلتان الصخريتان المتجاورتان بشكل مفاجئ على مستوى سطح كسر يُسمى الفالق. هذا التحرر المفاجئ للطاقة هو الذي يُنتج الاهتزازات التي نشعر بها.",
+            "fr": "Un {{terme:seisme|séisme}} est une secousse brusque et violente de la surface terrestre. En profondeur, les roches se brisent lorsque les contraintes accumulées dépassent leur résistance, provoquant un déplacement soudain le long d'une surface de rupture appelée faille. Cette libération brutale d'énergie produit les vibrations que l'on ressent en surface."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تتركز معظم الزلازل القوية على مستوى حدود الصفائح التكتونية، حيث تتحرك الصفائح الصخرية الكبيرة المكوّنة لسطح الأرض بالنسبة لبعضها البعض (تباعدا أو تقاربا أو انزلاقا)، مما يولّد إجهادات كبيرة على الصخور المجاورة للحدود.",
+            "fr": "La majorité des séismes puissants se concentrent au niveau des limites des plaques tectoniques, là où ces grandes plaques rigides se déplacent les unes par rapport aux autres (écartement, rapprochement ou coulissement), générant d'importantes contraintes dans les roches voisines de la limite."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/seisme-foyer-epicentre.svg",
+          "legende": { "ar": "البؤرة (منشأ الزلزال في العمق) والمركز السطحي (فوق المركز) على سطح الأرض", "fr": "Le foyer (origine du séisme en profondeur) et l'épicentre à la surface" }
+        },
+        {
+          "type": "encadre",
+          "variante": "taarif",
+          "titre": { "ar": "الفالق", "fr": "La faille" },
+          "texte": {
+            "ar": "الفالق هو سطح كسر في الصخور تتحرك بموجبه كتلتان صخريتان إحداهما بالنسبة للأخرى. يمكن أن يكون هذا التحرك عموديا أو أفقيا، وهو المكان الذي تتراكم فيه الإجهادات قبل أن تتحرر فجأة على شكل زلزال.",
+            "fr": "Une faille est une surface de rupture dans les roches le long de laquelle deux blocs se déplacent l'un par rapport à l'autre, verticalement ou horizontalement. C'est le lieu où les contraintes s'accumulent avant de se libérer brutalement sous forme de séisme."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "من البؤرة إلى السطح: الموجات الزلزالية", "fr": "Du foyer à la surface : les ondes sismiques" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تنطلق الطاقة المتحررة عند البؤرة على شكل موجات زلزالية تنتشر في جميع الاتجاهات عبر باطن الأرض. تصل هذه الموجات إلى {{terme:epicentre|المركز السطحي}} أولا، وهي النقطة الواقعة على السطح عموديا فوق البؤرة، حيث تكون شدة الاهتزاز عادة في أقصاها.",
+            "fr": "L'énergie libérée au foyer se propage sous forme d'ondes sismiques dans toutes les directions à travers l'intérieur de la Terre. Ces ondes atteignent en premier l'{{terme:epicentre|épicentre}}, point de la surface situé à la verticale du foyer, où l'intensité des secousses est généralement maximale."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/ondes-sismiques-types.svg",
+          "legende": { "ar": "مقارنة بين الموجة الأولية P والموجة الثانوية S", "fr": "Comparaison entre l'onde primaire P et l'onde secondaire S" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مقارنة بين نوعي الموجات الزلزالية", "fr": "Comparaison des deux types d'ondes sismiques" },
+          "entetes": { "ar": ["الخاصية", "الموجة P (أولية)", "الموجة S (ثانوية)"], "fr": ["Caractéristique", "Onde P (primaire)", "Onde S (secondaire)"] },
+          "lignes": [
+            { "ar": ["السرعة", "أسرع، تصل أولا", "أبطأ، تصل ثانيا"], "fr": ["Vitesse", "Plus rapide, arrive en premier", "Plus lente, arrive en second"] },
+            { "ar": ["اتجاه الاهتزاز", "في نفس اتجاه الانتشار", "عمودي على اتجاه الانتشار"], "fr": ["Sens de vibration", "Dans le sens de propagation", "Perpendiculaire à la propagation"] },
+            { "ar": ["الأضرار", "أقل تخريبا", "أشد تخريبا عموما"], "fr": ["Dégâts", "Généralement moins destructrice", "Généralement plus destructrice"] }
+          ]
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Observation" },
+          "texte": {
+            "ar": "كلما ابتعدنا عن المركز السطحي، كلما تناقصت شدة الاهتزازات المُحسّة والأضرار الناتجة عنها بشكل عام، رغم أن طبيعة التربة والبناء تؤثر أيضا في حجم الأضرار.",
+            "fr": "Plus on s'éloigne de l'épicentre, plus l'intensité des secousses ressenties et les dégâts diminuent en général, même si la nature du sol et des constructions influence également l'ampleur des dommages."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "قياس الزلازل والوقاية من مخاطرها", "fr": "Mesurer et prévenir les risques sismiques" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يقيس العلماء الزلازل باستعمال أجهزة تُسمى مقاييس الزلازل (Sismographes)، وتُسجَّل قوة الزلازل عادة بواسطة سلّم المقدار (Magnitude) الذي يعكس كمية الطاقة المتحررة عند البؤرة. أما شدة الزلازل فتُقاس بمقياس آخر يعتمد على حجم الأضرار المُلاحظة والشعور بالاهتزاز في مكان معيّن.",
+            "fr": "Les scientifiques mesurent les séismes à l'aide d'appareils appelés sismographes. La force d'un séisme est généralement exprimée par une échelle de magnitude, qui reflète la quantité d'énergie libérée au foyer. L'intensité, elle, est mesurée par une autre échelle basée sur les dégâts observés et la perception des secousses en un lieu donné."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "tanbih",
+          "titre": { "ar": "تنبيه", "fr": "Attention" },
+          "texte": {
+            "ar": "سلّم المقدار ليس خطيّا: الفرق بين درجتين متتاليتين (مثلا من 5 إلى 6) يعني طاقة متحررة أكبر بعشرات المرات، وليس مجرد زيادة بسيطة.",
+            "fr": "L'échelle de magnitude n'est pas linéaire : passer d'un degré à un autre (par exemple de 5 à 6) correspond à une énergie libérée des dizaines de fois plus grande, pas à une simple augmentation légère."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "لا يمكن حتى الآن التنبؤ بدقة بموعد وقوع الزلازل، لذلك تعتمد الوقاية على تقليل المخاطر: تشييد بنايات مقاومة للزلازل، إعداد خرائط لمناطق الخطر، تنظيم تداريب الإخلاء، وتوعية السكان بسلوكيات الحماية أثناء الهزة (الابتعاد عن النوافذ، الاحتماء تحت طاولة صلبة...).",
+            "fr": "À ce jour, on ne peut pas prédire avec précision la date d'un séisme. La prévention repose donc sur la réduction des risques : construction parasismique, cartographie des zones à risque, exercices d'évacuation, et sensibilisation de la population aux bons réflexes pendant la secousse (s'éloigner des fenêtres, s'abriter sous un meuble solide...)."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "ضرب زلزال مدينة أكادير المغربية سنة 1960 وتسبب في خسائر بشرية جسيمة رغم قوته المتوسطة نسبيا، بسبب هشاشة البنايات آنذاك. أدى هذا الحدث إلى إحداث أول قانون مغربي لمقاومة الزلازل في البناء.",
+            "fr": "Le séisme d'Agadir, au Maroc, en 1960 a causé de très lourdes pertes humaines malgré une magnitude relativement modérée, en raison de la fragilité des constructions de l'époque. Cet événement a conduit à l'adoption du premier règlement marocain de construction parasismique."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "ينشأ الزلزال عن تحرر مفاجئ للطاقة على مستوى فالق، غالبا قرب حدود الصفائح التكتونية. تنتشر هذه الطاقة على شكل موجات زلزالية من البؤرة نحو المركز السطحي ثم باقي المناطق. تُقاس قوة الزلازل بالمقدار، وتعتمد الوقاية من مخاطرها أساسا على البناء المقاوم للزلازل والتوعية.",
+            "fr": "Un séisme naît d'une libération brutale d'énergie au niveau d'une faille, souvent près des limites de plaques tectoniques. Cette énergie se propage sous forme d'ondes sismiques depuis le foyer vers l'épicentre puis les zones environnantes. La force d'un séisme se mesure par la magnitude, et la prévention repose principalement sur la construction parasismique et la sensibilisation."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما السبب الرئيسي لمعظم الزلازل؟", "fr": "Quelle est la cause principale de la plupart des séismes ?" },
+        "options": [
+          { "ar": "التحرك المفاجئ للصخور على مستوى فالق", "fr": "Un déplacement brusque des roches le long d'une faille" },
+          { "ar": "ارتفاع درجة حرارة الغلاف الجوي", "fr": "Une hausse de la température de l'atmosphère" },
+          { "ar": "تغير مستوى مياه المحيطات", "fr": "Une variation du niveau des océans" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "الزلازل تنتج عن تحرر مفاجئ للطاقة عندما تتجاوز الإجهادات المتراكمة قدرة الصخور على التحمل، فتتحرك الكتلتان على جانبي الفالق.",
+          "fr": "Les séismes résultent d'une libération soudaine d'énergie lorsque les contraintes accumulées dépassent la résistance des roches, provoquant le déplacement des deux blocs de part et d'autre de la faille."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "أين تقع البؤرة الزلزالية بالنسبة للمركز السطحي؟", "fr": "Où se situe le foyer sismique par rapport à l'épicentre ?" },
+        "options": [
+          { "ar": "في العمق، عموديا تحت المركز السطحي", "fr": "En profondeur, à la verticale de l'épicentre" },
+          { "ar": "على السطح، بجانب المركز السطحي", "fr": "En surface, juste à côté de l'épicentre" },
+          { "ar": "في الغلاف الجوي فوق منطقة الزلزال", "fr": "Dans l'atmosphère, au-dessus de la zone du séisme" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "البؤرة هي النقطة الحقيقية لانطلاق الزلزال في العمق، بينما المركز السطحي هو إسقاطها العمودي على سطح الأرض.",
+          "fr": "Le foyer est le point réel de déclenchement du séisme en profondeur, tandis que l'épicentre est sa projection verticale à la surface terrestre."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "أي وسيلة تُعتبر الأنسب حاليا للحد من مخاطر الزلازل؟", "fr": "Quel moyen est actuellement le plus adapté pour réduire les risques sismiques ?" },
+        "options": [
+          { "ar": "التنبؤ الدقيق بتاريخ وقوع الزلزال", "fr": "Prédire précisément la date du séisme" },
+          { "ar": "البناء المقاوم للزلازل والتوعية بسلوكيات الحماية", "fr": "La construction parasismique et la sensibilisation aux bons réflexes" },
+          { "ar": "إيقاف حركة الصفائح التكتونية", "fr": "Arrêter le mouvement des plaques tectoniques" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "لا يمكن حاليا التنبؤ بدقة بموعد الزلازل ولا التحكم في حركة الصفائح، لذلك تبقى الوقاية عبر البناء المقاوم والتوعية أنجع وسيلة للحد من الأضرار.",
+          "fr": "Il n'est actuellement pas possible de prédire précisément un séisme ni de contrôler le mouvement des plaques ; la prévention par la construction parasismique et la sensibilisation reste donc le moyen le plus efficace de réduire les dégâts."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": "svt-3ac-photosynthese" },
+  "tags": ["جيولوجيا", "زلازل", "géologie", "séismes"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

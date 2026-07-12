@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">البؤرة والمركز السطحي للزلزال</title>
+  <desc id="desc1">مقطع تحت سطح الأرض يبين فالقا، والبؤرة الزلزالية في العمق، والمركز السطحي فوقها مباشرة على السطح، مع أمواج زلزالية دائرية تنتشر من البؤرة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الطبقة الصخرية تحت السطح -->
+  <rect x="0" y="90" width="800" height="260" fill="#E3E8D6" />
+  <!-- خط السطح -->
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#204F3F" stroke-width="4" />
+
+  <!-- الفالق -->
+  <path d="M 340 90 L 460 350" stroke="#8B4A2B" stroke-width="5" fill="none" stroke-dasharray="2 0" />
+  <text x="480" y="330" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#8B4A2B" data-lang="ar">الفالق</text>
+  <text x="480" y="330" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#8B4A2B" data-lang="fr">Faille</text>
+
+  <!-- أمواج دائرية من البؤرة -->
+  <circle cx="400" cy="230" r="40" fill="none" stroke="#3B6E8F" stroke-width="2.5" opacity="0.9" />
+  <circle cx="400" cy="230" r="75" fill="none" stroke="#3B6E8F" stroke-width="2" opacity="0.7" />
+  <circle cx="400" cy="230" r="110" fill="none" stroke="#3B6E8F" stroke-width="1.5" opacity="0.5" />
+
+  <!-- البؤرة -->
+  <circle cx="400" cy="230" r="10" fill="#C17A2E" stroke="#1B241F" stroke-width="1.5" />
+  <text x="420" y="235" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">البؤرة</text>
+  <text x="420" y="235" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Foyer</text>
+
+  <!-- خط عمودي يصل البؤرة بالمركز السطحي -->
+  <line x1="400" y1="230" x2="400" y2="90" stroke="#1B241F" stroke-width="2" stroke-dasharray="6 5" />
+
+  <!-- المركز السطحي -->
+  <circle cx="400" cy="90" r="9" fill="#3C7A63" stroke="#1B241F" stroke-width="1.5" />
+  <text x="415" y="70" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">المركز السطحي (فوق المركز)</text>
+  <text x="415" y="70" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Épicentre</text>
+
+  <!-- سطح الأرض label -->
+  <text x="30" y="75" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#204F3F" data-lang="ar">سطح الأرض</text>
+  <text x="30" y="75" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#204F3F" data-lang="fr">Surface terrestre</text>
+
+  <!-- أمواج تصل السطح -->
+  <path d="M 250 90 q 15 -12 30 0" stroke="#3B6E8F" stroke-width="2" fill="none" />
+  <path d="M 500 90 q 15 -12 30 0" stroke="#3B6E8F" stroke-width="2" fill="none" />
+  <text x="620" y="230" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#3B6E8F" data-lang="ar">الأمواج الزلزالية</text>
+  <text x="620" y="230" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#3B6E8F" data-lang="fr">Ondes sismiques</text>
+</svg>

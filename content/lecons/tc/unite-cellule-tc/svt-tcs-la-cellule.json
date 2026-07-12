@@ -1,0 +1,196 @@
+{
+  "id": "svt-tcs-la-cellule",
+  "slug": "la-cellule",
+  "cycle": "thanawi-taahili",
+  "niveau": "tc",
+  "filieres": ["tcs"],
+  "unite_id": "unite-cellule-tc",
+  "dorra": 1,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "الخلية: الوحدة البنيوية والوظيفية للكائنات الحية", "fr": "La cellule : unité structurale et fonctionnelle du vivant" },
+  "duree_estimee_min": 30,
+  "domaine_specialite": "cytologie",
+  "objectifs": {
+    "ar": [
+      "شرح مبادئ النظرية الخلوية وأهميتها التاريخية",
+      "المقارنة بين البنية العامة للخلية الحيوانية والخلية النباتية",
+      "التعرف على الأعضية الخلوية الرئيسية وربط كل منها بوظيفته"
+    ],
+    "fr": [
+      "Expliquer les principes de la théorie cellulaire et leur portée historique",
+      "Comparer l'organisation générale de la cellule animale et de la cellule végétale",
+      "Identifier les principaux organites cellulaires et associer chacun à sa fonction"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "النظرية الخلوية: الخلية وحدة الحياة", "fr": "La théorie cellulaire : la cellule, unité du vivant" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "أظهرت الملاحظات المجهرية المتراكمة منذ القرن السابع عشر أن جميع الكائنات الحية، من أبسط البكتيريا إلى أعقد الحيوانات والنباتات، تتكون من وحدات بنيوية دقيقة تُسمى الخلايا. أدت هذه الملاحظات إلى صياغة **النظرية الخلوية** التي تنص على أن الخلية هي الوحدة البنيوية والوظيفية الأساسية لكل كائن حي، وأن كل خلية جديدة تنشأ عن انقسام خلية سابقة.",
+            "fr": "Les observations microscopiques accumulées depuis le XVIIe siècle ont montré que tous les êtres vivants, de la bactérie la plus simple aux animaux et végétaux les plus complexes, sont constitués d'unités structurales microscopiques appelées cellules. Ces observations ont abouti à la **théorie cellulaire**, selon laquelle la cellule est l'unité structurale et fonctionnelle de base de tout être vivant, et toute nouvelle cellule provient de la division d'une cellule préexistante."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تُصنَّف الخلايا إلى نوعين كبيرين: الخلايا بدائية النواة (كالبكتيريا) التي لا تتوفر على نواة حقيقية محاطة بغلاف، والخلايا حقيقية النواة التي تحتوي على نواة مُحدَّدة بغلاف نووي، وهي حالة خلايا الحيوانات والنباتات التي سنركز عليها في هذا الدرس.",
+            "fr": "Les cellules se répartissent en deux grands groupes : les cellules procaryotes (comme les bactéries), dépourvues de noyau véritable délimité par une enveloppe, et les cellules eucaryotes, qui possèdent un noyau bien individualisé par une enveloppe nucléaire — c'est le cas des cellules animales et végétales sur lesquelles porte cette leçon."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "كل خلية حية، مهما كان نوعها، تتوفر على {{terme:membrane-plasmique|غشاء هيولي}} يحدّها، وهيولى (سيتوبلازم) تحتوي على أعضياتها، ومادة وراثية تتحكم في نشاطها.",
+            "fr": "Toute cellule vivante, quel que soit son type, possède une {{terme:membrane-plasmique|membrane plasmique}} qui la délimite, un cytoplasme contenant ses organites, et un matériel génétique qui contrôle son activité."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "الخلية الحيوانية والخلية النباتية: دراسة مقارنة", "fr": "Cellule animale et cellule végétale : étude comparative" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "رغم أن الخلية الحيوانية والخلية النباتية تتقاسمان الأعضية الأساسية (النواة، الغشاء الهيولي، الهيولى، {{terme:mitochondrie|الميتوكوندري}})، فإنهما تختلفان في بعض المكونات المرتبطة بنمط تغذية كل منهما. تتوفر الخلية النباتية على جدار خلوي صلب يُحيط بالغشاء الهيولي من الخارج، وعلى فجوة عصارية كبيرة لتخزين الماء والمواد، وعلى {{terme:chloroplaste|بلاستيدات خضراء}} تُمكّنها من القيام بالتركيب الضوئي، وهي عناصر غائبة في الخلية الحيوانية.",
+            "fr": "Bien que la cellule animale et la cellule végétale partagent les organites fondamentaux (noyau, membrane plasmique, cytoplasme, {{terme:mitochondrie|mitochondrie}}), elles diffèrent par certains éléments liés à leur mode de nutrition. La cellule végétale possède une paroi rigide entourant la membrane plasmique, une grande vacuole de stockage de l'eau et des substances, ainsi que des {{terme:chloroplaste|chloroplastes}} lui permettant la photosynthèse — des éléments absents de la cellule animale."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/cellule-animale-vegetale-comparaison.svg",
+          "legende": { "ar": "مقارنة تخطيطية بين الخلية الحيوانية والخلية النباتية", "fr": "Comparaison schématique entre la cellule animale et la cellule végétale" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "جدول مقارنة بين الخلية الحيوانية والخلية النباتية", "fr": "Tableau comparatif cellule animale / cellule végétale" },
+          "entetes": { "ar": ["المكوّن", "الخلية الحيوانية", "الخلية النباتية"], "fr": ["Composant", "Cellule animale", "Cellule végétale"] },
+          "lignes": [
+            { "ar": ["جدار خلوي", "غائب", "موجود (بكتين وسليلوز)"], "fr": ["Paroi cellulaire", "Absente", "Présente (pectocellulosique)"] },
+            { "ar": ["فجوة عصارية", "غائبة أو صغيرة جدا", "كبيرة ومركزية غالبا"], "fr": ["Vacuole", "Absente ou très petite", "Grande, souvent centrale"] },
+            { "ar": ["بلاستيدات خضراء", "غائبة", "موجودة في الخلايا الخضراء"], "fr": ["Chloroplastes", "Absents", "Présents dans les cellules chlorophylliennes"] },
+            { "ar": ["النواة والميتوكوندري والغشاء الهيولي", "موجودة", "موجودة"], "fr": ["Noyau, mitochondrie, membrane plasmique", "Présents", "Présents"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "الأعضية الخلوية الرئيسية ووظائفها", "fr": "Les principaux organites cellulaires et leurs fonctions" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تحتوي كل خلية حقيقية النواة على {{terme:noyau-cellulaire|نواة}} تُعتبر مركز التحكم في نشاطها، إذ تحفظ المادة الوراثية (ADN) المسؤولة عن توجيه جميع الوظائف الخلوية. تحيط بالنواة غلاف نووي مزدوج يتخلله ثقوب تسمح بمرور المواد بين النواة والهيولى.",
+            "fr": "Toute cellule eucaryote possède un {{terme:noyau-cellulaire|noyau}} considéré comme le centre de contrôle de son activité, car il conserve le matériel génétique (ADN) responsable de la direction de toutes les fonctions cellulaires. Le noyau est entouré d'une double enveloppe nucléaire percée de pores permettant les échanges avec le cytoplasme."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/noyau-structure-detail.svg",
+          "legende": { "ar": "البنية التفصيلية للنواة: الغلاف النووي المثقب والنوية والكروماتين", "fr": "Structure détaillée du noyau : enveloppe poreuse, nucléole et chromatine" }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "بجانب النواة، تحتوي الهيولى على أعضية أخرى متخصصة، أبرزها {{terme:mitochondrie|الميتوكوندري}} المسؤولة عن إنتاج الطاقة (ATP) اللازمة لجميع الأنشطة الخلوية عبر التنفس الخلوي. أما {{terme:membrane-plasmique|الغشاء الهيولي}} فيُنظّم بشكل انتقائي دخول وخروج المواد بين الخلية ووسطها الخارجي.",
+            "fr": "Outre le noyau, le cytoplasme contient d'autres organites spécialisés, dont la {{terme:mitochondrie|mitochondrie}}, responsable de la production d'énergie (ATP) nécessaire à toutes les activités cellulaires via la respiration cellulaire. Quant à la {{terme:membrane-plasmique|membrane plasmique}}, elle régule de façon sélective l'entrée et la sortie des substances entre la cellule et son milieu extérieur."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "istintaj",
+          "titre": { "ar": "استنتاج", "fr": "Déduction" },
+          "texte": {
+            "ar": "تعمل أعضية الخلية بتكامل وظيفي: النواة تتحكم وتوجه، الميتوكوندري تُمد الخلية بالطاقة، والغشاء الهيولي يُنظّم التبادلات. هذا التكامل هو ما يُمكّن الخلية من القيام بوظائفها الحيوية.",
+            "fr": "Les organites cellulaires fonctionnent en complémentarité : le noyau contrôle et dirige, la mitochondrie fournit l'énergie, et la membrane plasmique régule les échanges. Cette complémentarité permet à la cellule d'assurer ses fonctions vitales."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "tanbih",
+          "titre": { "ar": "تنبيه", "fr": "Attention" },
+          "texte": {
+            "ar": "لا تخلط بين الفجوة العصارية (تخزين) والبلاستيدة الخضراء (تركيب ضوئي): كلاهما خاص بالخلية النباتية لكن لكل منهما دور مختلف تماما.",
+            "fr": "Ne confondez pas la vacuole (stockage) et le chloroplaste (photosynthèse) : les deux sont spécifiques à la cellule végétale mais assurent des rôles totalement différents."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "تحتوي بعض الخلايا العصبية عند الإنسان على امتدادات يمكن أن يبلغ طولها أكثر من متر واحد، رغم أن جسم الخلية نفسه لا يتجاوز حجمه بضع عشرات من الميكرومترات فقط.",
+            "fr": "Certains neurones humains possèdent des prolongements pouvant dépasser un mètre de long, alors que le corps cellulaire lui-même ne mesure que quelques dizaines de micromètres."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "الخلية هي الوحدة البنيوية والوظيفية لكل كائن حي. تتقاسم الخلية الحيوانية والنباتية أعضية أساسية (نواة، غشاء هيولي، ميتوكوندري)، لكن الخلية النباتية تتميز بجدار خلوي وفجوة عصارية وبلاستيدات خضراء ترتبط بنمط تغذيتها الذاتية.",
+            "fr": "La cellule est l'unité structurale et fonctionnelle de tout être vivant. Cellule animale et cellule végétale partagent des organites essentiels (noyau, membrane plasmique, mitochondrie), mais la cellule végétale se distingue par une paroi, une vacuole et des chloroplastes liés à son mode de nutrition autotrophe."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما الذي يميّز الخلية النباتية عن الخلية الحيوانية؟", "fr": "Qu'est-ce qui distingue la cellule végétale de la cellule animale ?" },
+        "options": [
+          { "ar": "وجود نواة وميتوكوندري", "fr": "La présence d'un noyau et d'une mitochondrie" },
+          { "ar": "وجود جدار خلوي وفجوة عصارية وبلاستيدات خضراء", "fr": "La présence d'une paroi, d'une vacuole et de chloroplastes" },
+          { "ar": "وجود غشاء هيولي يحيط بالخلية", "fr": "La présence d'une membrane plasmique entourant la cellule" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "النواة والميتوكوندري والغشاء الهيولي مكونات مشتركة بين الخليتين، بينما الجدار الخلوي والفجوة العصارية الكبيرة والبلاستيدات الخضراء خاصة بالخلية النباتية.",
+          "fr": "Le noyau, la mitochondrie et la membrane plasmique sont communs aux deux types de cellules, tandis que la paroi, la grande vacuole et les chloroplastes sont spécifiques à la cellule végétale."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "ما وظيفة النواة داخل الخلية؟", "fr": "Quelle est la fonction du noyau dans la cellule ?" },
+        "options": [
+          { "ar": "إنتاج الطاقة اللازمة للخلية", "fr": "Produire l'énergie nécessaire à la cellule" },
+          { "ar": "حفظ المادة الوراثية والتحكم في نشاط الخلية", "fr": "Conserver le matériel génétique et contrôler l'activité cellulaire" },
+          { "ar": "تنظيم دخول وخروج المواد عبر الغشاء", "fr": "Réguler l'entrée et la sortie des substances par la membrane" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "النواة تحتوي على ADN وتُعتبر مركز التحكم الذي يوجّه جميع الأنشطة داخل الخلية، بينما إنتاج الطاقة من مهام الميتوكوندري وتنظيم التبادلات من مهام الغشاء الهيولي.",
+          "fr": "Le noyau contient l'ADN et constitue le centre de contrôle dirigeant toutes les activités cellulaires, alors que la production d'énergie relève de la mitochondrie et la régulation des échanges de la membrane plasmique."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "ما مضمون النظرية الخلوية؟", "fr": "Quel est le contenu de la théorie cellulaire ?" },
+        "options": [
+          { "ar": "كل الكائنات الحية تتكون من خلايا، وكل خلية تنشأ عن خلية سابقة", "fr": "Tout être vivant est constitué de cellules, et toute cellule provient d'une cellule préexistante" },
+          { "ar": "الخلايا النباتية فقط تتكاثر بالانقسام", "fr": "Seules les cellules végétales se reproduisent par division" },
+          { "ar": "الخلايا الحيوانية أكبر دائما من الخلايا النباتية", "fr": "Les cellules animales sont toujours plus grandes que les cellules végétales" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "النظرية الخلوية تنص على أن الخلية هي الوحدة البنيوية والوظيفية لكل كائن حي وأن كل خلية جديدة تنتج عن انقسام خلية سابقة، وهذا ينطبق على جميع الكائنات الحية بدون استثناء.",
+          "fr": "La théorie cellulaire affirme que la cellule est l'unité structurale et fonctionnelle de tout être vivant et que toute nouvelle cellule résulte de la division d'une cellule préexistante, ce qui s'applique à tous les êtres vivants sans exception."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": "svt-tcs-tectonique-plaques" },
+  "tags": ["خلية", "علم الخلية", "cytologie", "cellule"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

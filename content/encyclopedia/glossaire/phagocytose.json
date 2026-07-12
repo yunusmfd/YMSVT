@@ -1,0 +1,9 @@
+{
+  "id": "phagocytose",
+  "terme": { "ar": "البلعمة", "fr": "Phagocytose" },
+  "definition": {
+    "ar": "آلية دفاعية غير نوعية تقوم بها بعض الكريات البيضاء (البلعميات) بالتهام الأجسام الغريبة كالميكروبات وتخريبها داخل فجوات هضمية، وذلك دون تمييز نوعي بين مختلف الجسيمات الغريبة.",
+    "fr": "Mécanisme de défense non spécifique par lequel certains globules blancs (phagocytes) englobent les corps étrangers comme les microbes et les détruisent dans des vacuoles digestives, sans distinction spécifique entre les différents éléments étrangers."
+  },
+  "voir_aussi": ["lymphocyte"]
+}

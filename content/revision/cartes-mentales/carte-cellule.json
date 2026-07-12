@@ -1,0 +1,7 @@
+{
+  "id": "carte-cellule",
+  "niveau": "tc",
+  "unite": "الخلية",
+  "titre": { "ar": "خريطة ذهنية: عضيات الخلية", "fr": "Carte mentale : les organites de la cellule" },
+  "image": "assets/images/svg/carte-cellule.svg"
+}

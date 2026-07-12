@@ -1,0 +1,9 @@
+{
+  "id": "artere",
+  "terme": { "ar": "الشريان", "fr": "Artère" },
+  "definition": {
+    "ar": "وعاء دموي ذو جدار سميك ومرن ينقل الدم من القلب باتجاه أعضاء الجسم، ويكون الدم فيه غنيا بالأكسجين باستثناء الشريان الرئوي.",
+    "fr": "Vaisseau sanguin à paroi épaisse et élastique qui transporte le sang du cœur vers les organes. Il véhicule un sang riche en dioxygène, à l'exception de l'artère pulmonaire."
+  },
+  "voir_aussi": ["veine"]
+}

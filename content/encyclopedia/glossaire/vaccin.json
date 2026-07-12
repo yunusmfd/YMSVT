@@ -1,0 +1,9 @@
+{
+  "id": "vaccin",
+  "terme": { "ar": "اللقاح", "fr": "Vaccin" },
+  "definition": {
+    "ar": "مستحضر بيولوجي يحتوي على عنصر ممرض مُضعَّف أو مُعطَّل أو أجزاء منه، يُحقن في الجسم لتحفيز جهازه المناعي على إنتاج أجسام مضادة وخلايا ذاكرة مناعية، مما يوفر حماية مستقبلية ضد المرض دون الإصابة الفعلية به.",
+    "fr": "Préparation biologique contenant un agent pathogène atténué, inactivé, ou des fragments de celui-ci, injectée dans l'organisme afin de stimuler le système immunitaire à produire des anticorps et des cellules mémoires, procurant ainsi une protection future contre la maladie sans provoquer l'infection réelle."
+  },
+  "voir_aussi": ["globule-blanc"]
+}

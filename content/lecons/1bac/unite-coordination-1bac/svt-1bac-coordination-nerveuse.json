@@ -1,0 +1,173 @@
+{
+  "id": "svt-1bac-coordination-nerveuse",
+  "slug": "coordination-nerveuse",
+  "cycle": "thanawi-taahili",
+  "niveau": "1bac",
+  "filieres": ["1bac-se"],
+  "unite_id": "unite-coordination-1bac",
+  "dorra": 1,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "التنسيق العصبي: من المنبه إلى الاستجابة", "fr": "La coordination nerveuse : du stimulus à la réponse" },
+  "duree_estimee_min": 30,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": [
+      "التعرف على العناصر التشريحية لعصبون وتحديد دورها",
+      "وصف مسار المعلومة العصبية من المنبه إلى الاستجابة عبر القوس الانعكاسي",
+      "تفسير آلية المنعكس العضلي (الوتري) كمثال ملموس للتنسيق العصبي",
+      "التمييز بين المستقبل والمركز العصبي والعضو المنفذ"
+    ],
+    "fr": [
+      "Identifier les éléments anatomiques d'un neurone et préciser leur rôle",
+      "Décrire le trajet de l'information nerveuse du stimulus à la réponse via l'arc réflexe",
+      "Expliquer le mécanisme du réflexe myotatique comme exemple concret de coordination nerveuse",
+      "Distinguer récepteur, centre nerveux et effecteur"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "بنية الخلية العصبية", "fr": "Structure du neurone" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتفاعل جسم الإنسان باستمرار مع محيطه: تغيّر في الإضاءة، لمس جسم ساخن، أو صوت مفاجئ. هذه المنبهات يتم استقبالها ومعالجتها بفضل الجهاز العصبي، الذي تُشكّل {{terme:neurone|العصبونات}} وحداته البنيوية والوظيفية الأساسية. يتكون العصبون من جسم الخلية الذي يحتوي على النواة، وتغصنات تستقبل المعلومة، ومحور أسطواني ينقلها على شكل سيالة عصبية إلى خلايا أخرى عبر {{terme:synapse|مشابك عصبية}}.",
+            "fr": "Le corps humain interagit en permanence avec son environnement : variation de luminosité, contact avec un objet chaud, bruit soudain. Ces stimulus sont perçus et traités grâce au système nerveux, dont les {{terme:neurone|neurones}} constituent l'unité structurale et fonctionnelle de base. Un neurone comprend un corps cellulaire contenant le noyau, des dendrites qui reçoivent l'information, et un axone qui la conduit sous forme d'influx nerveux vers d'autres cellules via des {{terme:synapse|synapses}}."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/neurone-structure.svg",
+          "legende": { "ar": "بنية العصبون: التغصنات، جسم الخلية، المحور الأسطواني، غمد الميالين والنهايات المشبكية", "fr": "Structure du neurone : dendrites, corps cellulaire, axone, gaine de myéline et terminaisons synaptiques" }
+        },
+        {
+          "type": "encadre",
+          "variante": "taarif",
+          "titre": { "ar": "تعريف", "fr": "Définition" },
+          "texte": {
+            "ar": "غمد الميالين هو غلاف دهني يحيط بالمحور الأسطواني على شكل قطع متقطعة (تفصل بينها عقد رانفييه)، ويعمل على تسريع سريان السيالة العصبية بشكل ملحوظ.",
+            "fr": "La gaine de myéline est un revêtement lipidique qui entoure l'axone de façon discontinue (séparée par des nœuds de Ranvier) et accélère nettement la propagation de l'influx nerveux."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "من المنبه إلى الاستجابة: القوس الانعكاسي", "fr": "Du stimulus à la réponse : l'arc réflexe" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "عندما نلمس عن غير قصد جسما ساخنا، نسحب يدنا بسرعة قبل أن نشعر بالألم بوعي. هذه الاستجابة اللاإرادية والسريعة تُسمى {{terme:reflexe|منعكسا عصبيا}}، وتتبع مسارا عصبيا ثابتا يُسمى القوس الانعكاسي، يتكون من خمسة عناصر مرتبة كالتالي: المستقبل (يحوّل المنبه إلى سيالة عصبية) ← العصب الحسي (الوارد) ← المركز العصبي (النخاع الشوكي أو الدماغ) ← العصب الحركي (الصادر) ← العضو المنفذ (المستجيب) الذي ينتج الاستجابة.",
+            "fr": "Lorsque nous touchons involontairement un objet chaud, nous retirons rapidement la main avant même de ressentir consciemment la douleur. Cette réponse involontaire et rapide s'appelle un {{terme:reflexe|réflexe}}, et suit un trajet nerveux fixe appelé arc réflexe, composé de cinq éléments ordonnés ainsi : le récepteur (convertit le stimulus en influx nerveux) → le nerf sensitif (afférent) → le centre nerveux (moelle épinière ou cerveau) → le nerf moteur (efférent) → l'effecteur (organe qui produit la réponse)."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/arc-reflexe-myotatique.svg",
+          "legende": { "ar": "مخطط القوس الانعكاسي للمنعكس العضلي: من المنبه إلى الاستجابة العضلية", "fr": "Schéma de l'arc réflexe myotatique : du stimulus à la réponse musculaire" }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "مثال ملموس على ذلك هو **المنعكس العضلي (الوتري)**، الذي يمكن ملاحظته سريريا بضرب وتر الركبة برفق: يؤدي تمدد مفاجئ للعضلة الباسطة إلى استثارة مستقبلات حسية داخلها تُسمى المغازل العضلية. تُنقل هذه المعلومة عبر عصب حسي إلى النخاع الشوكي، حيث يحدث مشبك مباشر مع عصبون حركي (منعكس أحادي المشبك)، فتنتقل السيالة عبر عصب حركي لتعود إلى نفس العضلة وتُحدث تقلصها الفوري.",
+            "fr": "Un exemple concret est le **réflexe myotatique (rotulien)**, observable cliniquement en frappant légèrement le tendon rotulien : l'étirement brusque du muscle extenseur excite des récepteurs sensoriels internes appelés fuseaux neuromusculaires. Cette information est transmise via un nerf sensitif jusqu'à la moelle épinière, où elle fait synapse directement avec un neurone moteur (réflexe monosynaptique) ; l'influx repart alors par un nerf moteur vers ce même muscle, provoquant sa contraction immédiate."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Remarque" },
+          "texte": {
+            "ar": "المنعكس العضلي لا إرادي وثابت الاستجابة: نفس المنبه يُنتج دائما نفس الاستجابة، بخلاف السلوك الإرادي الذي يتطلب تدخل الدماغ ويمكن التحكم فيه.",
+            "fr": "Le réflexe myotatique est involontaire et stéréotypé : le même stimulus produit toujours la même réponse, contrairement au comportement volontaire qui nécessite l'intervention du cerveau et peut être contrôlé."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "tanbih",
+          "titre": { "ar": "تنبيه", "fr": "Attention" },
+          "texte": {
+            "ar": "لا يجب الخلط بين المستقبل الحسي (خلية أو عضو يستقبل المنبه) والعضو المنفذ (عضو ينفذ الاستجابة، غالبا عضلة أو غدة). في المنعكس العضلي، المستقبل والمستجيب يوجدان في نفس العضلة لكنهما وظيفتان مختلفتان.",
+            "fr": "Il ne faut pas confondre le récepteur sensoriel (cellule ou organe qui perçoit le stimulus) et l'effecteur (organe qui exécute la réponse, souvent un muscle ou une glande). Dans le réflexe myotatique, récepteur et effecteur se trouvent dans le même muscle, mais assurent des fonctions différentes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "يمكن للسيالة العصبية أن تنتقل بسرعة تصل إلى حوالي 120 مترا في الثانية في الألياف العصبية المغلفة بالميالين، أي أسرع بكثير من الألياف العصبية العارية من هذا الغلاف.",
+            "fr": "L'influx nerveux peut se propager à une vitesse atteignant environ 120 mètres par seconde dans les fibres nerveuses myélinisées, soit bien plus rapide que dans les fibres dépourvues de cette gaine."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "يعتمد التنسيق العصبي على مسار محدد يبدأ بمنبه يستثير مستقبلا حسيا، فتنتقل المعلومة عبر عصب حسي إلى مركز عصبي، ثم عبر عصب حركي إلى عضو منفذ يُنتج الاستجابة. المنعكس العضلي مثال بسيط وسريع يوضح هذا المسار (القوس الانعكاسي) بشكل عملي.",
+            "fr": "La coordination nerveuse repose sur un trajet précis : un stimulus excite un récepteur sensoriel, l'information circule via un nerf sensitif jusqu'à un centre nerveux, puis via un nerf moteur jusqu'à un effecteur qui produit la réponse. Le réflexe myotatique illustre concrètement et rapidement ce trajet (l'arc réflexe)."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما ترتيب عناصر القوس الانعكاسي بدءا من المنبه؟", "fr": "Quel est l'ordre des éléments de l'arc réflexe à partir du stimulus ?" },
+        "options": [
+          { "ar": "مستقبل ← عصب حسي ← مركز عصبي ← عصب حركي ← عضو منفذ", "fr": "Récepteur → nerf sensitif → centre nerveux → nerf moteur → effecteur" },
+          { "ar": "عضو منفذ ← عصب حركي ← مركز عصبي ← عصب حسي ← مستقبل", "fr": "Effecteur → nerf moteur → centre nerveux → nerf sensitif → récepteur" },
+          { "ar": "مستقبل ← مركز عصبي ← عضو منفذ ← عصب حسي", "fr": "Récepteur → centre nerveux → effecteur → nerf sensitif" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "المعلومة العصبية تنطلق من المستقبل الذي يحوّل المنبه إلى سيالة عصبية، تنتقل عبر عصب حسي إلى المركز العصبي، ثم عبر عصب حركي إلى العضو المنفذ الذي ينتج الاستجابة.",
+          "fr": "L'information nerveuse part du récepteur qui convertit le stimulus en influx nerveux, transite par le nerf sensitif jusqu'au centre nerveux, puis par le nerf moteur jusqu'à l'effecteur qui produit la réponse."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "ما الذي يميز المنعكس العضلي (الوتري)؟", "fr": "Qu'est-ce qui caractérise le réflexe myotatique (rotulien) ?" },
+        "options": [
+          { "ar": "استجابة إرادية يتحكم فيها الدماغ بشكل واعٍ", "fr": "Une réponse volontaire contrôlée consciemment par le cerveau" },
+          { "ar": "استجابة لا إرادية وسريعة وثابتة لنفس المنبه", "fr": "Une réponse involontaire, rapide et stéréotypée face au même stimulus" },
+          { "ar": "استجابة تتطلب معالجة معقدة في القشرة الدماغية", "fr": "Une réponse nécessitant un traitement complexe dans le cortex cérébral" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "المنعكس العضلي استجابة لا إرادية وسريعة وثابتة النمط، لأنه يمر عبر مشبك مباشر بين العصبون الحسي والعصبون الحركي على مستوى النخاع الشوكي دون الحاجة إلى تدخل الدماغ.",
+          "fr": "Le réflexe myotatique est une réponse involontaire, rapide et stéréotypée, car elle passe par une synapse directe entre le neurone sensitif et le neurone moteur au niveau de la moelle épinière, sans nécessiter l'intervention du cerveau."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "أين يوجد المستقبل الحسي والعضو المنفذ في حالة المنعكس العضلي الوتري؟", "fr": "Où se trouvent le récepteur sensoriel et l'effecteur dans le cas du réflexe myotatique ?" },
+        "options": [
+          { "ar": "في نفس العضلة الباسطة المعنية بالمنعكس", "fr": "Dans le même muscle extenseur concerné par le réflexe" },
+          { "ar": "في الدماغ فقط", "fr": "Uniquement dans le cerveau" },
+          { "ar": "في عضلتين مختلفتين ومتباعدتين", "fr": "Dans deux muscles différents et éloignés" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "في المنعكس العضلي، المغزل العضلي (المستقبل) والألياف العضلية (المستجيب) يوجدان معا داخل نفس العضلة، رغم اختلاف وظيفتيهما.",
+          "fr": "Dans le réflexe myotatique, le fuseau neuromusculaire (récepteur) et les fibres musculaires (effecteur) se trouvent tous deux dans le même muscle, bien que leurs fonctions diffèrent."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": "svt-1bac-lignes-defense" },
+  "tags": ["تنسيق عصبي", "منعكس", "عصبون", "coordination nerveuse", "réflexe", "neurone"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

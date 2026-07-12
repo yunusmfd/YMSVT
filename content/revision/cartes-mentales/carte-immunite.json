@@ -1,0 +1,7 @@
+{
+  "id": "carte-immunite",
+  "niveau": "2bac",
+  "unite": "المناعة",
+  "titre": { "ar": "خريطة ذهنية: المناعة", "fr": "Carte mentale : l'immunité" },
+  "image": "assets/images/svg/carte-immunite.svg"
+}

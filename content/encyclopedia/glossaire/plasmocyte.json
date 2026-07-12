@@ -1,0 +1,9 @@
+{
+  "id": "plasmocyte",
+  "terme": { "ar": "المصورة (الخلية البلازمية)", "fr": "Plasmocyte" },
+  "definition": {
+    "ar": "خلية ناتجة عن تكاثر وتمايز اللمفاويات البائية المنشطة، متخصصة في إفراز كميات كبيرة من الأجسام المضادة النوعية لمولد الضد المحفِّز، وتتميز بشبكة هيولية فعالة تدل على نشاطها الإفرازي المكثف.",
+    "fr": "Cellule issue de la prolifération et de la différenciation des lymphocytes B activés, spécialisée dans la sécrétion massive d'anticorps spécifiques de l'antigène déclencheur, caractérisée par un réticulum endoplasmique très développé traduisant son intense activité sécrétoire."
+  },
+  "voir_aussi": ["anticorps", "lymphocyte"]
+}

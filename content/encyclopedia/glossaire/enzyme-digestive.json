@@ -1,0 +1,9 @@
+{
+  "id": "enzyme-digestive",
+  "terme": { "ar": "الإنزيم الهضمي", "fr": "Enzyme digestive" },
+  "definition": {
+    "ar": "مادة بروتينية تفرزها غدد الجهاز الهضمي (مثل اللعاب والعصارة المعدية والعصارة المعوية) وتُسرّع تفكيك الأغذية المعقدة إلى مغذيات بسيطة قابلة للامتصاص.",
+    "fr": "Substance protéique sécrétée par les glandes du tube digestif (salive, suc gastrique, suc intestinal) qui accélère la transformation des aliments complexes en nutriments simples et absorbables."
+  },
+  "voir_aussi": ["digestion"]
+}

@@ -1,0 +1,241 @@
+{
+  "id": "svt-2bac-svt-immunite-reponse-specifique",
+  "slug": "reponse-immunitaire-specifique",
+  "cycle": "thanawi-taahili",
+  "niveau": "2bac",
+  "filieres": ["2bac-svt"],
+  "unite_id": "unite-immunite-2bac",
+  "dorra": 2,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "الاستجابة المناعية النوعية", "fr": "La réponse immunitaire spécifique" },
+  "duree_estimee_min": 40,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": [
+      "تعريف مفهوم مولد الضد والتمييز بين الذات واللاذات",
+      "تفسير آلية الاستجابة المناعية الخِلطية بتدخل اللمفاويات البائية والمصورات",
+      "تفسير آلية الاستجابة المناعية الخلوية بتدخل اللمفاويات التائية السامة",
+      "شرح آلية الذاكرة المناعية وتفسير فعالية الاستجابة الثانوية",
+      "المقارنة بين خصائص الاستجابتين الخلطية والخلوية"
+    ],
+    "fr": [
+      "Définir la notion d'antigène et distinguer le soi du non-soi",
+      "Expliquer le mécanisme de la réponse immunitaire humorale impliquant les lymphocytes B et les plasmocytes",
+      "Expliquer le mécanisme de la réponse immunitaire cellulaire impliquant les lymphocytes T cytotoxiques",
+      "Expliquer le mécanisme de la mémoire immunitaire et justifier l'efficacité de la réponse secondaire",
+      "Comparer les caractéristiques des réponses humorale et cellulaire"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "التعرف على مولد الضد: أساس النوعية المناعية", "fr": "La reconnaissance de l'antigène : fondement de la spécificité immunitaire" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "بخلاف المناعة غير النوعية التي تتصدى لجميع الميكروبات بنفس الآلية، تتميز **الاستجابة المناعية النوعية** بقدرتها على التعرف بدقة متناهية على كل جسم غريب على حدة، والاحتفاظ بذاكرة تجاهه. يرتكز هذا التعرف على مفهوم {{terme:antigene|مولد الضد}}: كل جزيء (غالبا بروتيني أو سكري-بروتيني) يحمل بنية جزيئية غريبة عن الجسم، ويحمل مناطق دقيقة تُسمى الحواتم (المحددات المولدة للضد) هي التي يتم التعرف عليها فعليا.",
+            "fr": "Contrairement à l'immunité non spécifique qui neutralise tous les microbes selon le même mécanisme, la **réponse immunitaire spécifique** se caractérise par sa capacité à reconnaître avec une extrême précision chaque élément étranger, et à en conserver la mémoire. Cette reconnaissance repose sur la notion d'{{terme:antigene|antigène}} : toute molécule (le plus souvent protéique ou glycoprotéique) porteuse d'une structure moléculaire étrangère à l'organisme, dont des régions précises appelées épitopes (déterminants antigéniques) sont effectivement reconnues."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يقوم الجهاز المناعي على مبدأ أساسي هو التمييز بين **الذات** (الجزيئات الخاصة بالفرد نفسه، والتي يجب ألا تُهاجَم في الحالة السوية) و**اللاذات** (كل ما هو غريب عن الجسم: ميكروبات، خلايا مُطعّمة، خلايا سرطانية). يتطلب هذا التمييز جهازا معقدا من المستقبلات الغشائية النوعية الموجودة على سطح {{terme:lymphocyte|اللمفاويات}}، وكل لمفاوية تحمل مستقبلات نوعية لمحدد واحد فقط من بين ملايين المحددات الممكنة، وذلك بفضل تنوع هائل يتشكل أثناء نضجها في نخاع العظم (اللمفاويات البائية) أو الغدة التيموسية (اللمفاويات التائية).",
+            "fr": "Le système immunitaire repose sur un principe fondamental : distinguer le **soi** (les molécules propres à l'individu, qui ne doivent pas être attaquées à l'état normal) du **non-soi** (tout ce qui est étranger à l'organisme : microbes, cellules greffées, cellules cancéreuses). Cette distinction nécessite un système complexe de récepteurs membranaires spécifiques présents à la surface des {{terme:lymphocyte|lymphocytes}} ; chaque lymphocyte porte des récepteurs spécifiques d'un seul déterminant parmi des millions possibles, grâce à une diversité considérable qui se met en place lors de sa maturation dans la moelle osseuse (lymphocytes B) ou le thymus (lymphocytes T)."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/liaison-antigene-anticorps.svg",
+          "legende": { "ar": "التكامل البنيوي النوعي بين موقع تثبيت الجسم المضاد وحاتمة مولد الضد", "fr": "Complémentarité structurale spécifique entre le site de fixation de l'anticorps et l'épitope de l'antigène" }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "التعرف المناعي النوعي يخضع لمبدأ **التكامل البنيوي** (مفتاح-قفل): موقع تثبيت واحد لا يرتبط إلا بحاتمة ذات بنية مكمّلة له، مما يُفسّر الدقة الفائقة للاستجابة المناعية النوعية مقارنة بالمناعة غير النوعية.",
+            "fr": "La reconnaissance immunitaire spécifique obéit au principe de **complémentarité structurale** (clé-serrure) : un site de fixation ne se lie qu'à un épitope de structure complémentaire, ce qui explique l'extrême précision de la réponse immunitaire spécifique par rapport à l'immunité non spécifique."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "الاستجابة الخِلطية: إنتاج الأجسام المضادة", "fr": "La réponse humorale : production d'anticorps" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "عند تعرف اللمفاوية البائية (LB) الحاملة لمستقبل غشائي نوعي على مولد الضد المطابق له، تحدث ظاهرة **الانتقاء النسيلي**: تتكاثر هذه اللمفاوية بانقسامات خيطية متتالية مُنتجة نسيلة من الخلايا المتماثلة وراثيا، ثم تتمايز أغلبها إلى {{terme:plasmocyte|مصورات}} (خلايا بلازمية) ذات هيولى غنية بالشبكة الهيولية الفعالة، متخصصة في إفراز كميات هائلة من {{terme:anticorps|الأجسام المضادة}} النوعية لنفس مولد الضد المحفِّز، بمعدل يصل إلى آلاف الجزيئات في الثانية لكل مصورة.",
+            "fr": "Lorsqu'un lymphocyte B (LB) porteur d'un récepteur membranaire spécifique reconnaît l'antigène correspondant, un phénomène de **sélection clonale** se produit : ce lymphocyte prolifère par mitoses successives, produisant un clone de cellules génétiquement identiques, dont la plupart se différencient en {{terme:plasmocyte|plasmocytes}} (cellules plasmatiques) au cytoplasme riche en réticulum endoplasmique, spécialisés dans la sécrétion massive d'{{terme:anticorps|anticorps}} spécifiques du même antigène déclencheur, à raison de plusieurs milliers de molécules par seconde et par plasmocyte."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تنتشر الأجسام المضادة (الغلوبولينات المناعية) في الدم واللمف، حيث ترتبط نوعيا بمولدات الضد الحرة (كالسموم الجرثومية أو الميكروبات خارج الخلايا)، مُشكّلة معقدات مناعية. لا تُخرّب هذه المعقدات مباشرة، بل تُسهّل التخلص من مولد الضد عبر تفعيل آليات مساعدة، أبرزها **تنشيط البلعمة** (إذ تسهّل الأجسام المضادة التصاق البلعميات بالميكروب) و**تفعيل الجملة التتممية**. لهذا تُسمى هذه الاستجابة **خِلطية**، لأن فاعليها (الأجسام المضادة) ينتشرون في السوائل (الخلط) الداخلية للجسم.",
+            "fr": "Les anticorps (immunoglobulines) circulent dans le sang et la lymphe, où ils se lient spécifiquement aux antigènes libres (comme les toxines bactériennes ou les microbes extracellulaires), formant des complexes immuns. Ces complexes ne détruisent pas directement l'antigène, mais facilitent son élimination en activant des mécanismes auxiliaires, notamment la **stimulation de la phagocytose** (les anticorps facilitant l'adhésion des phagocytes au microbe) et l'**activation du système du complément**. C'est pourquoi cette réponse est dite **humorale** : ses effecteurs (les anticorps) circulent dans les liquides (humeurs) internes de l'organisme."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Remarque" },
+          "texte": {
+            "ar": "الاستجابة الخِلطية فعالة أساسا ضد مولدات الضد الحرة (خارج خلوية): الميكروبات المنتشرة في الدم واللمف، والسموم الجرثومية. أما الميكروبات التي تخترق الخلايا (كالفيروسات) فتتطلب استجابة أخرى.",
+            "fr": "La réponse humorale est efficace principalement contre les antigènes libres (extracellulaires) : microbes circulant dans le sang et la lymphe, toxines bactériennes. Les microbes qui pénètrent à l'intérieur des cellules (comme les virus) nécessitent une autre réponse."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "الاستجابة الخلوية: تدخل اللمفاويات التائية السامة", "fr": "La réponse cellulaire : intervention des lymphocytes T cytotoxiques" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "عندما يخترق فيروس أو عامل ممرض داخل خلية جسمية، تصبح هذه الخلية 'مصابة' وتعرض على سطحها أجزاء من بروتينات هذا الممرض مرتبطة بجزيئات غشائية خاصة، مما يجعلها قابلة للتعرف عليها من طرف {{terme:lymphocyte|اللمفاويات}} التائية القاتلة (LT8). عند حدوث هذا التعرف النوعي، تخضع اللمفاوية LT8 بدورها لانتقاء نسيلي وتكاثر، ثم تتمايز إلى **خلايا تائية سامة (LTc)** فعّالة.",
+            "fr": "Lorsqu'un virus ou un agent pathogène pénètre à l'intérieur d'une cellule somatique, celle-ci devient « infectée » et présente à sa surface des fragments de protéines de ce pathogène associés à des molécules membranaires particulières, la rendant reconnaissable par les {{terme:lymphocyte|lymphocytes}} T cytotoxiques (LT8). Lors de cette reconnaissance spécifique, le lymphocyte LT8 subit à son tour une sélection clonale et une prolifération, puis se différencie en **lymphocytes T cytotoxiques (LTc)** effecteurs."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تُدمّر الخلية التائية السامة الخلية المصابة عبر **اتصال مباشر** (وليس عبر إفراز جزيئات منتشرة كما في الحالة الخلطية): تلتصق بها ثم تُفرز موضعيا جزيئات مثل البرفورين التي تُحدث ثقوبا في غشاء الخلية المستهدفة، مما يؤدي إلى موتها المبرمج (استماتة) وتحرير الفيروسات قبل تكاثرها داخل خلايا أخرى. لهذا تُسمى هذه الاستجابة **خلوية**: فاعلوها (LTc) خلايا تتصل مباشرة بهدفها، وليست جزيئات ذائبة كالأجسام المضادة.",
+            "fr": "Le lymphocyte T cytotoxique détruit la cellule infectée par **contact direct** (et non par sécrétion de molécules diffusibles comme dans le cas humoral) : il s'accole à elle puis libère localement des molécules telles que la perforine, qui créent des pores dans la membrane de la cellule cible, provoquant sa mort programmée (apoptose) avant que les virus qu'elle contient ne se répliquent dans d'autres cellules. C'est pourquoi cette réponse est dite **cellulaire** : ses effecteurs (LTc) sont des cellules en contact direct avec leur cible, et non des molécules solubles comme les anticorps."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/activation-lymphocytes-b-t.svg",
+          "legende": { "ar": "مساري الاستجابة المناعية النوعية: الخِلطية (LB ← مصورات ← أجسام مضادة) والخلوية (LT8 ← خلايا تائية سامة)", "fr": "Les deux voies de la réponse immunitaire spécifique : humorale (LB → plasmocytes → anticorps) et cellulaire (LT8 → lymphocytes T cytotoxiques)" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مقارنة بين الاستجابة الخِلطية والاستجابة الخلوية", "fr": "Comparaison entre réponse humorale et réponse cellulaire" },
+          "entetes": { "ar": ["المعيار", "الاستجابة الخِلطية", "الاستجابة الخلوية"], "fr": ["Critère", "Réponse humorale", "Réponse cellulaire"] },
+          "lignes": [
+            { "ar": ["الخلايا المتدخلة", "اللمفاويات البائية (LB) والمصورات", "اللمفاويات التائية (LT8) والخلايا التائية السامة (LTc)"], "fr": ["Cellules impliquées", "Lymphocytes B (LB) et plasmocytes", "Lymphocytes T8 (LT8) et lymphocytes T cytotoxiques (LTc)"] },
+            { "ar": ["العنصر الفعّال", "أجسام مضادة (جزيئات ذائبة)", "خلايا سامة (اتصال مباشر)"], "fr": ["Effecteur", "Anticorps (molécules solubles)", "Cellules cytotoxiques (contact direct)"] },
+            { "ar": ["الهدف المفضّل", "مولدات ضد حرة (خارج خلوية)", "خلايا مصابة أو غريبة (داخل الجسم)"], "fr": ["Cible privilégiée", "Antigènes libres (extracellulaires)", "Cellules infectées ou étrangères (intracellulaires)"] },
+            { "ar": ["آلية التخريب", "تسهيل البلعمة وتفعيل الجملة التتممية", "ثقب الغشاء (برفورين) وتحفيز الاستماتة"], "fr": ["Mécanisme de destruction", "Facilitation de la phagocytose et activation du complément", "Perforation membranaire (perforine) et induction de l'apoptose"] }
+          ]
+        },
+        {
+          "type": "encadre",
+          "variante": "tanbih",
+          "titre": { "ar": "تنبيه", "fr": "Attention" },
+          "texte": {
+            "ar": "لا تعمل الاستجابتان الخِلطية والخلوية بمعزل تام إحداهما عن الأخرى: تتدخل اللمفاويات التائية المساعدة (LT4) في تنشيط كل من اللمفاويات البائية واللمفاويات التائية السامة عبر إفراز إنترلوكينات محفّزة، مما يجعل الاستجابة المناعية النوعية شبكة متكاملة ومنسقة.",
+            "fr": "Les réponses humorale et cellulaire n'agissent pas de façon totalement indépendante : les lymphocytes T auxiliaires (LT4) interviennent dans l'activation à la fois des lymphocytes B et des lymphocytes T cytotoxiques, via la sécrétion d'interleukines stimulantes, faisant de la réponse immunitaire spécifique un réseau intégré et coordonné."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "titre": { "ar": "الذاكرة المناعية والاستجابة الثانوية", "fr": "La mémoire immunitaire et la réponse secondaire" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "لا تتمايز جميع خلايا النسيلة الناتجة عن الانتقاء النسيلي إلى خلايا فعّالة (مصورات أو LTc)؛ فجزء منها يتمايز إلى **خلايا ذاكرة** طويلة الأمد، تبقى كامنة في الجسم لسنوات دون نشاط إفرازي مباشر، لكنها تحتفظ بالمعلومة النوعية لمولد الضد الذي واجهته أول مرة. عند تعرض الجسم لنفس مولد الضد مجددا، تُستثار خلايا الذاكرة هذه بسرعة أكبر بكثير من اللمفاويات الأصلية غير المُحسّسة سابقا.",
+            "fr": "Toutes les cellules du clone issu de la sélection clonale ne se différencient pas en cellules effectrices (plasmocytes ou LTc) ; une partie se différencie en **cellules mémoire** à longue durée de vie, qui persistent dans l'organisme pendant des années sans activité sécrétoire directe, mais conservent l'information spécifique de l'antigène rencontré une première fois. Lors d'une nouvelle exposition au même antigène, ces cellules mémoire sont mobilisées beaucoup plus rapidement que les lymphocytes naïfs initiaux."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يُفسّر ذلك الفرق الملحوظ بين **الاستجابة الأولية** (بطيئة، تظهر بعد عدة أيام من التماس الأول، وذات شدة محدودة) و**الاستجابة الثانوية** (أسرع ظهورا، أكثر شدة وأطول أمدا)، بفضل العدد الأكبر لخلايا الذاكرة مقارنة باللمفاويات النوعية القليلة الموجودة قبل أي تماس. تُشكّل هذه الظاهرة الأساس البيولوجي الذي يعتمد عليه **التلقيح**.",
+            "fr": "Cela explique la différence marquée entre la **réponse primaire** (lente, apparaissant après plusieurs jours suivant le premier contact, d'intensité limitée) et la **réponse secondaire** (plus rapide, plus intense et plus durable), grâce au nombre bien plus élevé de cellules mémoire comparé aux rares lymphocytes spécifiques présents avant tout contact. Ce phénomène constitue le fondement biologique sur lequel repose la **vaccination**."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "يمكن لبعض خلايا الذاكرة المناعية أن تبقى فعّالة لعقود من الزمن، وهو ما يُفسّر استمرار المناعة تجاه بعض الأمراض (كالحصبة) لسنوات طويلة بعد الإصابة الأولى أو التلقيح.",
+            "fr": "Certaines cellules mémoire immunitaires peuvent rester actives pendant des décennies, ce qui explique la persistance de l'immunité contre certaines maladies (comme la rougeole) pendant de nombreuses années après la première infection ou la vaccination."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "تعتمد الاستجابة المناعية النوعية على تعرف دقيق على مولدات الضد وفق مبدأ التكامل البنيوي، وتتفرع إلى مسارين متكاملين: استجابة خِلطية تنتج أجساما مضادة عبر اللمفاويات البائية والمصورات لمواجهة مولدات الضد الحرة، واستجابة خلوية تعتمد على اللمفاويات التائية السامة لتخريب الخلايا المصابة بالاتصال المباشر. يضمن تشكل خلايا الذاكرة استجابة ثانوية أسرع وأقوى عند تماس لاحق مع نفس مولد الضد.",
+            "fr": "La réponse immunitaire spécifique repose sur une reconnaissance précise des antigènes selon le principe de complémentarité structurale, et se décline en deux voies complémentaires : une réponse humorale produisant des anticorps via les lymphocytes B et les plasmocytes pour neutraliser les antigènes libres, et une réponse cellulaire reposant sur les lymphocytes T cytotoxiques pour détruire par contact direct les cellules infectées. La formation de cellules mémoire garantit une réponse secondaire plus rapide et plus puissante lors d'un contact ultérieur avec le même antigène."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما الفرق الأساسي بين فاعلي الاستجابة الخِلطية والاستجابة الخلوية؟", "fr": "Quelle est la différence fondamentale entre les effecteurs de la réponse humorale et ceux de la réponse cellulaire ?" },
+        "options": [
+          { "ar": "الاستجابة الخِلطية تعتمد على أجسام مضادة ذائبة، بينما الخلوية تعتمد على خلايا تتصل مباشرة بهدفها", "fr": "La réponse humorale repose sur des anticorps solubles, tandis que la cellulaire repose sur des cellules en contact direct avec leur cible" },
+          { "ar": "كلتا الاستجابتين تعتمدان على أجسام مضادة فقط", "fr": "Les deux réponses reposent uniquement sur des anticorps" },
+          { "ar": "الاستجابة الخلوية غير نوعية بخلاف الخِلطية", "fr": "La réponse cellulaire est non spécifique contrairement à l'humorale" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "الاستجابة الخِلطية فاعلوها جزيئات ذائبة (الأجسام المضادة) تنتشر في الدم واللمف، بينما فاعلو الاستجابة الخلوية (اللمفاويات التائية السامة) خلايا تدمّر هدفها بالاتصال المباشر معه.",
+          "fr": "Les effecteurs de la réponse humorale sont des molécules solubles (les anticorps) qui circulent dans le sang et la lymphe, tandis que ceux de la réponse cellulaire (lymphocytes T cytotoxiques) sont des cellules qui détruisent leur cible par contact direct."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "لماذا تكون الاستجابة الثانوية أسرع وأقوى من الاستجابة الأولية؟", "fr": "Pourquoi la réponse secondaire est-elle plus rapide et plus intense que la réponse primaire ?" },
+        "options": [
+          { "ar": "لأن الحواجز الطبيعية تصبح أكثر فعالية بعد التماس الأول", "fr": "Parce que les barrières naturelles deviennent plus efficaces après le premier contact" },
+          { "ar": "بسبب وجود عدد كبير من خلايا الذاكرة المتشكلة أثناء الاستجابة الأولية", "fr": "En raison du nombre élevé de cellules mémoire formées lors de la réponse primaire" },
+          { "ar": "لأن مولد الضد يفقد نوعيته عند التماس الثاني", "fr": "Parce que l'antigène perd sa spécificité lors du deuxième contact" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "خلايا الذاكرة الناتجة عن الاستجابة الأولية تكون أكثر عددا بكثير من اللمفاويات النوعية الأصلية، مما يسمح باستجابة أسرع وأشد عند التماس اللاحق مع نفس مولد الضد.",
+          "fr": "Les cellules mémoire issues de la réponse primaire sont bien plus nombreuses que les lymphocytes spécifiques initiaux, ce qui permet une réponse plus rapide et plus intense lors d'un contact ultérieur avec le même antigène."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "ما مبدأ التعرف بين موقع تثبيت الجسم المضاد وحاتمة مولد الضد؟", "fr": "Quel est le principe de reconnaissance entre le site de fixation de l'anticorps et l'épitope de l'antigène ?" },
+        "options": [
+          { "ar": "ارتباط عشوائي وغير محدد البنية", "fr": "Une liaison aléatoire sans structure définie" },
+          { "ar": "التكامل البنيوي وفق مبدأ المفتاح والقفل", "fr": "La complémentarité structurale selon le principe clé-serrure" },
+          { "ar": "ارتباط يعتمد فقط على الحجم دون البنية", "fr": "Une liaison basée uniquement sur la taille, sans lien avec la structure" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "التعرف النوعي بين الجسم المضاد ومولد الضد يخضع لمبدأ التكامل البنيوي: موقع التثبيت لا يرتبط إلا بحاتمة ذات بنية مكمّلة له تماما، على غرار المفتاح والقفل.",
+          "fr": "La reconnaissance spécifique entre l'anticorps et l'antigène obéit au principe de complémentarité structurale : le site de fixation ne se lie qu'à un épitope dont la structure lui est exactement complémentaire, à la manière d'une clé et d'une serrure."
+        }
+      },
+      {
+        "id": "q4",
+        "question": { "ar": "أي نوع من مولدات الضد تستهدفه الاستجابة الخلوية بشكل أساسي؟", "fr": "Quel type d'antigènes la réponse cellulaire cible-t-elle principalement ?" },
+        "options": [
+          { "ar": "مولدات الضد الحرة المنتشرة في الدم", "fr": "Les antigènes libres circulant dans le sang" },
+          { "ar": "الخلايا الذاتية المصابة بفيروس أو الخلايا الغريبة", "fr": "Les cellules propres infectées par un virus ou les cellules étrangères" },
+          { "ar": "السموم الجرثومية الذائبة فقط", "fr": "Uniquement les toxines bactériennes solubles" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الاستجابة الخلوية تستهدف الخلايا التي أصبحت 'مصابة' وتعرض على سطحها بروتينات غريبة، أو الخلايا الغريبة عن الجسم (كخلايا الطعوم)، وتُدمرها اللمفاويات التائية السامة عبر اتصال مباشر.",
+          "fr": "La réponse cellulaire cible les cellules devenues « infectées » qui présentent des protéines étrangères à leur surface, ou les cellules étrangères à l'organisme (comme les cellules greffées), détruites par les lymphocytes T cytotoxiques par contact direct."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": "svt-2bac-svt-genetique-meiose", "lecon_suivante": null },
+  "tags": ["مناعة نوعية", "أجسام مضادة", "لمفاويات", "immunité spécifique", "anticorps", "lymphocytes"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

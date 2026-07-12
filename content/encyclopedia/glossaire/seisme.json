@@ -1,0 +1,9 @@
+{
+  "id": "seisme",
+  "terme": { "ar": "الزلزال", "fr": "Séisme" },
+  "definition": {
+    "ar": "اهتزاز مفاجئ وعنيف لسطح الأرض ناتج عن تحرر مفاجئ للطاقة المتراكمة على مستوى فالق، غالبا بسبب حركة الصفائح التكتونية.",
+    "fr": "Tremblement brusque et violent de la surface terrestre résultant d'une libération soudaine d'énergie accumulée le long d'une faille, généralement liée au mouvement des plaques tectoniques."
+  },
+  "voir_aussi": ["epicentre", "plaque-tectonique"]
+}

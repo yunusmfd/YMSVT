@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="titleEarth descEarth">
+  <title id="titleEarth">مقطع مبسط في التركيب الداخلي للأرض</title>
+  <desc id="descEarth">رسم تخطيطي مبسط يمثل نصف كوكب الأرض مقطوعا، يُظهر القشرة والوشاح واللب الخارجي واللب الداخلي كطبقات متداخلة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- نصف دائرة مقطوعة تمثل الأرض -->
+  <g transform="translate(280,200)">
+    <path d="M -160 0 A 160 160 0 1 1 160 0 Z" fill="#3C7A63" stroke="#204F3F" stroke-width="3" />
+    <path d="M -130 0 A 130 130 0 1 1 130 0 Z" fill="#C17A2E" stroke="#8B4A2B" stroke-width="2" />
+    <path d="M -70 0 A 70 70 0 1 1 70 0 Z" fill="#3B6E8F" stroke="#204F3F" stroke-width="2" />
+    <path d="M -30 0 A 30 30 0 1 1 30 0 Z" fill="#8B4A2B" stroke="#1B241F" stroke-width="2" />
+    <line x1="-160" y1="0" x2="160" y2="0" stroke="#1B241F" stroke-width="2" />
+  </g>
+
+  <!-- القشرة -->
+  <path d="M280 45 L440 45" stroke="#204F3F" stroke-width="2" />
+  <text x="450" y="50" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">القشرة الأرضية</text>
+  <text x="450" y="50" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Croûte terrestre</text>
+
+  <!-- الوشاح -->
+  <path d="M340 100 L470 100" stroke="#8B4A2B" stroke-width="2" />
+  <text x="480" y="105" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الوشاح (المانتل)</text>
+  <text x="480" y="105" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Manteau</text>
+
+  <!-- اللب الخارجي -->
+  <path d="M330 200 L500 200" stroke="#3B6E8F" stroke-width="2" />
+  <text x="510" y="205" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">اللب الخارجي</text>
+  <text x="510" y="205" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Noyau externe</text>
+
+  <!-- اللب الداخلي -->
+  <path d="M280 260 L500 300" stroke="#1B241F" stroke-width="2" />
+  <text x="510" y="305" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">اللب الداخلي</text>
+  <text x="510" y="305" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Noyau interne</text>
+
+  <text x="400" y="30" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="20" fill="#204F3F" data-lang="ar">التركيب الداخلي للأرض</text>
+  <text x="400" y="30" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#204F3F" data-lang="fr">Structure interne de la Terre</text>
+</svg>

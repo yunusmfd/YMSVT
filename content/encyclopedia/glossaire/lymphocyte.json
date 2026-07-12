@@ -1,0 +1,9 @@
+{
+  "id": "lymphocyte",
+  "terme": { "ar": "اللمفاوية", "fr": "Lymphocyte" },
+  "definition": {
+    "ar": "نوع من الكريات البيضاء مسؤول عن الاستجابة المناعية النوعية، ويوجد صنفان رئيسيان: اللمفاويات البائية (LB) المسؤولة عن الاستجابة الخِلطية عبر إفراز الأجسام المضادة، واللمفاويات التائية (LT) المسؤولة عن الاستجابة الخلوية.",
+    "fr": "Type de globule blanc responsable de la réponse immunitaire spécifique. On distingue deux classes principales : les lymphocytes B (LB), responsables de la réponse humorale via la sécrétion d'anticorps, et les lymphocytes T (LT), responsables de la réponse cellulaire."
+  },
+  "voir_aussi": ["antigene", "plasmocyte", "phagocytose"]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "charles-darwin",
+  "nom": { "ar": "تشارلز داروين", "fr": "Charles Darwin" },
+  "periode": "1809–1882",
+  "photo": null,
+  "resume": {
+    "ar": "عالم طبيعة بريطاني غيّر رحلته الاستكشافية على متن سفينة البيغل (1831–1836) نظرته إلى تنوع الكائنات الحية. جمع خلالها ملاحظات دقيقة حول اختلاف الأنواع من جزيرة إلى أخرى، خصوصا في أرخبيل غالاباغوس، ما قاده بعد سنوات طويلة من التحليل إلى نشر كتابه الشهير 'أصل الأنواع' سنة 1859، الذي أرسى نظرية التطور بالانتخاب الطبيعي.",
+    "fr": "Naturaliste britannique dont le voyage à bord du HMS Beagle (1831–1836) transforma sa compréhension de la diversité du vivant. Il y observa avec minutie les variations entre espèces voisines, notamment dans l'archipel des Galápagos, avant de publier en 1859, après des années d'analyse, 'L'Origine des espèces', ouvrage fondateur de la théorie de l'évolution par sélection naturelle."
+  },
+  "contributions": {
+    "ar": [
+      "صياغة نظرية التطور بالانتخاب الطبيعي كآلية تفسر ظهور التنوع البيولوجي وتكيّف الكائنات مع بيئاتها",
+      "تقديم أدلة ميدانية وفيرة من علم الأحياء الجغرافي وعلم الحفريات ومقارنة الأنواع",
+      "إدخال مفهوم السلف المشترك الذي يربط جميع الكائنات الحية عبر شجرة تطورية واحدة",
+      "التأثير العميق على تطور علم الأحياء الحديث بمختلف فروعه، من البيئة إلى الوراثة"
+    ],
+    "fr": [
+      "Formulation de la théorie de l'évolution par sélection naturelle comme mécanisme expliquant la diversité et l'adaptation du vivant",
+      "Accumulation de preuves issues de la biogéographie, de la paléontologie et de l'anatomie comparée",
+      "Introduction du concept d'ancêtre commun reliant l'ensemble des êtres vivants au sein d'un même arbre évolutif",
+      "Influence durable sur l'ensemble des branches de la biologie moderne, de l'écologie à la génétique"
+    ]
+  },
+  "domaines": ["evolution", "biologie"]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "neurone",
+  "terme": { "ar": "العصبون (الخلية العصبية)", "fr": "Neurone" },
+  "definition": {
+    "ar": "خلية عصبية متخصصة في استقبال ونقل المعلومة العصبية على شكل سيالات كهربائية، وتتكون من جسم الخلية والتغصنات والمحور الأسطواني المحاط أحيانا بغمد الميالين.",
+    "fr": "Cellule spécialisée dans la réception et la conduction de l'information nerveuse sous forme d'influx électriques, composée d'un corps cellulaire, de dendrites et d'un axone parfois entouré d'une gaine de myéline."
+  },
+  "voir_aussi": ["synapse", "reflexe"]
+}

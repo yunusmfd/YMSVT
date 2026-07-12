@@ -1,0 +1,188 @@
+{
+  "id": "svt-tcs-tectonique-plaques",
+  "slug": "tectonique-plaques",
+  "cycle": "thanawi-taahili",
+  "niveau": "tc",
+  "filieres": ["tcs"],
+  "unite_id": "unite-tectonique-tc",
+  "dorra": 2,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "تكتونية الصفائح", "fr": "La tectonique des plaques" },
+  "duree_estimee_min": 30,
+  "domaine_specialite": "geologie",
+  "objectifs": {
+    "ar": [
+      "عرض الأدلة الداعمة لفكرة الانجراف القاري وتطورها إلى نظرية تكتونية الصفائح",
+      "التمييز بين أنواع حدود الصفائح التكتونية الثلاثة",
+      "ربط توزيع الزلازل والبراكين بحدود الصفائح التكتونية"
+    ],
+    "fr": [
+      "Présenter les arguments en faveur de la dérive des continents et son évolution vers la tectonique des plaques",
+      "Distinguer les trois types de limites de plaques tectoniques",
+      "Relier la répartition des séismes et des volcans aux limites des plaques"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "من الانجراف القاري إلى تكتونية الصفائح", "fr": "De la dérive des continents à la tectonique des plaques" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "لاحظ العلماء منذ بداية القرن العشرين أن حدود القارات، وخاصة الساحل الشرقي لأمريكا الجنوبية والساحل الغربي لإفريقيا، تتطابق بشكل يُشبه قطع أحجية (Puzzle). دعّم هذه الملاحظة وجود نفس الأنواع من الأحافير والصخور في قارات متباعدة اليوم بآلاف الكيلومترات، مما اقترح فكرة أن القارات كانت متجمعة قديما في كتلة واحدة تُسمى بانجيا ثم انجرفت تدريجيا لتتخذ مواقعها الحالية.",
+            "fr": "Dès le début du XXe siècle, les scientifiques ont remarqué que les contours de certains continents, notamment la côte est de l'Amérique du Sud et la côte ouest de l'Afrique, s'emboîtaient comme les pièces d'un puzzle. Cette observation a été renforcée par la présence de fossiles et de roches identiques sur des continents aujourd'hui séparés par des milliers de kilomètres, suggérant que les continents formaient jadis une masse unique, la Pangée, avant de dériver progressivement vers leur position actuelle."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/derive-continents-schema.svg",
+          "legende": { "ar": "من بانجيا (قارة موحدة) إلى القارات الحالية المنفصلة", "fr": "De la Pangée (supercontinent) aux continents actuels séparés" }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "لم تُقبل فكرة الانجراف القاري بشكل واسع في البداية، لأن آلية تحرك القارات لم تكن معروفة. تطورت هذه الفكرة لاحقا، بفضل اكتشاف قاع المحيطات وحركة الحمل الحراري في باطن الأرض، إلى نظرية أشمل تُسمى **تكتونية الصفائح**.",
+            "fr": "L'idée de dérive des continents ne fut pas immédiatement acceptée, faute de mécanisme connu expliquant ce déplacement. Elle a ensuite évolué, grâce à la découverte des fonds océaniques et des mouvements de convection dans le manteau terrestre, vers une théorie plus complète appelée **tectonique des plaques**."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "الغلاف الصخري لكوكب الأرض (Lithosphère) ليس قطعة واحدة متصلة، بل مُجزّأ إلى عدة {{terme:plaque-tectonique|صفائح تكتونية}} صلبة تتحرك ببطء (بضعة سنتيمترات في السنة) فوق طبقة لدنة تُسمى الأستينوسفير.",
+            "fr": "La lithosphère terrestre n'est pas une coquille continue, mais est fragmentée en plusieurs {{terme:plaque-tectonique|plaques tectoniques}} rigides qui se déplacent lentement (quelques centimètres par an) au-dessus d'une couche ductile appelée l'asthénosphère."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "أنواع حدود الصفائح التكتونية", "fr": "Les types de limites de plaques tectoniques" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تتحرك {{terme:plaque-tectonique|الصفائح التكتونية}} بالنسبة لبعضها البعض بثلاث طرق مختلفة، مما يُحدّد ثلاثة أنواع من الحدود: حدود متباعدة حيث تبتعد صفيحتان عن بعضهما وتصعد {{terme:magma|الصهارة}} لملء الفراغ (كما هو الحال عند الذرى وسط المحيطية)، وحدود متقاربة حيث تغوص صفيحة تحت أخرى في ظاهرة تُسمى الاندساس (Subduction)، وحدود تحويلية (انزلاقية) حيث تنزلق صفيحتان أفقيا جنبا إلى جنب دون تباعد أو تقارب يُذكر.",
+            "fr": "Les {{terme:plaque-tectonique|plaques tectoniques}} se déplacent les unes par rapport aux autres selon trois modes, définissant trois types de limites : les limites divergentes, où deux plaques s'écartent et où le {{terme:magma|magma}} remonte pour combler l'espace (cas des dorsales océaniques) ; les limites convergentes, où une plaque plonge sous une autre lors d'un phénomène appelé subduction ; et les limites transformantes (coulissantes), où deux plaques glissent horizontalement l'une contre l'autre sans écartement ni rapprochement notable."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/limites-plaques-types.svg",
+          "legende": { "ar": "الأنواع الثلاثة لحدود الصفائح: متباعدة، متقاربة، تحويلية", "fr": "Les trois types de limites de plaques : divergente, convergente, transformante" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مقارنة بين أنواع حدود الصفائح", "fr": "Comparaison des types de limites de plaques" },
+          "entetes": { "ar": ["النوع", "حركة الصفيحتين", "مثال / ظاهرة مرتبطة"], "fr": ["Type", "Mouvement des plaques", "Exemple / phénomène associé"] },
+          "lignes": [
+            { "ar": ["متباعدة", "تباعد مع صعود الصهارة", "الذرى وسط المحيطية"], "fr": ["Divergente", "Écartement avec remontée de magma", "Dorsales océaniques"] },
+            { "ar": ["متقاربة", "غوص صفيحة تحت أخرى (اندساس)", "السلاسل الجبلية والخنادق البحرية"], "fr": ["Convergente", "Subduction d'une plaque sous l'autre", "Chaînes de montagnes, fosses océaniques"] },
+            { "ar": ["تحويلية (انزلاقية)", "انزلاق أفقي دون تقارب أو تباعد", "فوالق تحويلية كبرى"], "fr": ["Transformante (coulissante)", "Glissement horizontal sans convergence ni divergence", "Grandes failles transformantes"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "الصفائح والزلازل والبراكين", "fr": "Plaques, séismes et volcans" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "إذا رسمنا خريطة توزيع {{terme:seisme|الزلازل}} والبراكين حول العالم، نلاحظ أنها ليست موزعة عشوائيا، بل تتركز بشكل كبير على طول حدود الصفائح التكتونية. فحدود التقارب (الاندساس) تُنتج زلازل عنيفة وبراكين نشطة بسبب انصهار جزء من الصفيحة الغائصة وتشكل الصهارة، بينما تُنتج حدود التباعد زلازل أقل عنفا عموما مرتبطة بصعود الصهارة، وتُنتج الحدود التحويلية زلازل سطحية قوية بسبب الاحتكاك الكبير بين الصفيحتين المتزحلقتين.",
+            "fr": "En cartographiant la répartition des {{terme:seisme|séismes}} et des volcans dans le monde, on constate qu'ils ne sont pas répartis au hasard, mais fortement concentrés le long des limites de plaques tectoniques. Les limites convergentes (subduction) produisent des séismes violents et des volcans actifs, dus à la fusion partielle de la plaque plongeante qui forme du magma ; les limites divergentes produisent des séismes généralement moins violents, liés à la remontée de magma ; et les limites transformantes produisent des séismes superficiels puissants dus au frottement important entre les deux plaques qui coulissent."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Observation" },
+          "texte": {
+            "ar": "تُسمى المنطقة المحيطة بالمحيط الهادئ، الغنية بالزلازل والبراكين النشطة بسبب تعدد حدود الاندساس فيها، بـ'حزام النار في المحيط الهادئ'.",
+            "fr": "La zone entourant l'océan Pacifique, très riche en séismes et volcans actifs en raison de ses nombreuses limites de subduction, est appelée la 'ceinture de feu du Pacifique'."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "istintaj",
+          "titre": { "ar": "استنتاج", "fr": "Déduction" },
+          "texte": {
+            "ar": "تُفسّر نظرية تكتونية الصفائح، بشكل موحّد، ظواهر جيولوجية بدت في السابق منفصلة: توزيع القارات، تشكل السلاسل الجبلية، وتوزيع الزلازل والبراكين، مما يجعلها إطارا نظريا مركزيا في علوم الأرض الحديثة.",
+            "fr": "La théorie de la tectonique des plaques explique de façon unifiée des phénomènes géologiques autrefois considérés séparément : la répartition des continents, la formation des chaînes de montagnes, et la distribution des séismes et volcans, ce qui en fait un cadre théorique central des sciences de la Terre modernes."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "تُقدَّر سرعة تباعد بعض الصفائح التكتونية بحوالي 2 إلى 5 سنتيمترات في السنة، وهي تقريبا نفس سرعة نمو أظافر اليد البشرية.",
+            "fr": "La vitesse d'écartement de certaines plaques tectoniques est estimée à environ 2 à 5 centimètres par an, soit approximativement la vitesse de pousse des ongles humains."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "تنص نظرية تكتونية الصفائح على أن الغلاف الصخري مُجزّأ إلى صفائح متحركة، تتفاعل عند حدودها بثلاث طرق (تباعد، تقارب، انزلاق). يتركز النشاط الزلزالي والبركاني بشكل رئيسي عند هذه الحدود، مما يجعل من هذه النظرية إطارا موحدا لفهم الظواهر الجيولوجية الداخلية لكوكب الأرض.",
+            "fr": "La théorie de la tectonique des plaques établit que la lithosphère est fragmentée en plaques mobiles, interagissant à leurs limites selon trois modes (divergence, convergence, coulissement). L'activité sismique et volcanique se concentre principalement à ces limites, faisant de cette théorie un cadre unificateur pour comprendre les phénomènes géologiques internes du globe."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما الدليل الذي دعم فكرة الانجراف القاري في بدايتها؟", "fr": "Quel argument a soutenu l'idée initiale de dérive des continents ?" },
+        "options": [
+          { "ar": "تطابق حدود القارات ووجود أحافير مشتركة بينها", "fr": "L'emboîtement des contours continentaux et des fossiles communs" },
+          { "ar": "قياس درجة حرارة المحيطات", "fr": "La mesure de la température des océans" },
+          { "ar": "رصد الزلازل بواسطة الأقمار الصناعية", "fr": "L'observation des séismes par satellite" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "تطابق حدود القارات (مثل أمريكا الجنوبية وإفريقيا) ووجود نفس الأحافير والصخور في قارات متباعدة اليوم كانا من أهم الأدلة الأولى الداعمة لفكرة الانجراف القاري.",
+          "fr": "L'emboîtement des côtes continentales (comme l'Amérique du Sud et l'Afrique) et la présence de fossiles et roches identiques sur des continents aujourd'hui distants furent parmi les premiers arguments majeurs en faveur de la dérive des continents."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "ماذا يحدث عند حد متقارب بين صفيحتين؟", "fr": "Que se passe-t-il au niveau d'une limite convergente entre deux plaques ?" },
+        "options": [
+          { "ar": "تبتعد الصفيحتان مع صعود الصهارة", "fr": "Les deux plaques s'écartent avec remontée de magma" },
+          { "ar": "تغوص إحدى الصفيحتين تحت الأخرى (اندساس)", "fr": "L'une des plaques plonge sous l'autre (subduction)" },
+          { "ar": "تنزلق الصفيحتان أفقيا دون أي تفاعل رأسي", "fr": "Les deux plaques glissent horizontalement sans interaction verticale" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "عند الحدود المتقاربة، تغوص إحدى الصفيحتين تحت الأخرى في ظاهرة الاندساس، مما يُنتج زلازل عنيفة وبراكين بسبب انصهار جزء من الصفيحة الغائصة.",
+          "fr": "Aux limites convergentes, l'une des plaques plonge sous l'autre lors de la subduction, ce qui génère des séismes violents et des volcans par fusion partielle de la plaque plongeante."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "لماذا يتركز معظم النشاط الزلزالي والبركاني حول 'حزام النار في المحيط الهادئ'؟", "fr": "Pourquoi l'essentiel de l'activité sismique et volcanique se concentre-t-il sur la 'ceinture de feu du Pacifique' ?" },
+        "options": [
+          { "ar": "لوجود عدد كبير من حدود الاندساس (التقارب) في هذه المنطقة", "fr": "En raison du grand nombre de limites de subduction (convergentes) dans cette zone" },
+          { "ar": "لأن المحيط الهادئ هو الأعمق في العالم فقط", "fr": "Parce que le Pacifique est simplement l'océan le plus profond du monde" },
+          { "ar": "لأن التيارات البحرية تُسبب الزلازل مباشرة", "fr": "Parce que les courants marins provoquent directement les séismes" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "تتوزع حول المحيط الهادئ عدة حدود صفائح من نوع التقارب (اندساس)، وهي مناطق معروفة بتركز الزلازل العنيفة والنشاط البركاني الكثيف.",
+          "fr": "Le pourtour du Pacifique compte de nombreuses limites de plaques convergentes (subduction), zones connues pour concentrer des séismes violents et une activité volcanique intense."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": "svt-tcs-la-cellule", "lecon_suivante": null },
+  "tags": ["جيولوجيا", "تكتونية الصفائح", "géologie", "tectonique des plaques"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

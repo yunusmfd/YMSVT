@@ -1,0 +1,9 @@
+{
+  "id": "hematie",
+  "terme": { "ar": "الكرية الحمراء", "fr": "Hématie (globule rouge)" },
+  "definition": {
+    "ar": "خلية دموية غنية بالهيموغلوبين، مهمتها الأساسية نقل الأكسجين من الرئتين إلى مختلف أعضاء الجسم، وهي أكثر الخلايا عددا في الدم.",
+    "fr": "Cellule sanguine riche en hémoglobine dont le rôle principal est de transporter le dioxygène des poumons vers les organes. C'est le type de cellule le plus abondant dans le sang."
+  },
+  "voir_aussi": ["globule-blanc"]
+}

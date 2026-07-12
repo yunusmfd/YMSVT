@@ -1,0 +1,201 @@
+{
+  "id": "svt-2ac-circulation-sanguine",
+  "slug": "circulation-sanguine",
+  "cycle": "iaadadi",
+  "niveau": "2ac",
+  "unite_id": "unite-circulation-2ac",
+  "dorra": 1,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "الدورة الدموية عند الإنسان", "fr": "La circulation sanguine chez l'être humain" },
+  "duree_estimee_min": 25,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": [
+      "التعرف على القلب باعتباره العضو المحرك للدورة الدموية",
+      "التمييز بين الشرايين والأوردة من حيث البنية والدور",
+      "شرح دور الدم في نقل الأكسجين والمغذيات والفضلات",
+      "التعرف على مبدأ الدورة الدموية المزدوجة (الصغرى والكبرى)"
+    ],
+    "fr": [
+      "Identifier le cœur comme organe moteur de la circulation sanguine",
+      "Distinguer les artères des veines par leur structure et leur rôle",
+      "Expliquer le rôle du sang dans le transport du dioxygène, des nutriments et des déchets",
+      "Comprendre le principe de la double circulation (petite et grande circulation)"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "القلب: المحرك الرئيسي للدورة الدموية", "fr": "Le cœur : moteur principal de la circulation" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "القلب عضلة مجوفة تنقبض وترتخي بشكل منتظم وتلقائي، وتعمل بمثابة مضخة تدفع الدم عبر شبكة من الأوعية الدموية إلى جميع أعضاء الجسم. تُقدَّر عدد نبضات القلب عند الراحة بحوالي 70 نبضة في الدقيقة عند البالغ.",
+            "fr": "Le cœur est un muscle creux qui se contracte et se relâche de façon régulière et automatique. Il agit comme une pompe qui propulse le sang à travers un réseau de vaisseaux sanguins vers tous les organes du corps. Au repos, le rythme cardiaque d'un adulte est d'environ 70 battements par minute."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Observation" },
+          "texte": {
+            "ar": "يزداد عدد نبضات القلب أثناء بذل مجهود عضلي، لأن العضلات تحتاج آنذاك إلى كمية أكبر من الأكسجين والمغذيات.",
+            "fr": "La fréquence cardiaque augmente pendant un effort musculaire, car les muscles ont alors besoin d'une plus grande quantité de dioxygène et de nutriments."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "الأوعية الدموية: الشرايين والأوردة", "fr": "Les vaisseaux sanguins : artères et veines" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتنقل الدم داخل شبكة من الأوعية الدموية تختلف بنيتها حسب اتجاه سريان الدم فيها. تنقل {{terme:artere|الشرايين}} الدم من القلب نحو الأعضاء، بينما تُعيد {{terme:veine|الأوردة}} الدم من الأعضاء نحو القلب. أما الشعيرات الدموية فهي أوعية دقيقة جدا تربط الشرايين بالأوردة وتسمح بالتبادلات مع الخلايا.",
+            "fr": "Le sang circule dans un réseau de vaisseaux sanguins dont la structure diffère selon le sens de circulation. Les {{terme:artere|artères}} transportent le sang du cœur vers les organes, tandis que les {{terme:veine|veines}} ramènent le sang des organes vers le cœur. Les capillaires sanguins, très fins, relient artères et veines et permettent les échanges avec les cellules."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/artere-veine-coupe.svg",
+          "legende": { "ar": "مقارنة بين مقطع شريان ومقطع وريد", "fr": "Comparaison entre une coupe d'artère et une coupe de veine" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مقارنة بين الشريان والوريد", "fr": "Comparaison artère / veine" },
+          "entetes": { "ar": ["المعيار", "الشريان", "الوريد"], "fr": ["Critère", "Artère", "Veine"] },
+          "lignes": [
+            { "ar": ["اتجاه الدم", "من القلب إلى الأعضاء", "من الأعضاء إلى القلب"], "fr": ["Sens du sang", "Du cœur vers les organes", "Des organes vers le cœur"] },
+            { "ar": ["سمك الجدار", "سميك ومرن", "رقيق"], "fr": ["Épaisseur de la paroi", "Épaisse et élastique", "Fine"] },
+            { "ar": ["الصمامات", "غائبة", "موجودة"], "fr": ["Valvules", "Absentes", "Présentes"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "دور الدم في نقل المواد", "fr": "Le rôle du sang dans le transport des substances" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتكون الدم من بلازما (سائل) تسبح فيها خلايا دموية: {{terme:hematie|الكريات الحمراء}} التي تنقل الأكسجين، و{{terme:globule-blanc|الكريات البيضاء}} التي تدافع عن الجسم، والصفائح الدموية التي تساهم في تخثر الدم. يضمن الدم نقل الأكسجين والمغذيات إلى جميع خلايا الجسم، كما ينقل الفضلات (مثل ثنائي أكسيد الكربون) نحو أعضاء الطرح.",
+            "fr": "Le sang est composé de plasma (liquide) dans lequel circulent des cellules sanguines : les {{terme:hematie|hématies}} qui transportent le dioxygène, les {{terme:globule-blanc|globules blancs}} qui défendent l'organisme, et les plaquettes qui participent à la coagulation. Le sang assure le transport du dioxygène et des nutriments vers toutes les cellules du corps, ainsi que celui des déchets (comme le dioxyde de carbone) vers les organes d'élimination."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "الدم هو الوسيط الذي يربط جميع أعضاء الجسم ببعضها: فهو ينقل إليها ما تحتاجه (O2، مغذيات) ويُخرج منها ما لا تحتاجه (CO2، فضلات).",
+            "fr": "Le sang est l'intermédiaire qui relie tous les organes du corps entre eux : il leur apporte ce dont ils ont besoin (O2, nutriments) et évacue ce dont ils n'ont pas besoin (CO2, déchets)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "titre": { "ar": "الدورة الدموية المزدوجة", "fr": "La double circulation sanguine" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تتكون الدورة الدموية عند الإنسان من دورتين متتاليتين تمران عبر القلب: الدورة الصغرى (الرئوية) التي تربط القلب بالرئتين حيث يتزود الدم بالأكسجين ويتخلص من ثنائي أكسيد الكربون، والدورة الكبرى (الجسمية) التي تربط القلب بباقي أعضاء الجسم حيث يُسلّم الدم الأكسجين والمغذيات ويستقبل الفضلات.",
+            "fr": "La circulation sanguine chez l'être humain comprend deux circuits successifs passant par le cœur : la petite circulation (pulmonaire), qui relie le cœur aux poumons où le sang s'enrichit en dioxygène et se débarrasse du dioxyde de carbone, et la grande circulation (systémique), qui relie le cœur au reste des organes où le sang délivre le dioxygène et les nutriments et reçoit les déchets."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/coeur-double-circulation.svg",
+          "legende": { "ar": "الدورة الدموية الصغرى (نحو الرئتين) والدورة الدموية الكبرى (نحو أعضاء الجسم)", "fr": "La petite circulation (vers les poumons) et la grande circulation (vers les organes du corps)" }
+        },
+        {
+          "type": "encadre",
+          "variante": "tanbih",
+          "titre": { "ar": "تنبيه", "fr": "Attention" },
+          "texte": {
+            "ar": "تُسمى دورة مزدوجة لأن الدم يمر بالقلب مرتين خلال دورة كاملة واحدة: مرة في اتجاه الرئتين ومرة في اتجاه باقي الجسم.",
+            "fr": "On l'appelle double circulation car le sang traverse le cœur deux fois au cours d'un cycle complet : une fois en direction des poumons, une fois en direction du reste du corps."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "يبلغ الطول الإجمالي لجميع الأوعية الدموية في جسم الإنسان البالغ عشرات الآلاف من الكيلومترات إذا ما تم وضعها بشكل متتالٍ، وذلك بفضل الشبكة الكثيفة من الشعيرات الدموية الدقيقة.",
+            "fr": "Mis bout à bout, l'ensemble des vaisseaux sanguins d'un adulte atteindrait des dizaines de milliers de kilomètres, grâce au réseau très dense de capillaires sanguins microscopiques."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-5",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "القلب مضخة تدفع الدم عبر الشرايين والأوردة ليصل إلى جميع أعضاء الجسم عبر دورتين متتاليتين: الصغرى نحو الرئتين والكبرى نحو باقي الأعضاء. ينقل الدم الأكسجين والمغذيات إلى الخلايا ويُخلّصها من الفضلات.",
+            "fr": "Le cœur est une pompe qui propulse le sang à travers les artères et les veines pour atteindre tous les organes via deux circuits successifs : la petite circulation vers les poumons et la grande circulation vers le reste des organes. Le sang apporte le dioxygène et les nutriments aux cellules et les débarrasse de leurs déchets."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما الفرق الأساسي بين الشريان والوريد؟", "fr": "Quelle est la différence essentielle entre une artère et une veine ?" },
+        "options": [
+          { "ar": "الشريان ينقل الدم من القلب، والوريد يعيده إليه", "fr": "L'artère transporte le sang depuis le cœur, la veine le ramène vers lui" },
+          { "ar": "الوريد ينقل الدم من القلب، والشريان يعيده إليه", "fr": "La veine transporte le sang depuis le cœur, l'artère le ramène vers lui" },
+          { "ar": "لا فرق بينهما", "fr": "Il n'y a aucune différence entre les deux" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "الشرايين تنقل الدم من القلب نحو الأعضاء، بينما تُعيد الأوردة الدم من الأعضاء نحو القلب.",
+          "fr": "Les artères transportent le sang du cœur vers les organes, tandis que les veines ramènent le sang des organes vers le cœur."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "لماذا تسمى الدورة الدموية عند الإنسان بـ'المزدوجة'؟", "fr": "Pourquoi la circulation sanguine humaine est-elle dite 'double' ?" },
+        "options": [
+          { "ar": "لأن هناك قلبين في الجسم", "fr": "Parce qu'il y a deux cœurs dans le corps" },
+          { "ar": "لأن الدم يمر بالقلب مرتين في كل دورة كاملة", "fr": "Parce que le sang traverse le cœur deux fois par cycle complet" },
+          { "ar": "لأن الدم يتضاعف حجمه أثناء الدورة", "fr": "Parce que le volume du sang double pendant la circulation" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الدم يعبر القلب مرتين خلال دورة كاملة: مرة نحو الرئتين (دورة صغرى) ومرة نحو باقي الجسم (دورة كبرى).",
+          "fr": "Le sang traverse le cœur deux fois au cours d'un cycle complet : une fois vers les poumons (petite circulation), une fois vers le reste du corps (grande circulation)."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "ما دور الكريات الحمراء في الدم؟", "fr": "Quel est le rôle des hématies dans le sang ?" },
+        "options": [
+          { "ar": "الدفاع عن الجسم ضد الميكروبات", "fr": "Défendre l'organisme contre les microbes" },
+          { "ar": "نقل الأكسجين إلى أعضاء الجسم", "fr": "Transporter le dioxygène vers les organes" },
+          { "ar": "المساهمة في تخثر الدم فقط", "fr": "Participer uniquement à la coagulation du sang" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الكريات الحمراء غنية بالهيموغلوبين الذي يرتبط بالأكسجين وينقله من الرئتين إلى مختلف أعضاء الجسم.",
+          "fr": "Les hématies, riches en hémoglobine, fixent le dioxygène et le transportent des poumons vers les différents organes du corps."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": "svt-2ac-reproduction-humaine" },
+  "tags": ["دورة دموية", "فيزيولوجيا", "circulation", "physiologie"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

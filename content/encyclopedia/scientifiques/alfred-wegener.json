@@ -1,0 +1,25 @@
+{
+  "id": "alfred-wegener",
+  "nom": { "ar": "ألفريد فيغنر", "fr": "Alfred Wegener" },
+  "periode": "1880–1930",
+  "photo": null,
+  "resume": {
+    "ar": "جيوفيزيائي وعالم مناخ ألماني، لاحظ سنة 1912 أن سواحل القارات، وخاصة أمريكا الجنوبية وإفريقيا، تتطابق كقطع أحجية، فاقترح نظرية 'انجراف القارات' القائلة بأن اليابسة كانت قارة واحدة قبل أن تتفرق تدريجيا. قوبلت أفكاره برفض واسع من مجتمعه العلمي لغياب آلية فيزيائية مقنعة، لكنها شكلت الأساس الذي بُنيت عليه لاحقا نظرية تكتونية الصفائح في ستينيات القرن العشرين.",
+    "fr": "Géophysicien et climatologue allemand qui remarqua en 1912 l'étonnante correspondance entre les côtes de l'Amérique du Sud et de l'Afrique, comme les pièces d'un puzzle. Il proposa alors la théorie de la 'dérive des continents', selon laquelle les terres émergées formaient jadis un seul supercontinent avant de se séparer progressivement. Longtemps rejetée faute de mécanisme physique convaincant, son intuition constitua néanmoins le socle sur lequel la théorie de la tectonique des plaques fut bâtie dans les années 1960."
+  },
+  "contributions": {
+    "ar": [
+      "صياغة نظرية انجراف القارات سنة 1912 استنادا إلى تطابق الشواطئ والحفريات والتراكيب الجيولوجية بين القارات المتباعدة",
+      "جمع أدلة من علم الحفريات النباتية والحيوانية تُظهر وجود كائنات متشابهة في قارات متباعدة اليوم بمحيطات شاسعة",
+      "اقتراح فكرة وجود قارة عملاقة قديمة أطلق عليها اسم 'بانجيا'",
+      "تمهيد الطريق أمام نظرية تكتونية الصفائح رغم عدم تمكنه من تفسير القوة المحركة للانجراف خلال حياته"
+    ],
+    "fr": [
+      "Formulation en 1912 de la théorie de la dérive des continents, appuyée sur la correspondance des côtes, des fossiles et des structures géologiques entre continents aujourd'hui séparés",
+      "Rassemblement de preuves paléontologiques montrant des espèces similaires sur des continents désormais séparés par de vastes océans",
+      "Proposition du supercontinent ancien qu'il nomma la 'Pangée'",
+      "Ouverture de la voie à la théorie de la tectonique des plaques, bien qu'il n'ait pas pu identifier de son vivant le moteur physique de ce déplacement"
+    ]
+  },
+  "domaines": ["geologie", "tectonique"]
+}

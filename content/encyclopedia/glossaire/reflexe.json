@@ -1,0 +1,9 @@
+{
+  "id": "reflexe",
+  "terme": { "ar": "المنعكس العصبي", "fr": "Réflexe" },
+  "definition": {
+    "ar": "استجابة حركية لا إرادية وسريعة لمنبه معين، تمر عبر مسار عصبي ثابت يُسمى القوس الانعكاسي، ويشمل مستقبلا وعصبا حسيا ومركزا عصبيا وعصبا حركيا وعضوا منفذا.",
+    "fr": "Réponse motrice involontaire et rapide à un stimulus donné, empruntant un trajet nerveux fixe appelé arc réflexe, qui comprend un récepteur, un nerf sensitif, un centre nerveux, un nerf moteur et un effecteur."
+  },
+  "voir_aussi": ["neurone", "synapse"]
+}

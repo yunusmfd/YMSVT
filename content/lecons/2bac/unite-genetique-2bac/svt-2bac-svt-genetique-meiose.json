@@ -1,0 +1,163 @@
+{
+  "id": "svt-2bac-svt-genetique-meiose",
+  "slug": "meiose",
+  "cycle": "thanawi-taahili",
+  "niveau": "2bac",
+  "filieres": ["2bac-svt", "2bac-pc"],
+  "unite_id": "unite-genetique-2bac",
+  "dorra": 1,
+  "ordre_dans_unite": 3,
+  "titre": { "ar": "الانقسام المنصف وتنوّع الأمشاج", "fr": "La méiose et la diversité des gamètes" },
+  "duree_estimee_min": 25,
+  "domaine_specialite": "genetique",
+  "objectifs": {
+    "ar": ["تفسير آلية الانقسام المنصف", "ربط الانقسام بالتنوع الوراثي"],
+    "fr": ["Expliquer le mécanisme de la méiose", "Relier la méiose à la diversité génétique"]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "تذكير بالانقسام الخيطي", "fr": "Rappel sur la mitose" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "الانقسام الخيطي (Mitose) هو الآلية التي تتكاثر بها معظم خلايا الجسم، وينتج عنه خليتان بنتان بنفس العدد الصبغي للخلية الأم (2n). يضمن هذا الانقسام تجديد الأنسجة والنمو، لكنه لا يُنتج تنوّعا وراثيا.",
+            "fr": "La mitose est le mécanisme par lequel se reproduisent la plupart des cellules du corps, produisant deux cellules filles ayant le même nombre chromosomique que la cellule mère (2n). Elle assure le renouvellement des tissus et la croissance, mais ne produit pas de diversité génétique."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/meiose-schema-1.svg",
+          "legende": { "ar": "مراحل الانقسام الخيطي: من الخلية الأم إلى خليتين بنتين متماثلتين", "fr": "Étapes de la mitose : de la cellule mère à deux cellules filles identiques" }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "الانقسام المنصف يحافظ على **نصف** العدد الأصلي للصبغيات في كل خلية ناتجة، بخلاف الانقسام الخيطي الذي يحافظ على العدد كاملا.",
+            "fr": "La méiose maintient **la moitié** du nombre initial de chromosomes dans chaque cellule fille, contrairement à la mitose qui conserve le nombre complet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "مراحل الانقسام المنصف", "fr": "Les étapes de la méiose" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتكون الانقسام المنصف من انقسامين متتاليين (I وII) يسبقهما استنساخ واحد فقط للمادة الوراثية. ينتج عن الانقسام الأول خليتان بعدد صبغي نصفي (n)، ثم ينتج عن الانقسام الثاني أربع خلايا أحادية الصيغة الصبغية تُسمى الأمشاج.",
+            "fr": "La méiose comprend deux divisions successives (I et II) précédées d'une seule réplication de l'ADN. La première division produit deux cellules à nombre chromosomique réduit (n), puis la seconde division produit quatre cellules haploïdes appelées gamètes."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/meiose-schema-2.svg",
+          "legende": { "ar": "الانقسامان المتتاليان للانقسام المنصف وينتج عنهما 4 أمشاج", "fr": "Les deux divisions successives de la méiose produisant 4 gamètes" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مقارنة بين الانقسام الخيطي والمنصف", "fr": "Comparaison mitose / méiose" },
+          "entetes": { "ar": ["المعيار", "الانقسام الخيطي", "الانقسام المنصف"], "fr": ["Critère", "Mitose", "Méiose"] },
+          "lignes": [
+            { "ar": ["عدد الانقسامات", "واحد", "اثنان"], "fr": ["Nombre de divisions", "Une", "Deux"] },
+            { "ar": ["عدد الخلايا الناتجة", "خليتان", "أربع خلايا"], "fr": ["Cellules produites", "Deux", "Quatre"] },
+            { "ar": ["العدد الصبغي للخلايا الناتجة", "2n (مطابق للخلية الأم)", "n (نصف الخلية الأم)"], "fr": ["Nombre chromosomique", "2n (identique)", "n (moitié)"] }
+          ]
+        },
+        {
+          "type": "video",
+          "src": "assets/videos/meiose-animation.mp4",
+          "optionnel": true
+        },
+        {
+          "type": "lien_labo",
+          "experience_id": "division-cellulaire",
+          "texte": { "ar": "شاهد الانقسام في المختبر الافتراضي", "fr": "Voir la division dans le labo virtuel" }
+        },
+        {
+          "type": "encadre",
+          "variante": "tanbih",
+          "titre": { "ar": "تنبيه", "fr": "Attention" },
+          "texte": {
+            "ar": "لا تخلط بين الانقسام المنصف والانقسام الخيطي: الأول يقلّل عدد الصبغيات إلى النصف، والثاني يحافظ عليه كاملا.",
+            "fr": "Ne confondez pas méiose et mitose : la première réduit de moitié le nombre de chromosomes, la seconde le conserve intégralement."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "istintaj",
+          "titre": { "ar": "استنتاج", "fr": "Déduction" },
+          "texte": {
+            "ar": "تنوّع الأمشاج ناتج عن ظاهرتين أساسيتين: {{terme:crossing-over|العبور الصبغي}} والاصطفاف العشوائي للصبغيات المتماثلة أثناء الانقسام الأول.",
+            "fr": "La diversité des gamètes résulte de deux phénomènes essentiels : le {{terme:crossing-over|crossing-over}} et l'assortiment indépendant des chromosomes homologues durant la première division."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "اكتشاف الكروموزومات وربطها بقوانين مندل للوراثة استغرق عقودا من البحث، ويُعتبر ثوماس مورغان من أبرز من أثبت العلاقة بينهما تجريبيا.",
+            "fr": "La découverte des chromosomes et leur lien avec les lois de Mendel a nécessité des décennies de recherche ; Thomas Morgan fut l'un des premiers à démontrer expérimentalement ce lien."
+          },
+          "lien_encyclopedie": "histoire-genetique"
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "الانقسام المنصف آلية تضمن ثبات العدد الصبغي عبر الأجيال، وتُنتج تنوّعا وراثيا عبر آليتين رئيسيتين: العبور الصبغي والاصطفاف العشوائي للصبغيات.",
+            "fr": "La méiose garantit la stabilité du nombre chromosomique entre générations et génère de la diversité génétique via deux mécanismes clés : le crossing-over et l'assortiment aléatoire des chromosomes."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "كم عدد الخلايا الناتجة عن الانقسام المنصف؟", "fr": "Combien de cellules résultent de la méiose ?" },
+        "options": [
+          { "ar": "خليتان", "fr": "Deux cellules" },
+          { "ar": "أربع خلايا", "fr": "Quatre cellules" },
+          { "ar": "خلية واحدة", "fr": "Une seule cellule" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الانقسام المنصف يتكون من انقسامين متتاليين ينتج عنهما 4 خلايا أحادية الصيغة الصبغية.",
+          "fr": "La méiose comprend deux divisions successives produisant 4 cellules haploïdes."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "ما الظاهرتان المسؤولتان عن تنوّع الأمشاج؟", "fr": "Quels sont les deux phénomènes responsables de la diversité des gamètes ?" },
+        "options": [
+          { "ar": "التضاعف الذاتي والانقسام الخيطي", "fr": "La réplication et la mitose" },
+          { "ar": "العبور الصبغي والاصطفاف العشوائي", "fr": "Le crossing-over et l'assortiment aléatoire" },
+          { "ar": "الإخصاب والانقسام غير المباشر", "fr": "La fécondation et la division indirecte" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "العبور الصبغي (تبادل أجزاء بين الصبغيات المتماثلة) والاصطفاف العشوائي هما المسؤولان عن التنوع الوراثي للأمشاج.",
+          "fr": "Le crossing-over (échange de segments entre chromosomes homologues) et l'assortiment aléatoire sont responsables de la diversité génétique des gamètes."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": "svt-2bac-svt-immunite-reponse-specifique" },
+  "tags": ["وراثة", "خلية", "génétique", "méiose"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

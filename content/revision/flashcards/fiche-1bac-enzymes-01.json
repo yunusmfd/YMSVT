@@ -1,0 +1,7 @@
+{
+  "id": "fiche-1bac-enzymes-01",
+  "niveau": "1bac",
+  "unite": "الإنزيمات",
+  "question": { "ar": "ما هو دور الإنزيم في التفاعل الكيميائي؟", "fr": "Quel est le rôle d'une enzyme dans une réaction chimique ?" },
+  "reponse": { "ar": "يسرّع الإنزيم التفاعل الكيميائي دون أن يُستهلك فيه، وهو خاص بنوع معين من الركائز.", "fr": "L'enzyme accélère la réaction chimique sans être consommée, et elle est spécifique à un type précis de substrat." }
+}

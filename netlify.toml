@@ -1,0 +1,5 @@
+[build]
+  command = "npm install && npm run build"
+  publish = "."
+
+# قواعد الكاش الفعلية موجودة في ملف _headers (القسم 11.2 من الوثيقة)

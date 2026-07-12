@@ -1,0 +1,7 @@
+{
+  "id": "fiche-2ac-respiration-01",
+  "niveau": "2ac",
+  "unite": "التنفس",
+  "question": { "ar": "أين تتم عملية التبادلات الغازية في الرئتين؟", "fr": "Où se déroulent les échanges gazeux dans les poumons ?" },
+  "reponse": { "ar": "على مستوى الأسناخ الرئوية، حيث يمر الأكسجين إلى الدم ويخرج ثاني أكسيد الكربون منه.", "fr": "Au niveau des alvéoles pulmonaires, où l'oxygène passe dans le sang et le dioxyde de carbone en est extrait." }
+}

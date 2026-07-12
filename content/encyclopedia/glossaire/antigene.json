@@ -1,0 +1,9 @@
+{
+  "id": "antigene",
+  "terme": { "ar": "مولد الضد (المستضد)", "fr": "Antigène" },
+  "definition": {
+    "ar": "جزيء غريب عن الجسم (بروتين غالبا) قادر على استثارة استجابة مناعية نوعية، ويحمل مناطق تُسمى الحواتم (المحددات المولدة للضد) يتم التعرف عليها بشكل نوعي من طرف الأجسام المضادة أو مستقبلات اللمفاويات.",
+    "fr": "Molécule étrangère à l'organisme (le plus souvent une protéine) capable de déclencher une réponse immunitaire spécifique ; elle porte des régions appelées épitopes (déterminants antigéniques) reconnues spécifiquement par les anticorps ou les récepteurs des lymphocytes."
+  },
+  "voir_aussi": ["anticorps", "lymphocyte"]
+}

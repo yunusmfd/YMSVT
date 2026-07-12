@@ -1,0 +1,9 @@
+{
+  "id": "membrane-plasmique",
+  "terme": { "ar": "الغشاء الهيولي (السيتوبلازمي)", "fr": "Membrane plasmique" },
+  "definition": {
+    "ar": "غشاء رقيق يحيط بالخلية ويفصل محتواها الداخلي عن الوسط الخارجي، وينظم تبادل المواد بين الخلية ومحيطها بشكل انتقائي.",
+    "fr": "Fine membrane qui entoure la cellule, séparant son contenu interne du milieu extérieur, et qui régule de façon sélective les échanges de substances entre la cellule et son environnement."
+  },
+  "voir_aussi": ["noyau-cellulaire", "mitochondrie"]
+}

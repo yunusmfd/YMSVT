@@ -1,0 +1,7 @@
+{
+  "id": "fiche-3ac-vaccination-01",
+  "niveau": "3ac",
+  "unite": "المناعة",
+  "question": { "ar": "كيف يحمي التلقيح الجسم من مرض معين؟", "fr": "Comment la vaccination protège-t-elle l'organisme d'une maladie ?" },
+  "reponse": { "ar": "بحقن عنصر ممرض مضعّف أو معطّل يحفّز الجهاز المناعي على إنتاج خلايا ذاكرة، تسمح باستجابة سريعة وفعالة عند التعرض الحقيقي للمرض.", "fr": "En injectant un agent pathogène atténué ou inactivé, on stimule le système immunitaire à produire des cellules mémoires, permettant une réponse rapide et efficace lors d'une exposition réelle à la maladie." }
+}

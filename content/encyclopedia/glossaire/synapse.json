@@ -1,0 +1,9 @@
+{
+  "id": "synapse",
+  "terme": { "ar": "المشبك العصبي", "fr": "Synapse" },
+  "definition": {
+    "ar": "منطقة اتصال وظيفي بين نهاية عصبون وخلية أخرى (عصبون أو خلية عضلية)، يتم عبرها نقل المعلومة العصبية غالبا بواسطة مواد كيميائية تُسمى النواقل العصبية.",
+    "fr": "Zone de contact fonctionnel entre la terminaison d'un neurone et une autre cellule (neurone ou cellule musculaire), où l'information nerveuse est transmise le plus souvent par des substances chimiques appelées neurotransmetteurs."
+  },
+  "voir_aussi": ["neurone", "reflexe"]
+}

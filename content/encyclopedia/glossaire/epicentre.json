@@ -1,0 +1,9 @@
+{
+  "id": "epicentre",
+  "terme": { "ar": "المركز السطحي (فوق المركز)", "fr": "Épicentre" },
+  "definition": {
+    "ar": "النقطة الواقعة على سطح الأرض عموديا فوق البؤرة الزلزالية، وهي عادة المنطقة التي تسجَّل فيها أقوى الاهتزازات.",
+    "fr": "Point situé à la surface terrestre, à la verticale du foyer sismique, où les secousses sont généralement les plus fortement ressenties."
+  },
+  "voir_aussi": ["seisme"]
+}

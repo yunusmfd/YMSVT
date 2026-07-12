@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title8 desc8">
+  <title id="title8">مؤشرات الانجراف القاري: من القارة الأم بانجيا إلى القارات الحالية</title>
+  <desc id="desc8">رسم تخطيطي مبسط يبين على اليسار كتلة قارية واحدة متقاربة الحواف (بانجيا)، وعلى اليمين قارات منفصلة بعد ابتعادها التدريجي، مع سهم زمني بينهما وإشارة إلى تطابق الحواف والأحافير المشتركة كأدلة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- بانجيا -->
+  <text x="150" y="55" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" font-weight="bold" fill="#204F3F" data-lang="ar">بانجيا (قارة موحدة قديما)</text>
+  <text x="150" y="55" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="fr">Pangée (supercontinent ancien)</text>
+
+  <ellipse cx="150" cy="200" rx="120" ry="100" fill="#3C7A63" stroke="#204F3F" stroke-width="3" />
+  <path d="M 150 105 C 130 150, 170 170, 150 210 C 135 250, 165 270, 150 295" stroke="#8B4A2B" stroke-width="2.5" fill="none" stroke-dasharray="5 4" />
+  <text x="150" y="330" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">حواف متطابقة قابلة للتركيب</text>
+  <text x="150" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#8B4A2B" data-lang="fr">Bords côtiers complémentaires</text>
+
+  <!-- سهم الزمن -->
+  <path d="M 300 200 L 480 200" stroke="#1B241F" stroke-width="3" marker-end="url(#arT)" />
+  <defs><marker id="arT" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#1B241F" /></marker></defs>
+  <text x="390" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">ملايين السنين من الانجراف</text>
+  <text x="390" y="220" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Millions d'années de dérive</text>
+
+  <!-- القارات الحالية -->
+  <text x="650" y="55" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" font-weight="bold" fill="#204F3F" data-lang="ar">القارات الحالية المنفصلة</text>
+  <text x="650" y="55" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="fr">Continents actuels séparés</text>
+
+  <ellipse cx="570" cy="170" rx="55" ry="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+  <ellipse cx="700" cy="240" rx="65" ry="55" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+  <ellipse cx="600" cy="310" rx="45" ry="35" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+
+  <!-- أحافير مشتركة -->
+  <circle cx="595" cy="160" r="5" fill="#C17A2E" /><circle cx="660" cy="230" r="5" fill="#C17A2E" /><circle cx="595" cy="300" r="5" fill="#C17A2E" />
+  <text x="650" y="350" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#C17A2E" data-lang="ar">نفس الأحافير موجودة في قارات متباعدة اليوم</text>
+  <text x="650" y="365" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#C17A2E" data-lang="fr">Fossiles identiques sur des continents aujourd'hui distants</text>
+</svg>

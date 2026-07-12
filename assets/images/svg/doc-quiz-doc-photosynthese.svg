@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="titlePhoto descPhoto">
+  <title id="titlePhoto">مبيان: سرعة التركيب الضوئي بدلالة شدة الإضاءة</title>
+  <desc id="descPhoto">مبيان تخطيطي يمثل تطور سرعة التركيب الضوئي عند نبات بدلالة شدة الإضاءة، حيث ترتفع السرعة بسرعة ثم تستقر عند مستوى ثابت (مرحلة التشبع).</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- المحاور -->
+  <line x1="90" y1="320" x2="90" y2="50" stroke="#1B241F" stroke-width="2" />
+  <line x1="90" y1="320" x2="740" y2="320" stroke="#1B241F" stroke-width="2" />
+
+  <!-- منحنى السرعة -->
+  <path d="M90 320 C 200 320, 260 110, 360 95 C 480 85, 600 85, 730 85" fill="none" stroke="#204F3F" stroke-width="4" />
+
+  <!-- نقاط بيانات -->
+  <circle cx="150" cy="290" r="6" fill="#3B6E8F" />
+  <circle cx="260" cy="160" r="6" fill="#3B6E8F" />
+  <circle cx="360" cy="95" r="6" fill="#3B6E8F" />
+  <circle cx="500" cy="86" r="6" fill="#3B6E8F" />
+  <circle cx="650" cy="85" r="6" fill="#3B6E8F" />
+
+  <!-- خط التشبع -->
+  <line x1="360" y1="95" x2="730" y2="85" stroke="#C17A2E" stroke-width="2" stroke-dasharray="6 4" />
+  <text x="600" y="70" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="14" fill="#8B4A2B" data-lang="ar">مرحلة التشبع</text>
+  <text x="600" y="70" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#8B4A2B" data-lang="fr" dy="16">Palier de saturation</text>
+
+  <!-- تسميات المحاور -->
+  <text x="415" y="360" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">شدة الإضاءة</text>
+  <text x="415" y="360" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Intensité lumineuse</text>
+
+  <text x="45" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar" transform="rotate(-90 45 185)">سرعة التركيب الضوئي</text>
+  <text x="45" y="185" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr" transform="rotate(-90 45 185)">Vitesse de photosynthèse</text>
+
+  <text x="400" y="30" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" fill="#204F3F" data-lang="ar">تطور سرعة التركيب الضوئي بدلالة شدة الإضاءة</text>
+  <text x="400" y="30" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#204F3F" data-lang="fr">Vitesse de photosynthèse selon l'intensité lumineuse</text>
+</svg>

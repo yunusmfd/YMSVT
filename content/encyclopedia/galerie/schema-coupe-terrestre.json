@@ -1,0 +1,13 @@
+{
+  "id": "schema-coupe-terrestre",
+  "titre": { "ar": "التركيب الداخلي للأرض", "fr": "Structure interne de la Terre" },
+  "domaine": "geologie",
+  "image": "assets/images/svg/galerie-schema-coupe-terrestre.svg",
+  "legendes": [
+    { "ar": "القشرة الأرضية: الطبقة الصلبة الرقيقة الخارجية التي نعيش فوقها", "fr": "Croûte terrestre : fine couche rigide externe sur laquelle nous vivons" },
+    { "ar": "الوشاح (المانتل): طبقة صخرية سميكة شبه لدنة تشكل الجزء الأكبر من حجم الأرض", "fr": "Manteau : épaisse couche rocheuse semi-ductile constituant l'essentiel du volume terrestre" },
+    { "ar": "اللب الخارجي: طبقة معدنية منصهرة غنية بالحديد والنيكل", "fr": "Noyau externe : couche métallique en fusion riche en fer et en nickel" },
+    { "ar": "اللب الداخلي: كرة معدنية صلبة في مركز الأرض رغم درجة حرارتها المرتفعة جدا", "fr": "Noyau interne : sphère métallique solide au centre de la Terre malgré sa température très élevée" }
+  ],
+  "lecons_liees": []
+}

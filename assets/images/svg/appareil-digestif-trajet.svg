@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title3 desc3">
+  <title id="title3">مخطط الجهاز الهضمي ومسار الأغذية</title>
+  <desc id="desc3">مخطط تخطيطي يبين أعضاء الأنبوب الهضمي مرتبة حسب مسار الأغذية: الفم، المريء، المعدة، الأمعاء الدقيقة، الأمعاء الغليظة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الفم -->
+  <ellipse cx="80" cy="70" rx="34" ry="22" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <text x="80" y="35" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">الفم</text>
+  <text x="80" y="35" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Bouche</text>
+
+  <!-- المريء -->
+  <path d="M80 92 C80 130 110 140 130 165" stroke="#3C7A63" stroke-width="14" fill="none" stroke-linecap="round" />
+  <text x="150" y="120" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">المريء</text>
+  <text x="150" y="120" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Œsophage</text>
+
+  <!-- المعدة -->
+  <path d="M130 165 Q90 200 130 250 Q190 285 250 250 Q290 220 260 180 Q220 155 130 165 Z" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <text x="190" y="225" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" font-weight="bold" fill="#204F3F" data-lang="ar">المعدة</text>
+  <text x="190" y="225" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="fr">Estomac</text>
+
+  <!-- الأمعاء الدقيقة (ملتفة) -->
+  <path d="M260 250 Q320 240 320 275 Q320 310 380 300 Q440 290 440 320 Q440 350 500 340"
+        stroke="#3B6E8F" stroke-width="12" fill="none" stroke-linecap="round" />
+  <path d="M320 275 Q280 300 340 330 Q380 350 420 330"
+        stroke="#3B6E8F" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.85" />
+  <text x="380" y="230" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" font-weight="bold" fill="#3B6E8F" data-lang="ar">الأمعاء الدقيقة</text>
+  <text x="380" y="230" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#3B6E8F" data-lang="fr">Intestin grêle</text>
+
+  <!-- الأمعاء الغليظة تحيط بالمشهد -->
+  <path d="M500 340 Q640 350 660 260 Q670 150 600 90 Q560 60 520 65"
+        stroke="#8B4A2B" stroke-width="16" fill="none" stroke-linecap="round" />
+  <text x="670" y="200" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" font-weight="bold" fill="#8B4A2B" data-lang="ar">الأمعاء الغليظة</text>
+  <text x="670" y="200" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#8B4A2B" data-lang="fr">Gros intestin</text>
+
+  <!-- فتحة الشرج -->
+  <circle cx="520" cy="65" r="12" fill="#C17A2E" stroke="#204F3F" stroke-width="2" />
+  <text x="520" y="35" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">فتحة الشرج</text>
+  <text x="520" y="35" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Anus</text>
+
+  <!-- سهم اتجاه المسار عند البداية -->
+  <path d="M40 50 L60 65" stroke="#C17A2E" stroke-width="4" marker-end="url(#arrowFood)" />
+  <defs>
+    <marker id="arrowFood" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#C17A2E" />
+    </marker>
+  </defs>
+
+  <!-- مفتاح: مسار الغذاء -->
+  <text x="400" y="370" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">مسار الأغذية عبر الأنبوب الهضمي</text>
+  <text x="400" y="370" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Trajet des aliments dans le tube digestif</text>
+</svg>

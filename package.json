@@ -1,0 +1,22 @@
+{
+  "name": "nova-svt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nova SVT — منصة مرجعية لعلوم الحياة والأرض لتلاميذ المغرب",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/prerender.js && node scripts/build-search-index.js && node scripts/build-sitemap.js && node scripts/build-manifest.js && node scripts/build-pages.js",
+    "prerender": "node scripts/prerender.js",
+    "search-index": "node scripts/build-search-index.js",
+    "sitemap": "node scripts/build-sitemap.js",
+    "manifest": "node scripts/build-manifest.js",
+    "pages": "node scripts/build-pages.js",
+    "serve": "node scripts/dev-server.js"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3",
+    "isomorphic-dompurify": "^2.14.0",
+    "marked": "^12.0.2",
+    "sharp": "^0.35.3"
+  }
+}

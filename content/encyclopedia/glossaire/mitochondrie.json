@@ -1,0 +1,9 @@
+{
+  "id": "mitochondrie",
+  "terme": { "ar": "الميتوكوندري", "fr": "Mitochondrie" },
+  "definition": {
+    "ar": "عضية خلوية مسؤولة عن إنتاج الطاقة (ATP) عبر التنفس الخلوي، وتتوفر على غشاءين وحمض نووي خاص بها.",
+    "fr": "Organite cellulaire responsable de la production d'énergie (ATP) via la respiration cellulaire, possédant une double membrane et son propre ADN."
+  },
+  "voir_aussi": ["cellule", "respiration-cellulaire"]
+}

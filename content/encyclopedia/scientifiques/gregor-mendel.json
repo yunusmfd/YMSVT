@@ -1,0 +1,25 @@
+{
+  "id": "gregor-mendel",
+  "nom": { "ar": "غريغور مندل", "fr": "Gregor Mendel" },
+  "periode": "1822–1884",
+  "photo": null,
+  "resume": {
+    "ar": "راهب وعالم نبات نمساوي يُعتبر مؤسس علم الوراثة الحديث. من خلال تجاربه الدقيقة على نبات البازلاء في حديقة ديره بمدينة برنو، توصل بين 1856 و1863 إلى القوانين الأساسية التي تحكم انتقال الصفات الوراثية من الآباء إلى الأبناء، رغم أن أهمية عمله لم تُكتشف إلا بعد وفاته بحوالي 16 سنة.",
+    "fr": "Moine et botaniste autrichien considéré comme le père de la génétique moderne. Par des expériences rigoureuses sur les petits pois dans le jardin de son monastère à Brno, il établit entre 1856 et 1863 les lois fondamentales régissant la transmission des caractères héréditaires — une découverte qui ne sera reconnue à sa juste valeur qu'environ seize ans après sa mort."
+  },
+  "contributions": {
+    "ar": [
+      "صياغة قانون الانعزال (تفرّق الأليلات) الذي يفسر كيف تنتقل النسخ المختلفة لصفة معينة إلى الأمشاج",
+      "صياغة قانون الاستقلالية (التوزيع الحر) الذي يصف انتقال صفات مختلفة بشكل مستقل عن بعضها",
+      "إدخال المفاهيم الإحصائية إلى دراسة الوراثة عبر تحليل آلاف نباتات البازلاء عبر أجيال متعاقبة",
+      "التمييز بين الصفات السائدة والصفات المتنحية قبل معرفة الأساس الكيميائي للوراثة"
+    ],
+    "fr": [
+      "Formulation de la loi de la ségrégation (dissociation des allèles), expliquant comment les différentes versions d'un caractère se répartissent dans les gamètes",
+      "Formulation de la loi de l'assortiment indépendant, décrivant la transmission indépendante de plusieurs caractères distincts",
+      "Introduction d'une approche statistique rigoureuse dans l'étude de l'hérédité, fondée sur des milliers de croisements de petits pois sur plusieurs générations",
+      "Distinction entre caractères dominants et récessifs, bien avant que la base chimique de l'hérédité ne soit connue"
+    ]
+  },
+  "domaines": ["genetique"]
+}

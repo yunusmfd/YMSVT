@@ -1,0 +1,7 @@
+{
+  "id": "fiche-tc-tectonique-01",
+  "niveau": "tc",
+  "unite": "تكتونية الصفائح",
+  "question": { "ar": "ماذا يحدث عند حدود الصفائح المتقاربة بين صفيحة محيطية وأخرى قارية؟", "fr": "Que se passe-t-il à une limite convergente entre une plaque océanique et une plaque continentale ?" },
+  "reponse": { "ar": "تنغرس الصفيحة المحيطية الأثقل تحت الصفيحة القارية في ظاهرة تُسمى الطمر (subduction).", "fr": "La plaque océanique, plus dense, s'enfonce sous la plaque continentale : c'est le phénomène de subduction." }
+}

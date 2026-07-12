@@ -1,0 +1,186 @@
+{
+  "id": "svt-1ac-respiration-echanges-gazeux",
+  "slug": "respiration-echanges",
+  "cycle": "iaadadi",
+  "niveau": "1ac",
+  "unite_id": "unite-respiration-1ac",
+  "dorra": 1,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "التنفس عند الإنسان: الحركات التنفسية والتبادلات الغازية", "fr": "La respiration chez l'être humain : mouvements respiratoires et échanges gazeux" },
+  "duree_estimee_min": 20,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": [
+      "التعرف على أعضاء الجهاز التنفسي ومسار الهواء",
+      "تفسير آلية الشهيق والزفير بالاعتماد على حركة القفص الصدري والحجاب الحاجز",
+      "شرح التبادلات الغازية على مستوى الحويصلات الرئوية"
+    ],
+    "fr": [
+      "Identifier les organes de l'appareil respiratoire et le trajet de l'air",
+      "Expliquer le mécanisme de l'inspiration et de l'expiration à partir des mouvements de la cage thoracique et du diaphragme",
+      "Expliquer les échanges gazeux au niveau des alvéoles pulmonaires"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "أعضاء الجهاز التنفسي ومسار الهواء", "fr": "Les organes de l'appareil respiratoire et le trajet de l'air" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يدخل الهواء إلى الجسم عبر الأنف أو الفم، ثم يمر عبر البلعوم والحنجرة فالقصبة الهوائية التي تتفرع إلى قصبتين، ثم إلى قصيبات هوائية أدق داخل الرئتين، لينتهي به المطاف عند الحويصلات الرئوية.",
+            "fr": "L'air pénètre dans le corps par le nez ou la bouche, traverse le pharynx puis le larynx, descend dans la trachée qui se divise en deux bronches, puis en bronchioles de plus en plus fines à l'intérieur des poumons, pour arriver enfin aux alvéoles pulmonaires."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Observation" },
+          "texte": {
+            "ar": "توجد الرئتان داخل القفص الصدري، وهما محميتان بالأضلاع، ويفصلهما عن البطن عضلة تسمى الحجاب الحاجز.",
+            "fr": "Les poumons se trouvent à l'intérieur de la cage thoracique, protégés par les côtes, et sont séparés de l'abdomen par un muscle appelé le diaphragme."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "الحركات التنفسية: الشهيق والزفير", "fr": "Les mouvements respiratoires : inspiration et expiration" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "التنفس حركة إيقاعية تتكون من مرحلتين متعاقبتين: الشهيق الذي يُدخل الهواء إلى الرئتين، والزفير الذي يُخرجه. تنتج هذه الحركات عن تغيّر حجم القفص الصدري بفعل انقباض وارتخاء عضلات معيّنة، أهمها الحجاب الحاجز والعضلات الوربية.",
+            "fr": "La respiration est un mouvement rythmique composé de deux phases successives : l'inspiration qui fait entrer l'air dans les poumons, et l'expiration qui le fait sortir. Ces mouvements résultent de la variation du volume de la cage thoracique, due à la contraction et au relâchement de certains muscles, principalement le diaphragme et les muscles intercostaux."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/inspiration-expiration-thorax.svg",
+          "legende": { "ar": "مقارنة بين وضعية القفص الصدري والحجاب الحاجز أثناء الشهيق والزفير", "fr": "Comparaison de la cage thoracique et du diaphragme lors de l'inspiration et de l'expiration" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مقارنة بين الشهيق والزفير", "fr": "Comparaison inspiration / expiration" },
+          "entetes": { "ar": ["المعيار", "الشهيق", "الزفير"], "fr": ["Critère", "Inspiration", "Expiration"] },
+          "lignes": [
+            { "ar": ["الحجاب الحاجز", "ينقبض وينخفض", "يرتخي ويرتفع"], "fr": ["Diaphragme", "Se contracte et s'abaisse", "Se relâche et remonte"] },
+            { "ar": ["حجم القفص الصدري", "يزداد (اتساع)", "يقل (انضغاط)"], "fr": ["Volume de la cage thoracique", "Augmente (dilatation)", "Diminue (resserrement)"] },
+            { "ar": ["حركة الهواء", "دخول الهواء إلى الرئتين", "خروج الهواء من الرئتين"], "fr": ["Mouvement de l'air", "Entrée d'air dans les poumons", "Sortie d'air des poumons"] }
+          ]
+        },
+        {
+          "type": "encadre",
+          "variante": "tanbih",
+          "titre": { "ar": "تنبيه", "fr": "Attention" },
+          "texte": {
+            "ar": "لا يجب الخلط بين اتساع القفص الصدري وانتفاخ الرئتين بالهواء: اتساع القفص الصدري هو **السبب**، ودخول الهواء إلى الرئتين هو **النتيجة**.",
+            "fr": "Il ne faut pas confondre la dilatation de la cage thoracique et le remplissage des poumons par l'air : la dilatation de la cage thoracique est **la cause**, et l'entrée d'air dans les poumons en est **la conséquence**."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "التبادلات الغازية على مستوى الحويصلات الرئوية", "fr": "Les échanges gazeux au niveau des alvéoles pulmonaires" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تحتوي الرئتان على ملايين الحويصلات الرئوية، وهي أكياس هوائية صغيرة جدا ذات جدار رقيق جدا ومحاطة بشبكة كثيفة من الشعيرات الدموية. يسمح هذا التنظيم بحدوث تبادل غازي بين الهواء والدم: ينتقل ثنائي الأكسجين (O2) من هواء {{terme:alveole-pulmonaire|الحويصلة الرئوية}} إلى الدم، بينما ينتقل ثنائي أكسيد الكربون (CO2) من الدم إلى الحويصلة ليُطرح خارج الجسم عبر الزفير.",
+            "fr": "Les poumons contiennent des millions d'{{terme:alveole-pulmonaire|alvéoles pulmonaires}}, de minuscules sacs d'air à paroi très fine, entourés d'un réseau dense de capillaires sanguins. Cette organisation permet un échange gazeux entre l'air et le sang : le dioxygène (O2) passe de l'air alvéolaire vers le sang, tandis que le dioxyde de carbone (CO2) passe du sang vers l'alvéole pour être rejeté hors du corps lors de l'expiration."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/alveoles-echanges-gazeux.svg",
+          "legende": { "ar": "التبادلات الغازية بين الحويصلة الرئوية والشعيرة الدموية", "fr": "Échanges gazeux entre l'alvéole pulmonaire et le capillaire sanguin" }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "يتم التبادل الغازي دائما من الوسط الأكثر تركيزا في الغاز نحو الوسط الأقل تركيزا فيه، دون بذل أي مجهود عضلي.",
+            "fr": "L'échange gazeux se fait toujours du milieu le plus concentré en un gaz vers le milieu le moins concentré, sans aucun effort musculaire."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "لو تم فرد جميع الحويصلات الرئوية لشخص بالغ على سطح مستو، فإنها ستغطي مساحة تقارب مساحة ملعب لكرة التنس، وهو ما يفسر كفاءة التبادلات الغازية داخل الرئتين.",
+            "fr": "Si l'on dépliait toutes les alvéoles pulmonaires d'un adulte, leur surface totale couvrirait environ la superficie d'un court de tennis, ce qui explique l'efficacité des échanges gazeux dans les poumons."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "يسمح التنفس بدخول الهواء الغني بالأكسجين إلى الرئتين بفضل حركات الشهيق والزفير الناتجة عن تغيّر حجم القفص الصدري. وعلى مستوى الحويصلات الرئوية، تحدث تبادلات غازية تُدخل الأكسجين إلى الدم وتُخرج ثنائي أكسيد الكربون منه.",
+            "fr": "La respiration permet l'entrée d'air riche en dioxygène dans les poumons grâce aux mouvements d'inspiration et d'expiration résultant de la variation du volume de la cage thoracique. Au niveau des alvéoles pulmonaires, des échanges gazeux font entrer le dioxygène dans le sang et sortir le dioxyde de carbone."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ماذا يحدث للحجاب الحاجز أثناء الشهيق؟", "fr": "Que se passe-t-il au niveau du diaphragme pendant l'inspiration ?" },
+        "options": [
+          { "ar": "يرتخي ويرتفع", "fr": "Il se relâche et remonte" },
+          { "ar": "ينقبض وينخفض", "fr": "Il se contracte et s'abaisse" },
+          { "ar": "يبقى في وضعية ثابتة", "fr": "Il reste immobile" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "أثناء الشهيق ينقبض الحجاب الحاجز وينخفض نحو الأسفل، مما يزيد من حجم القفص الصدري ويسمح بدخول الهواء.",
+          "fr": "Pendant l'inspiration, le diaphragme se contracte et s'abaisse, ce qui augmente le volume de la cage thoracique et permet l'entrée de l'air."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "أين تحدث التبادلات الغازية بين الهواء والدم؟", "fr": "Où se déroulent les échanges gazeux entre l'air et le sang ?" },
+        "options": [
+          { "ar": "على مستوى القصبة الهوائية", "fr": "Au niveau de la trachée" },
+          { "ar": "على مستوى الحويصلات الرئوية", "fr": "Au niveau des alvéoles pulmonaires" },
+          { "ar": "على مستوى البلعوم", "fr": "Au niveau du pharynx" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الحويصلات الرئوية هي المكان الوحيد الذي يسمح جدارها الرقيق وتواجدها بجانب الشعيرات الدموية بحدوث التبادل الغازي.",
+          "fr": "Les alvéoles pulmonaires, grâce à leur paroi très fine et à leur proximité avec les capillaires sanguins, sont le seul site où se produit l'échange gazeux."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "ما اتجاه انتقال ثنائي أكسيد الكربون (CO2) على مستوى الحويصلة الرئوية؟", "fr": "Dans quel sens circule le dioxyde de carbone (CO2) au niveau de l'alvéole pulmonaire ?" },
+        "options": [
+          { "ar": "من الدم إلى الحويصلة", "fr": "Du sang vers l'alvéole" },
+          { "ar": "من الحويصلة إلى الدم", "fr": "De l'alvéole vers le sang" },
+          { "ar": "لا ينتقل CO2 على هذا المستوى", "fr": "Le CO2 ne circule pas à ce niveau" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "ثنائي أكسيد الكربون ينتقل من الدم (حيث يكون أكثر تركيزا) إلى هواء الحويصلة الرئوية ليُطرح خارج الجسم عبر الزفير.",
+          "fr": "Le CO2 passe du sang, où il est plus concentré, vers l'air de l'alvéole pulmonaire, pour être rejeté hors du corps lors de l'expiration."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": "svt-1ac-digestion-appareil-digestif" },
+  "tags": ["تنفس", "فيزيولوجيا", "respiration", "physiologie"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

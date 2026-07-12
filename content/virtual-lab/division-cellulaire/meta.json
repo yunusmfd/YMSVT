@@ -1,0 +1,11 @@
+{
+  "id": "division-cellulaire",
+  "type": "interactif",
+  "niveau": "2bac",
+  "titre": { "ar": "المختبر الافتراضي: الانقسام الخلوي", "fr": "Labo virtuel : la division cellulaire" },
+  "description": {
+    "ar": "تجربة تفاعلية تتيح لك تتبع مراحل الانقسام الخلوي خطوة بخطوة، من خلية أم إلى خليتين بنتين، بالنقر على زر الانتقال بين المراحل.",
+    "fr": "Une expérience interactive qui permet de suivre pas à pas les étapes de la division cellulaire, d'une cellule mère jusqu'aux cellules filles, en cliquant sur le bouton de passage à l'étape suivante."
+  },
+  "vignette": null
+}

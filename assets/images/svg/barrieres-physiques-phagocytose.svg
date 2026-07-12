@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title3 desc3">
+  <title id="title3">خطوط الدفاع غير النوعي: الحاجز الجلدي والبلعمة</title>
+  <desc id="desc3">مخطط يوضح على اليسار الجلد كحاجز فيزيائي يمنع دخول الميكروبات، وعلى اليمين المراحل الثلاث للبلعمة: التعرف، الالتهام، ثم الهضم.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- Skin barrier section -->
+  <text x="120" y="40" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#204F3F" data-lang="ar">الحاجز الجلدي</text>
+  <text x="120" y="40" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#204F3F" data-lang="fr">Barrière cutanée</text>
+
+  <rect x="40" y="60" width="180" height="26" fill="#C17A2E" stroke="#8B4A2B" stroke-width="1.5" />
+  <rect x="40" y="86" width="180" height="26" fill="#E3E8D6" stroke="#3C7A63" stroke-width="1.5" />
+  <rect x="40" y="112" width="180" height="26" fill="#F0F1F0" stroke="#DADDD5" stroke-width="1.5" />
+  <text x="230" y="78" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">البشرة</text>
+  <text x="230" y="78" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">Épiderme</text>
+
+  <!-- microbe blocked -->
+  <circle cx="120" cy="30" r="9" fill="#8B4A2B" />
+  <path d="M120 39 L120 58" stroke="#8B4A2B" stroke-width="3" marker-end="url(#arrowB)" />
+  <line x1="105" y1="65" x2="135" y2="90" stroke="#204F3F" stroke-width="4" stroke-linecap="round" />
+  <line x1="135" y1="65" x2="105" y2="90" stroke="#204F3F" stroke-width="4" stroke-linecap="round" />
+  <defs>
+    <marker id="arrowB" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#8B4A2B" />
+    </marker>
+  </defs>
+  <text x="120" y="175" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">إيقاف دخول الميكروب</text>
+  <text x="120" y="175" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Blocage du microbe</text>
+
+  <!-- separator -->
+  <line x1="270" y1="20" x2="270" y2="360" stroke="#DADDD5" stroke-width="2" stroke-dasharray="6,4" />
+
+  <!-- Phagocytosis title -->
+  <text x="540" y="40" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#204F3F" data-lang="ar">البلعمة (استجابة التهابية)</text>
+  <text x="540" y="40" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#204F3F" data-lang="fr">Phagocytose (réponse inflammatoire)</text>
+
+  <!-- Stage 1: reconnaissance -->
+  <circle cx="330" cy="220" r="42" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <circle cx="395" cy="220" r="8" fill="#8B4A2B" />
+  <text x="345" y="290" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">التعرف</text>
+  <text x="345" y="290" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Reconnaissance</text>
+
+  <path d="M400 220 L455 220" stroke="#3B6E8F" stroke-width="3" marker-end="url(#arrowB2)" />
+  <defs>
+    <marker id="arrowB2" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#3B6E8F" />
+    </marker>
+  </defs>
+
+  <!-- Stage 2: engulfing -->
+  <g>
+    <path d="M500 220 a42 42 0 1 1 0.1 0 M478 185 q-25 -10 -35 15 M562 185 q25 -10 35 15" fill="none" stroke="#204F3F" stroke-width="3" />
+    <circle cx="500" cy="220" r="42" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+    <path d="M470 195 q-20 -15 -25 10 q25 5 25 -10" fill="#3C7A63" stroke="#204F3F" stroke-width="1.5" />
+    <path d="M530 195 q20 -15 25 10 q-25 5 -25 -10" fill="#3C7A63" stroke="#204F3F" stroke-width="1.5" />
+    <circle cx="500" cy="220" r="8" fill="#8B4A2B" />
+  </g>
+  <text x="500" y="290" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">الالتهام</text>
+  <text x="500" y="290" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Englobement</text>
+
+  <path d="M555 220 L610 220" stroke="#3B6E8F" stroke-width="3" marker-end="url(#arrowB2)" />
+
+  <!-- Stage 3: digestion -->
+  <circle cx="655" cy="220" r="42" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <circle cx="655" cy="220" r="14" fill="none" stroke="#8B4A2B" stroke-width="2" stroke-dasharray="3,3" />
+  <text x="655" y="290" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">الهضم داخل الفجوة الهضمية</text>
+  <text x="655" y="290" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Digestion (vacuole)</text>
+
+  <text x="540" y="335" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">البلعمي (كرية دم بيضاء)</text>
+  <text x="540" y="335" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Phagocyte (globule blanc)</text>
+</svg>

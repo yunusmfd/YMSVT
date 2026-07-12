@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">مخطط القوس الانعكاسي للمنعكس العضلي (المنعكس الوتري)</title>
+  <desc id="desc2">مخطط يوضح مسار المعلومة العصبية بدءا من المنبه (تمدد الوتر) مرورا بالمستقبل، العصب الحسي، النخاع الشوكي، العصب الحركي، وصولا إلى العضو المنفذ الذي يحدث الاستجابة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- Stimulus -->
+  <g>
+    <path d="M25 300 l20 -30 l10 15 l20 -25" stroke="#8B4A2B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="55" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#8B4A2B" data-lang="ar">المنبه (تمدد الوتر)</text>
+    <text x="55" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Stimulus (étirement)</text>
+  </g>
+
+  <!-- Récepteur box -->
+  <rect x="40" y="180" width="160" height="80" rx="12" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <text x="120" y="215" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">المستقبل الحسي</text>
+  <text x="120" y="215" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Récepteur sensoriel</text>
+  <text x="120" y="238" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">(مغزل عضلي)</text>
+  <text x="120" y="238" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">(fuseau neuromusculaire)</text>
+
+  <!-- Arrow receptor -> spinal cord -->
+  <path d="M200 200 Q 300 90 340 100" stroke="#3B6E8F" stroke-width="3.5" fill="none" marker-end="url(#arrowR)" />
+  <text x="255" y="130" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#3B6E8F" data-lang="ar">عصب حسي (وارد)</text>
+  <text x="255" y="130" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3B6E8F" data-lang="fr">Nerf sensitif (afférent)</text>
+
+  <!-- Spinal cord cross section -->
+  <circle cx="420" cy="130" r="75" fill="#F0F1F0" stroke="#204F3F" stroke-width="3" />
+  <path d="M400 90 q20 20 0 40 q-20 20 0 40 q20 -20 40 0 q20 -20 0 -40 q-20 -20 0 -40 q-20 20 -40 0 z" fill="#3C7A63" opacity="0.85" />
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">المركز العصبي (النخاع الشوكي)</text>
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Centre nerveux (moelle épinière)</text>
+
+  <!-- Synapse marker -->
+  <circle cx="420" cy="130" r="6" fill="#C17A2E" />
+  <text x="470" y="70" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#C17A2E" data-lang="ar">مشبك عصبي</text>
+  <text x="470" y="70" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#C17A2E" data-lang="fr">Synapse</text>
+
+  <!-- Arrow spinal cord -> effecteur -->
+  <path d="M495 160 Q 590 260 610 250" stroke="#3B6E8F" stroke-width="3.5" fill="none" marker-end="url(#arrowR)" />
+  <text x="575" y="290" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#3B6E8F" data-lang="ar">عصب حركي (صادر)</text>
+  <text x="575" y="290" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3B6E8F" data-lang="fr">Nerf moteur (efférent)</text>
+
+  <defs>
+    <marker id="arrowR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#3B6E8F" />
+    </marker>
+  </defs>
+
+  <!-- Effecteur box -->
+  <rect x="610" y="180" width="160" height="80" rx="12" fill="#E3E8D6" stroke="#C17A2E" stroke-width="3" />
+  <text x="690" y="215" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">العضو المنفذ (العضلة)</text>
+  <text x="690" y="215" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Effecteur (muscle)</text>
+  <text x="690" y="238" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">(المستجيب)</text>
+  <text x="690" y="238" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">(l'effecteur)</text>
+
+  <!-- Response -->
+  <path d="M770 300 l20 -30 M790 270 l10 15 l20 -25" stroke="#204F3F" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="745" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#204F3F" data-lang="ar">الاستجابة (تقلص عضلي)</text>
+  <text x="745" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#204F3F" data-lang="fr">Réponse (contraction)</text>
+</svg>

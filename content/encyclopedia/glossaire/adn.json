@@ -1,0 +1,9 @@
+{
+  "id": "adn",
+  "terme": { "ar": "الحمض النووي الريبي منقوص الأكسجين (ADN)", "fr": "Acide désoxyribonucléique (ADN)" },
+  "definition": {
+    "ar": "جزيء بيولوجي يتخذ شكل حلزون مزدوج، يحمل المعلومة الوراثية اللازمة لبناء وتنظيم وتكاثر الكائنات الحية، ويوجد بشكل أساسي داخل نواة الخلية على هيئة صبغيات.",
+    "fr": "Molécule biologique en forme de double hélice, porteuse de l'information génétique nécessaire à la construction, au fonctionnement et à la reproduction des êtres vivants, principalement localisée dans le noyau cellulaire sous forme de chromosomes."
+  },
+  "voir_aussi": ["noyau-cellulaire", "crossing-over"]
+}

@@ -1,0 +1,175 @@
+{
+  "id": "svt-1bac-lignes-defense",
+  "slug": "lignes-defense",
+  "cycle": "thanawi-taahili",
+  "niveau": "1bac",
+  "filieres": ["1bac-se"],
+  "unite_id": "unite-immunite-1bac",
+  "dorra": 2,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "المناعة: خطوط الدفاع عن الجسم", "fr": "L'immunité : les lignes de défense de l'organisme" },
+  "duree_estimee_min": 30,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": [
+      "التعرف على الحواجز الفيزيائية والكيميائية كخط دفاع أول ضد الميكروبات",
+      "وصف مظاهر الاستجابة الالتهابية وتفسير فائدتها",
+      "تفسير آلية البلعمة كاستجابة مناعية غير نوعية",
+      "التمييز بين المناعة غير النوعية والمناعة النوعية بشكل عام"
+    ],
+    "fr": [
+      "Identifier les barrières physiques et chimiques comme première ligne de défense contre les microbes",
+      "Décrire les manifestations de la réaction inflammatoire et expliquer son utilité",
+      "Expliquer le mécanisme de la phagocytose comme réponse immunitaire non spécifique",
+      "Distinguer de façon générale l'immunité non spécifique de l'immunité spécifique"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "الحواجز الطبيعية: خط الدفاع الأول", "fr": "Les barrières naturelles : la première ligne de défense" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتعرض جسم الإنسان باستمرار لعدد هائل من الميكروبات (بكتيريا، فيروسات، فطريات) الموجودة في محيطه. ومع ذلك، فإن الإصابة بالمرض ليست هي القاعدة، بفضل مجموعة من آليات الدفاع تُشكّل معا ما يُسمى **المناعة**. خط الدفاع الأول هو مجموعة من الحواجز الطبيعية التي تمنع دخول الميكروبات إلى الجسم قبل أي مواجهة مباشرة معها.",
+            "fr": "L'organisme humain est en permanence exposé à un nombre considérable de microbes (bactéries, virus, champignons) présents dans son environnement. Pourtant, la maladie n'est pas la règle, grâce à un ensemble de mécanismes de défense formant ce qu'on appelle **l'immunité**. La première ligne de défense est un ensemble de barrières naturelles qui empêchent l'entrée des microbes dans l'organisme avant toute confrontation directe."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يُشكّل **الجلد** حاجزا فيزيائيا فعالا بفضل طبقته القرنية السميكة وغير النفاذة، بينما تُفرز **الأغشية المخاطية** (كمخاطية الجهاز التنفسي والهضمي) مخاطا لزجا يُحاصر الميكروبات، إضافة إلى إفرازات كيميائية كاللعاب والدموع التي تحتوي على إنزيمات مضادة للبكتيريا. كما تلعب البكتيريا النافعة الطبيعية الموجودة على الجلد والأمعاء دورا في منافسة الميكروبات الممرضة.",
+            "fr": "La **peau** constitue une barrière physique efficace grâce à sa couche cornée épaisse et imperméable, tandis que les **muqueuses** (comme celles des voies respiratoires et digestives) sécrètent un mucus visqueux qui piège les microbes, en plus de sécrétions chimiques comme la salive et les larmes contenant des enzymes antibactériennes. La flore microbienne naturelle présente sur la peau et dans l'intestin joue également un rôle en concurrençant les microbes pathogènes."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "الحواجز الطبيعية تعمل بشكل **غير نوعي**: فهي تصد جميع الميكروبات دون تمييز بين أنواعها، وتُشكّل خط الدفاع الأول قبل أي استجابة مناعية داخلية.",
+            "fr": "Les barrières naturelles agissent de manière **non spécifique** : elles repoussent tous les microbes sans distinction de type, et constituent la première ligne de défense avant toute réponse immunitaire interne."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "خط الدفاع الثاني: الاستجابة الالتهابية والبلعمة", "fr": "La deuxième ligne de défense : réaction inflammatoire et phagocytose" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "عندما يتمكن ميكروب من اختراق الحواجز الطبيعية (مثلا عبر جرح في الجلد)، يدخل حيز التنفيذ خط دفاع ثانٍ غير نوعي أيضا يُسمى **الاستجابة الالتهابية**. تتجلى مظاهرها في احمرار وتورم وارتفاع حرارة موضعي وألم بمكان الإصابة، نتيجة توسع الأوعية الدموية وزيادة نفاذيتها، مما يسمح بتدفق أكبر لخلايا الدفاع نحو موقع العدوى.",
+            "fr": "Lorsqu'un microbe parvient à franchir les barrières naturelles (par exemple via une blessure cutanée), une deuxième ligne de défense, elle aussi non spécifique, entre en action : la **réaction inflammatoire**. Elle se manifeste par une rougeur, un gonflement, une élévation locale de température et une douleur au site de la lésion, résultant de la dilatation des vaisseaux sanguins et de l'augmentation de leur perméabilité, permettant un afflux accru de cellules de défense vers le site de l'infection."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "من بين خلايا الدفاع التي تتدخل، تلعب **البلعميات** (نوع من الكريات البيضاء) دورا أساسيا عبر آلية {{terme:phagocytose|البلعمة}}، التي تتم وفق ثلاث مراحل متتالية: **التعرف** على الميكروب، ثم **الالتهام** حيث تحيط البلعمية بالميكروب داخل حويصلة، وأخيرا **الهضم** بواسطة إنزيمات هاضمة تُخرّب الميكروب داخل فجوة هضمية.",
+            "fr": "Parmi les cellules de défense qui interviennent, les **phagocytes** (un type de globules blancs) jouent un rôle essentiel via le mécanisme de {{terme:phagocytose|phagocytose}}, qui se déroule en trois étapes successives : la **reconnaissance** du microbe, puis l'**englobement**, où le phagocyte entoure le microbe dans une vésicule, et enfin la **digestion** par des enzymes qui détruisent le microbe dans une vacuole digestive."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/barrieres-physiques-phagocytose.svg",
+          "legende": { "ar": "الحاجز الجلدي كخط دفاع أول، ومراحل البلعمة الثلاث كخط دفاع ثانٍ", "fr": "La barrière cutanée comme première ligne de défense, et les trois étapes de la phagocytose comme deuxième ligne" }
+        },
+        {
+          "type": "encadre",
+          "variante": "istintaj",
+          "titre": { "ar": "استنتاج", "fr": "Déduction" },
+          "texte": {
+            "ar": "الحواجز الطبيعية والاستجابة الالتهابية (بما فيها البلعمة) تُشكّلان معا ما يُسمى **المناعة غير النوعية (الفطرية)**، وهي دفاع سريع وعام لا يتطلب تعرفا دقيقا على نوع الميكروب، ولا يترك ذاكرة مناعية.",
+            "fr": "Les barrières naturelles et la réaction inflammatoire (y compris la phagocytose) constituent ensemble ce qu'on appelle **l'immunité non spécifique (innée)**, une défense rapide et générale qui ne nécessite pas une reconnaissance précise du type de microbe et ne laisse pas de mémoire immunitaire."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Remarque" },
+          "texte": {
+            "ar": "عندما لا تكفي المناعة غير النوعية للقضاء على العدوى، يتدخل خط دفاع ثالث أكثر دقة وتخصصا يُسمى **المناعة النوعية**، والذي يعتمد على خلايا متخصصة تتعرف بدقة على كل ميكروب على حدة وتحتفظ بذاكرة مناعية تجاهه. سنتناول هذا الخط الدفاعي بتفصيل أكبر في مستوى لاحق.",
+            "fr": "Lorsque l'immunité non spécifique ne suffit pas à éliminer l'infection, une troisième ligne de défense, plus précise et spécialisée, entre en jeu : **l'immunité spécifique**, qui repose sur des cellules spécialisées reconnaissant précisément chaque microbe et conservant une mémoire immunitaire à son égard. Cette ligne de défense sera étudiée plus en détail à un niveau ultérieur."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "يُنتج جسم الإنسان يوميا ملايين الكريات البيضاء الجديدة في نخاع العظم لتعويض الخلايا المناعية المستهلكة أثناء مواجهة الميكروبات المستمرة في محيطنا.",
+            "fr": "Le corps humain produit chaque jour des millions de nouveaux globules blancs dans la moelle osseuse pour remplacer les cellules immunitaires consommées lors de la confrontation permanente avec les microbes de notre environnement."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "يعتمد دفاع الجسم عن نفسه على خطين متكاملين وغير نوعيين: خط أول يتمثل في الحواجز الطبيعية (الجلد والأغشية المخاطية) التي تمنع دخول الميكروبات، وخط ثانٍ يتمثل في الاستجابة الالتهابية والبلعمة اللتين تتصديان للميكروبات التي تجاوزت الخط الأول، دون تمييز دقيق بين أنواعها.",
+            "fr": "La défense de l'organisme repose sur deux lignes complémentaires et non spécifiques : une première ligne formée par les barrières naturelles (peau et muqueuses) qui empêchent l'entrée des microbes, et une deuxième ligne formée par la réaction inflammatoire et la phagocytose, qui neutralisent les microbes ayant franchi la première ligne, sans distinction précise de leur type."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "أي مما يلي يُعتبر جزءا من خط الدفاع الأول؟", "fr": "Lequel des éléments suivants fait partie de la première ligne de défense ?" },
+        "options": [
+          { "ar": "الجلد والأغشية المخاطية", "fr": "La peau et les muqueuses" },
+          { "ar": "البلعمة", "fr": "La phagocytose" },
+          { "ar": "اللمفاويات النوعية", "fr": "Les lymphocytes spécifiques" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "الجلد والأغشية المخاطية يُشكّلان حواجز طبيعية فيزيائية وكيميائية تمنع دخول الميكروبات، وهي خط الدفاع الأول قبل أي استجابة داخلية.",
+          "fr": "La peau et les muqueuses forment des barrières naturelles physiques et chimiques empêchant l'entrée des microbes ; elles constituent la première ligne de défense avant toute réponse interne."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "ما ترتيب المراحل الثلاث للبلعمة؟", "fr": "Quel est l'ordre des trois étapes de la phagocytose ?" },
+        "options": [
+          { "ar": "الهضم ← التعرف ← الالتهام", "fr": "Digestion → reconnaissance → englobement" },
+          { "ar": "التعرف ← الالتهام ← الهضم", "fr": "Reconnaissance → englobement → digestion" },
+          { "ar": "الالتهام ← الهضم ← التعرف", "fr": "Englobement → digestion → reconnaissance" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "تبدأ البلعمة بتعرف البلعمية على الميكروب، ثم تلتهمه داخل حويصلة، وأخيرا تهضمه بإنزيمات هاضمة داخل فجوة هضمية.",
+          "fr": "La phagocytose commence par la reconnaissance du microbe par le phagocyte, puis son englobement dans une vésicule, et enfin sa digestion par des enzymes dans une vacuole digestive."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "لماذا تُعتبر الحواجز الطبيعية والبلعمة آليات 'غير نوعية'؟", "fr": "Pourquoi les barrières naturelles et la phagocytose sont-elles des mécanismes « non spécifiques » ?" },
+        "options": [
+          { "ar": "لأنها تستهدف نوعا واحدا فقط من الميكروبات", "fr": "Parce qu'elles ne ciblent qu'un seul type de microbe" },
+          { "ar": "لأنها تعمل بنفس الطريقة ضد جميع الميكروبات دون تمييز دقيق بينها", "fr": "Parce qu'elles agissent de la même façon contre tous les microbes sans distinction précise" },
+          { "ar": "لأنها تترك ذاكرة مناعية دائمة", "fr": "Parce qu'elles laissent une mémoire immunitaire durable" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "المناعة غير النوعية (الحواجز والبلعمة) تتصدى لأي ميكروب بنفس الآلية دون تمييز دقيق بين أنواعه، ولا تترك ذاكرة مناعية، بخلاف المناعة النوعية.",
+          "fr": "L'immunité non spécifique (barrières et phagocytose) neutralise tout microbe par le même mécanisme, sans distinction précise de son type, et ne laisse pas de mémoire immunitaire, contrairement à l'immunité spécifique."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": "svt-1bac-coordination-nerveuse", "lecon_suivante": null },
+  "tags": ["مناعة", "بلعمة", "استجابة التهابية", "immunité", "phagocytose", "inflammation"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

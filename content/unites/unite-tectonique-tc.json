@@ -1,0 +1,9 @@
+{
+  "id": "unite-tectonique-tc",
+  "slug": "tectonique-plaques",
+  "niveau": "tc",
+  "dorra": 2,
+  "filieres": ["tcs"],
+  "numero_ordre": 1,
+  "titre": { "ar": "تكتونية الصفائح", "fr": "La tectonique des plaques" }
+}

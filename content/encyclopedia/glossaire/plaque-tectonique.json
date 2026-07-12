@@ -1,0 +1,9 @@
+{
+  "id": "plaque-tectonique",
+  "terme": { "ar": "الصفيحة التكتونية", "fr": "Plaque tectonique" },
+  "definition": {
+    "ar": "قطعة صلبة من الغلاف الصخري (الليتوسفير) تطفو وتتحرك ببطء فوق الغلاف المائع (الأستينوسفير)، وتشكل حدودها مناطق تركز النشاط الزلزالي والبركاني.",
+    "fr": "Portion rigide de la lithosphère qui se déplace lentement au-dessus de l'asthénosphère ductile ; ses limites concentrent l'essentiel de l'activité sismique et volcanique du globe."
+  },
+  "voir_aussi": ["seisme", "magma"]
+}

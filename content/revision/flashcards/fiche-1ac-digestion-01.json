@@ -1,0 +1,7 @@
+{
+  "id": "fiche-1ac-digestion-01",
+  "niveau": "1ac",
+  "unite": "التغذية",
+  "question": { "ar": "ما هو دور الأمعاء الدقيقة في الجهاز الهضمي؟", "fr": "Quel est le rôle de l'intestin grêle dans le système digestif ?" },
+  "reponse": { "ar": "تُتمّم فيها عملية الهضم وتُمتَص المغذيات البسيطة عبر جدارها إلى الدم.", "fr": "La digestion s'y achève et les nutriments simples y sont absorbés à travers sa paroi vers le sang." }
+}

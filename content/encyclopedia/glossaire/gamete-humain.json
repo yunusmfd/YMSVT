@@ -1,0 +1,9 @@
+{
+  "id": "gamete-humain",
+  "terme": { "ar": "المشيج عند الإنسان", "fr": "Gamète humain" },
+  "definition": {
+    "ar": "خلية تناسلية أحادية الصيغة الصبغية (n)، تُنتَج على مستوى الأعضاء التناسلية: النطفة عند الرجل والبويضة عند المرأة، وتتحد إحداهما بالأخرى أثناء الإخصاب.",
+    "fr": "Cellule reproductrice haploïde (n) produite au niveau des organes génitaux : le spermatozoïde chez l'homme et l'ovule chez la femme. Deux gamètes s'unissent lors de la fécondation."
+  },
+  "voir_aussi": ["fecondation"]
+}

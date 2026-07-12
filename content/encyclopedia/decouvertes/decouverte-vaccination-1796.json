@@ -1,0 +1,11 @@
+{
+  "id": "decouverte-vaccination-1796",
+  "titre": { "ar": "اكتشاف التلقيح ضد الجدري", "fr": "La découverte de la vaccination contre la variole" },
+  "annee": 1796,
+  "scientifiques_lies": ["edward-jenner"],
+  "resume": {
+    "ar": "سنة 1796، لاحظ الطبيب الإنجليزي إدوارد جينر أن الحلاّبات اللواتي أصبن بمرض جدري البقر، وهو مرض خفيف يصيب الأبقار، كنّ يكتسبن مناعة ضد الجدري البشري القاتل. أجرى جينر تجربة جريئة بحقن غلاصم مأخوذ من دمّل جدري البقر لصبي صغير، ثم عرّضه لاحقا لجدري بشري فلم يُصب بالمرض. شكّلت هذه التجربة أول دليل علمي موثق على مبدأ التلقيح، وأرست الأساس الذي بُني عليه لاحقا علم المناعة الحديث وتطوير اللقاحات ضد أمراض عديدة.",
+    "fr": "En 1796, le médecin anglais Edward Jenner observe que les fermières ayant contracté la vaccine, une maladie bénigne touchant les vaches, semblent protégées contre la variole humaine, alors souvent mortelle. Il réalise une expérience audacieuse en inoculant à un jeune garçon du pus prélevé sur une pustule de vaccine, puis l'expose plus tard à la variole humaine sans que la maladie ne se déclare. Cette expérience constitue la première démonstration scientifique documentée du principe de la vaccination, et posera les bases de l'immunologie moderne et du développement des vaccins contre de nombreuses maladies."
+  },
+  "domaine": "physiologie"
+}

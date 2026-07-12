@@ -1,0 +1,9 @@
+{
+  "id": "derive-continentale",
+  "terme": { "ar": "انجراف القارات", "fr": "Dérive continentale" },
+  "definition": {
+    "ar": "نظرية علمية تفترض أن القارات كانت مجتمعة في الماضي ضمن كتلة يابسة واحدة، ثم انفصلت وتحركت تدريجيا عبر ملايين السنين لتصل إلى مواقعها الحالية، وهي الفكرة التي مهّدت لاحقا لظهور نظرية تكتونية الصفائح.",
+    "fr": "Théorie scientifique selon laquelle les continents formaient jadis une seule masse terrestre avant de se séparer et de se déplacer progressivement sur des millions d'années pour atteindre leurs positions actuelles ; une idée qui a préparé l'émergence ultérieure de la théorie de la tectonique des plaques."
+  },
+  "voir_aussi": ["plaque-tectonique"]
+}

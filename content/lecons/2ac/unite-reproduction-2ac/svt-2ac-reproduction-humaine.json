@@ -1,0 +1,188 @@
+{
+  "id": "svt-2ac-reproduction-humaine",
+  "slug": "reproduction",
+  "cycle": "iaadadi",
+  "niveau": "2ac",
+  "unite_id": "unite-reproduction-2ac",
+  "dorra": 2,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "التكاثر عند الإنسان", "fr": "La reproduction chez l'être humain" },
+  "duree_estimee_min": 25,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": [
+      "التعرف على أعضاء الجهاز التناسلي الذكري والأنثوي وأدوارها",
+      "التعرف على المشيجين الذكري والأنثوي",
+      "شرح ظاهرة الإخصاب وبداية الحمل"
+    ],
+    "fr": [
+      "Identifier les organes des appareils génitaux masculin et féminin et leurs rôles",
+      "Connaître les deux gamètes, masculin et féminin",
+      "Expliquer le phénomène de la fécondation et le début de la grossesse"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "الجهاز التناسلي الذكري", "fr": "L'appareil génital masculin" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتكون الجهاز التناسلي الذكري أساسا من الخصيتين، وهما العضوان المسؤولان عن إنتاج {{terme:gamete-humain|النطاف}} (المشيج الذكري) بشكل مستمر ابتداء من سن البلوغ. تنتقل النطاف عبر قنوات ناقلة إلى أن تُقذف إلى الخارج مصحوبة بسائل يُسمى السائل المنوي.",
+            "fr": "L'appareil génital masculin est constitué principalement des testicules, organes responsables de la production continue de {{terme:gamete-humain|spermatozoïdes}} (gamète mâle) à partir de la puberté. Les spermatozoïdes progressent à travers des canaux jusqu'à être expulsés vers l'extérieur, mêlés à un liquide appelé sperme."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Observation" },
+          "texte": {
+            "ar": "النطفة خلية صغيرة الحجم جدا، متحركة بفضل سوط طويل يُمكّنها من السباحة داخل الجهاز التناسلي الأنثوي.",
+            "fr": "Le spermatozoïde est une cellule de très petite taille, mobile grâce à un long flagelle qui lui permet de se déplacer dans l'appareil génital féminin."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "الجهاز التناسلي الأنثوي", "fr": "L'appareil génital féminin" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يتكون الجهاز التناسلي الأنثوي من مبيضين ينتجان {{terme:gamete-humain|البويضة}} (المشيج الأنثوي) بشكل دوري تقريبا كل 28 يوما، وقناتي بيض تُنقل من خلالهما البويضة نحو الرحم، وهو العضو الذي يستقبل ويحتضن الجنين في حالة حدوث الإخصاب.",
+            "fr": "L'appareil génital féminin est constitué de deux ovaires produisant l'{{terme:gamete-humain|ovule}} (gamète femelle) de façon cyclique, environ tous les 28 jours, ainsi que de deux trompes par lesquelles l'ovule est acheminé vers l'utérus, organe qui accueille et abrite l'embryon en cas de fécondation."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/appareil-reproducteur-schema.svg",
+          "legende": { "ar": "مخطط تبسيطي للجهازين التناسليين الذكري والأنثوي", "fr": "Schéma simplifié des appareils génitaux masculin et féminin" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مقارنة بين المشيج الذكري والمشيج الأنثوي", "fr": "Comparaison entre gamète masculin et gamète féminin" },
+          "entetes": { "ar": ["المعيار", "النطفة", "البويضة"], "fr": ["Critère", "Spermatozoïde", "Ovule"] },
+          "lignes": [
+            { "ar": ["مكان الإنتاج", "الخصيتان", "المبيضان"], "fr": ["Lieu de production", "Testicules", "Ovaires"] },
+            { "ar": ["الحركة", "متحركة (سوط)", "غير متحركة"], "fr": ["Mobilité", "Mobile (flagelle)", "Immobile"] },
+            { "ar": ["وتيرة الإنتاج", "مستمرة", "دورية (شهرية تقريبا)"], "fr": ["Rythme de production", "Continu", "Cyclique (environ mensuel)"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "الإخصاب وبداية الحمل", "fr": "La fécondation et le début de la grossesse" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "خلال العلاقة الجنسية، تُقذف ملايين النطاف داخل الجهاز التناسلي الأنثوي، لكن نطفة واحدة فقط هي التي تتمكن عادةً من اختراق البويضة على مستوى قناة البيض، فيحدث بذلك {{terme:fecondation|الإخصاب}}: اتحاد نواة النطفة بنواة البويضة لتكوين خلية-بيضة.",
+            "fr": "Lors d'un rapport sexuel, des millions de spermatozoïdes sont déposés dans l'appareil génital féminin, mais un seul parvient généralement à pénétrer l'ovule au niveau de la trompe, réalisant ainsi la {{terme:fecondation|fécondation}} : l'union du noyau du spermatozoïde et du noyau de l'ovule pour former une cellule-œuf."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "تنتقل الخلية-البيضة بعد ذلك عبر قناة البيض نحو الرحم، وتبدأ في الانقسام المتكرر أثناء هذا المسار. عند وصولها إلى الرحم، تنغرس في جداره، وهو ما يُشكّل بداية الحمل.",
+            "fr": "La cellule-œuf migre ensuite le long de la trompe vers l'utérus, en se divisant de façon répétée durant ce trajet. Arrivée dans l'utérus, elle s'y implante, ce qui marque le début de la grossesse."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "الإخصاب هو اتحاد مشيج ذكري (n) بمشيج أنثوي (n) لتكوين خلية-بيضة تحمل العدد الصبغي الكامل (2n) للنوع البشري.",
+            "fr": "La fécondation est l'union d'un gamète mâle (n) et d'un gamète femelle (n), formant une cellule-œuf porteuse du nombre chromosomique complet (2n) de l'espèce humaine."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "istintaj",
+          "titre": { "ar": "استنتاج", "fr": "Déduction" },
+          "texte": {
+            "ar": "لا يحدث الحمل إلا إذا اجتمعت شروط ثلاثة: إنتاج نطاف سليمة، إنتاج بويضة قابلة للإخصاب، والتقاؤهما على مستوى قناة البيض.",
+            "fr": "Une grossesse ne peut débuter que si trois conditions sont réunies : production de spermatozoïdes viables, production d'un ovule fécondable, et rencontre des deux au niveau de la trompe."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "من بين ملايين النطاف التي تدخل الجهاز التناسلي الأنثوي خلال علاقة جنسية واحدة، لا يصل إلى محيط البويضة سوى بضع مئات منها فقط، وذلك بسبب طول المسافة وصعوبة المسار.",
+            "fr": "Sur les millions de spermatozoïdes déposés dans l'appareil génital féminin lors d'un rapport, seules quelques centaines parviennent jusqu'à proximité de l'ovule, en raison de la distance à parcourir et de la difficulté du trajet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-4",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "يُنتج الجهاز التناسلي الذكري النطاف والجهاز التناسلي الأنثوي البويضات. يحدث الإخصاب باتحاد نطفة ببويضة على مستوى قناة البيض، مُكوّنا خلية-بيضة تنغرس في الرحم لتُشكّل بداية الحمل.",
+            "fr": "L'appareil génital masculin produit les spermatozoïdes et l'appareil génital féminin produit les ovules. La fécondation résulte de l'union d'un spermatozoïde et d'un ovule au niveau de la trompe, formant une cellule-œuf qui s'implante dans l'utérus, marquant le début de la grossesse."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "أين تُنتَج البويضة عند المرأة؟", "fr": "Où l'ovule est-il produit chez la femme ?" },
+        "options": [
+          { "ar": "في الرحم", "fr": "Dans l'utérus" },
+          { "ar": "في المبيضين", "fr": "Dans les ovaires" },
+          { "ar": "في قناة البيض", "fr": "Dans la trompe" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "المبيضان هما العضوان المسؤولان عن إنتاج البويضة (المشيج الأنثوي) بشكل دوري.",
+          "fr": "Les ovaires sont les organes responsables de la production cyclique de l'ovule (gamète féminin)."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "أين يحدث الإخصاب عادةً؟", "fr": "Où la fécondation se déroule-t-elle habituellement ?" },
+        "options": [
+          { "ar": "في المبيض", "fr": "Dans l'ovaire" },
+          { "ar": "في الرحم", "fr": "Dans l'utérus" },
+          { "ar": "في قناة البيض", "fr": "Dans la trompe" }
+        ],
+        "reponse_correcte": 2,
+        "justification": {
+          "ar": "تلتقي النطفة بالبويضة عادة على مستوى قناة البيض، حيث يحدث اتحاد نواتيهما فيتكون خلية-بيضة.",
+          "fr": "Le spermatozoïde rencontre habituellement l'ovule au niveau de la trompe, où leurs noyaux s'unissent pour former une cellule-œuf."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "ما الذي يُشكّل بداية الحمل؟", "fr": "Qu'est-ce qui marque le début de la grossesse ?" },
+        "options": [
+          { "ar": "إنتاج البويضة من طرف المبيض", "fr": "La production de l'ovule par l'ovaire" },
+          { "ar": "انغراس الخلية-البيضة في جدار الرحم", "fr": "L'implantation de la cellule-œuf dans la paroi de l'utérus" },
+          { "ar": "خروج النطاف من الخصيتين", "fr": "La sortie des spermatozoïdes des testicules" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "بعد الإخصاب، تنتقل الخلية-البيضة إلى الرحم وتنغرس في جداره، وهو ما يُمثّل البداية الفعلية للحمل.",
+          "fr": "Après la fécondation, la cellule-œuf migre vers l'utérus et s'y implante, ce qui constitue le point de départ réel de la grossesse."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": "svt-2ac-circulation-sanguine", "lecon_suivante": null },
+  "tags": ["تكاثر", "فيزيولوجيا", "reproduction", "physiologie"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

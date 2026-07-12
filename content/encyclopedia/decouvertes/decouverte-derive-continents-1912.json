@@ -1,0 +1,11 @@
+{
+  "id": "decouverte-derive-continents-1912",
+  "titre": { "ar": "نظرية انجراف القارات", "fr": "La théorie de la dérive des continents" },
+  "annee": 1912,
+  "scientifiques_lies": ["alfred-wegener"],
+  "resume": {
+    "ar": "سنة 1912، قدّم ألفريد فيغنر نظريته القائلة بأن القارات الحالية كانت في الماضي متصلة ضمن كتلة يابسة واحدة، قبل أن تنجرف تدريجيا لتحتل مواقعها الحالية. استند في ذلك إلى تطابق أشكال السواحل بين إفريقيا وأمريكا الجنوبية، وتشابه الطبقات الصخرية والحفريات بين قارات متباعدة اليوم. رغم رفض الفكرة لعقود لغياب تفسير فيزيائي مقنع لآلية الحركة، أصبحت لاحقا حجر الأساس لنظرية تكتونية الصفائح التي فسّرت الظاهرة بحركة الصفائح الصخرية فوق طبقة لدنة من الوشاح.",
+    "fr": "En 1912, Alfred Wegener présente sa théorie selon laquelle les continents actuels formaient jadis un seul bloc de terres émergées avant de dériver progressivement vers leurs positions actuelles. Il s'appuie sur la correspondance des côtes entre l'Afrique et l'Amérique du Sud, ainsi que sur la similarité des couches rocheuses et des fossiles entre continents aujourd'hui séparés. Longtemps écartée faute de mécanisme physique convaincant, cette idée deviendra plus tard le socle de la théorie de la tectonique des plaques, qui expliquera le phénomène par le déplacement de plaques rigides au-dessus d'une couche ductile du manteau."
+  },
+  "domaine": "geologie"
+}

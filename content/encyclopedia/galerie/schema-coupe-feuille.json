@@ -1,0 +1,13 @@
+{
+  "id": "schema-coupe-feuille",
+  "titre": { "ar": "مقطع عرضي في ورقة نبات", "fr": "Coupe transversale d'une feuille" },
+  "domaine": "biologie",
+  "image": "assets/images/svg/galerie-schema-coupe-feuille.svg",
+  "legendes": [
+    { "ar": "البشرة العليا: طبقة خلايا شفافة تحمي الورقة وتسمح بمرور الضوء", "fr": "Épiderme supérieur : couche de cellules transparentes protégeant la feuille et laissant passer la lumière" },
+    { "ar": "النسيج الحشوي العمادي: خلايا مستطيلة غنية بالبلاستيدات الخضراء، مقر معظم عملية التركيب الضوئي", "fr": "Parenchyme palissadique : cellules allongées riches en chloroplastes, siège principal de la photosynthèse" },
+    { "ar": "النسيج الحشوي الإسفنجي: خلايا متباعدة تسمح بتبادل الغازات داخل الورقة", "fr": "Parenchyme lacuneux : cellules espacées permettant les échanges gazeux au sein de la feuille" },
+    { "ar": "الثغر: فتحة مجهرية في البشرة السفلى تتحكم في تبادل الماء وثاني أكسيد الكربون والأكسجين", "fr": "Stomate : ouverture microscopique de l'épiderme inférieur régulant les échanges d'eau, de CO2 et d'O2" }
+  ],
+  "lecons_liees": []
+}

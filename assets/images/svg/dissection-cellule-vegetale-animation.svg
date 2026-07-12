@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="titleDiss descDiss">
+  <title id="titleDiss">تشريح افتراضي لخلية نباتية</title>
+  <desc id="descDiss">رسم تخطيطي لخلية نباتية يُظهر طبقاتها من الخارج إلى الداخل: الجدار الخلوي، الغشاء الهيولي، الهيولى، البلاستيدات الخضراء، الفجوة العصارية والنواة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الجدار الخلوي -->
+  <rect x="150" y="60" width="340" height="260" rx="18" fill="none" stroke="#204F3F" stroke-width="6" />
+  <text x="600" y="80" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الجدار الخلوي</text>
+  <text x="600" y="80" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Paroi cellulaire</text>
+  <path d="M540 75 L470 90" stroke="#204F3F" stroke-width="1.5" />
+
+  <!-- الغشاء الهيولي -->
+  <rect x="164" y="74" width="312" height="232" rx="14" fill="#E3E8D6" stroke="#3C7A63" stroke-width="4" />
+  <text x="600" y="140" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الغشاء الهيولي</text>
+  <text x="600" y="140" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Membrane plasmique</text>
+  <path d="M540 135 L470 130" stroke="#204F3F" stroke-width="1.5" />
+
+  <!-- الفجوة العصارية (كبيرة، مركزية) -->
+  <ellipse cx="330" cy="200" rx="120" ry="90" fill="#3B6E8F" opacity="0.35" stroke="#3B6E8F" stroke-width="3" />
+  <text x="600" y="200" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الفجوة العصارية</text>
+  <text x="600" y="200" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Vacuole</text>
+  <path d="M540 195 L440 200" stroke="#204F3F" stroke-width="1.5" />
+
+  <!-- النواة -->
+  <circle cx="230" cy="150" r="34" fill="#8B4A2B" stroke="#1B241F" stroke-width="3" />
+  <text x="600" y="255" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">النواة</text>
+  <text x="600" y="255" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Noyau</text>
+  <path d="M540 250 L262 155" stroke="#204F3F" stroke-width="1.5" />
+
+  <!-- البلاستيدات الخضراء -->
+  <ellipse cx="260" cy="260" rx="22" ry="12" fill="#3C7A63" stroke="#204F3F" stroke-width="2" transform="rotate(15 260 260)" />
+  <ellipse cx="410" cy="130" rx="20" ry="11" fill="#3C7A63" stroke="#204F3F" stroke-width="2" transform="rotate(-20 410 130)" />
+  <ellipse cx="400" cy="255" rx="20" ry="11" fill="#3C7A63" stroke="#204F3F" stroke-width="2" transform="rotate(10 400 255)" />
+  <text x="600" y="310" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">البلاستيدات الخضراء</text>
+  <text x="600" y="310" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Chloroplastes</text>
+  <path d="M540 305 L420 258" stroke="#204F3F" stroke-width="1.5" />
+
+  <text x="400" y="30" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="20" fill="#204F3F" data-lang="ar">تشريح افتراضي لخلية نباتية</text>
+  <text x="400" y="30" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#204F3F" data-lang="fr">Dissection virtuelle d'une cellule végétale</text>
+</svg>

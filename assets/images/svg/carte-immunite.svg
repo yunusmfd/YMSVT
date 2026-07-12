@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="titleImm descImm">
+  <title id="titleImm">خريطة ذهنية: المناعة</title>
+  <desc id="descImm">خريطة ذهنية بسيطة تربط مفهوم المناعة المركزي بفروعه الرئيسية: المناعة الفطرية والمناعة النوعية والخلايا اللمفاوية والذاكرة المناعية.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الفروع -->
+  <g stroke="#DADDD5" stroke-width="3" fill="none">
+    <line x1="400" y1="190" x2="150" y2="80" />
+    <line x1="400" y1="190" x2="650" y2="80" />
+    <line x1="400" y1="190" x2="150" y2="300" />
+    <line x1="400" y1="190" x2="650" y2="300" />
+  </g>
+
+  <!-- العقدة المركزية -->
+  <ellipse cx="400" cy="190" rx="95" ry="48" fill="#204F3F" stroke="#1B241F" stroke-width="3" />
+  <text x="400" y="184" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="20" fill="#F9FAF7" data-lang="ar">المناعة</text>
+  <text x="400" y="208" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#F9FAF7" data-lang="fr">Immunité</text>
+
+  <!-- الفرع 1: مناعة فطرية -->
+  <ellipse cx="150" cy="80" rx="110" ry="38" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+  <text x="150" y="75" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#F9FAF7" data-lang="ar">مناعة فطرية</text>
+  <text x="150" y="95" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#F9FAF7" data-lang="fr">Immunité innée</text>
+
+  <!-- الفرع 2: مناعة نوعية -->
+  <ellipse cx="650" cy="80" rx="110" ry="38" fill="#3B6E8F" stroke="#204F3F" stroke-width="2" />
+  <text x="650" y="75" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#F9FAF7" data-lang="ar">مناعة نوعية</text>
+  <text x="650" y="95" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#F9FAF7" data-lang="fr">Immunité spécifique</text>
+
+  <!-- الفرع 3: خلايا لمفاوية -->
+  <ellipse cx="150" cy="300" rx="110" ry="38" fill="#C17A2E" stroke="#8B4A2B" stroke-width="2" />
+  <text x="150" y="295" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#F9FAF7" data-lang="ar">خلايا لمفاوية</text>
+  <text x="150" y="315" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#F9FAF7" data-lang="fr">Lymphocytes</text>
+
+  <!-- الفرع 4: ذاكرة مناعية -->
+  <ellipse cx="650" cy="300" rx="110" ry="38" fill="#8B4A2B" stroke="#1B241F" stroke-width="2" />
+  <text x="650" y="295" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#F9FAF7" data-lang="ar">ذاكرة مناعية</text>
+  <text x="650" y="315" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#F9FAF7" data-lang="fr">Mémoire immunitaire</text>
+</svg>

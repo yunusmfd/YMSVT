@@ -1,0 +1,9 @@
+{
+  "id": "anticorps",
+  "terme": { "ar": "الجسم المضاد", "fr": "Anticorps" },
+  "definition": {
+    "ar": "بروتين على شكل حرف Y تفرزه المصورات (الخلايا البلازمية)، يتميز بموقعي تثبيت نوعيين يتعرفان على حاتمة معينة لمولد ضد محدد ويرتبطان بها وفق مبدأ التكامل البنيوي (مفتاح-قفل).",
+    "fr": "Protéine en forme de Y sécrétée par les plasmocytes, possédant deux sites de fixation spécifiques qui reconnaissent et se lient à un épitope précis d'un antigène donné, selon un principe de complémentarité structurale (clé-serrure)."
+  },
+  "voir_aussi": ["antigene", "plasmocyte"]
+}

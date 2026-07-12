@@ -1,0 +1,9 @@
+{
+  "id": "unite-genetique-2bac",
+  "slug": "genetique",
+  "niveau": "2bac",
+  "dorra": 1,
+  "filieres": ["2bac-svt", "2bac-pc"],
+  "numero_ordre": 1,
+  "titre": { "ar": "الوراثة", "fr": "Génétique" }
+}

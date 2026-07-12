@@ -1,0 +1,9 @@
+{
+  "id": "globule-blanc",
+  "terme": { "ar": "الكرية البيضاء", "fr": "Globule blanc" },
+  "definition": {
+    "ar": "خلية دموية تلعب دورا أساسيا في الدفاع عن الجسم ضد الميكروبات والأجسام الغريبة، وعددها في الدم أقل بكثير من عدد الكريات الحمراء.",
+    "fr": "Cellule sanguine jouant un rôle essentiel dans la défense de l'organisme contre les microbes et les corps étrangers. Elle est beaucoup moins nombreuse dans le sang que l'hématie."
+  },
+  "voir_aussi": ["hematie"]
+}

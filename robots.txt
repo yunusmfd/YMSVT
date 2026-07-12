@@ -1,0 +1,6 @@
+# ملاحظة: استبدل النطاق أدناه بنطاق الإنتاج الفعلي عند الإطلاق
+User-agent: *
+Allow: /
+Disallow: /mon-espace
+
+Sitemap: https://novasvt.ma/sitemap.xml

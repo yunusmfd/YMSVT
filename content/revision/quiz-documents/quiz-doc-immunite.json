@@ -1,0 +1,40 @@
+{
+  "id": "quiz-doc-immunite",
+  "niveau": "2bac",
+  "unite": "المناعة",
+  "titre": { "ar": "تحليل وثيقة: الاستجابة المناعية الأولية والثانوية", "fr": "Analyse de document : réponses immunitaires primaire et secondaire" },
+  "document": {
+    "type": "image",
+    "src": "assets/images/svg/doc-quiz-doc-immunite.svg",
+    "legende": {
+      "ar": "مبيان يقارن تطور تركيز الأجسام المضادة في الدم بدلالة الزمن، بعد حقن أول وحقن ثانٍ بنفس المستضد.",
+      "fr": "Graphique comparant l'évolution de la concentration sanguine en anticorps au cours du temps, après une première puis une seconde injection du même antigène."
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "tahlil",
+      "enonce": {
+        "ar": "قارن بين خصائص المنحنيين (السرعة، الشدة، مدة الظهور) المرتبطين بالحقنتين الأولى والثانية.",
+        "fr": "Comparez les caractéristiques des deux courbes (rapidité, intensité, délai d'apparition) associées aux deux injections."
+      },
+      "reponse_modele": {
+        "ar": "بعد الحقنة الأولى، يظهر تركيز الأجسام المضادة بعد فترة كمون طويلة نسبيا وبمستوى منخفض. أما بعد الحقنة الثانية، فيظهر التركيز بسرعة أكبر (فترة كمون أقصر) ويصل إلى مستوى أعلى بكثير.",
+        "fr": "Après la première injection, les anticorps apparaissent après un délai relativement long et atteignent un niveau faible. Après la seconde injection, ils apparaissent beaucoup plus rapidement (délai plus court) et atteignent un niveau bien plus élevé."
+      }
+    },
+    {
+      "id": "q2",
+      "type": "istintaj",
+      "enonce": {
+        "ar": "استنتج الآلية المناعية التي تفسر الفرق بين الاستجابتين، مع الربط بمبدأ التلقيح.",
+        "fr": "Déduisez le mécanisme immunitaire expliquant la différence entre les deux réponses, en faisant le lien avec le principe de la vaccination."
+      },
+      "reponse_modele": {
+        "ar": "يعود الفرق إلى وجود خلايا لمفاوية ذاكرة تكوّنت بعد التعرض الأول للمستضد، والتي تسمح باستجابة أسرع وأقوى عند التعرض الثاني. هذه الآلية هي بالضبط ما يستغله التلقيح لحماية الجسم مسبقا دون التسبب في المرض.",
+        "fr": "Cette différence s'explique par la présence de lymphocytes mémoires formés lors du premier contact avec l'antigène, permettant une réponse plus rapide et plus intense lors d'une seconde exposition. C'est précisément ce mécanisme qu'exploite la vaccination pour protéger l'organisme à l'avance sans provoquer la maladie."
+      }
+    }
+  ]
+}

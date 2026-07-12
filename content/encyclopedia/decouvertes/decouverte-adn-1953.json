@@ -1,0 +1,11 @@
+{
+  "id": "decouverte-adn-1953",
+  "titre": { "ar": "اكتشاف البنية الحلزونية المزدوجة للحمض النووي", "fr": "Découverte de la structure en double hélice de l'ADN" },
+  "annee": 1953,
+  "scientifiques_lies": ["james-watson", "francis-crick", "rosalind-franklin"],
+  "resume": {
+    "ar": "في أبريل 1953، نشر جيمس واطسون وفرانسيس كريك في مجلة Nature نموذجا يصف بنية الحمض النووي الريبي منقوص الأكسجين (ADN) على شكل حلزون مزدوج، حيث يلتف شريطان متكاملان حول محور مشترك وتربط بينهما أزواج من القواعد النيتروجينية. استند هذا الاكتشاف إلى صور حيود الأشعة السينية التي التقطتها روزاليند فرانكلين، والتي كشفت الشكل الحلزوني للجزيء دون أن يُنسب إليها الفضل الكافي في حينه. فتح هذا النموذج الباب أمام فهم آلية تخزين المعلومة الوراثية ونسخها وانتقالها عبر الأجيال.",
+    "fr": "En avril 1953, James Watson et Francis Crick publient dans la revue Nature un modèle décrivant la structure de l'acide désoxyribonucléique (ADN) sous forme de double hélice : deux brins complémentaires enroulés autour d'un axe commun, reliés par des paires de bases azotées. Cette découverte s'appuie largement sur les clichés de diffraction aux rayons X réalisés par Rosalind Franklin, qui révélèrent la forme hélicoïdale de la molécule sans que sa contribution ne soit pleinement reconnue à l'époque. Ce modèle ouvrit la voie à la compréhension du stockage, de la copie et de la transmission de l'information génétique."
+  },
+  "domaine": "genetique"
+}

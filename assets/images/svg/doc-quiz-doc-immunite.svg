@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="titleImmDoc descImmDoc">
+  <title id="titleImmDoc">مبيان: تركيز الأجسام المضادة عبر الزمن</title>
+  <desc id="descImmDoc">مبيان تخطيطي يقارن الاستجابة المناعية الأولية والثانوية، حيث يظهر منحنيان لتركيز الأجسام المضادة بدلالة الزمن بعد التعرض الأول والثاني لنفس المستضد.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- المحاور -->
+  <line x1="90" y1="320" x2="90" y2="50" stroke="#1B241F" stroke-width="2" />
+  <line x1="90" y1="320" x2="740" y2="320" stroke="#1B241F" stroke-width="2" />
+
+  <!-- الاستجابة الأولية -->
+  <path d="M90 315 L150 315 C 200 310, 240 260, 280 240 C 320 225, 340 235, 360 260 C 380 285, 400 310, 420 315" fill="none" stroke="#3B6E8F" stroke-width="4" />
+  <text x="230" y="200" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#3B6E8F" data-lang="ar">الاستجابة الأولية</text>
+  <text x="230" y="200" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#3B6E8F" data-lang="fr" dy="16">Réponse primaire</text>
+
+  <!-- الاستجابة الثانوية -->
+  <path d="M420 315 L460 315 C 480 260, 500 110, 540 85 C 580 65, 640 65, 730 90" fill="none" stroke="#8B4A2B" stroke-width="4" />
+  <text x="600" y="55" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#8B4A2B" data-lang="ar">الاستجابة الثانوية</text>
+  <text x="600" y="55" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr" dy="16">Réponse secondaire</text>
+
+  <!-- سهما الحقن -->
+  <line x1="150" y1="330" x2="150" y2="320" stroke="#204F3F" stroke-width="2" />
+  <text x="150" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#204F3F" data-lang="ar">حقن 1</text>
+  <text x="150" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#204F3F" data-lang="fr" dy="14">Injection 1</text>
+
+  <line x1="460" y1="330" x2="460" y2="320" stroke="#204F3F" stroke-width="2" />
+  <text x="460" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#204F3F" data-lang="ar">حقن 2</text>
+  <text x="460" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#204F3F" data-lang="fr" dy="14">Injection 2</text>
+
+  <!-- تسميات المحاور -->
+  <text x="415" y="365" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar" dy="-8">الزمن (أيام)</text>
+  <text x="415" y="365" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr" dy="-8">Temps (jours)</text>
+
+  <text x="45" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar" transform="rotate(-90 45 185)">تركيز الأجسام المضادة</text>
+  <text x="45" y="185" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr" transform="rotate(-90 45 185)">Concentration en anticorps</text>
+
+  <text x="400" y="25" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#204F3F" data-lang="ar">الاستجابة المناعية الأولية والثانوية</text>
+  <text x="400" y="25" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#204F3F" data-lang="fr">Réponses immunitaires primaire et secondaire</text>
+</svg>

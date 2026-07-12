@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">حركات القفص الصدري أثناء الشهيق والزفير</title>
+  <desc id="desc1">مخطط يقارن بين وضعية القفص الصدري والحجاب الحاجز أثناء الشهيق (اتساع وارتفاع) وأثناء الزفير (انضغاط وارتخاء).</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- عنوان القسم الأول: الشهيق -->
+  <text x="190" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="20" font-weight="bold" fill="#204F3F" data-lang="ar">الشهيق (دخول الهواء)</text>
+  <text x="190" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="18" font-weight="bold" fill="#204F3F" data-lang="fr">Inspiration (entrée d'air)</text>
+
+  <!-- القفص الصدري - شهيق : متسع -->
+  <path d="M90 80 Q190 60 290 80 L300 260 Q190 290 80 260 Z" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <!-- الرئتان منتفختان -->
+  <ellipse cx="150" cy="170" rx="42" ry="80" fill="#3C7A63" opacity="0.55" />
+  <ellipse cx="230" cy="170" rx="42" ry="80" fill="#3C7A63" opacity="0.55" />
+  <!-- القصبة الهوائية -->
+  <rect x="182" y="90" width="16" height="45" fill="#3B6E8F" />
+  <!-- سهم الهواء الداخل -->
+  <path d="M190 60 L190 90" stroke="#3B6E8F" stroke-width="5" marker-end="url(#arrowIn)" />
+  <defs>
+    <marker id="arrowIn" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L5,8 L10,0 Z" fill="#3B6E8F" />
+    </marker>
+  </defs>
+  <!-- الحجاب الحاجز - منخفض ومسطح أثناء الشهيق -->
+  <path d="M85 262 Q190 280 295 262" fill="none" stroke="#8B4A2B" stroke-width="5" stroke-linecap="round" />
+  <text x="190" y="310" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">الحجاب الحاجز ينقبض وينخفض</text>
+  <text x="190" y="310" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Diaphragme contracté (abaissé)</text>
+  <text x="190" y="330" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">القفص الصدري يتسع</text>
+  <text x="190" y="330" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Cage thoracique dilatée</text>
+
+  <!-- خط فاصل -->
+  <line x1="400" y1="60" x2="400" y2="340" stroke="#DADDD5" stroke-width="2" />
+
+  <!-- عنوان القسم الثاني: الزفير -->
+  <text x="610" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="20" font-weight="bold" fill="#C17A2E" data-lang="ar">الزفير (خروج الهواء)</text>
+  <text x="610" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="18" font-weight="bold" fill="#C17A2E" data-lang="fr">Expiration (sortie d'air)</text>
+
+  <!-- القفص الصدري - زفير : منضغط -->
+  <path d="M525 95 Q610 80 695 95 L685 245 Q610 265 515 245 Z" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <!-- الرئتان منكمشتان -->
+  <ellipse cx="565" cy="170" rx="32" ry="65" fill="#3C7A63" opacity="0.4" />
+  <ellipse cx="655" cy="170" rx="32" ry="65" fill="#3C7A63" opacity="0.4" />
+  <!-- القصبة الهوائية -->
+  <rect x="602" y="100" width="16" height="40" fill="#3B6E8F" />
+  <!-- سهم الهواء الخارج -->
+  <path d="M610 90 L610 60" stroke="#8B4A2B" stroke-width="5" marker-end="url(#arrowOut)" />
+  <defs>
+    <marker id="arrowOut" markerWidth="10" markerHeight="10" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L5,8 L10,0 Z" fill="#8B4A2B" />
+    </marker>
+  </defs>
+  <!-- الحجاب الحاجز - مرتفع ومقوس أثناء الزفير -->
+  <path d="M520 250 Q610 220 690 250" fill="none" stroke="#8B4A2B" stroke-width="5" stroke-linecap="round" />
+  <text x="610" y="300" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">الحجاب الحاجز يرتخي ويرتفع</text>
+  <text x="610" y="300" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Diaphragme relâché (remonte)</text>
+  <text x="610" y="320" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">القفص الصدري ينضغط</text>
+  <text x="610" y="320" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Cage thoracique resserrée</text>
+</svg>

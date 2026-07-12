@@ -1,0 +1,9 @@
+{
+  "id": "alveole-pulmonaire",
+  "terme": { "ar": "الحويصلة الرئوية", "fr": "Alvéole pulmonaire" },
+  "definition": {
+    "ar": "كييس هوائي صغير جدا يوجد بالملايين في نهاية الشعب الهوائية داخل الرئتين، وله جدار رقيق ومحاط بشعيرات دموية، مما يسمح بحدوث التبادلات الغازية بين الهواء والدم.",
+    "fr": "Minuscule sac d'air présent par millions au bout des ramifications bronchiques dans les poumons. Sa paroi fine et son entourage de capillaires sanguins permettent les échanges gazeux entre l'air et le sang."
+  },
+  "voir_aussi": ["respiration"]
+}

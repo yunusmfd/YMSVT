@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title7 desc7">
+  <title id="title7">أنواع حدود الصفائح التكتونية الثلاثة</title>
+  <desc id="desc7">ثلاثة مقاطع تخطيطية جنبا إلى جنب: حد متباعد بصفيحتين تبتعدان عن بعضهما مع صعود الصهارة، وحد متقارب بصفيحة تغوص تحت أخرى، وحد تحويلي بصفيحتين تنزلقان أفقيا جنبا إلى جنب.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- عمود 1: حد متباعد -->
+  <g>
+    <rect x="10" y="60" width="250" height="20" fill="none" />
+    <text x="135" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد متباعد</text>
+    <text x="135" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite divergente</text>
+
+    <rect x="10" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="10" y="150" width="110" height="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <rect x="140" y="150" width="110" height="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <path d="M 120 150 L 130 210 L 140 150 Z" fill="#C17A2E" stroke="#8B4A2B" stroke-width="1.5" />
+    <path d="M 100 130 L 60 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 160 130 L 200 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <defs><marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#1B241F" /></marker></defs>
+    <text x="135" y="250" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">صعود الصهارة</text>
+    <text x="135" y="250" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#8B4A2B" data-lang="fr">Remontée de magma</text>
+    <text x="135" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">تباعد الصفيحتين (ذروة وسط محيطية)</text>
+    <text x="135" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Écartement (dorsale océanique)</text>
+  </g>
+
+  <!-- عمود 2: حد متقارب -->
+  <g>
+    <text x="400" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد متقارب</text>
+    <text x="400" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite convergente</text>
+
+    <rect x="275" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="275" y="150" width="120" height="55" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <path d="M 395 150 L 480 260 L 505 150 Z" fill="#3B6E8F" stroke="#204F3F" stroke-width="2" />
+    <path d="M 350 135 L 390 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 470 135 L 430 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <text x="400" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">غوص صفيحة تحت أخرى (اندساس)</text>
+    <text x="400" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Subduction d'une plaque</text>
+  </g>
+
+  <!-- عمود 3: حد تحويلي -->
+  <g>
+    <text x="665" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد تحويلي (انزلاقي)</text>
+    <text x="665" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite transformante</text>
+
+    <rect x="540" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="540" y="150" width="115" height="180" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <rect x="655" y="150" width="135" height="180" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <line x1="655" y1="150" x2="655" y2="330" stroke="#8B4A2B" stroke-width="3" stroke-dasharray="4 3" />
+    <path d="M 610 130 L 610 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 720 350 L 720 380" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" transform="translate(0,-40)" />
+    <text x="665" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">انزلاق أفقي للصفيحتين</text>
+    <text x="665" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Coulissement horizontal</text>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">بنية الخلية العصبية (العصبون)</title>
+  <desc id="desc1">مخطط تخطيطي لعصبون يوضح التغصنات وجسم الخلية والنواة والمحور الأسطواني وغمد الميالين والعقد الرانفييرية والنهايات المشبكية.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- Dendrites -->
+  <g stroke="#3C7A63" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M60 120 L120 165" />
+    <path d="M50 160 L120 175" />
+    <path d="M55 200 L120 185" />
+    <path d="M65 240 L120 195" />
+    <path d="M45 90 L110 150" />
+  </g>
+  <text x="90" y="60" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">التغصنات</text>
+  <text x="90" y="60" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Dendrites</text>
+
+  <!-- Soma / cell body -->
+  <circle cx="160" cy="190" r="55" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <circle cx="160" cy="190" r="20" fill="#3C7A63" stroke="#204F3F" stroke-width="1.5" />
+  <text x="160" y="290" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">جسم الخلية</text>
+  <text x="160" y="290" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Corps cellulaire</text>
+  <text x="160" y="150" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">النواة</text>
+  <text x="160" y="150" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Noyau</text>
+
+  <!-- Axon with myelin segments -->
+  <line x1="215" y1="190" x2="620" y2="190" stroke="#3B6E8F" stroke-width="5" />
+  <g fill="#C17A2E" stroke="#8B4A2B" stroke-width="1.5">
+    <rect x="235" y="178" width="55" height="24" rx="10" />
+    <rect x="310" y="178" width="55" height="24" rx="10" />
+    <rect x="385" y="178" width="55" height="24" rx="10" />
+    <rect x="460" y="178" width="55" height="24" rx="10" />
+    <rect x="535" y="178" width="55" height="24" rx="10" />
+  </g>
+  <text x="420" y="140" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">المحور الأسطواني</text>
+  <text x="420" y="140" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Axone</text>
+
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">غمد الميالين</text>
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Gaine de myéline</text>
+
+  <!-- Node of Ranvier callout -->
+  <line x1="297" y1="190" x2="297" y2="250" stroke="#8B4A2B" stroke-width="1.5" stroke-dasharray="4,3" />
+  <text x="297" y="270" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">عقدة رانفييه</text>
+  <text x="297" y="270" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Nœud de Ranvier</text>
+
+  <!-- Axon terminals -->
+  <g stroke="#3B6E8F" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M620 190 L670 150" />
+    <path d="M620 190 L680 190" />
+    <path d="M620 190 L670 230" />
+  </g>
+  <g fill="#8B4A2B">
+    <circle cx="670" cy="150" r="9" />
+    <circle cx="680" cy="190" r="9" />
+    <circle cx="670" cy="230" r="9" />
+  </g>
+  <text x="700" y="270" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">النهايات المشبكية</text>
+  <text x="700" y="270" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Terminaisons synaptiques</text>
+
+  <!-- Direction of influx -->
+  <path d="M225 320 L610 320" stroke="#204F3F" stroke-width="2" marker-end="url(#arrowN)" />
+  <defs>
+    <marker id="arrowN" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#204F3F" />
+    </marker>
+  </defs>
+  <text x="420" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#204F3F" data-lang="ar">اتجاه سريان الرسالة العصبية</text>
+  <text x="420" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#204F3F" data-lang="fr">Sens de propagation du message nerveux</text>
+</svg>

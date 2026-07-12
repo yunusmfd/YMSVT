@@ -1,0 +1,40 @@
+{
+  "id": "quiz-doc-photosynthese",
+  "niveau": "3ac",
+  "unite": "التغذية عند النباتات",
+  "titre": { "ar": "تحليل وثيقة: سرعة التركيب الضوئي بدلالة شدة الإضاءة", "fr": "Analyse de document : vitesse de photosynthèse selon l'intensité lumineuse" },
+  "document": {
+    "type": "image",
+    "src": "assets/images/svg/doc-quiz-doc-photosynthese.svg",
+    "legende": {
+      "ar": "مبيان يمثل تطور سرعة التركيب الضوئي عند نبات أخضر بدلالة شدة الإضاءة المسلطة عليه.",
+      "fr": "Graphique représentant l'évolution de la vitesse de photosynthèse d'une plante verte en fonction de l'intensité lumineuse reçue."
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "type": "tahlil",
+      "enonce": {
+        "ar": "صف تطور سرعة التركيب الضوئي بدلالة شدة الإضاءة كما يظهر في المبيان.",
+        "fr": "Décrivez l'évolution de la vitesse de photosynthèse en fonction de l'intensité lumineuse telle qu'elle apparaît sur le graphique."
+      },
+      "reponse_modele": {
+        "ar": "تزداد سرعة التركيب الضوئي بسرعة مع زيادة شدة الإضاءة في البداية، ثم يتباطأ الازدياد تدريجيا لتستقر السرعة عند قيمة ثابتة (مرحلة التشبع) رغم استمرار زيادة شدة الإضاءة.",
+        "fr": "La vitesse de photosynthèse augmente rapidement avec l'intensité lumineuse au début, puis cette augmentation ralentit progressivement jusqu'à atteindre un palier constant (saturation), malgré la poursuite de l'augmentation de la lumière."
+      }
+    },
+    {
+      "id": "q2",
+      "type": "istintaj",
+      "enonce": {
+        "ar": "استنتج العامل المحدِّد لسرعة التركيب الضوئي عند مستوى التشبع، مع اقتراح تفسير ممكن.",
+        "fr": "Déduisez le facteur limitant la vitesse de photosynthèse au niveau du palier de saturation, en proposant une explication possible."
+      },
+      "reponse_modele": {
+        "ar": "عند مرحلة التشبع، لم تعد شدة الإضاءة هي العامل المحدِّد، بل عامل آخر مثل تركيز ثاني أكسيد الكربون أو درجة الحرارة أو القدرة الإنزيمية للبلاستيدات الخضراء، الذي أصبح العائق أمام استمرار ارتفاع سرعة التفاعل.",
+        "fr": "Au palier de saturation, l'intensité lumineuse n'est plus le facteur limitant : un autre facteur, comme la concentration en CO2, la température ou la capacité enzymatique des chloroplastes, devient alors le facteur limitant empêchant la vitesse de continuer à augmenter."
+      }
+    }
+  ]
+}

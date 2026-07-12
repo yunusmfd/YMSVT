@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title4 desc4">
+  <title id="title4">التخصص البنيوي بين الجسم المضاد ومولد الضد</title>
+  <desc id="desc4">مخطط يوضح شكل الجسم المضاد على هيئة حرف Y وموقعي تثبيته النوعيين، وارتباطهما بمحددات مولدة للضد متكاملة الشكل معهما على غرار المفتاح والقفل.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <text x="400" y="35" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#204F3F" data-lang="ar">التعرف النوعي بين الجسم المضاد ومولد الضد</text>
+  <text x="400" y="35" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#204F3F" data-lang="fr">Reconnaissance spécifique anticorps-antigène</text>
+
+  <!-- Antibody Y shape -->
+  <g stroke="#3B6E8F" stroke-width="10" stroke-linecap="round" fill="none">
+    <path d="M230 260 L230 190" />
+    <path d="M230 190 L170 120" />
+    <path d="M230 190 L290 120" />
+  </g>
+  <g fill="#3B6E8F">
+    <circle cx="170" cy="120" r="10" />
+    <circle cx="290" cy="120" r="10" />
+  </g>
+  <text x="230" y="300" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">الجسم المضاد</text>
+  <text x="230" y="300" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Anticorps</text>
+  <text x="130" y="100" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#3B6E8F" data-lang="ar">موقع التثبيت</text>
+  <text x="130" y="100" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#3B6E8F" data-lang="fr">Site de fixation</text>
+
+  <!-- Binding link -->
+  <path d="M300 118 L410 110" stroke="#C17A2E" stroke-width="2.5" stroke-dasharray="5,4" />
+  <text x="355" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#C17A2E" data-lang="ar">تثبيت نوعي (مفتاح-قفل)</text>
+  <text x="355" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#C17A2E" data-lang="fr">Fixation spécifique (clé-serrure)</text>
+
+  <!-- Antigen (pathogen surface) -->
+  <circle cx="560" cy="200" r="110" fill="#E3E8D6" stroke="#8B4A2B" stroke-width="3" />
+  <path d="M420 130 q-15 -25 10 -35 q20 5 15 30 z" fill="#C17A2E" stroke="#8B4A2B" stroke-width="1.5" />
+  <path d="M560 90 q-10 -30 20 -30 q20 10 5 32 z" fill="#3C7A63" stroke="#204F3F" stroke-width="1.5" />
+  <path d="M660 260 q25 -10 25 20 q-15 15 -30 0 z" fill="#3C7A63" stroke="#204F3F" stroke-width="1.5" />
+
+  <text x="560" y="330" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">مولد الضد (سطح جسم غريب)</text>
+  <text x="560" y="330" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Antigène (surface d'un corps étranger)</text>
+  <text x="440" y="115" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#8B4A2B" data-lang="ar">حاتمة (محدد مولد الضد)</text>
+  <text x="440" y="115" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#8B4A2B" data-lang="fr">Épitope (déterminant antigénique)</text>
+</svg>

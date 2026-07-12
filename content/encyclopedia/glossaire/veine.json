@@ -1,0 +1,9 @@
+{
+  "id": "veine",
+  "terme": { "ar": "الوريد", "fr": "Veine" },
+  "definition": {
+    "ar": "وعاء دموي ذو جدار رقيق يحتوي على صمامات، ويعيد الدم من أعضاء الجسم إلى القلب، ويكون الدم فيه غنيا بثنائي أكسيد الكربون باستثناء الوريد الرئوي.",
+    "fr": "Vaisseau sanguin à paroi fine muni de valvules, qui ramène le sang des organes vers le cœur. Il transporte un sang riche en dioxyde de carbone, à l'exception de la veine pulmonaire."
+  },
+  "voir_aussi": ["artere"]
+}

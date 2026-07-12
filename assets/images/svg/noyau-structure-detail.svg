@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title6 desc6">
+  <title id="title6">البنية التفصيلية للنواة الخلوية</title>
+  <desc id="desc6">رسم مكبر للنواة يبين الغلاف النووي المزدوج وثقوبه، والنوية، والمادة الوراثية (الكروماتين) بداخلها.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الغلاف النووي المزدوج -->
+  <circle cx="400" cy="195" r="150" fill="#DDEBE3" stroke="#204F3F" stroke-width="4" />
+  <circle cx="400" cy="195" r="138" fill="none" stroke="#3C7A63" stroke-width="2.5" />
+
+  <!-- ثقوب نووية -->
+  <circle cx="400" cy="45" r="6" fill="#F9FAF7" stroke="#204F3F" stroke-width="1.5" />
+  <circle cx="480" cy="65" r="6" fill="#F9FAF7" stroke="#204F3F" stroke-width="1.5" />
+  <circle cx="310" cy="60" r="6" fill="#F9FAF7" stroke="#204F3F" stroke-width="1.5" />
+  <circle cx="545" cy="150" r="6" fill="#F9FAF7" stroke="#204F3F" stroke-width="1.5" />
+
+  <text x="620" y="90" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#204F3F" data-lang="ar">الغلاف النووي (مزدوج ومثقب)</text>
+  <text x="620" y="90" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#204F3F" data-lang="fr">Enveloppe nucléaire (double, poreuse)</text>
+  <path d="M 545 100 L 605 95" stroke="#204F3F" stroke-width="1.5" fill="none" />
+
+  <!-- كروماتين -->
+  <g stroke="#3B6E8F" stroke-width="4" stroke-linecap="round" opacity="0.85">
+    <path d="M 330 150 q 20 -20 40 0 t 40 0" fill="none" />
+    <path d="M 320 190 q 25 25 50 0 t 50 0" fill="none" />
+    <path d="M 350 230 q 15 -15 30 0 t 30 0" fill="none" />
+    <path d="M 420 170 q 20 20 40 -5" fill="none" />
+  </g>
+  <text x="400" y="270" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#3B6E8F" data-lang="ar">الكروماتين (ADN)</text>
+  <text x="400" y="270" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#3B6E8F" data-lang="fr">Chromatine (ADN)</text>
+
+  <!-- النوية -->
+  <ellipse cx="400" cy="195" rx="35" ry="28" fill="#C17A2E" stroke="#8B4A2B" stroke-width="2" opacity="0.9" />
+  <text x="400" y="200" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#F9FAF7" data-lang="ar">النوية</text>
+  <text x="400" y="200" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#F9FAF7" data-lang="fr">Nucléole</text>
+
+  <text x="400" y="365" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="14" fill="#1B241F" data-lang="ar">النواة تحتوي على المعلومة الوراثية وتتحكم في نشاط الخلية</text>
+  <text x="400" y="365" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#1B241F" data-lang="fr">Le noyau contient l'information génétique et contrôle l'activité cellulaire</text>
+</svg>

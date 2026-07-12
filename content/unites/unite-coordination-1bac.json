@@ -1,0 +1,9 @@
+{
+  "id": "unite-coordination-1bac",
+  "slug": "coordination-nerveuse",
+  "niveau": "1bac",
+  "dorra": 1,
+  "filieres": ["1bac-se"],
+  "numero_ordre": 1,
+  "titre": { "ar": "التنسيق العصبي", "fr": "La coordination nerveuse" }
+}

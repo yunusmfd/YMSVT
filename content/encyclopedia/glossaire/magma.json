@@ -1,0 +1,9 @@
+{
+  "id": "magma",
+  "terme": { "ar": "الصهارة", "fr": "Magma" },
+  "definition": {
+    "ar": "صخر منصهر جزئيا أو كليا يوجد في العمق، ويمكن أن يصعد نحو السطح عبر مناطق ضعف في الغلاف الصخري ليُشكّل النشاط البركاني.",
+    "fr": "Roche fondue, partiellement ou totalement, présente en profondeur, susceptible de remonter vers la surface par les zones de faiblesse de la lithosphère et d'alimenter l'activité volcanique."
+  },
+  "voir_aussi": ["plaque-tectonique"]
+}

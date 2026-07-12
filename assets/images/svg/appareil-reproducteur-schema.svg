@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title6 desc6">
+  <title id="title6">مخطط تبسيطي للجهازين التناسليين وحدوث الإخصاب</title>
+  <desc id="desc6">مخطط هندسي مبسط يبين الأعضاء التناسلية الذكرية (الخصيتان) والأنثوية (المبيضان والرحم) والتقاء المشيج الذكري بالمشيج الأنثوي في قناة البيض.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الجهاز الذكري -->
+  <text x="150" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" font-weight="bold" fill="#3B6E8F" data-lang="ar">الجهاز التناسلي الذكري</text>
+  <text x="150" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="bold" fill="#3B6E8F" data-lang="fr">Appareil génital masculin</text>
+
+  <ellipse cx="115" cy="130" rx="30" ry="38" fill="#E3E8D6" stroke="#3B6E8F" stroke-width="3" />
+  <ellipse cx="185" cy="130" rx="30" ry="38" fill="#E3E8D6" stroke="#3B6E8F" stroke-width="3" />
+  <text x="150" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">الخصيتان (إنتاج النطاف)</text>
+  <text x="150" y="185" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Testicules (production spermatozoïdes)</text>
+
+  <!-- قناة ناقلة -->
+  <path d="M150 92 L150 60 L340 60" stroke="#3B6E8F" stroke-width="6" fill="none" stroke-linecap="round" />
+  <text x="240" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">قناة ناقلة للنطاف</text>
+  <text x="240" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">Canal déférent</text>
+
+  <!-- خط فاصل -->
+  <line x1="400" y1="30" x2="400" y2="350" stroke="#DADDD5" stroke-width="2" />
+
+  <!-- الجهاز الأنثوي -->
+  <text x="640" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" font-weight="bold" fill="#C17A2E" data-lang="ar">الجهاز التناسلي الأنثوي</text>
+  <text x="640" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="bold" fill="#C17A2E" data-lang="fr">Appareil génital féminin</text>
+
+  <!-- المبيضان -->
+  <ellipse cx="530" cy="110" rx="26" ry="20" fill="#E3E8D6" stroke="#C17A2E" stroke-width="3" />
+  <ellipse cx="750" cy="110" rx="26" ry="20" fill="#E3E8D6" stroke="#C17A2E" stroke-width="3" />
+  <text x="530" y="80" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">مبيض</text>
+  <text x="530" y="80" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Ovaire</text>
+
+  <!-- قناتا البيض -->
+  <path d="M556 110 Q600 120 620 160" stroke="#C17A2E" stroke-width="8" fill="none" stroke-linecap="round" />
+  <path d="M724 110 Q680 120 660 160" stroke="#C17A2E" stroke-width="8" fill="none" stroke-linecap="round" />
+  <text x="640" y="140" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">قناة البيض (مكان الإخصاب)</text>
+  <text x="640" y="140" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Trompe (lieu de la fécondation)</text>
+
+  <!-- الرحم -->
+  <path d="M600 160 Q640 150 680 160 L675 260 Q640 285 605 260 Z" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <text x="640" y="220" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="ar">الرحم</text>
+  <text x="640" y="220" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="bold" fill="#204F3F" data-lang="fr">Utérus</text>
+
+  <!-- خلية بيضية ونطفة عند الإخصاب -->
+  <circle cx="620" cy="160" r="9" fill="#8B4A2B" />
+  <circle cx="600" cy="150" r="3" fill="#1B241F" />
+  <path d="M600 150 L588 145" stroke="#1B241F" stroke-width="1.5" />
+  <text x="640" y="300" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">التقاء النطفة بالبويضة = إخصاب</text>
+  <text x="640" y="300" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Rencontre spermatozoïde-ovule = fécondation</text>
+</svg>

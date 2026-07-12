@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">مراحل الانقسام الخيطي (Mitose)</title>
+  <desc id="desc1">خلية أم تحتوي على 4 صبغيات تنقسم لتعطي خليتين بنتين متماثلتين، كل واحدة بنفس العدد الأصلي من الصبغيات.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الخلية الأم -->
+  <circle cx="140" cy="190" r="90" fill="#F0F1F0" stroke="#204F3F" stroke-width="3" />
+  <g stroke="#3B6E8F" stroke-width="5" stroke-linecap="round">
+    <line x1="105" y1="160" x2="130" y2="185" /><line x1="130" y1="185" x2="105" y2="210" />
+    <line x1="175" y1="160" x2="150" y2="185" /><line x1="150" y1="185" x2="175" y2="210" />
+    <line x1="105" y1="170" x2="130" y2="195" transform="translate(20,10)" /><line x1="130" y1="195" x2="105" y2="220" transform="translate(20,10)" />
+    <line x1="175" y1="170" x2="150" y2="195" transform="translate(-20,10)" /><line x1="150" y1="195" x2="175" y2="220" transform="translate(-20,10)" />
+  </g>
+  <text x="140" y="300" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" fill="#1B241F" data-lang="ar">الخلية الأم (2n=4)</text>
+  <text x="140" y="300" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#1B241F" data-lang="fr">Cellule mère (2n=4)</text>
+
+  <!-- سهم -->
+  <path d="M260 190 L360 190" stroke="#8B4A2B" stroke-width="4" marker-end="url(#arrow1)" />
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8B4A2B" />
+    </marker>
+  </defs>
+  <text x="310" y="170" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#8B4A2B" data-lang="ar">انقسام خيطي</text>
+  <text x="310" y="170" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#8B4A2B" data-lang="fr">Mitose</text>
+
+  <!-- الخليتان البنتان -->
+  <g>
+    <circle cx="480" cy="190" r="70" fill="#E3E8D6" stroke="#3C7A63" stroke-width="3" />
+    <g stroke="#3B6E8F" stroke-width="4" stroke-linecap="round">
+      <line x1="455" y1="165" x2="475" y2="185" /><line x1="475" y1="185" x2="455" y2="205" />
+      <line x1="505" y1="165" x2="485" y2="185" /><line x1="485" y1="185" x2="505" y2="205" />
+      <line x1="455" y1="185" x2="475" y2="205" /><line x1="475" y1="205" x2="455" y2="225" />
+      <line x1="505" y1="185" x2="485" y2="205" /><line x1="485" y1="205" x2="505" y2="225" />
+    </g>
+  </g>
+  <g>
+    <circle cx="660" cy="190" r="70" fill="#E3E8D6" stroke="#3C7A63" stroke-width="3" />
+    <g stroke="#3B6E8F" stroke-width="4" stroke-linecap="round">
+      <line x1="635" y1="165" x2="655" y2="185" /><line x1="655" y1="185" x2="635" y2="205" />
+      <line x1="685" y1="165" x2="665" y2="185" /><line x1="665" y1="185" x2="685" y2="205" />
+      <line x1="635" y1="185" x2="655" y2="205" /><line x1="655" y1="205" x2="635" y2="225" />
+      <line x1="685" y1="185" x2="665" y2="205" /><line x1="665" y1="205" x2="685" y2="225" />
+    </g>
+  </g>
+  <text x="570" y="300" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" fill="#1B241F" data-lang="ar">خليتان بنتان (2n=4 لكل واحدة)</text>
+  <text x="570" y="300" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#1B241F" data-lang="fr">Deux cellules filles (2n=4 chacune)</text>
+</svg>

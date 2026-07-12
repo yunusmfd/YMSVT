@@ -1,0 +1,10 @@
+{
+  "id": "exam-3ac-2026-fard2",
+  "type": "fard",
+  "niveau": "3ac",
+  "dorra": 2,
+  "numero": 2,
+  "annee_scolaire": "2025-2026",
+  "titre": { "ar": "الفرض المحروس الثاني", "fr": "Deuxième devoir surveillé" },
+  "fichier_pdf": "content/exams/files/exam-3ac-2026-fard2.pdf"
+}

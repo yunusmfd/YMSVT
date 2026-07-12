@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">التبادلات الغازية على مستوى الحويصلة الرئوية</title>
+  <desc id="desc2">مخطط لحويصلة رئوية محاطة بشعيرات دموية، يبين دخول ثنائي أكسيد الكربون إليها وخروج الأكسجين منها نحو الدم.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- القصبات الهوائية المؤدية للحويصلة -->
+  <path d="M60 190 L220 190" stroke="#3B6E8F" stroke-width="14" fill="none" stroke-linecap="round" />
+  <path d="M220 190 L270 140" stroke="#3B6E8F" stroke-width="9" fill="none" stroke-linecap="round" />
+  <path d="M220 190 L270 240" stroke="#3B6E8F" stroke-width="9" fill="none" stroke-linecap="round" />
+  <text x="120" y="170" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">قصيبة هوائية</text>
+  <text x="120" y="170" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Bronchiole</text>
+
+  <!-- الحويصلة الرئوية (كرة) -->
+  <circle cx="380" cy="140" r="75" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <circle cx="380" cy="140" r="75" fill="none" />
+  <text x="380" y="95" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" font-weight="bold" fill="#204F3F" data-lang="ar">حويصلة رئوية</text>
+  <text x="380" y="95" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="fr">Alvéole pulmonaire</text>
+
+  <!-- شعيرة دموية ملتفة حول الحويصلة -->
+  <path d="M320 200 Q380 250 440 200 Q470 175 440 150 Q420 135 400 150" fill="none" stroke="#8B4A2B" stroke-width="6" stroke-linecap="round" />
+  <text x="380" y="280" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">شعيرة دموية</text>
+  <text x="380" y="280" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Capillaire sanguin</text>
+
+  <!-- سهم O2 من الحويصلة الى الدم -->
+  <path d="M410 155 L470 130" stroke="#3B6E8F" stroke-width="5" marker-end="url(#arrowO2)" />
+  <defs>
+    <marker id="arrowO2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#3B6E8F" />
+    </marker>
+  </defs>
+  <text x="560" y="110" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" fill="#3B6E8F" data-lang="ar">O2 نحو الدم</text>
+  <text x="560" y="110" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" fill="#3B6E8F" data-lang="fr">O2 vers le sang</text>
+
+  <!-- سهم CO2 من الدم الى الحويصلة -->
+  <path d="M470 190 L410 185" stroke="#C17A2E" stroke-width="5" marker-end="url(#arrowCO2)" />
+  <defs>
+    <marker id="arrowCO2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#C17A2E" />
+    </marker>
+  </defs>
+  <text x="560" y="215" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="18" fill="#C17A2E" data-lang="ar">CO2 نحو الحويصلة</text>
+  <text x="560" y="215" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" fill="#C17A2E" data-lang="fr">CO2 vers l'alvéole</text>
+
+  <!-- ملاحظة أسفل: سطح تبادل كبير -->
+  <text x="380" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">جدار رقيق ومساحة كبيرة تُسهّل التبادلات الغازية</text>
+  <text x="380" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Paroi fine et grande surface facilitent les échanges gazeux</text>
+</svg>

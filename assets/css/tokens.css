@@ -1,0 +1,131 @@
+/*
+  Nova SVT — Design Tokens
+  مصدر الحقيقة الوحيد لكل الألوان/الخطوط/المسافات (القسم 4 من الوثيقة).
+  أي تعديل بصري يمر من هنا فقط — لا قيم "سحرية" inline في أي صفحة أو ملف آخر.
+*/
+
+:root {
+  /* --- 4.1 لوحة الألوان (فاتح) --- */
+  --bg: #F0F1F0;
+  --bg-alt: #E3E8D6;
+  --ink: #1B241F;
+  --ink-soft: #4D554E;
+  --primary: #204F3F;
+  --primary-light: #3C7A63;
+  --secondary: #C17A2E;
+  --accent: #3B6E8F;
+  --rust: #8B4A2B;
+  --line: #DADDD5;
+  --card-bg: #F9FAF7;
+
+  /* --- 4.1.2 بليتة ألوان التخصصات (فاتح) --- */
+  --spec-genetique: #3D5A96;
+  --spec-cytologie: #8B4F73;
+  --spec-physiologie: #B4483F;
+  --spec-ecologie: #4C7A3E;
+  --spec-biomol: #6B4F8C;
+  --spec-geologie: var(--secondary);
+  --spec-microbiologie: #2E7A82;
+  --spec-botanique: #7A8F3E;
+  --spec-zoologie: #B5652E;
+  --spec-taxonomie: #8B7355;
+
+  /* --- 4.2 الطباعة --- */
+  --font-display-ar: "Markazi Text", serif;
+  --font-display-fr: "Fraunces", serif;
+  --font-body-ar: "IBM Plex Sans Arabic", sans-serif;
+  --font-body-fr: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* سلّم الأحجام */
+  --fs-12: 12.5px;
+  --fs-14: 14px;
+  --fs-15: 15px;
+  --fs-16: 16.5px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-32: 32px;
+  --fs-hero: clamp(40px, 6vw, 54px);
+
+  --lh-text: 1.55;
+  --lh-heading: 1.2;
+
+  /* --- 4.3 المسافات والزوايا --- */
+  --sp-1: 6px;
+  --sp-2: 10px;
+  --sp-3: 14px;
+  --sp-4: 18px;
+  --sp-5: 22px;
+  --sp-6: 30px;
+  --sp-7: 40px;
+  --sp-8: 56px;
+  --sp-9: 70px;
+
+  --radius: 14px;
+  --radius-pill: 999px;
+  --radius-lg: 22px;
+
+  /* --- 9.2 الحركة --- */
+  --motion-fast: 150ms ease;
+  --motion-dropdown: 180ms ease-out;
+  --motion-theme: 200ms ease;
+
+  /* --- 8.1 الحاوية --- */
+  --container-max: 1180px;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #142219;
+  --bg-alt: #1A2C21;
+  --ink: #E9ECE2;
+  --ink-soft: #A3B3A5;
+  --primary: #3C8A6D;
+  --primary-light: #5AAE8C;
+  --secondary: #D68F45;
+  --accent: #6FAFCB;
+  --line: #2E4536;
+  --card-bg: #1C2F24;
+
+  --spec-genetique: #6B87C4;
+  --spec-cytologie: #B87CA0;
+  --spec-physiologie: #D97668;
+  --spec-ecologie: #7AAD68;
+  --spec-biomol: #9A7AB8;
+  --spec-geologie: #D68F45;
+  --spec-microbiologie: #4FA3AC;
+  --spec-botanique: #A8C066;
+  --spec-zoologie: #D68251;
+  --spec-taxonomie: #B89A78;
+
+  color-scheme: dark;
+}
+
+/* دعم تفضيل نظام التشغيل قبل أي اختيار يدوي محفوظ (يُطبَّق فقط إن لم يوجد nova-svt:theme محفوظ، القسم 4.1.1) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --bg: #142219;
+    --bg-alt: #1A2C21;
+    --ink: #E9ECE2;
+    --ink-soft: #A3B3A5;
+    --primary: #3C8A6D;
+    --primary-light: #5AAE8C;
+    --secondary: #D68F45;
+    --accent: #6FAFCB;
+    --line: #2E4536;
+    --card-bg: #1C2F24;
+    color-scheme: dark;
+  }
+}
+
+[lang="ar"] {
+  --font-display: var(--font-display-ar);
+  --font-body: var(--font-body-ar);
+}
+[lang="fr"] {
+  --font-display: var(--font-display-fr);
+  --font-body: var(--font-body-fr);
+}

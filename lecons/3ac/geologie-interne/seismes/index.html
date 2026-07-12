@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>الزلازل | Nova SVT</title>
+<meta name="description" content="تحديد أسباب حدوث الزلازل وعلاقتها بحركة الصفائح والفوالق" />
+<link rel="canonical" href="https://novasvt.ma/lecons/3ac/geologie-interne/seismes/" />
+<meta property="og:title" content="الزلازل | Nova SVT" />
+<meta property="og:description" content="تحديد أسباب حدوث الزلازل وعلاقتها بحركة الصفائح والفوالق" />
+<meta property="og:image" content="https://novasvt.ma/assets/images/hero/og-default.webp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://novasvt.ma/lecons/3ac/geologie-interne/seismes/" />
+<meta property="og:locale" content="ar_MA" />
+<meta property="og:locale:alternate" content="fr_MA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#204F3F" />
+<link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicons/favicon.svg" />
+<link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/tokens.css" />
+<link rel="stylesheet" href="/assets/css/base.css" />
+<link rel="stylesheet" href="/assets/css/components.css" />
+<script>/*
+  سكريبت أوّلي حرج (Critical Inline Script)
+  يُحقن حرفيا داخل <head> كل صفحة (عبر scripts/lib/partials.js وقت البناء)
+  قبل أول Paint، لتفادي وميض تبديل الثيم/الاتجاه (FOUC/RTL flash) — القسم 3.1.3 و4.1.1.
+  ملاحظة: يبقى هذا الملف مصدر المرجعية المقروءة؛ partials.js يُضمّن نسخة مطابقة inline.
+*/
+(function () {
+  try {
+    var theme = localStorage.getItem("nova-svt:theme");
+    if (!theme) {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+
+    var lang = localStorage.getItem("nova-svt:lang") || document.documentElement.getAttribute("lang") || "ar";
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", lang === "fr" ? "ltr" : "rtl");
+  } catch (e) {
+    /* localStorage قد يكون معطّلا (وضع خاص) — لا كسر للصفحة، القيم الافتراضية في HTML تبقى فعّالة */
+  }
+})();
+</script>
+
+</head>
+<body>
+
+<a href="#main" class="skip-link" data-i18n="skip_to_content">تخطَّ إلى المحتوى</a>
+<header class="navbar" data-navbar>
+  <div class="navbar-inner">
+    <a href="/" class="nova-logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
+  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
+  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
+</svg><span class="nova-logo-text">Nova SVT</span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/" data-i18n="nav_home"></a></li>
+        <li><a class="nav-link" href="/lecons/" data-i18n="nav_lecons" aria-current="page"></a></li><li><a class="nav-link" href="/devoirs-examens/" data-i18n="nav_exams"></a></li><li><a class="nav-link" href="/labo-virtuel/" data-i18n="nav_labo"></a></li><li><a class="nav-link" href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li><li><a class="nav-link" href="/revision/" data-i18n="nav_revision"></a></li>
+      </ul>
+    </nav>
+    <div class="nav-more" data-nav-more>
+      <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false" data-i18n="nav_more"></button>
+      <span class="arrow" aria-hidden="true">▾</span>
+      <div class="nav-more-menu" data-nav-more-menu hidden><a href="/blog/" data-i18n="nav_blog"></a><a href="/a-propos/" data-i18n="nav_apropos"></a><a href="/contact/" data-i18n="nav_contact"></a></div>
+    </div>
+    <div class="nav-actions">
+      <form class="search-bar-inline" role="search" data-search-open>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="search" data-i18n-placeholder="search_placeholder" readonly />
+      </form>
+      <button class="icon-btn search-icon-btn" data-search-open data-i18n-aria="search_title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="icon-btn" data-lang-toggle data-i18n-aria="lang_toggle">FR</button>
+      <button class="icon-btn theme-toggle" data-theme-toggle data-i18n-aria="theme_toggle"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+      <div class="nav-more" data-nav-more>
+        <button class="icon-btn" data-nav-more-trigger="bell" aria-expanded="false" data-i18n-aria="blog_menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="bell-dot"></span></button>
+        <div class="nav-more-menu" data-nav-more-menu hidden><a href="/blog/comment-cerveau-memorise/"><strong data-lang="ar">كيف يتذكر الدماغ؟</strong><strong data-lang="fr">Comment le cerveau se souvient-il ?</strong></a><a href="/blog/" class="mono" data-i18n="nav_blog" style="font-size:var(--fs-12)"></a></div>
+      </div>
+      <button class="icon-btn hamburger-btn" data-hamburger-btn data-i18n-aria="menu_open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+  <div class="nav-divider-bar"></div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu hidden>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-6)">
+    <span class="nova-logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
+  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
+  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
+</svg><span>Nova SVT</span></span>
+    <button class="icon-btn" data-mobile-menu-close data-i18n-aria="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <nav>
+    <ul>
+      <li><a class="nav-link" href="/" data-i18n="nav_home"></a></li>
+      <li><a class="nav-link" href="/lecons/" data-i18n="nav_lecons"></a></li><li><a class="nav-link" href="/devoirs-examens/" data-i18n="nav_exams"></a></li><li><a class="nav-link" href="/labo-virtuel/" data-i18n="nav_labo"></a></li><li><a class="nav-link" href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li><li><a class="nav-link" href="/revision/" data-i18n="nav_revision"></a></li>
+      <li class="mobile-submenu">
+        <a class="nav-link" href="/blog/" data-i18n="nav_blog"></a><a class="nav-link" href="/a-propos/" data-i18n="nav_apropos"></a><a class="nav-link" href="/contact/" data-i18n="nav_contact"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-box" role="dialog" aria-modal="true" data-i18n-aria="search_title">
+    <div class="search-box-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" data-search-input data-i18n-placeholder="search_placeholder" autocomplete="off" />
+      <button class="icon-btn" data-search-close data-i18n-aria="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="search-suggestions">
+      <button class="chip" data-search-suggestion>الانقسام المنصف</button>
+      <button class="chip" data-search-suggestion>التركيب الضوئي</button>
+      <button class="chip" data-search-suggestion>المناعة</button>
+      <button class="chip" data-search-suggestion>الخلية</button>
+    </div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+
+<main id="main">
+
+<div class="progress-bar-top" data-progress-bar></div>
+<div class="container" style="padding-top:var(--sp-5)">
+  <nav class="breadcrumb" aria-label="مسار التنقل">
+    <a href="/"><span data-lang="ar">الرئيسية</span><span data-lang="fr">Accueil</span></a><span aria-hidden="true">/</span> <a href="/lecons/"><span data-lang="ar">الدروس</span><span data-lang="fr">Leçons</span></a><span aria-hidden="true">/</span> <a href="/lecons/#3ac"><span data-lang="ar">الثالثة إعدادي</span><span data-lang="fr">3e année collège</span></a><span aria-hidden="true">/</span> <a href="/lecons/3ac/geologie-interne/"><span data-lang="ar">الظواهر الجيولوجية الداخلية</span><span data-lang="fr">Les phénomènes géologiques internes</span></a><span aria-hidden="true">/</span>
+    <span class="current"><span data-lang="ar">الزلازل</span><span data-lang="fr">Les séismes</span></span>
+  </nav>
+
+  <div class="lesson-info-bar">
+    <div class="item"><strong data-lang="ar">المستوى</strong><strong data-lang="fr">Niveau</strong><span data-lang="ar">الثالثة إعدادي</span><span data-lang="fr">3e année collège</span></div>
+    
+    
+    <div class="item"><strong data-lang="ar">الوحدة</strong><strong data-lang="fr">Unité</strong><span data-lang="ar">الظواهر الجيولوجية الداخلية</span><span data-lang="fr">Les phénomènes géologiques internes</span></div>
+    <div class="item"><strong data-lang="ar">الدورة</strong><strong data-lang="fr">Semestre</strong><span data-lang="ar">الأولى</span><span data-lang="fr">1</span></div>
+    <div class="item"><strong data-lang="ar">المدة</strong><strong data-lang="fr">Durée</strong><span data-lang="ar">20 د</span><span data-lang="fr">20 min</span></div>
+  </div>
+
+  <h1><span data-lang="ar">الزلازل</span><span data-lang="fr">Les séismes</span></h1>
+
+  <div class="lesson-layout">
+    <aside class="lesson-toc" aria-label="فهرس المحاور">
+      <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
+        <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
+      </button>
+      <div data-toc-list>
+        <div data-lang="ar"><ul>
+    <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">ما هو الزلزال؟</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">من البؤرة إلى السطح: الموجات الزلزالية</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">قياس الزلازل والوقاية من مخاطرها</a></li>
+  </ul></div>
+        <div data-lang="fr"><ul>
+    <li><a href="#sec-1-fr" data-toc-link="sec-1-fr">Qu&#39;est-ce qu&#39;un séisme ?</a></li><li><a href="#sec-2-fr" data-toc-link="sec-2-fr">Du foyer à la surface : les ondes sismiques</a></li><li><a href="#sec-3-fr" data-toc-link="sec-3-fr">Mesurer et prévenir les risques sismiques</a></li>
+  </ul></div>
+      </div>
+    </aside>
+    <div data-lesson-content data-content-src="" data-lecon-id="svt-3ac-seismes">
+      <div data-lang="ar"><section class="lesson-section" id="sec-1-ar" data-lesson-section tabindex="-1">
+    <h2>ما هو الزلزال؟</h2>
+    <p><span class="terme-link" data-terme="seisme" tabindex="0">الزلزال</span> هو اهتزاز مفاجئ وعنيف لسطح الأرض. تنكسر الصخور في العمق عندما تتجاوز الضغوط المتراكمة قدرتها على التحمل، فتتحرك الكتلتان الصخريتان المتجاورتان بشكل مفاجئ على مستوى سطح كسر يُسمى الفالق. هذا التحرر المفاجئ للطاقة هو الذي يُنتج الاهتزازات التي نشعر بها.</p>
+
+<p>تتركز معظم الزلازل القوية على مستوى حدود الصفائح التكتونية، حيث تتحرك الصفائح الصخرية الكبيرة المكوّنة لسطح الأرض بالنسبة لبعضها البعض (تباعدا أو تقاربا أو انزلاقا)، مما يولّد إجهادات كبيرة على الصخور المجاورة للحدود.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">البؤرة والمركز السطحي للزلزال</title>
+  <desc id="desc1">مقطع تحت سطح الأرض يبين فالقا، والبؤرة الزلزالية في العمق، والمركز السطحي فوقها مباشرة على السطح، مع أمواج زلزالية دائرية تنتشر من البؤرة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الطبقة الصخرية تحت السطح -->
+  <rect x="0" y="90" width="800" height="260" fill="#E3E8D6" />
+  <!-- خط السطح -->
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#204F3F" stroke-width="4" />
+
+  <!-- الفالق -->
+  <path d="M 340 90 L 460 350" stroke="#8B4A2B" stroke-width="5" fill="none" stroke-dasharray="2 0" />
+  <text x="480" y="330" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#8B4A2B" data-lang="ar">الفالق</text>
+  <text x="480" y="330" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#8B4A2B" data-lang="fr">Faille</text>
+
+  <!-- أمواج دائرية من البؤرة -->
+  <circle cx="400" cy="230" r="40" fill="none" stroke="#3B6E8F" stroke-width="2.5" opacity="0.9" />
+  <circle cx="400" cy="230" r="75" fill="none" stroke="#3B6E8F" stroke-width="2" opacity="0.7" />
+  <circle cx="400" cy="230" r="110" fill="none" stroke="#3B6E8F" stroke-width="1.5" opacity="0.5" />
+
+  <!-- البؤرة -->
+  <circle cx="400" cy="230" r="10" fill="#C17A2E" stroke="#1B241F" stroke-width="1.5" />
+  <text x="420" y="235" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">البؤرة</text>
+  <text x="420" y="235" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Foyer</text>
+
+  <!-- خط عمودي يصل البؤرة بالمركز السطحي -->
+  <line x1="400" y1="230" x2="400" y2="90" stroke="#1B241F" stroke-width="2" stroke-dasharray="6 5" />
+
+  <!-- المركز السطحي -->
+  <circle cx="400" cy="90" r="9" fill="#3C7A63" stroke="#1B241F" stroke-width="1.5" />
+  <text x="415" y="70" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">المركز السطحي (فوق المركز)</text>
+  <text x="415" y="70" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Épicentre</text>
+
+  <!-- سطح الأرض label -->
+  <text x="30" y="75" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#204F3F" data-lang="ar">سطح الأرض</text>
+  <text x="30" y="75" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#204F3F" data-lang="fr">Surface terrestre</text>
+
+  <!-- أمواج تصل السطح -->
+  <path d="M 250 90 q 15 -12 30 0" stroke="#3B6E8F" stroke-width="2" fill="none" />
+  <path d="M 500 90 q 15 -12 30 0" stroke="#3B6E8F" stroke-width="2" fill="none" />
+  <text x="620" y="230" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#3B6E8F" data-lang="ar">الأمواج الزلزالية</text>
+  <text x="620" y="230" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#3B6E8F" data-lang="fr">Ondes sismiques</text>
+</svg>
+
+        <figcaption>البؤرة (منشأ الزلزال في العمق) والمركز السطحي (فوق المركز) على سطح الأرض</figcaption>
+      </figure>
+<aside class="encadre encadre-taarif" role="note" aria-label="الفالق">
+    <span class="encadre-icon" aria-hidden="true">🔤</span>
+    <p class="encadre-titre">الفالق</p>
+    <p>الفالق هو سطح كسر في الصخور تتحرك بموجبه كتلتان صخريتان إحداهما بالنسبة للأخرى. يمكن أن يكون هذا التحرك عموديا أو أفقيا، وهو المكان الذي تتراكم فيه الإجهادات قبل أن تتحرر فجأة على شكل زلزال.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-2-ar" data-lesson-section tabindex="-1">
+    <h2>من البؤرة إلى السطح: الموجات الزلزالية</h2>
+    <p>تنطلق الطاقة المتحررة عند البؤرة على شكل موجات زلزالية تنتشر في جميع الاتجاهات عبر باطن الأرض. تصل هذه الموجات إلى <span class="terme-link" data-terme="epicentre" tabindex="0">المركز السطحي</span> أولا، وهي النقطة الواقعة على السطح عموديا فوق البؤرة، حيث تكون شدة الاهتزاز عادة في أقصاها.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">نوعا الأمواج الزلزالية P وS</title>
+  <desc id="desc2">رسم تخطيطي يقارن بين الموجة الأولية P ذات الحركة الاهتزازية في اتجاه الانتشار، والموجة الثانوية S ذات الحركة الاهتزازية العمودية على اتجاه الانتشار.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- منطقة الموجة P -->
+  <rect x="40" y="40" width="720" height="140" rx="10" fill="#E3E8D6" stroke="#3C7A63" stroke-width="2" />
+  <text x="70" y="70" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" font-weight="bold" fill="#204F3F" data-lang="ar">الموجة P (الأولية) — اهتزاز في اتجاه الانتشار</text>
+  <text x="70" y="70" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="bold" fill="#204F3F" data-lang="fr">Onde P (primaire) — vibration dans le sens de propagation</text>
+
+  <!-- تمثيل موجة P كخطوط متقاربة/متباعدة (ضغط وتمدد) -->
+  <g stroke="#3B6E8F" stroke-width="3">
+    <line x1="90" y1="110" x2="90" y2="160" />
+    <line x1="110" y1="110" x2="110" y2="160" />
+    <line x1="140" y1="110" x2="140" y2="160" />
+    <line x1="220" y1="110" x2="220" y2="160" />
+    <line x1="330" y1="110" x2="330" y2="160" />
+    <line x1="350" y1="110" x2="350" y2="160" />
+    <line x1="380" y1="110" x2="380" y2="160" />
+    <line x1="460" y1="110" x2="460" y2="160" />
+    <line x1="570" y1="110" x2="570" y2="160" />
+    <line x1="590" y1="110" x2="590" y2="160" />
+    <line x1="620" y1="110" x2="620" y2="160" />
+  </g>
+  <path d="M 70 135 L 700 135" stroke="#8B4A2B" stroke-width="2.5" marker-end="url(#arrowP)" opacity="0.7" />
+  <defs>
+    <marker id="arrowP" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8B4A2B" />
+    </marker>
+  </defs>
+  <text x="710" y="140" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#8B4A2B" data-lang="ar">اتجاه الانتشار</text>
+  <text x="710" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Propagation</text>
+
+  <!-- منطقة الموجة S -->
+  <rect x="40" y="200" width="720" height="140" rx="10" fill="#E3E8D6" stroke="#3C7A63" stroke-width="2" />
+  <text x="70" y="230" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" font-weight="bold" fill="#204F3F" data-lang="ar">الموجة S (الثانوية) — اهتزاز عمودي على اتجاه الانتشار</text>
+  <text x="70" y="230" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="bold" fill="#204F3F" data-lang="fr">Onde S (secondaire) — vibration perpendiculaire</text>
+
+  <path d="M 70 300 Q 130 250 190 300 T 310 300 T 430 300 T 550 300 T 670 300" stroke="#3B6E8F" stroke-width="3.5" fill="none" />
+  <path d="M 70 300 L 700 300" stroke="#8B4A2B" stroke-width="2" stroke-dasharray="4 4" opacity="0.6" />
+  <path d="M 610 300 L 700 300" stroke="#8B4A2B" stroke-width="2.5" marker-end="url(#arrowS)" opacity="0.7" />
+  <defs>
+    <marker id="arrowS" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8B4A2B" />
+    </marker>
+  </defs>
+  <text x="710" y="305" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#8B4A2B" data-lang="ar">اتجاه الانتشار</text>
+  <text x="710" y="305" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Propagation</text>
+
+  <text x="400" y="370" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="14" fill="#1B241F" data-lang="ar">الموجة P أسرع وتصل أولا، والموجة S أبطأ لكنها أشد تخريبا</text>
+  <text x="400" y="370" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#1B241F" data-lang="fr">L'onde P est plus rapide (arrive en premier), l'onde S est plus lente mais plus destructrice</text>
+</svg>
+
+        <figcaption>مقارنة بين الموجة الأولية P والموجة الثانوية S</figcaption>
+      </figure>
+<div class="tableau-wrap"><table class="tableau">
+    <caption>مقارنة بين نوعي الموجات الزلزالية</caption>
+    <thead><tr><th>الخاصية</th><th>الموجة P (أولية)</th><th>الموجة S (ثانوية)</th></tr></thead>
+    <tbody><tr><td>السرعة</td><td>أسرع، تصل أولا</td><td>أبطأ، تصل ثانيا</td></tr><tr><td>اتجاه الاهتزاز</td><td>في نفس اتجاه الانتشار</td><td>عمودي على اتجاه الانتشار</td></tr><tr><td>الأضرار</td><td>أقل تخريبا</td><td>أشد تخريبا عموما</td></tr></tbody>
+  </table></div>
+<aside class="encadre encadre-molahada" role="note" aria-label="ملاحظة">
+    <span class="encadre-icon" aria-hidden="true">ℹ️</span>
+    <p class="encadre-titre">ملاحظة</p>
+    <p>كلما ابتعدنا عن المركز السطحي، كلما تناقصت شدة الاهتزازات المُحسّة والأضرار الناتجة عنها بشكل عام، رغم أن طبيعة التربة والبناء تؤثر أيضا في حجم الأضرار.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-3-ar" data-lesson-section tabindex="-1">
+    <h2>قياس الزلازل والوقاية من مخاطرها</h2>
+    <p>يقيس العلماء الزلازل باستعمال أجهزة تُسمى مقاييس الزلازل (Sismographes)، وتُسجَّل قوة الزلازل عادة بواسطة سلّم المقدار (Magnitude) الذي يعكس كمية الطاقة المتحررة عند البؤرة. أما شدة الزلازل فتُقاس بمقياس آخر يعتمد على حجم الأضرار المُلاحظة والشعور بالاهتزاز في مكان معيّن.</p>
+
+<aside class="encadre encadre-tanbih" role="note" aria-label="تنبيه">
+    <span class="encadre-icon" aria-hidden="true">⚠️</span>
+    <p class="encadre-titre">تنبيه</p>
+    <p>سلّم المقدار ليس خطيّا: الفرق بين درجتين متتاليتين (مثلا من 5 إلى 6) يعني طاقة متحررة أكبر بعشرات المرات، وليس مجرد زيادة بسيطة.</p>
+
+  </aside>
+<p>لا يمكن حتى الآن التنبؤ بدقة بموعد وقوع الزلازل، لذلك تعتمد الوقاية على تقليل المخاطر: تشييد بنايات مقاومة للزلازل، إعداد خرائط لمناطق الخطر، تنظيم تداريب الإخلاء، وتوعية السكان بسلوكيات الحماية أثناء الهزة (الابتعاد عن النوافذ، الاحتماء تحت طاولة صلبة...).</p>
+
+<div class="le-saviez-vous">
+    <span class="le-saviez-vous-icon" aria-hidden="true">💡</span>
+    <p class="encadre-titre">أضف إلى معلوماتك</p>
+    <p>ضرب زلزال مدينة أكادير المغربية سنة 1960 وتسبب في خسائر بشرية جسيمة رغم قوته المتوسطة نسبيا، بسبب هشاشة البنايات آنذاك. أدى هذا الحدث إلى إحداث أول قانون مغربي لمقاومة الزلازل في البناء.</p>
+
+    
+  </div>
+<aside class="encadre encadre-khoulasa" role="note" aria-label="خلاصة الدرس">
+    <span class="encadre-icon" aria-hidden="true">📋</span>
+    <p class="encadre-titre">خلاصة الدرس</p>
+    <p>ينشأ الزلزال عن تحرر مفاجئ للطاقة على مستوى فالق، غالبا قرب حدود الصفائح التكتونية. تنتشر هذه الطاقة على شكل موجات زلزالية من البؤرة نحو المركز السطحي ثم باقي المناطق. تُقاس قوة الزلازل بالمقدار، وتعتمد الوقاية من مخاطرها أساسا على البناء المقاوم للزلازل والتوعية.</p>
+
+  </aside>
+  </section><div class="quiz" aria-label="اختبر فهمك">
+    <h3>اختبر فهمك</h3>
+    <div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>1. ما السبب الرئيسي لمعظم الزلازل؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">التحرك المفاجئ للصخور على مستوى فالق</button><button type="button" class="quiz-option" data-option-index="1">ارتفاع درجة حرارة الغلاف الجوي</button><button type="button" class="quiz-option" data-option-index="2">تغير مستوى مياه المحيطات</button>
+      </div>
+      <div class="quiz-justification" hidden><p>الزلازل تنتج عن تحرر مفاجئ للطاقة عندما تتجاوز الإجهادات المتراكمة قدرة الصخور على التحمل، فتتحرك الكتلتان على جانبي الفالق.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>2. أين تقع البؤرة الزلزالية بالنسبة للمركز السطحي؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">في العمق، عموديا تحت المركز السطحي</button><button type="button" class="quiz-option" data-option-index="1">على السطح، بجانب المركز السطحي</button><button type="button" class="quiz-option" data-option-index="2">في الغلاف الجوي فوق منطقة الزلزال</button>
+      </div>
+      <div class="quiz-justification" hidden><p>البؤرة هي النقطة الحقيقية لانطلاق الزلزال في العمق، بينما المركز السطحي هو إسقاطها العمودي على سطح الأرض.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="1">
+      <p><strong>3. أي وسيلة تُعتبر الأنسب حاليا للحد من مخاطر الزلازل؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">التنبؤ الدقيق بتاريخ وقوع الزلزال</button><button type="button" class="quiz-option" data-option-index="1">البناء المقاوم للزلازل والتوعية بسلوكيات الحماية</button><button type="button" class="quiz-option" data-option-index="2">إيقاف حركة الصفائح التكتونية</button>
+      </div>
+      <div class="quiz-justification" hidden><p>لا يمكن حاليا التنبؤ بدقة بموعد الزلازل ولا التحكم في حركة الصفائح، لذلك تبقى الوقاية عبر البناء المقاوم والتوعية أنجع وسيلة للحد من الأضرار.</p>
+</div>
+    </div>
+  </div></div>
+      <div data-lang="fr"><section class="lesson-section" id="sec-1-fr" data-lesson-section tabindex="-1">
+    <h2>Qu&#39;est-ce qu&#39;un séisme ?</h2>
+    <p>Un <span class="terme-link" data-terme="seisme" tabindex="0">séisme</span> est une secousse brusque et violente de la surface terrestre. En profondeur, les roches se brisent lorsque les contraintes accumulées dépassent leur résistance, provoquant un déplacement soudain le long d'une surface de rupture appelée faille. Cette libération brutale d'énergie produit les vibrations que l'on ressent en surface.</p>
+
+<p>La majorité des séismes puissants se concentrent au niveau des limites des plaques tectoniques, là où ces grandes plaques rigides se déplacent les unes par rapport aux autres (écartement, rapprochement ou coulissement), générant d'importantes contraintes dans les roches voisines de la limite.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">البؤرة والمركز السطحي للزلزال</title>
+  <desc id="desc1">مقطع تحت سطح الأرض يبين فالقا، والبؤرة الزلزالية في العمق، والمركز السطحي فوقها مباشرة على السطح، مع أمواج زلزالية دائرية تنتشر من البؤرة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الطبقة الصخرية تحت السطح -->
+  <rect x="0" y="90" width="800" height="260" fill="#E3E8D6" />
+  <!-- خط السطح -->
+  <line x1="0" y1="90" x2="800" y2="90" stroke="#204F3F" stroke-width="4" />
+
+  <!-- الفالق -->
+  <path d="M 340 90 L 460 350" stroke="#8B4A2B" stroke-width="5" fill="none" stroke-dasharray="2 0" />
+  <text x="480" y="330" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#8B4A2B" data-lang="ar">الفالق</text>
+  <text x="480" y="330" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#8B4A2B" data-lang="fr">Faille</text>
+
+  <!-- أمواج دائرية من البؤرة -->
+  <circle cx="400" cy="230" r="40" fill="none" stroke="#3B6E8F" stroke-width="2.5" opacity="0.9" />
+  <circle cx="400" cy="230" r="75" fill="none" stroke="#3B6E8F" stroke-width="2" opacity="0.7" />
+  <circle cx="400" cy="230" r="110" fill="none" stroke="#3B6E8F" stroke-width="1.5" opacity="0.5" />
+
+  <!-- البؤرة -->
+  <circle cx="400" cy="230" r="10" fill="#C17A2E" stroke="#1B241F" stroke-width="1.5" />
+  <text x="420" y="235" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">البؤرة</text>
+  <text x="420" y="235" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Foyer</text>
+
+  <!-- خط عمودي يصل البؤرة بالمركز السطحي -->
+  <line x1="400" y1="230" x2="400" y2="90" stroke="#1B241F" stroke-width="2" stroke-dasharray="6 5" />
+
+  <!-- المركز السطحي -->
+  <circle cx="400" cy="90" r="9" fill="#3C7A63" stroke="#1B241F" stroke-width="1.5" />
+  <text x="415" y="70" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">المركز السطحي (فوق المركز)</text>
+  <text x="415" y="70" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Épicentre</text>
+
+  <!-- سطح الأرض label -->
+  <text x="30" y="75" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#204F3F" data-lang="ar">سطح الأرض</text>
+  <text x="30" y="75" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#204F3F" data-lang="fr">Surface terrestre</text>
+
+  <!-- أمواج تصل السطح -->
+  <path d="M 250 90 q 15 -12 30 0" stroke="#3B6E8F" stroke-width="2" fill="none" />
+  <path d="M 500 90 q 15 -12 30 0" stroke="#3B6E8F" stroke-width="2" fill="none" />
+  <text x="620" y="230" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#3B6E8F" data-lang="ar">الأمواج الزلزالية</text>
+  <text x="620" y="230" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#3B6E8F" data-lang="fr">Ondes sismiques</text>
+</svg>
+
+        <figcaption>Le foyer (origine du séisme en profondeur) et l&#39;épicentre à la surface</figcaption>
+      </figure>
+<aside class="encadre encadre-taarif" role="note" aria-label="La faille">
+    <span class="encadre-icon" aria-hidden="true">🔤</span>
+    <p class="encadre-titre">La faille</p>
+    <p>Une faille est une surface de rupture dans les roches le long de laquelle deux blocs se déplacent l'un par rapport à l'autre, verticalement ou horizontalement. C'est le lieu où les contraintes s'accumulent avant de se libérer brutalement sous forme de séisme.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-2-fr" data-lesson-section tabindex="-1">
+    <h2>Du foyer à la surface : les ondes sismiques</h2>
+    <p>L'énergie libérée au foyer se propage sous forme d'ondes sismiques dans toutes les directions à travers l'intérieur de la Terre. Ces ondes atteignent en premier l'<span class="terme-link" data-terme="epicentre" tabindex="0">épicentre</span>, point de la surface situé à la verticale du foyer, où l'intensité des secousses est généralement maximale.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">نوعا الأمواج الزلزالية P وS</title>
+  <desc id="desc2">رسم تخطيطي يقارن بين الموجة الأولية P ذات الحركة الاهتزازية في اتجاه الانتشار، والموجة الثانوية S ذات الحركة الاهتزازية العمودية على اتجاه الانتشار.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- منطقة الموجة P -->
+  <rect x="40" y="40" width="720" height="140" rx="10" fill="#E3E8D6" stroke="#3C7A63" stroke-width="2" />
+  <text x="70" y="70" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" font-weight="bold" fill="#204F3F" data-lang="ar">الموجة P (الأولية) — اهتزاز في اتجاه الانتشار</text>
+  <text x="70" y="70" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="bold" fill="#204F3F" data-lang="fr">Onde P (primaire) — vibration dans le sens de propagation</text>
+
+  <!-- تمثيل موجة P كخطوط متقاربة/متباعدة (ضغط وتمدد) -->
+  <g stroke="#3B6E8F" stroke-width="3">
+    <line x1="90" y1="110" x2="90" y2="160" />
+    <line x1="110" y1="110" x2="110" y2="160" />
+    <line x1="140" y1="110" x2="140" y2="160" />
+    <line x1="220" y1="110" x2="220" y2="160" />
+    <line x1="330" y1="110" x2="330" y2="160" />
+    <line x1="350" y1="110" x2="350" y2="160" />
+    <line x1="380" y1="110" x2="380" y2="160" />
+    <line x1="460" y1="110" x2="460" y2="160" />
+    <line x1="570" y1="110" x2="570" y2="160" />
+    <line x1="590" y1="110" x2="590" y2="160" />
+    <line x1="620" y1="110" x2="620" y2="160" />
+  </g>
+  <path d="M 70 135 L 700 135" stroke="#8B4A2B" stroke-width="2.5" marker-end="url(#arrowP)" opacity="0.7" />
+  <defs>
+    <marker id="arrowP" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8B4A2B" />
+    </marker>
+  </defs>
+  <text x="710" y="140" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#8B4A2B" data-lang="ar">اتجاه الانتشار</text>
+  <text x="710" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Propagation</text>
+
+  <!-- منطقة الموجة S -->
+  <rect x="40" y="200" width="720" height="140" rx="10" fill="#E3E8D6" stroke="#3C7A63" stroke-width="2" />
+  <text x="70" y="230" font-family="IBM Plex Sans Arabic, sans-serif" font-size="18" font-weight="bold" fill="#204F3F" data-lang="ar">الموجة S (الثانوية) — اهتزاز عمودي على اتجاه الانتشار</text>
+  <text x="70" y="230" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="bold" fill="#204F3F" data-lang="fr">Onde S (secondaire) — vibration perpendiculaire</text>
+
+  <path d="M 70 300 Q 130 250 190 300 T 310 300 T 430 300 T 550 300 T 670 300" stroke="#3B6E8F" stroke-width="3.5" fill="none" />
+  <path d="M 70 300 L 700 300" stroke="#8B4A2B" stroke-width="2" stroke-dasharray="4 4" opacity="0.6" />
+  <path d="M 610 300 L 700 300" stroke="#8B4A2B" stroke-width="2.5" marker-end="url(#arrowS)" opacity="0.7" />
+  <defs>
+    <marker id="arrowS" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8B4A2B" />
+    </marker>
+  </defs>
+  <text x="710" y="305" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#8B4A2B" data-lang="ar">اتجاه الانتشار</text>
+  <text x="710" y="305" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Propagation</text>
+
+  <text x="400" y="370" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="14" fill="#1B241F" data-lang="ar">الموجة P أسرع وتصل أولا، والموجة S أبطأ لكنها أشد تخريبا</text>
+  <text x="400" y="370" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#1B241F" data-lang="fr">L'onde P est plus rapide (arrive en premier), l'onde S est plus lente mais plus destructrice</text>
+</svg>
+
+        <figcaption>Comparaison entre l&#39;onde primaire P et l&#39;onde secondaire S</figcaption>
+      </figure>
+<div class="tableau-wrap"><table class="tableau">
+    <caption>Comparaison des deux types d&#39;ondes sismiques</caption>
+    <thead><tr><th>Caractéristique</th><th>Onde P (primaire)</th><th>Onde S (secondaire)</th></tr></thead>
+    <tbody><tr><td>Vitesse</td><td>Plus rapide, arrive en premier</td><td>Plus lente, arrive en second</td></tr><tr><td>Sens de vibration</td><td>Dans le sens de propagation</td><td>Perpendiculaire à la propagation</td></tr><tr><td>Dégâts</td><td>Généralement moins destructrice</td><td>Généralement plus destructrice</td></tr></tbody>
+  </table></div>
+<aside class="encadre encadre-molahada" role="note" aria-label="Observation">
+    <span class="encadre-icon" aria-hidden="true">ℹ️</span>
+    <p class="encadre-titre">Observation</p>
+    <p>Plus on s'éloigne de l'épicentre, plus l'intensité des secousses ressenties et les dégâts diminuent en général, même si la nature du sol et des constructions influence également l'ampleur des dommages.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-3-fr" data-lesson-section tabindex="-1">
+    <h2>Mesurer et prévenir les risques sismiques</h2>
+    <p>Les scientifiques mesurent les séismes à l'aide d'appareils appelés sismographes. La force d'un séisme est généralement exprimée par une échelle de magnitude, qui reflète la quantité d'énergie libérée au foyer. L'intensité, elle, est mesurée par une autre échelle basée sur les dégâts observés et la perception des secousses en un lieu donné.</p>
+
+<aside class="encadre encadre-tanbih" role="note" aria-label="Attention">
+    <span class="encadre-icon" aria-hidden="true">⚠️</span>
+    <p class="encadre-titre">Attention</p>
+    <p>L'échelle de magnitude n'est pas linéaire : passer d'un degré à un autre (par exemple de 5 à 6) correspond à une énergie libérée des dizaines de fois plus grande, pas à une simple augmentation légère.</p>
+
+  </aside>
+<p>À ce jour, on ne peut pas prédire avec précision la date d'un séisme. La prévention repose donc sur la réduction des risques : construction parasismique, cartographie des zones à risque, exercices d'évacuation, et sensibilisation de la population aux bons réflexes pendant la secousse (s'éloigner des fenêtres, s'abriter sous un meuble solide...).</p>
+
+<div class="le-saviez-vous">
+    <span class="le-saviez-vous-icon" aria-hidden="true">💡</span>
+    <p class="encadre-titre">Le saviez-vous ?</p>
+    <p>Le séisme d'Agadir, au Maroc, en 1960 a causé de très lourdes pertes humaines malgré une magnitude relativement modérée, en raison de la fragilité des constructions de l'époque. Cet événement a conduit à l'adoption du premier règlement marocain de construction parasismique.</p>
+
+    
+  </div>
+<aside class="encadre encadre-khoulasa" role="note" aria-label="Synthèse de la leçon">
+    <span class="encadre-icon" aria-hidden="true">📋</span>
+    <p class="encadre-titre">Synthèse de la leçon</p>
+    <p>Un séisme naît d'une libération brutale d'énergie au niveau d'une faille, souvent près des limites de plaques tectoniques. Cette énergie se propage sous forme d'ondes sismiques depuis le foyer vers l'épicentre puis les zones environnantes. La force d'un séisme se mesure par la magnitude, et la prévention repose principalement sur la construction parasismique et la sensibilisation.</p>
+
+  </aside>
+  </section><div class="quiz" aria-label="Testez votre compréhension">
+    <h3>Testez votre compréhension</h3>
+    <div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>1. Quelle est la cause principale de la plupart des séismes ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">Un déplacement brusque des roches le long d&#39;une faille</button><button type="button" class="quiz-option" data-option-index="1">Une hausse de la température de l&#39;atmosphère</button><button type="button" class="quiz-option" data-option-index="2">Une variation du niveau des océans</button>
+      </div>
+      <div class="quiz-justification" hidden><p>Les séismes résultent d'une libération soudaine d'énergie lorsque les contraintes accumulées dépassent la résistance des roches, provoquant le déplacement des deux blocs de part et d'autre de la faille.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>2. Où se situe le foyer sismique par rapport à l&#39;épicentre ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">En profondeur, à la verticale de l&#39;épicentre</button><button type="button" class="quiz-option" data-option-index="1">En surface, juste à côté de l&#39;épicentre</button><button type="button" class="quiz-option" data-option-index="2">Dans l&#39;atmosphère, au-dessus de la zone du séisme</button>
+      </div>
+      <div class="quiz-justification" hidden><p>Le foyer est le point réel de déclenchement du séisme en profondeur, tandis que l'épicentre est sa projection verticale à la surface terrestre.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="1">
+      <p><strong>3. Quel moyen est actuellement le plus adapté pour réduire les risques sismiques ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">Prédire précisément la date du séisme</button><button type="button" class="quiz-option" data-option-index="1">La construction parasismique et la sensibilisation aux bons réflexes</button><button type="button" class="quiz-option" data-option-index="2">Arrêter le mouvement des plaques tectoniques</button>
+      </div>
+      <div class="quiz-justification" hidden><p>Il n'est actuellement pas possible de prédire précisément un séisme ni de contrôler le mouvement des plaques ; la prévention par la construction parasismique et la sensibilisation reste donc le moyen le plus efficace de réduire les dégâts.</p>
+</div>
+    </div>
+  </div></div>
+    </div>
+  </div>
+
+  <div class="lesson-nav no-print">
+    <span></span>
+    <button class="btn btn-ghost btn-sm" onclick="window.print()"><span data-lang="ar">🖨️ طباعة / تنزيل PDF</span><span data-lang="fr">🖨️ Imprimer / PDF</span></button>
+    <a href="/lecons/3ac/photosynthese/photosynthese/"><span data-lang="ar">التركيب الضوئي</span><span data-lang="fr">La photosynthèse</span> →</a>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="nova-logo" style="color:#fff"><span>Nova SVT</span></span>
+        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="ar">المرجع الرقمي لعلوم الحياة والأرض بالمغرب — بالعربية والفرنسية.</p>
+        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="fr">La référence numérique des SVT au Maroc — en arabe et en français.</p>
+      </div>
+      <div>
+        <h5 data-i18n="nav_lecons"></h5>
+        <ul>
+          <li><a href="/lecons/">1AC · 2AC · 3AC</a></li>
+          <li><a href="/lecons/">TC · 1BAC · 2BAC</a></li>
+          <li><a href="/devoirs-examens/" data-i18n="nav_exams"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="nav_encyclopedie"></h5>
+        <ul>
+          <li><a href="/encyclopedie/">Glossaire / معجم</a></li>
+          <li><a href="/labo-virtuel/" data-i18n="nav_labo"></a></li>
+          <li><a href="/revision/" data-i18n="nav_revision"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="nav_apropos"></h5>
+        <ul>
+          <li><a href="/a-propos/" data-i18n="nav_apropos"></a></li>
+          <li><a href="/contact/" data-i18n="nav_contact"></a></li>
+          <li><a href="/confidentialite/" data-i18n="footer_privacy"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year>2026</span> Nova SVT — <span data-i18n="footer_rights"></span></span>
+      <span data-lang="ar">صُنع بعناية للتلميذ والأستاذ المغربي 🇲🇦</span>
+      <span data-lang="fr">Conçu avec soin pour l'élève et l'enseignant marocain 🇲🇦</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/vendor/marked.min.js"></script>
+<script src="/assets/vendor/purify.min.js"></script>
+<script type="module" src="/assets/js/site.js"></script>
+<script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
+
+</body>
+</html>

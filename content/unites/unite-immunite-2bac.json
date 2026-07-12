@@ -1,0 +1,9 @@
+{
+  "id": "unite-immunite-2bac",
+  "slug": "immunite",
+  "niveau": "2bac",
+  "dorra": 2,
+  "filieres": ["2bac-svt"],
+  "numero_ordre": 1,
+  "titre": { "ar": "المناعة", "fr": "L'immunité" }
+}

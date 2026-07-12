@@ -1,0 +1,9 @@
+{
+  "id": "noyau-cellulaire",
+  "terme": { "ar": "النواة", "fr": "Noyau cellulaire" },
+  "definition": {
+    "ar": "عضية محاطة بغلاف نووي مزدوج، تحتوي على المادة الوراثية (ADN) وتتحكم في مجمل الأنشطة الخلوية، وتوجد في الخلايا حقيقية النواة.",
+    "fr": "Organite délimité par une double enveloppe nucléaire, contenant le matériel génétique (ADN) et contrôlant l'ensemble des activités cellulaires ; présent dans les cellules eucaryotes."
+  },
+  "voir_aussi": ["membrane-plasmique", "mitochondrie"]
+}

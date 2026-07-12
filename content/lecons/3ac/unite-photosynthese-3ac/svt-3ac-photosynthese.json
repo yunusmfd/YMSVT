@@ -1,0 +1,187 @@
+{
+  "id": "svt-3ac-photosynthese",
+  "slug": "photosynthese",
+  "cycle": "iaadadi",
+  "niveau": "3ac",
+  "unite_id": "unite-photosynthese-3ac",
+  "dorra": 2,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "التركيب الضوئي", "fr": "La photosynthèse" },
+  "duree_estimee_min": 20,
+  "domaine_specialite": "botanique",
+  "objectifs": {
+    "ar": [
+      "تحديد الشروط اللازمة لحدوث التركيب الضوئي",
+      "كتابة المعادلة المبسطة للتركيب الضوئي وتفسير مكوناتها",
+      "إبراز أهمية التركيب الضوئي بالنسبة للسلسلة الغذائية وتركيب الغلاف الجوي"
+    ],
+    "fr": [
+      "Identifier les conditions nécessaires à la photosynthèse",
+      "Écrire l'équation simplifiée de la photosynthèse et en expliquer les termes",
+      "Montrer l'importance de la photosynthèse pour la chaîne alimentaire et la composition de l'atmosphère"
+    ]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "النباتات الخضراء تصنع غذاءها بنفسها", "fr": "Les plantes vertes fabriquent leur propre nourriture" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "على عكس الحيوانات، تستطيع النباتات الخضراء تصنيع موادها العضوية (كالسكريات) انطلاقا من مواد معدنية بسيطة، وذلك بفضل عملية تُسمى التركيب الضوئي. تحدث هذه العملية في الأجزاء الخضراء من النبات، وخاصة الأوراق، بفضل صبغة خضراء تُسمى اليخضور (الكلوروفيل) الموجودة داخل عضية تُدعى {{terme:chloroplaste|البلاستيدة الخضراء}}.",
+            "fr": "Contrairement aux animaux, les plantes vertes peuvent fabriquer leur propre matière organique (comme les sucres) à partir de matières minérales simples, grâce à un processus appelé photosynthèse. Ce processus se déroule dans les parties vertes de la plante, surtout les feuilles, grâce à un pigment vert appelé chlorophylle, présent dans un organite nommé {{terme:chloroplaste|chloroplaste}}."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "لكي يحدث التركيب الضوئي، يحتاج النبات إلى ثلاثة عناصر أساسية: الطاقة الضوئية (ضوء الشمس)، الماء الممتص من التربة عبر الجذور، وثاني أكسيد الكربون الممتص من الهواء عبر الثغور الموجودة على سطح الأوراق.",
+            "fr": "Pour que la photosynthèse ait lieu, la plante a besoin de trois éléments essentiels : l'énergie lumineuse (la lumière du soleil), l'eau absorbée du sol par les racines, et le dioxyde de carbone absorbé dans l'air par les stomates situés à la surface des feuilles."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/feuille-coupe-transversale.svg",
+          "legende": { "ar": "مقطع في ورقة نبات يبين الخلايا المحتوية على البلاستيدات الخضراء والثغور", "fr": "Coupe transversale d'une feuille montrant les cellules à chloroplastes et les stomates" }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "المعادلة المبسطة للتركيب الضوئي", "fr": "L'équation simplifiée de la photosynthèse" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يمكن تلخيص التركيب الضوئي بمعادلة بسيطة: يتفاعل ثاني أكسيد الكربون والماء، بحضور الطاقة الضوئية داخل البلاستيدات الخضراء، لينتج عنهما مادة عضوية (غلوكوز) وثاني الأكسجين الذي يُطرح إلى الهواء.",
+            "fr": "La photosynthèse peut se résumer par une équation simple : le dioxyde de carbone et l'eau réagissent, en présence d'énergie lumineuse au sein des chloroplastes, pour produire une matière organique (le glucose) et du dioxygène rejeté dans l'air."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/equation-photosynthese-schema.svg",
+          "legende": { "ar": "مخطط يبين مدخلات ومخرجات التركيب الضوئي على مستوى البلاستيدة الخضراء", "fr": "Schéma des entrées et sorties de la photosynthèse au niveau du chloroplaste" }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "لا يحدث التركيب الضوئي إلا في وجود الضوء، وهو ما يميزه عن التنفس الذي يحدث ليلا ونهارا في جميع خلايا النبات.",
+            "fr": "La photosynthèse ne se produit qu'en présence de lumière, contrairement à la respiration qui a lieu jour et nuit dans toutes les cellules de la plante."
+          }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مدخلات ومخرجات التركيب الضوئي", "fr": "Entrées et sorties de la photosynthèse" },
+          "entetes": { "ar": ["العنصر", "الدور"], "fr": ["Élément", "Rôle"] },
+          "lignes": [
+            { "ar": ["ثاني أكسيد الكربون (مدخل)", "مصدر الكربون لبناء المادة العضوية"], "fr": ["Dioxyde de carbone (entrée)", "Source de carbone pour la matière organique"] },
+            { "ar": ["الماء (مدخل)", "يمتصه النبات من التربة عبر الجذور"], "fr": ["Eau (entrée)", "Absorbée du sol par les racines"] },
+            { "ar": ["الطاقة الضوئية (مدخل)", "تُلتقط بواسطة اليخضور وتُحوَّل إلى طاقة كيميائية"], "fr": ["Lumière (entrée)", "Captée par la chlorophylle et convertie en énergie chimique"] },
+            { "ar": ["المادة العضوية / غلوكوز (مخرج)", "تُستعمل لنمو النبات أو تُخزَّن"], "fr": ["Matière organique / glucose (sortie)", "Utilisée pour la croissance ou stockée"] },
+            { "ar": ["ثاني الأكسجين (مخرج)", "يُطرح إلى الهواء عبر الثغور"], "fr": ["Dioxygène (sortie)", "Rejeté dans l'air par les stomates"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "أهمية التركيب الضوئي", "fr": "L'importance de la photosynthèse" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يُعتبر التركيب الضوئي نقطة انطلاق كل السلاسل الغذائية تقريبا: فالنباتات الخضراء هي المُنتجات الأولية التي تصنع المادة العضوية التي تتغذى عليها الحيوانات العاشبة، والتي بدورها تُشكّل غذاء الحيوانات اللاحمة. بدون التركيب الضوئي، لن تتوفر الطاقة اللازمة لاستمرار الحياة على الأرض.",
+            "fr": "La photosynthèse constitue le point de départ de presque toutes les chaînes alimentaires : les plantes vertes sont les producteurs primaires qui fabriquent la matière organique dont se nourrissent les herbivores, qui à leur tour nourrissent les carnivores. Sans photosynthèse, l'énergie nécessaire au maintien de la vie sur Terre ne serait pas disponible."
+          }
+        },
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "يُساهم التركيب الضوئي أيضا في تجديد الأكسجين في الغلاف الجوي، وهو غاز ضروري لتنفس معظم الكائنات الحية، كما يُساعد على امتصاص جزء من ثاني أكسيد الكربون الموجود في الهواء.",
+            "fr": "La photosynthèse contribue également au renouvellement de l'oxygène atmosphérique, indispensable à la respiration de la plupart des êtres vivants, et permet d'absorber une partie du dioxyde de carbone présent dans l'air."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "istintaj",
+          "titre": { "ar": "استنتاج", "fr": "Déduction" },
+          "texte": {
+            "ar": "النباتات الخضراء كائنات ذاتية التغذية (Autotrophes): تصنع مادتها العضوية بنفسها انطلاقا من مواد معدنية، بخلاف الحيوانات غيرية التغذية (Hétérotrophes) التي تعتمد على مواد عضوية جاهزة.",
+            "fr": "Les plantes vertes sont des organismes autotrophes : elles fabriquent elles-mêmes leur matière organique à partir de matières minérales, contrairement aux animaux hétérotrophes qui dépendent de matière organique déjà élaborée."
+          }
+        },
+        {
+          "type": "le_saviez_vous",
+          "titre": { "ar": "أضف إلى معلوماتك", "fr": "Le saviez-vous ?" },
+          "texte": {
+            "ar": "تُنتج الطحالب الدقيقة الموجودة في المحيطات جزءا كبيرا من الأكسجين المتوفر في الغلاف الجوي، ربما يفوق ما تنتجه الغابات على اليابسة.",
+            "fr": "Les micro-algues présentes dans les océans produisent une part considérable de l'oxygène atmosphérique, peut-être même davantage que les forêts terrestres."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "التركيب الضوئي هو العملية التي تُمكّن النباتات الخضراء من تصنيع مادتها العضوية انطلاقا من ثاني أكسيد الكربون والماء، بحضور الطاقة الضوئية داخل البلاستيدات الخضراء، مع إطلاق ثاني الأكسجين. تُشكّل هذه العملية أساس السلاسل الغذائية ومصدرا رئيسيا للأكسجين في الغلاف الجوي.",
+            "fr": "La photosynthèse est le processus qui permet aux plantes vertes de fabriquer leur matière organique à partir de dioxyde de carbone et d'eau, en présence de lumière, au sein des chloroplastes, avec libération de dioxygène. Ce processus est à la base des chaînes alimentaires et constitue une source majeure d'oxygène atmosphérique."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "أين تحدث عملية التركيب الضوئي داخل الخلية النباتية؟", "fr": "Où se déroule la photosynthèse dans la cellule végétale ?" },
+        "options": [
+          { "ar": "في الميتوكوندري", "fr": "Dans la mitochondrie" },
+          { "ar": "في البلاستيدة الخضراء", "fr": "Dans le chloroplaste" },
+          { "ar": "في النواة", "fr": "Dans le noyau" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "البلاستيدة الخضراء تحتوي على اليخضور الذي يلتقط الطاقة الضوئية اللازمة لعملية التركيب الضوئي.",
+          "fr": "Le chloroplaste contient la chlorophylle qui capte l'énergie lumineuse nécessaire à la photosynthèse."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "ما هي المخرجات الرئيسية لعملية التركيب الضوئي؟", "fr": "Quels sont les principaux produits de la photosynthèse ?" },
+        "options": [
+          { "ar": "ثاني أكسيد الكربون والماء", "fr": "Le dioxyde de carbone et l'eau" },
+          { "ar": "مادة عضوية (غلوكوز) وثاني الأكسجين", "fr": "Une matière organique (glucose) et du dioxygène" },
+          { "ar": "الطاقة الضوئية والأملاح المعدنية", "fr": "L'énergie lumineuse et les sels minéraux" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "ينتج عن التركيب الضوئي مادة عضوية (غلوكوز) تُستعمل أو تُخزَّن من طرف النبات، بالإضافة إلى ثاني الأكسجين الذي يُطرح إلى الهواء.",
+          "fr": "La photosynthèse produit une matière organique (glucose) utilisée ou stockée par la plante, ainsi que du dioxygène rejeté dans l'air."
+        }
+      },
+      {
+        "id": "q3",
+        "question": { "ar": "لماذا تُعتبر النباتات الخضراء أساس السلاسل الغذائية؟", "fr": "Pourquoi les plantes vertes sont-elles à la base des chaînes alimentaires ?" },
+        "options": [
+          { "ar": "لأنها تتغذى على الحيوانات العاشبة", "fr": "Parce qu'elles se nourrissent des herbivores" },
+          { "ar": "لأنها الوحيدة القادرة على صنع مادتها العضوية بنفسها من مواد معدنية", "fr": "Parce qu'elles sont les seules capables de fabriquer leur matière organique à partir de matières minérales" },
+          { "ar": "لأنها لا تحتاج إلى الماء أو الضوء", "fr": "Parce qu'elles n'ont besoin ni d'eau ni de lumière" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "بفضل التركيب الضوئي، تُعتبر النباتات الخضراء منتجات أولية توفر المادة العضوية التي تعتمد عليها جميع الكائنات الأخرى في السلسلة الغذائية.",
+          "fr": "Grâce à la photosynthèse, les plantes vertes sont des producteurs primaires qui fournissent la matière organique dont dépendent tous les autres maillons de la chaîne alimentaire."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": "svt-3ac-seismes", "lecon_suivante": null },
+  "tags": ["نبات", "تركيب ضوئي", "botanique", "photosynthèse"],
+  "date_maj": "2026-07-01",
+  "statut": "publie"
+}

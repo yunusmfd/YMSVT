@@ -1,0 +1,42 @@
+// أدوات مشتركة لصفحات القوائم: هيكل تحميل/فراغ/خطأ (القسم 5.2) + جلب manifest.json
+export function showSkeleton(container, count = 6) {
+  container.innerHTML = Array.from({ length: count }, () => `<div class="skeleton-card"></div>`).join("");
+}
+
+export function showError(container, onRetry) {
+  const lang = document.documentElement.getAttribute("lang") || "ar";
+  container.innerHTML = `<div class="state-error">
+    <span class="icon" aria-hidden="true">⚠️</span>
+    <p>${lang === "fr" ? "Échec du chargement du contenu." : "تعذّر تحميل المحتوى."}</p>
+    <button class="btn btn-ghost btn-sm" data-retry>${lang === "fr" ? "Réessayer" : "إعادة المحاولة"}</button>
+  </div>`;
+  const btn = container.querySelector("[data-retry]");
+  if (btn) btn.addEventListener("click", onRetry);
+}
+
+export function showEmpty(container, messageAr, messageFr) {
+  const lang = document.documentElement.getAttribute("lang") || "ar";
+  container.innerHTML = `<div class="state-empty">
+    <span class="icon" aria-hidden="true">🔎</span>
+    <p>${lang === "fr" ? messageFr : messageAr}</p>
+  </div>`;
+}
+
+let manifestCache = null;
+export async function fetchManifest() {
+  if (manifestCache) return manifestCache;
+  const res = await fetch("/manifest.json");
+  if (!res.ok) throw new Error("manifest fetch failed");
+  manifestCache = await res.json();
+  return manifestCache;
+}
+
+export function renderGrid(container, items, cardFn) {
+  if (!items.length) return false;
+  container.innerHTML = items.map(cardFn).join("");
+  return true;
+}
+
+export function escapeHtml(str) {
+  return String(str == null ? "" : str).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}

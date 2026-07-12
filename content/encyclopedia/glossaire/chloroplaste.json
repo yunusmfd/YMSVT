@@ -1,0 +1,9 @@
+{
+  "id": "chloroplaste",
+  "terme": { "ar": "البلاستيدة الخضراء", "fr": "Chloroplaste" },
+  "definition": {
+    "ar": "عضية توجد في خلايا النباتات الخضراء، تحتوي على صبغة اليخضور (الكلوروفيل) التي تلتقط الطاقة الضوئية وتُستعمل في عملية التركيب الضوئي لإنتاج المادة العضوية.",
+    "fr": "Organite présent dans les cellules des végétaux chlorophylliens, contenant la chlorophylle qui capte l'énergie lumineuse utilisée lors de la photosynthèse pour produire de la matière organique."
+  },
+  "voir_aussi": ["mitochondrie"]
+}

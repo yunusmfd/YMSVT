@@ -1,0 +1,9 @@
+{
+  "id": "crossing-over",
+  "terme": { "ar": "العبور الصبغي", "fr": "Crossing-over" },
+  "definition": {
+    "ar": "تبادل أجزاء من الكروماتيدات بين الصبغيات المتماثلة أثناء الطور التمهيدي الأول للانقسام المنصف، وهو مصدر رئيسي للتنوع الوراثي.",
+    "fr": "Échange de segments de chromatides entre chromosomes homologues durant la prophase I de la méiose, source majeure de diversité génétique."
+  },
+  "voir_aussi": ["meiose", "chromosome"]
+}

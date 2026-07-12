@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="titleCell descCell">
+  <title id="titleCell">مخطط مبسط لخلية حيوانية</title>
+  <desc id="descCell">رسم تخطيطي مبسط لخلية حيوانية يُظهر الغشاء الهيولي والهيولى والنواة والميتوكوندري.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- الغشاء الهيولي -->
+  <ellipse cx="330" cy="195" rx="220" ry="150" fill="#E3E8D6" stroke="#204F3F" stroke-width="4" />
+  <text x="120" y="90" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الغشاء الهيولي</text>
+  <text x="120" y="90" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Membrane plasmique</text>
+  <path d="M170 100 L215 130" stroke="#204F3F" stroke-width="1.5" />
+
+  <!-- الهيولى -->
+  <text x="620" y="120" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الهيولى (السيتوبلازم)</text>
+  <text x="620" y="120" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Cytoplasme</text>
+  <path d="M540 105 L470 140" stroke="#204F3F" stroke-width="1.5" />
+
+  <!-- النواة -->
+  <circle cx="300" cy="195" r="70" fill="#3C7A63" stroke="#204F3F" stroke-width="3" />
+  <circle cx="300" cy="195" r="24" fill="#204F3F" />
+  <text x="620" y="230" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">النواة</text>
+  <text x="620" y="230" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Noyau</text>
+  <path d="M540 225 L365 205" stroke="#204F3F" stroke-width="1.5" />
+
+  <!-- الميتوكوندري -->
+  <ellipse cx="420" cy="270" rx="34" ry="18" fill="#C17A2E" stroke="#8B4A2B" stroke-width="2" transform="rotate(20 420 270)" />
+  <ellipse cx="440" cy="130" rx="30" ry="16" fill="#C17A2E" stroke="#8B4A2B" stroke-width="2" transform="rotate(-15 440 130)" />
+  <text x="620" y="300" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الميتوكوندري</text>
+  <text x="620" y="300" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Mitochondrie</text>
+  <path d="M540 295 L448 278" stroke="#204F3F" stroke-width="1.5" />
+
+  <text x="400" y="30" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="20" fill="#204F3F" data-lang="ar">مخطط مبسط لخلية حيوانية</text>
+  <text x="400" y="30" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="#204F3F" data-lang="fr">Schéma simplifié d'une cellule animale</text>
+</svg>

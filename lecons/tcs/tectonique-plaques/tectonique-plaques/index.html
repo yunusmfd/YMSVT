@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>تكتونية الصفائح | Nova SVT</title>
+<meta name="description" content="عرض الأدلة الداعمة لفكرة الانجراف القاري وتطورها إلى نظرية تكتونية الصفائح" />
+<link rel="canonical" href="https://novasvt.ma/lecons/tcs/tectonique-plaques/tectonique-plaques/" />
+<meta property="og:title" content="تكتونية الصفائح | Nova SVT" />
+<meta property="og:description" content="عرض الأدلة الداعمة لفكرة الانجراف القاري وتطورها إلى نظرية تكتونية الصفائح" />
+<meta property="og:image" content="https://novasvt.ma/assets/images/hero/og-default.webp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://novasvt.ma/lecons/tcs/tectonique-plaques/tectonique-plaques/" />
+<meta property="og:locale" content="ar_MA" />
+<meta property="og:locale:alternate" content="fr_MA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#204F3F" />
+<link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicons/favicon.svg" />
+<link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/tokens.css" />
+<link rel="stylesheet" href="/assets/css/base.css" />
+<link rel="stylesheet" href="/assets/css/components.css" />
+<script>/*
+  سكريبت أوّلي حرج (Critical Inline Script)
+  يُحقن حرفيا داخل <head> كل صفحة (عبر scripts/lib/partials.js وقت البناء)
+  قبل أول Paint، لتفادي وميض تبديل الثيم/الاتجاه (FOUC/RTL flash) — القسم 3.1.3 و4.1.1.
+  ملاحظة: يبقى هذا الملف مصدر المرجعية المقروءة؛ partials.js يُضمّن نسخة مطابقة inline.
+*/
+(function () {
+  try {
+    var theme = localStorage.getItem("nova-svt:theme");
+    if (!theme) {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+
+    var lang = localStorage.getItem("nova-svt:lang") || document.documentElement.getAttribute("lang") || "ar";
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", lang === "fr" ? "ltr" : "rtl");
+  } catch (e) {
+    /* localStorage قد يكون معطّلا (وضع خاص) — لا كسر للصفحة، القيم الافتراضية في HTML تبقى فعّالة */
+  }
+})();
+</script>
+
+</head>
+<body>
+
+<a href="#main" class="skip-link" data-i18n="skip_to_content">تخطَّ إلى المحتوى</a>
+<header class="navbar" data-navbar>
+  <div class="navbar-inner">
+    <a href="/" class="nova-logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
+  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
+  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
+</svg><span class="nova-logo-text">Nova SVT</span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/" data-i18n="nav_home"></a></li>
+        <li><a class="nav-link" href="/lecons/" data-i18n="nav_lecons" aria-current="page"></a></li><li><a class="nav-link" href="/devoirs-examens/" data-i18n="nav_exams"></a></li><li><a class="nav-link" href="/labo-virtuel/" data-i18n="nav_labo"></a></li><li><a class="nav-link" href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li><li><a class="nav-link" href="/revision/" data-i18n="nav_revision"></a></li>
+      </ul>
+    </nav>
+    <div class="nav-more" data-nav-more>
+      <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false" data-i18n="nav_more"></button>
+      <span class="arrow" aria-hidden="true">▾</span>
+      <div class="nav-more-menu" data-nav-more-menu hidden><a href="/blog/" data-i18n="nav_blog"></a><a href="/a-propos/" data-i18n="nav_apropos"></a><a href="/contact/" data-i18n="nav_contact"></a></div>
+    </div>
+    <div class="nav-actions">
+      <form class="search-bar-inline" role="search" data-search-open>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="search" data-i18n-placeholder="search_placeholder" readonly />
+      </form>
+      <button class="icon-btn search-icon-btn" data-search-open data-i18n-aria="search_title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="icon-btn" data-lang-toggle data-i18n-aria="lang_toggle">FR</button>
+      <button class="icon-btn theme-toggle" data-theme-toggle data-i18n-aria="theme_toggle"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+      <div class="nav-more" data-nav-more>
+        <button class="icon-btn" data-nav-more-trigger="bell" aria-expanded="false" data-i18n-aria="blog_menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="bell-dot"></span></button>
+        <div class="nav-more-menu" data-nav-more-menu hidden><a href="/blog/comment-cerveau-memorise/"><strong data-lang="ar">كيف يتذكر الدماغ؟</strong><strong data-lang="fr">Comment le cerveau se souvient-il ?</strong></a><a href="/blog/" class="mono" data-i18n="nav_blog" style="font-size:var(--fs-12)"></a></div>
+      </div>
+      <button class="icon-btn hamburger-btn" data-hamburger-btn data-i18n-aria="menu_open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+  <div class="nav-divider-bar"></div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu hidden>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-6)">
+    <span class="nova-logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
+  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
+  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
+</svg><span>Nova SVT</span></span>
+    <button class="icon-btn" data-mobile-menu-close data-i18n-aria="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <nav>
+    <ul>
+      <li><a class="nav-link" href="/" data-i18n="nav_home"></a></li>
+      <li><a class="nav-link" href="/lecons/" data-i18n="nav_lecons"></a></li><li><a class="nav-link" href="/devoirs-examens/" data-i18n="nav_exams"></a></li><li><a class="nav-link" href="/labo-virtuel/" data-i18n="nav_labo"></a></li><li><a class="nav-link" href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li><li><a class="nav-link" href="/revision/" data-i18n="nav_revision"></a></li>
+      <li class="mobile-submenu">
+        <a class="nav-link" href="/blog/" data-i18n="nav_blog"></a><a class="nav-link" href="/a-propos/" data-i18n="nav_apropos"></a><a class="nav-link" href="/contact/" data-i18n="nav_contact"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-box" role="dialog" aria-modal="true" data-i18n-aria="search_title">
+    <div class="search-box-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" data-search-input data-i18n-placeholder="search_placeholder" autocomplete="off" />
+      <button class="icon-btn" data-search-close data-i18n-aria="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="search-suggestions">
+      <button class="chip" data-search-suggestion>الانقسام المنصف</button>
+      <button class="chip" data-search-suggestion>التركيب الضوئي</button>
+      <button class="chip" data-search-suggestion>المناعة</button>
+      <button class="chip" data-search-suggestion>الخلية</button>
+    </div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+
+<main id="main">
+
+<div class="progress-bar-top" data-progress-bar></div>
+<div class="container" style="padding-top:var(--sp-5)">
+  <nav class="breadcrumb" aria-label="مسار التنقل">
+    <a href="/"><span data-lang="ar">الرئيسية</span><span data-lang="fr">Accueil</span></a><span aria-hidden="true">/</span> <a href="/lecons/"><span data-lang="ar">الدروس</span><span data-lang="fr">Leçons</span></a><span aria-hidden="true">/</span> <a href="/lecons/#tc"><span data-lang="ar">الجذع المشترك</span><span data-lang="fr">Tronc commun</span></a><span aria-hidden="true">/</span> <a href="/lecons/tcs/tectonique-plaques/"><span data-lang="ar">تكتونية الصفائح</span><span data-lang="fr">La tectonique des plaques</span></a><span aria-hidden="true">/</span>
+    <span class="current"><span data-lang="ar">تكتونية الصفائح</span><span data-lang="fr">La tectonique des plaques</span></span>
+  </nav>
+
+  <div class="lesson-info-bar">
+    <div class="item"><strong data-lang="ar">المستوى</strong><strong data-lang="fr">Niveau</strong><span data-lang="ar">الجذع المشترك</span><span data-lang="fr">Tronc commun</span></div>
+    <div class="item"><strong data-lang="ar">السلك</strong><strong data-lang="fr">Cycle</strong><span data-lang="ar">الثانوي التأهيلي</span><span data-lang="fr">Secondaire qualifiant</span></div>
+    <div class="item"><strong data-lang="ar">المسلك</strong><strong data-lang="fr">Filière</strong><span data-lang="ar">الجذع المشترك علمي</span><span data-lang="fr">Tronc commun scientifique</span></div>
+    <div class="item"><strong data-lang="ar">الوحدة</strong><strong data-lang="fr">Unité</strong><span data-lang="ar">تكتونية الصفائح</span><span data-lang="fr">La tectonique des plaques</span></div>
+    <div class="item"><strong data-lang="ar">الدورة</strong><strong data-lang="fr">Semestre</strong><span data-lang="ar">الثانية</span><span data-lang="fr">2</span></div>
+    <div class="item"><strong data-lang="ar">المدة</strong><strong data-lang="fr">Durée</strong><span data-lang="ar">30 د</span><span data-lang="fr">30 min</span></div>
+  </div>
+
+  <h1><span data-lang="ar">تكتونية الصفائح</span><span data-lang="fr">La tectonique des plaques</span></h1>
+
+  <div class="lesson-layout">
+    <aside class="lesson-toc" aria-label="فهرس المحاور">
+      <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
+        <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
+      </button>
+      <div data-toc-list>
+        <div data-lang="ar"><ul>
+    <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">من الانجراف القاري إلى تكتونية الصفائح</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">أنواع حدود الصفائح التكتونية</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">الصفائح والزلازل والبراكين</a></li>
+  </ul></div>
+        <div data-lang="fr"><ul>
+    <li><a href="#sec-1-fr" data-toc-link="sec-1-fr">De la dérive des continents à la tectonique des plaques</a></li><li><a href="#sec-2-fr" data-toc-link="sec-2-fr">Les types de limites de plaques tectoniques</a></li><li><a href="#sec-3-fr" data-toc-link="sec-3-fr">Plaques, séismes et volcans</a></li>
+  </ul></div>
+      </div>
+    </aside>
+    <div data-lesson-content data-content-src="" data-lecon-id="svt-tcs-tectonique-plaques">
+      <div data-lang="ar"><section class="lesson-section" id="sec-1-ar" data-lesson-section tabindex="-1">
+    <h2>من الانجراف القاري إلى تكتونية الصفائح</h2>
+    <p>لاحظ العلماء منذ بداية القرن العشرين أن حدود القارات، وخاصة الساحل الشرقي لأمريكا الجنوبية والساحل الغربي لإفريقيا، تتطابق بشكل يُشبه قطع أحجية (Puzzle). دعّم هذه الملاحظة وجود نفس الأنواع من الأحافير والصخور في قارات متباعدة اليوم بآلاف الكيلومترات، مما اقترح فكرة أن القارات كانت متجمعة قديما في كتلة واحدة تُسمى بانجيا ثم انجرفت تدريجيا لتتخذ مواقعها الحالية.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title8 desc8">
+  <title id="title8">مؤشرات الانجراف القاري: من القارة الأم بانجيا إلى القارات الحالية</title>
+  <desc id="desc8">رسم تخطيطي مبسط يبين على اليسار كتلة قارية واحدة متقاربة الحواف (بانجيا)، وعلى اليمين قارات منفصلة بعد ابتعادها التدريجي، مع سهم زمني بينهما وإشارة إلى تطابق الحواف والأحافير المشتركة كأدلة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- بانجيا -->
+  <text x="150" y="55" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" font-weight="bold" fill="#204F3F" data-lang="ar">بانجيا (قارة موحدة قديما)</text>
+  <text x="150" y="55" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="fr">Pangée (supercontinent ancien)</text>
+
+  <ellipse cx="150" cy="200" rx="120" ry="100" fill="#3C7A63" stroke="#204F3F" stroke-width="3" />
+  <path d="M 150 105 C 130 150, 170 170, 150 210 C 135 250, 165 270, 150 295" stroke="#8B4A2B" stroke-width="2.5" fill="none" stroke-dasharray="5 4" />
+  <text x="150" y="330" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">حواف متطابقة قابلة للتركيب</text>
+  <text x="150" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#8B4A2B" data-lang="fr">Bords côtiers complémentaires</text>
+
+  <!-- سهم الزمن -->
+  <path d="M 300 200 L 480 200" stroke="#1B241F" stroke-width="3" marker-end="url(#arT)" />
+  <defs><marker id="arT" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#1B241F" /></marker></defs>
+  <text x="390" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">ملايين السنين من الانجراف</text>
+  <text x="390" y="220" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Millions d'années de dérive</text>
+
+  <!-- القارات الحالية -->
+  <text x="650" y="55" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" font-weight="bold" fill="#204F3F" data-lang="ar">القارات الحالية المنفصلة</text>
+  <text x="650" y="55" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="fr">Continents actuels séparés</text>
+
+  <ellipse cx="570" cy="170" rx="55" ry="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+  <ellipse cx="700" cy="240" rx="65" ry="55" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+  <ellipse cx="600" cy="310" rx="45" ry="35" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+
+  <!-- أحافير مشتركة -->
+  <circle cx="595" cy="160" r="5" fill="#C17A2E" /><circle cx="660" cy="230" r="5" fill="#C17A2E" /><circle cx="595" cy="300" r="5" fill="#C17A2E" />
+  <text x="650" y="350" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#C17A2E" data-lang="ar">نفس الأحافير موجودة في قارات متباعدة اليوم</text>
+  <text x="650" y="365" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#C17A2E" data-lang="fr">Fossiles identiques sur des continents aujourd'hui distants</text>
+</svg>
+
+        <figcaption>من بانجيا (قارة موحدة) إلى القارات الحالية المنفصلة</figcaption>
+      </figure>
+<p>لم تُقبل فكرة الانجراف القاري بشكل واسع في البداية، لأن آلية تحرك القارات لم تكن معروفة. تطورت هذه الفكرة لاحقا، بفضل اكتشاف قاع المحيطات وحركة الحمل الحراري في باطن الأرض، إلى نظرية أشمل تُسمى <strong>تكتونية الصفائح</strong>.</p>
+
+<aside class="encadre encadre-qaida" role="note" aria-label="قاعدة">
+    <span class="encadre-icon" aria-hidden="true">📐</span>
+    <p class="encadre-titre">قاعدة</p>
+    <p>الغلاف الصخري لكوكب الأرض (Lithosphère) ليس قطعة واحدة متصلة، بل مُجزّأ إلى عدة <span class="terme-link" data-terme="plaque-tectonique" tabindex="0">صفائح تكتونية</span> صلبة تتحرك ببطء (بضعة سنتيمترات في السنة) فوق طبقة لدنة تُسمى الأستينوسفير.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-2-ar" data-lesson-section tabindex="-1">
+    <h2>أنواع حدود الصفائح التكتونية</h2>
+    <p>تتحرك <span class="terme-link" data-terme="plaque-tectonique" tabindex="0">الصفائح التكتونية</span> بالنسبة لبعضها البعض بثلاث طرق مختلفة، مما يُحدّد ثلاثة أنواع من الحدود: حدود متباعدة حيث تبتعد صفيحتان عن بعضهما وتصعد <span class="terme-link" data-terme="magma" tabindex="0">الصهارة</span> لملء الفراغ (كما هو الحال عند الذرى وسط المحيطية)، وحدود متقاربة حيث تغوص صفيحة تحت أخرى في ظاهرة تُسمى الاندساس (Subduction)، وحدود تحويلية (انزلاقية) حيث تنزلق صفيحتان أفقيا جنبا إلى جنب دون تباعد أو تقارب يُذكر.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title7 desc7">
+  <title id="title7">أنواع حدود الصفائح التكتونية الثلاثة</title>
+  <desc id="desc7">ثلاثة مقاطع تخطيطية جنبا إلى جنب: حد متباعد بصفيحتين تبتعدان عن بعضهما مع صعود الصهارة، وحد متقارب بصفيحة تغوص تحت أخرى، وحد تحويلي بصفيحتين تنزلقان أفقيا جنبا إلى جنب.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- عمود 1: حد متباعد -->
+  <g>
+    <rect x="10" y="60" width="250" height="20" fill="none" />
+    <text x="135" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد متباعد</text>
+    <text x="135" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite divergente</text>
+
+    <rect x="10" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="10" y="150" width="110" height="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <rect x="140" y="150" width="110" height="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <path d="M 120 150 L 130 210 L 140 150 Z" fill="#C17A2E" stroke="#8B4A2B" stroke-width="1.5" />
+    <path d="M 100 130 L 60 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 160 130 L 200 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <defs><marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#1B241F" /></marker></defs>
+    <text x="135" y="250" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">صعود الصهارة</text>
+    <text x="135" y="250" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#8B4A2B" data-lang="fr">Remontée de magma</text>
+    <text x="135" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">تباعد الصفيحتين (ذروة وسط محيطية)</text>
+    <text x="135" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Écartement (dorsale océanique)</text>
+  </g>
+
+  <!-- عمود 2: حد متقارب -->
+  <g>
+    <text x="400" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد متقارب</text>
+    <text x="400" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite convergente</text>
+
+    <rect x="275" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="275" y="150" width="120" height="55" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <path d="M 395 150 L 480 260 L 505 150 Z" fill="#3B6E8F" stroke="#204F3F" stroke-width="2" />
+    <path d="M 350 135 L 390 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 470 135 L 430 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <text x="400" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">غوص صفيحة تحت أخرى (اندساس)</text>
+    <text x="400" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Subduction d'une plaque</text>
+  </g>
+
+  <!-- عمود 3: حد تحويلي -->
+  <g>
+    <text x="665" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد تحويلي (انزلاقي)</text>
+    <text x="665" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite transformante</text>
+
+    <rect x="540" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="540" y="150" width="115" height="180" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <rect x="655" y="150" width="135" height="180" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <line x1="655" y1="150" x2="655" y2="330" stroke="#8B4A2B" stroke-width="3" stroke-dasharray="4 3" />
+    <path d="M 610 130 L 610 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 720 350 L 720 380" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" transform="translate(0,-40)" />
+    <text x="665" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">انزلاق أفقي للصفيحتين</text>
+    <text x="665" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Coulissement horizontal</text>
+  </g>
+</svg>
+
+        <figcaption>الأنواع الثلاثة لحدود الصفائح: متباعدة، متقاربة، تحويلية</figcaption>
+      </figure>
+<div class="tableau-wrap"><table class="tableau">
+    <caption>مقارنة بين أنواع حدود الصفائح</caption>
+    <thead><tr><th>النوع</th><th>حركة الصفيحتين</th><th>مثال / ظاهرة مرتبطة</th></tr></thead>
+    <tbody><tr><td>متباعدة</td><td>تباعد مع صعود الصهارة</td><td>الذرى وسط المحيطية</td></tr><tr><td>متقاربة</td><td>غوص صفيحة تحت أخرى (اندساس)</td><td>السلاسل الجبلية والخنادق البحرية</td></tr><tr><td>تحويلية (انزلاقية)</td><td>انزلاق أفقي دون تقارب أو تباعد</td><td>فوالق تحويلية كبرى</td></tr></tbody>
+  </table></div>
+  </section>
+<section class="lesson-section" id="sec-3-ar" data-lesson-section tabindex="-1">
+    <h2>الصفائح والزلازل والبراكين</h2>
+    <p>إذا رسمنا خريطة توزيع <span class="terme-link" data-terme="seisme" tabindex="0">الزلازل</span> والبراكين حول العالم، نلاحظ أنها ليست موزعة عشوائيا، بل تتركز بشكل كبير على طول حدود الصفائح التكتونية. فحدود التقارب (الاندساس) تُنتج زلازل عنيفة وبراكين نشطة بسبب انصهار جزء من الصفيحة الغائصة وتشكل الصهارة، بينما تُنتج حدود التباعد زلازل أقل عنفا عموما مرتبطة بصعود الصهارة، وتُنتج الحدود التحويلية زلازل سطحية قوية بسبب الاحتكاك الكبير بين الصفيحتين المتزحلقتين.</p>
+
+<aside class="encadre encadre-molahada" role="note" aria-label="ملاحظة">
+    <span class="encadre-icon" aria-hidden="true">ℹ️</span>
+    <p class="encadre-titre">ملاحظة</p>
+    <p>تُسمى المنطقة المحيطة بالمحيط الهادئ، الغنية بالزلازل والبراكين النشطة بسبب تعدد حدود الاندساس فيها، بـ'حزام النار في المحيط الهادئ'.</p>
+
+  </aside>
+<aside class="encadre encadre-istintaj" role="note" aria-label="استنتاج">
+    <span class="encadre-icon" aria-hidden="true">←</span>
+    <p class="encadre-titre">استنتاج</p>
+    <p>تُفسّر نظرية تكتونية الصفائح، بشكل موحّد، ظواهر جيولوجية بدت في السابق منفصلة: توزيع القارات، تشكل السلاسل الجبلية، وتوزيع الزلازل والبراكين، مما يجعلها إطارا نظريا مركزيا في علوم الأرض الحديثة.</p>
+
+  </aside>
+<div class="le-saviez-vous">
+    <span class="le-saviez-vous-icon" aria-hidden="true">💡</span>
+    <p class="encadre-titre">أضف إلى معلوماتك</p>
+    <p>تُقدَّر سرعة تباعد بعض الصفائح التكتونية بحوالي 2 إلى 5 سنتيمترات في السنة، وهي تقريبا نفس سرعة نمو أظافر اليد البشرية.</p>
+
+    
+  </div>
+<aside class="encadre encadre-khoulasa" role="note" aria-label="خلاصة الدرس">
+    <span class="encadre-icon" aria-hidden="true">📋</span>
+    <p class="encadre-titre">خلاصة الدرس</p>
+    <p>تنص نظرية تكتونية الصفائح على أن الغلاف الصخري مُجزّأ إلى صفائح متحركة، تتفاعل عند حدودها بثلاث طرق (تباعد، تقارب، انزلاق). يتركز النشاط الزلزالي والبركاني بشكل رئيسي عند هذه الحدود، مما يجعل من هذه النظرية إطارا موحدا لفهم الظواهر الجيولوجية الداخلية لكوكب الأرض.</p>
+
+  </aside>
+  </section><div class="quiz" aria-label="اختبر فهمك">
+    <h3>اختبر فهمك</h3>
+    <div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>1. ما الدليل الذي دعم فكرة الانجراف القاري في بدايتها؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">تطابق حدود القارات ووجود أحافير مشتركة بينها</button><button type="button" class="quiz-option" data-option-index="1">قياس درجة حرارة المحيطات</button><button type="button" class="quiz-option" data-option-index="2">رصد الزلازل بواسطة الأقمار الصناعية</button>
+      </div>
+      <div class="quiz-justification" hidden><p>تطابق حدود القارات (مثل أمريكا الجنوبية وإفريقيا) ووجود نفس الأحافير والصخور في قارات متباعدة اليوم كانا من أهم الأدلة الأولى الداعمة لفكرة الانجراف القاري.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="1">
+      <p><strong>2. ماذا يحدث عند حد متقارب بين صفيحتين؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">تبتعد الصفيحتان مع صعود الصهارة</button><button type="button" class="quiz-option" data-option-index="1">تغوص إحدى الصفيحتين تحت الأخرى (اندساس)</button><button type="button" class="quiz-option" data-option-index="2">تنزلق الصفيحتان أفقيا دون أي تفاعل رأسي</button>
+      </div>
+      <div class="quiz-justification" hidden><p>عند الحدود المتقاربة، تغوص إحدى الصفيحتين تحت الأخرى في ظاهرة الاندساس، مما يُنتج زلازل عنيفة وبراكين بسبب انصهار جزء من الصفيحة الغائصة.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>3. لماذا يتركز معظم النشاط الزلزالي والبركاني حول &#39;حزام النار في المحيط الهادئ&#39;؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">لوجود عدد كبير من حدود الاندساس (التقارب) في هذه المنطقة</button><button type="button" class="quiz-option" data-option-index="1">لأن المحيط الهادئ هو الأعمق في العالم فقط</button><button type="button" class="quiz-option" data-option-index="2">لأن التيارات البحرية تُسبب الزلازل مباشرة</button>
+      </div>
+      <div class="quiz-justification" hidden><p>تتوزع حول المحيط الهادئ عدة حدود صفائح من نوع التقارب (اندساس)، وهي مناطق معروفة بتركز الزلازل العنيفة والنشاط البركاني الكثيف.</p>
+</div>
+    </div>
+  </div></div>
+      <div data-lang="fr"><section class="lesson-section" id="sec-1-fr" data-lesson-section tabindex="-1">
+    <h2>De la dérive des continents à la tectonique des plaques</h2>
+    <p>Dès le début du XXe siècle, les scientifiques ont remarqué que les contours de certains continents, notamment la côte est de l'Amérique du Sud et la côte ouest de l'Afrique, s'emboîtaient comme les pièces d'un puzzle. Cette observation a été renforcée par la présence de fossiles et de roches identiques sur des continents aujourd'hui séparés par des milliers de kilomètres, suggérant que les continents formaient jadis une masse unique, la Pangée, avant de dériver progressivement vers leur position actuelle.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title8 desc8">
+  <title id="title8">مؤشرات الانجراف القاري: من القارة الأم بانجيا إلى القارات الحالية</title>
+  <desc id="desc8">رسم تخطيطي مبسط يبين على اليسار كتلة قارية واحدة متقاربة الحواف (بانجيا)، وعلى اليمين قارات منفصلة بعد ابتعادها التدريجي، مع سهم زمني بينهما وإشارة إلى تطابق الحواف والأحافير المشتركة كأدلة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- بانجيا -->
+  <text x="150" y="55" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" font-weight="bold" fill="#204F3F" data-lang="ar">بانجيا (قارة موحدة قديما)</text>
+  <text x="150" y="55" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="fr">Pangée (supercontinent ancien)</text>
+
+  <ellipse cx="150" cy="200" rx="120" ry="100" fill="#3C7A63" stroke="#204F3F" stroke-width="3" />
+  <path d="M 150 105 C 130 150, 170 170, 150 210 C 135 250, 165 270, 150 295" stroke="#8B4A2B" stroke-width="2.5" fill="none" stroke-dasharray="5 4" />
+  <text x="150" y="330" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">حواف متطابقة قابلة للتركيب</text>
+  <text x="150" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#8B4A2B" data-lang="fr">Bords côtiers complémentaires</text>
+
+  <!-- سهم الزمن -->
+  <path d="M 300 200 L 480 200" stroke="#1B241F" stroke-width="3" marker-end="url(#arT)" />
+  <defs><marker id="arT" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#1B241F" /></marker></defs>
+  <text x="390" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">ملايين السنين من الانجراف</text>
+  <text x="390" y="220" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Millions d'années de dérive</text>
+
+  <!-- القارات الحالية -->
+  <text x="650" y="55" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" font-weight="bold" fill="#204F3F" data-lang="ar">القارات الحالية المنفصلة</text>
+  <text x="650" y="55" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="bold" fill="#204F3F" data-lang="fr">Continents actuels séparés</text>
+
+  <ellipse cx="570" cy="170" rx="55" ry="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+  <ellipse cx="700" cy="240" rx="65" ry="55" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+  <ellipse cx="600" cy="310" rx="45" ry="35" fill="#3C7A63" stroke="#204F3F" stroke-width="2.5" />
+
+  <!-- أحافير مشتركة -->
+  <circle cx="595" cy="160" r="5" fill="#C17A2E" /><circle cx="660" cy="230" r="5" fill="#C17A2E" /><circle cx="595" cy="300" r="5" fill="#C17A2E" />
+  <text x="650" y="350" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#C17A2E" data-lang="ar">نفس الأحافير موجودة في قارات متباعدة اليوم</text>
+  <text x="650" y="365" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#C17A2E" data-lang="fr">Fossiles identiques sur des continents aujourd'hui distants</text>
+</svg>
+
+        <figcaption>De la Pangée (supercontinent) aux continents actuels séparés</figcaption>
+      </figure>
+<p>L'idée de dérive des continents ne fut pas immédiatement acceptée, faute de mécanisme connu expliquant ce déplacement. Elle a ensuite évolué, grâce à la découverte des fonds océaniques et des mouvements de convection dans le manteau terrestre, vers une théorie plus complète appelée <strong>tectonique des plaques</strong>.</p>
+
+<aside class="encadre encadre-qaida" role="note" aria-label="Règle">
+    <span class="encadre-icon" aria-hidden="true">📐</span>
+    <p class="encadre-titre">Règle</p>
+    <p>La lithosphère terrestre n'est pas une coquille continue, mais est fragmentée en plusieurs <span class="terme-link" data-terme="plaque-tectonique" tabindex="0">plaques tectoniques</span> rigides qui se déplacent lentement (quelques centimètres par an) au-dessus d'une couche ductile appelée l'asthénosphère.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-2-fr" data-lesson-section tabindex="-1">
+    <h2>Les types de limites de plaques tectoniques</h2>
+    <p>Les <span class="terme-link" data-terme="plaque-tectonique" tabindex="0">plaques tectoniques</span> se déplacent les unes par rapport aux autres selon trois modes, définissant trois types de limites : les limites divergentes, où deux plaques s'écartent et où le <span class="terme-link" data-terme="magma" tabindex="0">magma</span> remonte pour combler l'espace (cas des dorsales océaniques) ; les limites convergentes, où une plaque plonge sous une autre lors d'un phénomène appelé subduction ; et les limites transformantes (coulissantes), où deux plaques glissent horizontalement l'une contre l'autre sans écartement ni rapprochement notable.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title7 desc7">
+  <title id="title7">أنواع حدود الصفائح التكتونية الثلاثة</title>
+  <desc id="desc7">ثلاثة مقاطع تخطيطية جنبا إلى جنب: حد متباعد بصفيحتين تبتعدان عن بعضهما مع صعود الصهارة، وحد متقارب بصفيحة تغوص تحت أخرى، وحد تحويلي بصفيحتين تنزلقان أفقيا جنبا إلى جنب.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- عمود 1: حد متباعد -->
+  <g>
+    <rect x="10" y="60" width="250" height="20" fill="none" />
+    <text x="135" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد متباعد</text>
+    <text x="135" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite divergente</text>
+
+    <rect x="10" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="10" y="150" width="110" height="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <rect x="140" y="150" width="110" height="60" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <path d="M 120 150 L 130 210 L 140 150 Z" fill="#C17A2E" stroke="#8B4A2B" stroke-width="1.5" />
+    <path d="M 100 130 L 60 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 160 130 L 200 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <defs><marker id="ar1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#1B241F" /></marker></defs>
+    <text x="135" y="250" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">صعود الصهارة</text>
+    <text x="135" y="250" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#8B4A2B" data-lang="fr">Remontée de magma</text>
+    <text x="135" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">تباعد الصفيحتين (ذروة وسط محيطية)</text>
+    <text x="135" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Écartement (dorsale océanique)</text>
+  </g>
+
+  <!-- عمود 2: حد متقارب -->
+  <g>
+    <text x="400" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد متقارب</text>
+    <text x="400" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite convergente</text>
+
+    <rect x="275" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="275" y="150" width="120" height="55" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <path d="M 395 150 L 480 260 L 505 150 Z" fill="#3B6E8F" stroke="#204F3F" stroke-width="2" />
+    <path d="M 350 135 L 390 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 470 135 L 430 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <text x="400" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">غوص صفيحة تحت أخرى (اندساس)</text>
+    <text x="400" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Subduction d'une plaque</text>
+  </g>
+
+  <!-- عمود 3: حد تحويلي -->
+  <g>
+    <text x="665" y="45" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" font-weight="bold" fill="#204F3F" data-lang="ar">حد تحويلي (انزلاقي)</text>
+    <text x="665" y="45" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="bold" fill="#204F3F" data-lang="fr">Limite transformante</text>
+
+    <rect x="540" y="150" width="250" height="180" fill="#E3E8D6" />
+    <rect x="540" y="150" width="115" height="180" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <rect x="655" y="150" width="135" height="180" fill="#3C7A63" stroke="#204F3F" stroke-width="2" />
+    <line x1="655" y1="150" x2="655" y2="330" stroke="#8B4A2B" stroke-width="3" stroke-dasharray="4 3" />
+    <path d="M 610 130 L 610 100" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" />
+    <path d="M 720 350 L 720 380" stroke="#1B241F" stroke-width="3" marker-end="url(#ar1)" transform="translate(0,-40)" />
+    <text x="665" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">انزلاق أفقي للصفيحتين</text>
+    <text x="665" y="358" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#1B241F" data-lang="fr">Coulissement horizontal</text>
+  </g>
+</svg>
+
+        <figcaption>Les trois types de limites de plaques : divergente, convergente, transformante</figcaption>
+      </figure>
+<div class="tableau-wrap"><table class="tableau">
+    <caption>Comparaison des types de limites de plaques</caption>
+    <thead><tr><th>Type</th><th>Mouvement des plaques</th><th>Exemple / phénomène associé</th></tr></thead>
+    <tbody><tr><td>Divergente</td><td>Écartement avec remontée de magma</td><td>Dorsales océaniques</td></tr><tr><td>Convergente</td><td>Subduction d&#39;une plaque sous l&#39;autre</td><td>Chaînes de montagnes, fosses océaniques</td></tr><tr><td>Transformante (coulissante)</td><td>Glissement horizontal sans convergence ni divergence</td><td>Grandes failles transformantes</td></tr></tbody>
+  </table></div>
+  </section>
+<section class="lesson-section" id="sec-3-fr" data-lesson-section tabindex="-1">
+    <h2>Plaques, séismes et volcans</h2>
+    <p>En cartographiant la répartition des <span class="terme-link" data-terme="seisme" tabindex="0">séismes</span> et des volcans dans le monde, on constate qu'ils ne sont pas répartis au hasard, mais fortement concentrés le long des limites de plaques tectoniques. Les limites convergentes (subduction) produisent des séismes violents et des volcans actifs, dus à la fusion partielle de la plaque plongeante qui forme du magma ; les limites divergentes produisent des séismes généralement moins violents, liés à la remontée de magma ; et les limites transformantes produisent des séismes superficiels puissants dus au frottement important entre les deux plaques qui coulissent.</p>
+
+<aside class="encadre encadre-molahada" role="note" aria-label="Observation">
+    <span class="encadre-icon" aria-hidden="true">ℹ️</span>
+    <p class="encadre-titre">Observation</p>
+    <p>La zone entourant l'océan Pacifique, très riche en séismes et volcans actifs en raison de ses nombreuses limites de subduction, est appelée la 'ceinture de feu du Pacifique'.</p>
+
+  </aside>
+<aside class="encadre encadre-istintaj" role="note" aria-label="Déduction">
+    <span class="encadre-icon" aria-hidden="true">←</span>
+    <p class="encadre-titre">Déduction</p>
+    <p>La théorie de la tectonique des plaques explique de façon unifiée des phénomènes géologiques autrefois considérés séparément : la répartition des continents, la formation des chaînes de montagnes, et la distribution des séismes et volcans, ce qui en fait un cadre théorique central des sciences de la Terre modernes.</p>
+
+  </aside>
+<div class="le-saviez-vous">
+    <span class="le-saviez-vous-icon" aria-hidden="true">💡</span>
+    <p class="encadre-titre">Le saviez-vous ?</p>
+    <p>La vitesse d'écartement de certaines plaques tectoniques est estimée à environ 2 à 5 centimètres par an, soit approximativement la vitesse de pousse des ongles humains.</p>
+
+    
+  </div>
+<aside class="encadre encadre-khoulasa" role="note" aria-label="Synthèse de la leçon">
+    <span class="encadre-icon" aria-hidden="true">📋</span>
+    <p class="encadre-titre">Synthèse de la leçon</p>
+    <p>La théorie de la tectonique des plaques établit que la lithosphère est fragmentée en plaques mobiles, interagissant à leurs limites selon trois modes (divergence, convergence, coulissement). L'activité sismique et volcanique se concentre principalement à ces limites, faisant de cette théorie un cadre unificateur pour comprendre les phénomènes géologiques internes du globe.</p>
+
+  </aside>
+  </section><div class="quiz" aria-label="Testez votre compréhension">
+    <h3>Testez votre compréhension</h3>
+    <div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>1. Quel argument a soutenu l&#39;idée initiale de dérive des continents ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">L&#39;emboîtement des contours continentaux et des fossiles communs</button><button type="button" class="quiz-option" data-option-index="1">La mesure de la température des océans</button><button type="button" class="quiz-option" data-option-index="2">L&#39;observation des séismes par satellite</button>
+      </div>
+      <div class="quiz-justification" hidden><p>L'emboîtement des côtes continentales (comme l'Amérique du Sud et l'Afrique) et la présence de fossiles et roches identiques sur des continents aujourd'hui distants furent parmi les premiers arguments majeurs en faveur de la dérive des continents.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="1">
+      <p><strong>2. Que se passe-t-il au niveau d&#39;une limite convergente entre deux plaques ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">Les deux plaques s&#39;écartent avec remontée de magma</button><button type="button" class="quiz-option" data-option-index="1">L&#39;une des plaques plonge sous l&#39;autre (subduction)</button><button type="button" class="quiz-option" data-option-index="2">Les deux plaques glissent horizontalement sans interaction verticale</button>
+      </div>
+      <div class="quiz-justification" hidden><p>Aux limites convergentes, l'une des plaques plonge sous l'autre lors de la subduction, ce qui génère des séismes violents et des volcans par fusion partielle de la plaque plongeante.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>3. Pourquoi l&#39;essentiel de l&#39;activité sismique et volcanique se concentre-t-il sur la &#39;ceinture de feu du Pacifique&#39; ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">En raison du grand nombre de limites de subduction (convergentes) dans cette zone</button><button type="button" class="quiz-option" data-option-index="1">Parce que le Pacifique est simplement l&#39;océan le plus profond du monde</button><button type="button" class="quiz-option" data-option-index="2">Parce que les courants marins provoquent directement les séismes</button>
+      </div>
+      <div class="quiz-justification" hidden><p>Le pourtour du Pacifique compte de nombreuses limites de plaques convergentes (subduction), zones connues pour concentrer des séismes violents et une activité volcanique intense.</p>
+</div>
+    </div>
+  </div></div>
+    </div>
+  </div>
+
+  <div class="lesson-nav no-print">
+    <a href="/lecons/tcs/la-cellule/la-cellule/">← <span data-lang="ar">الخلية: الوحدة البنيوية والوظيفية للكائنات الحية</span><span data-lang="fr">La cellule : unité structurale et fonctionnelle du vivant</span></a>
+    <button class="btn btn-ghost btn-sm" onclick="window.print()"><span data-lang="ar">🖨️ طباعة / تنزيل PDF</span><span data-lang="fr">🖨️ Imprimer / PDF</span></button>
+    <span></span>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="nova-logo" style="color:#fff"><span>Nova SVT</span></span>
+        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="ar">المرجع الرقمي لعلوم الحياة والأرض بالمغرب — بالعربية والفرنسية.</p>
+        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="fr">La référence numérique des SVT au Maroc — en arabe et en français.</p>
+      </div>
+      <div>
+        <h5 data-i18n="nav_lecons"></h5>
+        <ul>
+          <li><a href="/lecons/">1AC · 2AC · 3AC</a></li>
+          <li><a href="/lecons/">TC · 1BAC · 2BAC</a></li>
+          <li><a href="/devoirs-examens/" data-i18n="nav_exams"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="nav_encyclopedie"></h5>
+        <ul>
+          <li><a href="/encyclopedie/">Glossaire / معجم</a></li>
+          <li><a href="/labo-virtuel/" data-i18n="nav_labo"></a></li>
+          <li><a href="/revision/" data-i18n="nav_revision"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="nav_apropos"></h5>
+        <ul>
+          <li><a href="/a-propos/" data-i18n="nav_apropos"></a></li>
+          <li><a href="/contact/" data-i18n="nav_contact"></a></li>
+          <li><a href="/confidentialite/" data-i18n="footer_privacy"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year>2026</span> Nova SVT — <span data-i18n="footer_rights"></span></span>
+      <span data-lang="ar">صُنع بعناية للتلميذ والأستاذ المغربي 🇲🇦</span>
+      <span data-lang="fr">Conçu avec soin pour l'élève et l'enseignant marocain 🇲🇦</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/vendor/marked.min.js"></script>
+<script src="/assets/vendor/purify.min.js"></script>
+<script type="module" src="/assets/js/site.js"></script>
+<script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
+
+</body>
+</html>

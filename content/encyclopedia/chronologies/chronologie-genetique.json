@@ -1,0 +1,54 @@
+{
+  "id": "chronologie-genetique",
+  "titre": { "ar": "خط زمني: تاريخ علم الوراثة", "fr": "Chronologie : histoire de la génétique" },
+  "evenements": [
+    {
+      "annee": 1865,
+      "titre": { "ar": "قوانين مندل للوراثة", "fr": "Les lois de Mendel sur l'hérédité" },
+      "description": {
+        "ar": "قدّم غريغور مندل نتائج تجاربه على نبات البازلاء أمام الجمعية التاريخية الطبيعية في برنو، مصوغا القوانين الأساسية لانتقال الصفات الوراثية، وإن لم يلق عمله اهتماما واسعا إلا بعد عقود.",
+        "fr": "Gregor Mendel présente les résultats de ses expériences sur les petits pois devant la société d'histoire naturelle de Brno, formulant les lois fondamentales de la transmission héréditaire — un travail qui ne sera reconnu que des décennies plus tard."
+      }
+    },
+    {
+      "annee": 1902,
+      "titre": { "ar": "بداية النظرية الصبغية للوراثة", "fr": "Les débuts de la théorie chromosomique de l'hérédité" },
+      "description": {
+        "ar": "اقترح والتر ساتون وثيودور بوفري بشكل مستقل أن الصبغيات هي حاملة العوامل الوراثية التي وصفها مندل، رابطين بذلك بين علم الخلية وقوانين الوراثة.",
+        "fr": "Walter Sutton et Theodor Boveri proposent indépendamment que les chromosomes sont les supports des facteurs héréditaires décrits par Mendel, établissant le lien entre cytologie et lois de l'hérédité."
+      }
+    },
+    {
+      "annee": 1915,
+      "titre": { "ar": "تأكيد النظرية الصبغية عبر ذبابة الفاكهة", "fr": "Confirmation de la théorie chromosomique grâce à la drosophile" },
+      "description": {
+        "ar": "أثبت توماس مورغان وفريقه تجريبيا، من خلال دراسات على ذبابة الفاكهة، أن الجينات مرتبة بشكل خطي على الصبغيات، مرسّخين النظرية الصبغية للوراثة.",
+        "fr": "Thomas Morgan et son équipe démontrent expérimentalement, grâce à des études sur la drosophile, que les gènes sont disposés de façon linéaire sur les chromosomes, consolidant la théorie chromosomique de l'hérédité."
+      }
+    },
+    {
+      "annee": 1953,
+      "titre": { "ar": "اكتشاف البنية الحلزونية المزدوجة للADN", "fr": "Découverte de la double hélice de l'ADN" },
+      "description": {
+        "ar": "نشر جيمس واطسون وفرانسيس كريك نموذج البنية الحلزونية المزدوجة للADN، معتمدين على صور حيود الأشعة السينية التي التقطتها روزاليند فرانكلين.",
+        "fr": "James Watson et Francis Crick publient le modèle de la double hélice de l'ADN, en s'appuyant sur les clichés de diffraction aux rayons X réalisés par Rosalind Franklin."
+      }
+    },
+    {
+      "annee": 1961,
+      "titre": { "ar": "فك رموز الشيفرة الوراثية", "fr": "Le déchiffrage du code génétique" },
+      "description": {
+        "ar": "بدأ مارشال نيرنبرغ وزملاؤه فك رموز الشيفرة الوراثية بين 1961 و1966، محددين كيف تُترجم متتاليات النيكليوتيدات في ADN إلى أحماض أمينية تبني البروتينات.",
+        "fr": "Marshall Nirenberg et ses collaborateurs déchiffrent le code génétique entre 1961 et 1966, déterminant comment les séquences de nucléotides de l'ADN sont traduites en acides aminés constituant les protéines."
+      }
+    },
+    {
+      "annee": 2003,
+      "titre": { "ar": "إتمام مشروع الجينوم البشري", "fr": "Achèvement du projet Génome Humain" },
+      "description": {
+        "ar": "أُعلن عن الانتهاء الكامل من تحديد تسلسل الجينوم البشري بعد أكثر من عقد من العمل الدولي المشترك، فاتحا آفاقا جديدة في الطب والبحث الوراثي.",
+        "fr": "L'achèvement complet du séquençage du génome humain est annoncé après plus d'une décennie de collaboration internationale, ouvrant de nouvelles perspectives en médecine et en recherche génétique."
+      }
+    }
+  ]
+}

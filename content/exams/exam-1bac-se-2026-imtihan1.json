@@ -1,0 +1,12 @@
+{
+  "id": "exam-1bac-se-2026-imtihan1",
+  "type": "imtihan",
+  "niveau": "1bac",
+  "filiere": "1bac-se",
+  "dorra": 1,
+  "numero": 1,
+  "annee_scolaire": "2025-2026",
+  "titre": { "ar": "الامتحان الموحد الإقليمي", "fr": "Examen régional unifié" },
+  "fichier_pdf": "content/exams/files/exam-1bac-se-2026-imtihan1.pdf",
+  "corrige_pdf": "content/exams/files/exam-1bac-se-2026-imtihan1-corrige.pdf"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "fecondation",
+  "terme": { "ar": "الإخصاب", "fr": "Fécondation" },
+  "definition": {
+    "ar": "اتحاد نواة النطفة بنواة البويضة على مستوى قناة البيض، ينتج عنه خلية بيضية مخصبة (خلية-بيضة) تحمل العدد الصبغي الكامل وتبدأ في الانقسام لتكوين جنين.",
+    "fr": "Union du noyau du spermatozoïde et du noyau de l'ovule au niveau de la trompe, formant une cellule-œuf porteuse du nombre chromosomique complet, qui commence à se diviser pour donner un embryon."
+  },
+  "voir_aussi": ["gamete-humain"]
+}

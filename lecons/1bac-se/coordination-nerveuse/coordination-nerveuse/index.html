@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>التنسيق العصبي: من المنبه إلى الاستجابة | Nova SVT</title>
+<meta name="description" content="التعرف على العناصر التشريحية لعصبون وتحديد دورها" />
+<link rel="canonical" href="https://novasvt.ma/lecons/1bac-se/coordination-nerveuse/coordination-nerveuse/" />
+<meta property="og:title" content="التنسيق العصبي: من المنبه إلى الاستجابة | Nova SVT" />
+<meta property="og:description" content="التعرف على العناصر التشريحية لعصبون وتحديد دورها" />
+<meta property="og:image" content="https://novasvt.ma/assets/images/hero/og-default.webp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://novasvt.ma/lecons/1bac-se/coordination-nerveuse/coordination-nerveuse/" />
+<meta property="og:locale" content="ar_MA" />
+<meta property="og:locale:alternate" content="fr_MA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#204F3F" />
+<link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicons/favicon.svg" />
+<link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/tokens.css" />
+<link rel="stylesheet" href="/assets/css/base.css" />
+<link rel="stylesheet" href="/assets/css/components.css" />
+<script>/*
+  سكريبت أوّلي حرج (Critical Inline Script)
+  يُحقن حرفيا داخل <head> كل صفحة (عبر scripts/lib/partials.js وقت البناء)
+  قبل أول Paint، لتفادي وميض تبديل الثيم/الاتجاه (FOUC/RTL flash) — القسم 3.1.3 و4.1.1.
+  ملاحظة: يبقى هذا الملف مصدر المرجعية المقروءة؛ partials.js يُضمّن نسخة مطابقة inline.
+*/
+(function () {
+  try {
+    var theme = localStorage.getItem("nova-svt:theme");
+    if (!theme) {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+
+    var lang = localStorage.getItem("nova-svt:lang") || document.documentElement.getAttribute("lang") || "ar";
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", lang === "fr" ? "ltr" : "rtl");
+  } catch (e) {
+    /* localStorage قد يكون معطّلا (وضع خاص) — لا كسر للصفحة، القيم الافتراضية في HTML تبقى فعّالة */
+  }
+})();
+</script>
+
+</head>
+<body>
+
+<a href="#main" class="skip-link" data-i18n="skip_to_content">تخطَّ إلى المحتوى</a>
+<header class="navbar" data-navbar>
+  <div class="navbar-inner">
+    <a href="/" class="nova-logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
+  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
+  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
+</svg><span class="nova-logo-text">Nova SVT</span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/" data-i18n="nav_home"></a></li>
+        <li><a class="nav-link" href="/lecons/" data-i18n="nav_lecons" aria-current="page"></a></li><li><a class="nav-link" href="/devoirs-examens/" data-i18n="nav_exams"></a></li><li><a class="nav-link" href="/labo-virtuel/" data-i18n="nav_labo"></a></li><li><a class="nav-link" href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li><li><a class="nav-link" href="/revision/" data-i18n="nav_revision"></a></li>
+      </ul>
+    </nav>
+    <div class="nav-more" data-nav-more>
+      <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false" data-i18n="nav_more"></button>
+      <span class="arrow" aria-hidden="true">▾</span>
+      <div class="nav-more-menu" data-nav-more-menu hidden><a href="/blog/" data-i18n="nav_blog"></a><a href="/a-propos/" data-i18n="nav_apropos"></a><a href="/contact/" data-i18n="nav_contact"></a></div>
+    </div>
+    <div class="nav-actions">
+      <form class="search-bar-inline" role="search" data-search-open>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="search" data-i18n-placeholder="search_placeholder" readonly />
+      </form>
+      <button class="icon-btn search-icon-btn" data-search-open data-i18n-aria="search_title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="icon-btn" data-lang-toggle data-i18n-aria="lang_toggle">FR</button>
+      <button class="icon-btn theme-toggle" data-theme-toggle data-i18n-aria="theme_toggle"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+      <div class="nav-more" data-nav-more>
+        <button class="icon-btn" data-nav-more-trigger="bell" aria-expanded="false" data-i18n-aria="blog_menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="bell-dot"></span></button>
+        <div class="nav-more-menu" data-nav-more-menu hidden><a href="/blog/comment-cerveau-memorise/"><strong data-lang="ar">كيف يتذكر الدماغ؟</strong><strong data-lang="fr">Comment le cerveau se souvient-il ?</strong></a><a href="/blog/" class="mono" data-i18n="nav_blog" style="font-size:var(--fs-12)"></a></div>
+      </div>
+      <button class="icon-btn hamburger-btn" data-hamburger-btn data-i18n-aria="menu_open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+  <div class="nav-divider-bar"></div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu hidden>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-6)">
+    <span class="nova-logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
+  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
+  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
+</svg><span>Nova SVT</span></span>
+    <button class="icon-btn" data-mobile-menu-close data-i18n-aria="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <nav>
+    <ul>
+      <li><a class="nav-link" href="/" data-i18n="nav_home"></a></li>
+      <li><a class="nav-link" href="/lecons/" data-i18n="nav_lecons"></a></li><li><a class="nav-link" href="/devoirs-examens/" data-i18n="nav_exams"></a></li><li><a class="nav-link" href="/labo-virtuel/" data-i18n="nav_labo"></a></li><li><a class="nav-link" href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li><li><a class="nav-link" href="/revision/" data-i18n="nav_revision"></a></li>
+      <li class="mobile-submenu">
+        <a class="nav-link" href="/blog/" data-i18n="nav_blog"></a><a class="nav-link" href="/a-propos/" data-i18n="nav_apropos"></a><a class="nav-link" href="/contact/" data-i18n="nav_contact"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-box" role="dialog" aria-modal="true" data-i18n-aria="search_title">
+    <div class="search-box-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" data-search-input data-i18n-placeholder="search_placeholder" autocomplete="off" />
+      <button class="icon-btn" data-search-close data-i18n-aria="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="search-suggestions">
+      <button class="chip" data-search-suggestion>الانقسام المنصف</button>
+      <button class="chip" data-search-suggestion>التركيب الضوئي</button>
+      <button class="chip" data-search-suggestion>المناعة</button>
+      <button class="chip" data-search-suggestion>الخلية</button>
+    </div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+
+<main id="main">
+
+<div class="progress-bar-top" data-progress-bar></div>
+<div class="container" style="padding-top:var(--sp-5)">
+  <nav class="breadcrumb" aria-label="مسار التنقل">
+    <a href="/"><span data-lang="ar">الرئيسية</span><span data-lang="fr">Accueil</span></a><span aria-hidden="true">/</span> <a href="/lecons/"><span data-lang="ar">الدروس</span><span data-lang="fr">Leçons</span></a><span aria-hidden="true">/</span> <a href="/lecons/#1bac"><span data-lang="ar">الأولى باك</span><span data-lang="fr">1re année Bac</span></a><span aria-hidden="true">/</span> <a href="/lecons/1bac-se/coordination-nerveuse/"><span data-lang="ar">التنسيق العصبي</span><span data-lang="fr">La coordination nerveuse</span></a><span aria-hidden="true">/</span>
+    <span class="current"><span data-lang="ar">التنسيق العصبي: من المنبه إلى الاستجابة</span><span data-lang="fr">La coordination nerveuse : du stimulus à la réponse</span></span>
+  </nav>
+
+  <div class="lesson-info-bar">
+    <div class="item"><strong data-lang="ar">المستوى</strong><strong data-lang="fr">Niveau</strong><span data-lang="ar">الأولى باك</span><span data-lang="fr">1re année Bac</span></div>
+    <div class="item"><strong data-lang="ar">السلك</strong><strong data-lang="fr">Cycle</strong><span data-lang="ar">الثانوي التأهيلي</span><span data-lang="fr">Secondaire qualifiant</span></div>
+    <div class="item"><strong data-lang="ar">المسلك</strong><strong data-lang="fr">Filière</strong><span data-lang="ar">الأولى باك علوم تجريبية</span><span data-lang="fr">1re Bac Sciences expérimentales</span></div>
+    <div class="item"><strong data-lang="ar">الوحدة</strong><strong data-lang="fr">Unité</strong><span data-lang="ar">التنسيق العصبي</span><span data-lang="fr">La coordination nerveuse</span></div>
+    <div class="item"><strong data-lang="ar">الدورة</strong><strong data-lang="fr">Semestre</strong><span data-lang="ar">الأولى</span><span data-lang="fr">1</span></div>
+    <div class="item"><strong data-lang="ar">المدة</strong><strong data-lang="fr">Durée</strong><span data-lang="ar">30 د</span><span data-lang="fr">30 min</span></div>
+  </div>
+
+  <h1><span data-lang="ar">التنسيق العصبي: من المنبه إلى الاستجابة</span><span data-lang="fr">La coordination nerveuse : du stimulus à la réponse</span></h1>
+
+  <div class="lesson-layout">
+    <aside class="lesson-toc" aria-label="فهرس المحاور">
+      <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
+        <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
+      </button>
+      <div data-toc-list>
+        <div data-lang="ar"><ul>
+    <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">بنية الخلية العصبية</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">من المنبه إلى الاستجابة: القوس الانعكاسي</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
+  </ul></div>
+        <div data-lang="fr"><ul>
+    <li><a href="#sec-1-fr" data-toc-link="sec-1-fr">Structure du neurone</a></li><li><a href="#sec-2-fr" data-toc-link="sec-2-fr">Du stimulus à la réponse : l&#39;arc réflexe</a></li><li><a href="#sec-3-fr" data-toc-link="sec-3-fr">Synthèse</a></li>
+  </ul></div>
+      </div>
+    </aside>
+    <div data-lesson-content data-content-src="" data-lecon-id="svt-1bac-coordination-nerveuse">
+      <div data-lang="ar"><section class="lesson-section" id="sec-1-ar" data-lesson-section tabindex="-1">
+    <h2>بنية الخلية العصبية</h2>
+    <p>يتفاعل جسم الإنسان باستمرار مع محيطه: تغيّر في الإضاءة، لمس جسم ساخن، أو صوت مفاجئ. هذه المنبهات يتم استقبالها ومعالجتها بفضل الجهاز العصبي، الذي تُشكّل <span class="terme-link" data-terme="neurone" tabindex="0">العصبونات</span> وحداته البنيوية والوظيفية الأساسية. يتكون العصبون من جسم الخلية الذي يحتوي على النواة، وتغصنات تستقبل المعلومة، ومحور أسطواني ينقلها على شكل سيالة عصبية إلى خلايا أخرى عبر <span class="terme-link" data-terme="synapse" tabindex="0">مشابك عصبية</span>.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">بنية الخلية العصبية (العصبون)</title>
+  <desc id="desc1">مخطط تخطيطي لعصبون يوضح التغصنات وجسم الخلية والنواة والمحور الأسطواني وغمد الميالين والعقد الرانفييرية والنهايات المشبكية.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- Dendrites -->
+  <g stroke="#3C7A63" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M60 120 L120 165" />
+    <path d="M50 160 L120 175" />
+    <path d="M55 200 L120 185" />
+    <path d="M65 240 L120 195" />
+    <path d="M45 90 L110 150" />
+  </g>
+  <text x="90" y="60" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">التغصنات</text>
+  <text x="90" y="60" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Dendrites</text>
+
+  <!-- Soma / cell body -->
+  <circle cx="160" cy="190" r="55" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <circle cx="160" cy="190" r="20" fill="#3C7A63" stroke="#204F3F" stroke-width="1.5" />
+  <text x="160" y="290" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">جسم الخلية</text>
+  <text x="160" y="290" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Corps cellulaire</text>
+  <text x="160" y="150" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">النواة</text>
+  <text x="160" y="150" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Noyau</text>
+
+  <!-- Axon with myelin segments -->
+  <line x1="215" y1="190" x2="620" y2="190" stroke="#3B6E8F" stroke-width="5" />
+  <g fill="#C17A2E" stroke="#8B4A2B" stroke-width="1.5">
+    <rect x="235" y="178" width="55" height="24" rx="10" />
+    <rect x="310" y="178" width="55" height="24" rx="10" />
+    <rect x="385" y="178" width="55" height="24" rx="10" />
+    <rect x="460" y="178" width="55" height="24" rx="10" />
+    <rect x="535" y="178" width="55" height="24" rx="10" />
+  </g>
+  <text x="420" y="140" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">المحور الأسطواني</text>
+  <text x="420" y="140" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Axone</text>
+
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">غمد الميالين</text>
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Gaine de myéline</text>
+
+  <!-- Node of Ranvier callout -->
+  <line x1="297" y1="190" x2="297" y2="250" stroke="#8B4A2B" stroke-width="1.5" stroke-dasharray="4,3" />
+  <text x="297" y="270" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">عقدة رانفييه</text>
+  <text x="297" y="270" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Nœud de Ranvier</text>
+
+  <!-- Axon terminals -->
+  <g stroke="#3B6E8F" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M620 190 L670 150" />
+    <path d="M620 190 L680 190" />
+    <path d="M620 190 L670 230" />
+  </g>
+  <g fill="#8B4A2B">
+    <circle cx="670" cy="150" r="9" />
+    <circle cx="680" cy="190" r="9" />
+    <circle cx="670" cy="230" r="9" />
+  </g>
+  <text x="700" y="270" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">النهايات المشبكية</text>
+  <text x="700" y="270" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Terminaisons synaptiques</text>
+
+  <!-- Direction of influx -->
+  <path d="M225 320 L610 320" stroke="#204F3F" stroke-width="2" marker-end="url(#arrowN)" />
+  <defs>
+    <marker id="arrowN" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#204F3F" />
+    </marker>
+  </defs>
+  <text x="420" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#204F3F" data-lang="ar">اتجاه سريان الرسالة العصبية</text>
+  <text x="420" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#204F3F" data-lang="fr">Sens de propagation du message nerveux</text>
+</svg>
+
+        <figcaption>بنية العصبون: التغصنات، جسم الخلية، المحور الأسطواني، غمد الميالين والنهايات المشبكية</figcaption>
+      </figure>
+<aside class="encadre encadre-taarif" role="note" aria-label="تعريف">
+    <span class="encadre-icon" aria-hidden="true">🔤</span>
+    <p class="encadre-titre">تعريف</p>
+    <p>غمد الميالين هو غلاف دهني يحيط بالمحور الأسطواني على شكل قطع متقطعة (تفصل بينها عقد رانفييه)، ويعمل على تسريع سريان السيالة العصبية بشكل ملحوظ.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-2-ar" data-lesson-section tabindex="-1">
+    <h2>من المنبه إلى الاستجابة: القوس الانعكاسي</h2>
+    <p>عندما نلمس عن غير قصد جسما ساخنا، نسحب يدنا بسرعة قبل أن نشعر بالألم بوعي. هذه الاستجابة اللاإرادية والسريعة تُسمى <span class="terme-link" data-terme="reflexe" tabindex="0">منعكسا عصبيا</span>، وتتبع مسارا عصبيا ثابتا يُسمى القوس الانعكاسي، يتكون من خمسة عناصر مرتبة كالتالي: المستقبل (يحوّل المنبه إلى سيالة عصبية) ← العصب الحسي (الوارد) ← المركز العصبي (النخاع الشوكي أو الدماغ) ← العصب الحركي (الصادر) ← العضو المنفذ (المستجيب) الذي ينتج الاستجابة.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">مخطط القوس الانعكاسي للمنعكس العضلي (المنعكس الوتري)</title>
+  <desc id="desc2">مخطط يوضح مسار المعلومة العصبية بدءا من المنبه (تمدد الوتر) مرورا بالمستقبل، العصب الحسي، النخاع الشوكي، العصب الحركي، وصولا إلى العضو المنفذ الذي يحدث الاستجابة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- Stimulus -->
+  <g>
+    <path d="M25 300 l20 -30 l10 15 l20 -25" stroke="#8B4A2B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="55" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#8B4A2B" data-lang="ar">المنبه (تمدد الوتر)</text>
+    <text x="55" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Stimulus (étirement)</text>
+  </g>
+
+  <!-- Récepteur box -->
+  <rect x="40" y="180" width="160" height="80" rx="12" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <text x="120" y="215" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">المستقبل الحسي</text>
+  <text x="120" y="215" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Récepteur sensoriel</text>
+  <text x="120" y="238" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">(مغزل عضلي)</text>
+  <text x="120" y="238" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">(fuseau neuromusculaire)</text>
+
+  <!-- Arrow receptor -> spinal cord -->
+  <path d="M200 200 Q 300 90 340 100" stroke="#3B6E8F" stroke-width="3.5" fill="none" marker-end="url(#arrowR)" />
+  <text x="255" y="130" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#3B6E8F" data-lang="ar">عصب حسي (وارد)</text>
+  <text x="255" y="130" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3B6E8F" data-lang="fr">Nerf sensitif (afférent)</text>
+
+  <!-- Spinal cord cross section -->
+  <circle cx="420" cy="130" r="75" fill="#F0F1F0" stroke="#204F3F" stroke-width="3" />
+  <path d="M400 90 q20 20 0 40 q-20 20 0 40 q20 -20 40 0 q20 -20 0 -40 q-20 -20 0 -40 q-20 20 -40 0 z" fill="#3C7A63" opacity="0.85" />
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">المركز العصبي (النخاع الشوكي)</text>
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Centre nerveux (moelle épinière)</text>
+
+  <!-- Synapse marker -->
+  <circle cx="420" cy="130" r="6" fill="#C17A2E" />
+  <text x="470" y="70" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#C17A2E" data-lang="ar">مشبك عصبي</text>
+  <text x="470" y="70" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#C17A2E" data-lang="fr">Synapse</text>
+
+  <!-- Arrow spinal cord -> effecteur -->
+  <path d="M495 160 Q 590 260 610 250" stroke="#3B6E8F" stroke-width="3.5" fill="none" marker-end="url(#arrowR)" />
+  <text x="575" y="290" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#3B6E8F" data-lang="ar">عصب حركي (صادر)</text>
+  <text x="575" y="290" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3B6E8F" data-lang="fr">Nerf moteur (efférent)</text>
+
+  <defs>
+    <marker id="arrowR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#3B6E8F" />
+    </marker>
+  </defs>
+
+  <!-- Effecteur box -->
+  <rect x="610" y="180" width="160" height="80" rx="12" fill="#E3E8D6" stroke="#C17A2E" stroke-width="3" />
+  <text x="690" y="215" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">العضو المنفذ (العضلة)</text>
+  <text x="690" y="215" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Effecteur (muscle)</text>
+  <text x="690" y="238" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">(المستجيب)</text>
+  <text x="690" y="238" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">(l'effecteur)</text>
+
+  <!-- Response -->
+  <path d="M770 300 l20 -30 M790 270 l10 15 l20 -25" stroke="#204F3F" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="745" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#204F3F" data-lang="ar">الاستجابة (تقلص عضلي)</text>
+  <text x="745" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#204F3F" data-lang="fr">Réponse (contraction)</text>
+</svg>
+
+        <figcaption>مخطط القوس الانعكاسي للمنعكس العضلي: من المنبه إلى الاستجابة العضلية</figcaption>
+      </figure>
+<p>مثال ملموس على ذلك هو <strong>المنعكس العضلي (الوتري)</strong>، الذي يمكن ملاحظته سريريا بضرب وتر الركبة برفق: يؤدي تمدد مفاجئ للعضلة الباسطة إلى استثارة مستقبلات حسية داخلها تُسمى المغازل العضلية. تُنقل هذه المعلومة عبر عصب حسي إلى النخاع الشوكي، حيث يحدث مشبك مباشر مع عصبون حركي (منعكس أحادي المشبك)، فتنتقل السيالة عبر عصب حركي لتعود إلى نفس العضلة وتُحدث تقلصها الفوري.</p>
+
+<aside class="encadre encadre-molahada" role="note" aria-label="ملاحظة">
+    <span class="encadre-icon" aria-hidden="true">ℹ️</span>
+    <p class="encadre-titre">ملاحظة</p>
+    <p>المنعكس العضلي لا إرادي وثابت الاستجابة: نفس المنبه يُنتج دائما نفس الاستجابة، بخلاف السلوك الإرادي الذي يتطلب تدخل الدماغ ويمكن التحكم فيه.</p>
+
+  </aside>
+<aside class="encadre encadre-tanbih" role="note" aria-label="تنبيه">
+    <span class="encadre-icon" aria-hidden="true">⚠️</span>
+    <p class="encadre-titre">تنبيه</p>
+    <p>لا يجب الخلط بين المستقبل الحسي (خلية أو عضو يستقبل المنبه) والعضو المنفذ (عضو ينفذ الاستجابة، غالبا عضلة أو غدة). في المنعكس العضلي، المستقبل والمستجيب يوجدان في نفس العضلة لكنهما وظيفتان مختلفتان.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-3-ar" data-lesson-section tabindex="-1">
+    <h2>خلاصة</h2>
+    <div class="le-saviez-vous">
+    <span class="le-saviez-vous-icon" aria-hidden="true">💡</span>
+    <p class="encadre-titre">أضف إلى معلوماتك</p>
+    <p>يمكن للسيالة العصبية أن تنتقل بسرعة تصل إلى حوالي 120 مترا في الثانية في الألياف العصبية المغلفة بالميالين، أي أسرع بكثير من الألياف العصبية العارية من هذا الغلاف.</p>
+
+    
+  </div>
+<aside class="encadre encadre-khoulasa" role="note" aria-label="خلاصة الدرس">
+    <span class="encadre-icon" aria-hidden="true">📋</span>
+    <p class="encadre-titre">خلاصة الدرس</p>
+    <p>يعتمد التنسيق العصبي على مسار محدد يبدأ بمنبه يستثير مستقبلا حسيا، فتنتقل المعلومة عبر عصب حسي إلى مركز عصبي، ثم عبر عصب حركي إلى عضو منفذ يُنتج الاستجابة. المنعكس العضلي مثال بسيط وسريع يوضح هذا المسار (القوس الانعكاسي) بشكل عملي.</p>
+
+  </aside>
+  </section><div class="quiz" aria-label="اختبر فهمك">
+    <h3>اختبر فهمك</h3>
+    <div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>1. ما ترتيب عناصر القوس الانعكاسي بدءا من المنبه؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">مستقبل ← عصب حسي ← مركز عصبي ← عصب حركي ← عضو منفذ</button><button type="button" class="quiz-option" data-option-index="1">عضو منفذ ← عصب حركي ← مركز عصبي ← عصب حسي ← مستقبل</button><button type="button" class="quiz-option" data-option-index="2">مستقبل ← مركز عصبي ← عضو منفذ ← عصب حسي</button>
+      </div>
+      <div class="quiz-justification" hidden><p>المعلومة العصبية تنطلق من المستقبل الذي يحوّل المنبه إلى سيالة عصبية، تنتقل عبر عصب حسي إلى المركز العصبي، ثم عبر عصب حركي إلى العضو المنفذ الذي ينتج الاستجابة.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="1">
+      <p><strong>2. ما الذي يميز المنعكس العضلي (الوتري)؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">استجابة إرادية يتحكم فيها الدماغ بشكل واعٍ</button><button type="button" class="quiz-option" data-option-index="1">استجابة لا إرادية وسريعة وثابتة لنفس المنبه</button><button type="button" class="quiz-option" data-option-index="2">استجابة تتطلب معالجة معقدة في القشرة الدماغية</button>
+      </div>
+      <div class="quiz-justification" hidden><p>المنعكس العضلي استجابة لا إرادية وسريعة وثابتة النمط، لأنه يمر عبر مشبك مباشر بين العصبون الحسي والعصبون الحركي على مستوى النخاع الشوكي دون الحاجة إلى تدخل الدماغ.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>3. أين يوجد المستقبل الحسي والعضو المنفذ في حالة المنعكس العضلي الوتري؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">في نفس العضلة الباسطة المعنية بالمنعكس</button><button type="button" class="quiz-option" data-option-index="1">في الدماغ فقط</button><button type="button" class="quiz-option" data-option-index="2">في عضلتين مختلفتين ومتباعدتين</button>
+      </div>
+      <div class="quiz-justification" hidden><p>في المنعكس العضلي، المغزل العضلي (المستقبل) والألياف العضلية (المستجيب) يوجدان معا داخل نفس العضلة، رغم اختلاف وظيفتيهما.</p>
+</div>
+    </div>
+  </div></div>
+      <div data-lang="fr"><section class="lesson-section" id="sec-1-fr" data-lesson-section tabindex="-1">
+    <h2>Structure du neurone</h2>
+    <p>Le corps humain interagit en permanence avec son environnement : variation de luminosité, contact avec un objet chaud, bruit soudain. Ces stimulus sont perçus et traités grâce au système nerveux, dont les <span class="terme-link" data-terme="neurone" tabindex="0">neurones</span> constituent l'unité structurale et fonctionnelle de base. Un neurone comprend un corps cellulaire contenant le noyau, des dendrites qui reçoivent l'information, et un axone qui la conduit sous forme d'influx nerveux vers d'autres cellules via des <span class="terme-link" data-terme="synapse" tabindex="0">synapses</span>.</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">بنية الخلية العصبية (العصبون)</title>
+  <desc id="desc1">مخطط تخطيطي لعصبون يوضح التغصنات وجسم الخلية والنواة والمحور الأسطواني وغمد الميالين والعقد الرانفييرية والنهايات المشبكية.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- Dendrites -->
+  <g stroke="#3C7A63" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M60 120 L120 165" />
+    <path d="M50 160 L120 175" />
+    <path d="M55 200 L120 185" />
+    <path d="M65 240 L120 195" />
+    <path d="M45 90 L110 150" />
+  </g>
+  <text x="90" y="60" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">التغصنات</text>
+  <text x="90" y="60" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Dendrites</text>
+
+  <!-- Soma / cell body -->
+  <circle cx="160" cy="190" r="55" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <circle cx="160" cy="190" r="20" fill="#3C7A63" stroke="#204F3F" stroke-width="1.5" />
+  <text x="160" y="290" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">جسم الخلية</text>
+  <text x="160" y="290" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Corps cellulaire</text>
+  <text x="160" y="150" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">النواة</text>
+  <text x="160" y="150" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Noyau</text>
+
+  <!-- Axon with myelin segments -->
+  <line x1="215" y1="190" x2="620" y2="190" stroke="#3B6E8F" stroke-width="5" />
+  <g fill="#C17A2E" stroke="#8B4A2B" stroke-width="1.5">
+    <rect x="235" y="178" width="55" height="24" rx="10" />
+    <rect x="310" y="178" width="55" height="24" rx="10" />
+    <rect x="385" y="178" width="55" height="24" rx="10" />
+    <rect x="460" y="178" width="55" height="24" rx="10" />
+    <rect x="535" y="178" width="55" height="24" rx="10" />
+  </g>
+  <text x="420" y="140" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">المحور الأسطواني</text>
+  <text x="420" y="140" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Axone</text>
+
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">غمد الميالين</text>
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Gaine de myéline</text>
+
+  <!-- Node of Ranvier callout -->
+  <line x1="297" y1="190" x2="297" y2="250" stroke="#8B4A2B" stroke-width="1.5" stroke-dasharray="4,3" />
+  <text x="297" y="270" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#8B4A2B" data-lang="ar">عقدة رانفييه</text>
+  <text x="297" y="270" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Nœud de Ranvier</text>
+
+  <!-- Axon terminals -->
+  <g stroke="#3B6E8F" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M620 190 L670 150" />
+    <path d="M620 190 L680 190" />
+    <path d="M620 190 L670 230" />
+  </g>
+  <g fill="#8B4A2B">
+    <circle cx="670" cy="150" r="9" />
+    <circle cx="680" cy="190" r="9" />
+    <circle cx="670" cy="230" r="9" />
+  </g>
+  <text x="700" y="270" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">النهايات المشبكية</text>
+  <text x="700" y="270" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Terminaisons synaptiques</text>
+
+  <!-- Direction of influx -->
+  <path d="M225 320 L610 320" stroke="#204F3F" stroke-width="2" marker-end="url(#arrowN)" />
+  <defs>
+    <marker id="arrowN" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#204F3F" />
+    </marker>
+  </defs>
+  <text x="420" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#204F3F" data-lang="ar">اتجاه سريان الرسالة العصبية</text>
+  <text x="420" y="345" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#204F3F" data-lang="fr">Sens de propagation du message nerveux</text>
+</svg>
+
+        <figcaption>Structure du neurone : dendrites, corps cellulaire, axone, gaine de myéline et terminaisons synaptiques</figcaption>
+      </figure>
+<aside class="encadre encadre-taarif" role="note" aria-label="Définition">
+    <span class="encadre-icon" aria-hidden="true">🔤</span>
+    <p class="encadre-titre">Définition</p>
+    <p>La gaine de myéline est un revêtement lipidique qui entoure l'axone de façon discontinue (séparée par des nœuds de Ranvier) et accélère nettement la propagation de l'influx nerveux.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-2-fr" data-lesson-section tabindex="-1">
+    <h2>Du stimulus à la réponse : l&#39;arc réflexe</h2>
+    <p>Lorsque nous touchons involontairement un objet chaud, nous retirons rapidement la main avant même de ressentir consciemment la douleur. Cette réponse involontaire et rapide s'appelle un <span class="terme-link" data-terme="reflexe" tabindex="0">réflexe</span>, et suit un trajet nerveux fixe appelé arc réflexe, composé de cinq éléments ordonnés ainsi : le récepteur (convertit le stimulus en influx nerveux) → le nerf sensitif (afférent) → le centre nerveux (moelle épinière ou cerveau) → le nerf moteur (efférent) → l'effecteur (organe qui produit la réponse).</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" role="img" aria-labelledby="title2 desc2">
+  <title id="title2">مخطط القوس الانعكاسي للمنعكس العضلي (المنعكس الوتري)</title>
+  <desc id="desc2">مخطط يوضح مسار المعلومة العصبية بدءا من المنبه (تمدد الوتر) مرورا بالمستقبل، العصب الحسي، النخاع الشوكي، العصب الحركي، وصولا إلى العضو المنفذ الذي يحدث الاستجابة.</desc>
+  <rect x="0" y="0" width="800" height="380" fill="#F9FAF7" />
+
+  <!-- Stimulus -->
+  <g>
+    <path d="M25 300 l20 -30 l10 15 l20 -25" stroke="#8B4A2B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="55" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#8B4A2B" data-lang="ar">المنبه (تمدد الوتر)</text>
+    <text x="55" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#8B4A2B" data-lang="fr">Stimulus (étirement)</text>
+  </g>
+
+  <!-- Récepteur box -->
+  <rect x="40" y="180" width="160" height="80" rx="12" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+  <text x="120" y="215" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">المستقبل الحسي</text>
+  <text x="120" y="215" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Récepteur sensoriel</text>
+  <text x="120" y="238" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">(مغزل عضلي)</text>
+  <text x="120" y="238" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">(fuseau neuromusculaire)</text>
+
+  <!-- Arrow receptor -> spinal cord -->
+  <path d="M200 200 Q 300 90 340 100" stroke="#3B6E8F" stroke-width="3.5" fill="none" marker-end="url(#arrowR)" />
+  <text x="255" y="130" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#3B6E8F" data-lang="ar">عصب حسي (وارد)</text>
+  <text x="255" y="130" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3B6E8F" data-lang="fr">Nerf sensitif (afférent)</text>
+
+  <!-- Spinal cord cross section -->
+  <circle cx="420" cy="130" r="75" fill="#F0F1F0" stroke="#204F3F" stroke-width="3" />
+  <path d="M400 90 q20 20 0 40 q-20 20 0 40 q20 -20 40 0 q20 -20 0 -40 q-20 -20 0 -40 q-20 20 -40 0 z" fill="#3C7A63" opacity="0.85" />
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">المركز العصبي (النخاع الشوكي)</text>
+  <text x="420" y="230" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Centre nerveux (moelle épinière)</text>
+
+  <!-- Synapse marker -->
+  <circle cx="420" cy="130" r="6" fill="#C17A2E" />
+  <text x="470" y="70" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#C17A2E" data-lang="ar">مشبك عصبي</text>
+  <text x="470" y="70" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#C17A2E" data-lang="fr">Synapse</text>
+
+  <!-- Arrow spinal cord -> effecteur -->
+  <path d="M495 160 Q 590 260 610 250" stroke="#3B6E8F" stroke-width="3.5" fill="none" marker-end="url(#arrowR)" />
+  <text x="575" y="290" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#3B6E8F" data-lang="ar">عصب حركي (صادر)</text>
+  <text x="575" y="290" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#3B6E8F" data-lang="fr">Nerf moteur (efférent)</text>
+
+  <defs>
+    <marker id="arrowR" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#3B6E8F" />
+    </marker>
+  </defs>
+
+  <!-- Effecteur box -->
+  <rect x="610" y="180" width="160" height="80" rx="12" fill="#E3E8D6" stroke="#C17A2E" stroke-width="3" />
+  <text x="690" y="215" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">العضو المنفذ (العضلة)</text>
+  <text x="690" y="215" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Effecteur (muscle)</text>
+  <text x="690" y="238" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="12" fill="#1B241F" data-lang="ar">(المستجيب)</text>
+  <text x="690" y="238" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#1B241F" data-lang="fr">(l'effecteur)</text>
+
+  <!-- Response -->
+  <path d="M770 300 l20 -30 M790 270 l10 15 l20 -25" stroke="#204F3F" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="745" y="345" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#204F3F" data-lang="ar">الاستجابة (تقلص عضلي)</text>
+  <text x="745" y="345" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#204F3F" data-lang="fr">Réponse (contraction)</text>
+</svg>
+
+        <figcaption>Schéma de l&#39;arc réflexe myotatique : du stimulus à la réponse musculaire</figcaption>
+      </figure>
+<p>Un exemple concret est le <strong>réflexe myotatique (rotulien)</strong>, observable cliniquement en frappant légèrement le tendon rotulien : l'étirement brusque du muscle extenseur excite des récepteurs sensoriels internes appelés fuseaux neuromusculaires. Cette information est transmise via un nerf sensitif jusqu'à la moelle épinière, où elle fait synapse directement avec un neurone moteur (réflexe monosynaptique) ; l'influx repart alors par un nerf moteur vers ce même muscle, provoquant sa contraction immédiate.</p>
+
+<aside class="encadre encadre-molahada" role="note" aria-label="Remarque">
+    <span class="encadre-icon" aria-hidden="true">ℹ️</span>
+    <p class="encadre-titre">Remarque</p>
+    <p>Le réflexe myotatique est involontaire et stéréotypé : le même stimulus produit toujours la même réponse, contrairement au comportement volontaire qui nécessite l'intervention du cerveau et peut être contrôlé.</p>
+
+  </aside>
+<aside class="encadre encadre-tanbih" role="note" aria-label="Attention">
+    <span class="encadre-icon" aria-hidden="true">⚠️</span>
+    <p class="encadre-titre">Attention</p>
+    <p>Il ne faut pas confondre le récepteur sensoriel (cellule ou organe qui perçoit le stimulus) et l'effecteur (organe qui exécute la réponse, souvent un muscle ou une glande). Dans le réflexe myotatique, récepteur et effecteur se trouvent dans le même muscle, mais assurent des fonctions différentes.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-3-fr" data-lesson-section tabindex="-1">
+    <h2>Synthèse</h2>
+    <div class="le-saviez-vous">
+    <span class="le-saviez-vous-icon" aria-hidden="true">💡</span>
+    <p class="encadre-titre">Le saviez-vous ?</p>
+    <p>L'influx nerveux peut se propager à une vitesse atteignant environ 120 mètres par seconde dans les fibres nerveuses myélinisées, soit bien plus rapide que dans les fibres dépourvues de cette gaine.</p>
+
+    
+  </div>
+<aside class="encadre encadre-khoulasa" role="note" aria-label="Synthèse de la leçon">
+    <span class="encadre-icon" aria-hidden="true">📋</span>
+    <p class="encadre-titre">Synthèse de la leçon</p>
+    <p>La coordination nerveuse repose sur un trajet précis : un stimulus excite un récepteur sensoriel, l'information circule via un nerf sensitif jusqu'à un centre nerveux, puis via un nerf moteur jusqu'à un effecteur qui produit la réponse. Le réflexe myotatique illustre concrètement et rapidement ce trajet (l'arc réflexe).</p>
+
+  </aside>
+  </section><div class="quiz" aria-label="Testez votre compréhension">
+    <h3>Testez votre compréhension</h3>
+    <div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>1. Quel est l&#39;ordre des éléments de l&#39;arc réflexe à partir du stimulus ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">Récepteur → nerf sensitif → centre nerveux → nerf moteur → effecteur</button><button type="button" class="quiz-option" data-option-index="1">Effecteur → nerf moteur → centre nerveux → nerf sensitif → récepteur</button><button type="button" class="quiz-option" data-option-index="2">Récepteur → centre nerveux → effecteur → nerf sensitif</button>
+      </div>
+      <div class="quiz-justification" hidden><p>L'information nerveuse part du récepteur qui convertit le stimulus en influx nerveux, transite par le nerf sensitif jusqu'au centre nerveux, puis par le nerf moteur jusqu'à l'effecteur qui produit la réponse.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="1">
+      <p><strong>2. Qu&#39;est-ce qui caractérise le réflexe myotatique (rotulien) ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">Une réponse volontaire contrôlée consciemment par le cerveau</button><button type="button" class="quiz-option" data-option-index="1">Une réponse involontaire, rapide et stéréotypée face au même stimulus</button><button type="button" class="quiz-option" data-option-index="2">Une réponse nécessitant un traitement complexe dans le cortex cérébral</button>
+      </div>
+      <div class="quiz-justification" hidden><p>Le réflexe myotatique est une réponse involontaire, rapide et stéréotypée, car elle passe par une synapse directe entre le neurone sensitif et le neurone moteur au niveau de la moelle épinière, sans nécessiter l'intervention du cerveau.</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>3. Où se trouvent le récepteur sensoriel et l&#39;effecteur dans le cas du réflexe myotatique ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">Dans le même muscle extenseur concerné par le réflexe</button><button type="button" class="quiz-option" data-option-index="1">Uniquement dans le cerveau</button><button type="button" class="quiz-option" data-option-index="2">Dans deux muscles différents et éloignés</button>
+      </div>
+      <div class="quiz-justification" hidden><p>Dans le réflexe myotatique, le fuseau neuromusculaire (récepteur) et les fibres musculaires (effecteur) se trouvent tous deux dans le même muscle, bien que leurs fonctions diffèrent.</p>
+</div>
+    </div>
+  </div></div>
+    </div>
+  </div>
+
+  <div class="lesson-nav no-print">
+    <span></span>
+    <button class="btn btn-ghost btn-sm" onclick="window.print()"><span data-lang="ar">🖨️ طباعة / تنزيل PDF</span><span data-lang="fr">🖨️ Imprimer / PDF</span></button>
+    <a href="/lecons/1bac-se/immunite/lignes-defense/"><span data-lang="ar">المناعة: خطوط الدفاع عن الجسم</span><span data-lang="fr">L'immunité : les lignes de défense de l'organisme</span> →</a>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="nova-logo" style="color:#fff"><span>Nova SVT</span></span>
+        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="ar">المرجع الرقمي لعلوم الحياة والأرض بالمغرب — بالعربية والفرنسية.</p>
+        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="fr">La référence numérique des SVT au Maroc — en arabe et en français.</p>
+      </div>
+      <div>
+        <h5 data-i18n="nav_lecons"></h5>
+        <ul>
+          <li><a href="/lecons/">1AC · 2AC · 3AC</a></li>
+          <li><a href="/lecons/">TC · 1BAC · 2BAC</a></li>
+          <li><a href="/devoirs-examens/" data-i18n="nav_exams"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="nav_encyclopedie"></h5>
+        <ul>
+          <li><a href="/encyclopedie/">Glossaire / معجم</a></li>
+          <li><a href="/labo-virtuel/" data-i18n="nav_labo"></a></li>
+          <li><a href="/revision/" data-i18n="nav_revision"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="nav_apropos"></h5>
+        <ul>
+          <li><a href="/a-propos/" data-i18n="nav_apropos"></a></li>
+          <li><a href="/contact/" data-i18n="nav_contact"></a></li>
+          <li><a href="/confidentialite/" data-i18n="footer_privacy"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year>2026</span> Nova SVT — <span data-i18n="footer_rights"></span></span>
+      <span data-lang="ar">صُنع بعناية للتلميذ والأستاذ المغربي 🇲🇦</span>
+      <span data-lang="fr">Conçu avec soin pour l'élève et l'enseignant marocain 🇲🇦</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/vendor/marked.min.js"></script>
+<script src="/assets/vendor/purify.min.js"></script>
+<script type="module" src="/assets/js/site.js"></script>
+<script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
+
+</body>
+</html>

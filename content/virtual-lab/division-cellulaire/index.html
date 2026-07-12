@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>المختبر الافتراضي: الانقسام الخلوي</title>
+<style>
+  :root {
+    --primary: #204F3F;
+    --primary-light: #3C7A63;
+    --secondary: #C17A2E;
+    --accent: #3B6E8F;
+    --rust: #8B4A2B;
+    --ink: #1B241F;
+    --bg: #F9FAF7;
+    --bg-alt: #E3E8D6;
+    --line: #DADDD5;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+    height: 100%;
+  }
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    min-height: 100%;
+  }
+  h1 {
+    font-size: 1.15rem;
+    margin: 0 0 4px;
+    color: var(--primary);
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 0.85rem;
+    color: var(--primary-light);
+    margin: 0 0 14px;
+    text-align: center;
+  }
+  .stage-name {
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: var(--rust);
+    min-height: 1.4em;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .stage-name .fr {
+    display: block;
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+  svg {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    align-items: center;
+  }
+  button {
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: var(--primary);
+    color: #fff;
+    transition: background 0.15s ease;
+  }
+  button:hover:not(:disabled) { background: var(--primary-light); }
+  button:disabled { background: var(--line); color: #8a8f86; cursor: not-allowed; }
+  .reset-btn { background: var(--secondary); }
+  .reset-btn:hover { background: var(--rust); }
+  .progress {
+    display: flex;
+    gap: 6px;
+    margin-top: 14px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--line);
+    transition: background 0.15s ease;
+  }
+  .dot.active { background: var(--rust); }
+  .desc {
+    max-width: 560px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 12px;
+    color: var(--ink);
+  }
+  .stage-group { display: none; }
+  .stage-group.visible { display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>المختبر الافتراضي: مراحل الانقسام الخلوي</h1>
+  <p class="subtitle">Labo virtuel : les étapes de la division cellulaire</p>
+
+  <div class="stage-name">
+    <span id="stageNameAr"></span>
+    <span class="fr" id="stageNameFr"></span>
+  </div>
+
+  <svg viewBox="0 0 500 320" role="img" aria-labelledby="svgTitle svgDesc">
+    <title id="svgTitle">مراحل الانقسام الخلوي</title>
+    <desc id="svgDesc">رسم متحرك تفاعلي يعرض المراحل المتعاقبة للانقسام الخلوي داخل خلية واحدة.</desc>
+    <rect x="0" y="0" width="500" height="320" fill="#F9FAF7" />
+
+    <!-- المرحلة 0: الطور البيني -->
+    <g id="stage0" class="stage-group visible">
+      <circle cx="250" cy="160" r="110" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+      <circle cx="250" cy="160" r="50" fill="#F0F1F0" stroke="#3C7A63" stroke-width="2" />
+      <g stroke="#3B6E8F" stroke-width="3" stroke-linecap="round">
+        <path d="M225 140 q10 15 0 30" fill="none" />
+        <path d="M245 135 q10 20 0 35" fill="none" />
+        <path d="M265 140 q10 15 0 30" fill="none" />
+        <path d="M280 150 q10 15 0 25" fill="none" />
+      </g>
+    </g>
+
+    <!-- المرحلة 1: الطور التمهيدي (تكاثف الصبغيات) -->
+    <g id="stage1" class="stage-group">
+      <circle cx="250" cy="160" r="110" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+      <g stroke="#3B6E8F" stroke-width="6" stroke-linecap="round">
+        <line x1="215" y1="130" x2="235" y2="150" /><line x1="235" y1="150" x2="215" y2="170" />
+        <line x1="285" y1="130" x2="265" y2="150" /><line x1="265" y1="150" x2="285" y2="170" />
+        <line x1="215" y1="150" x2="235" y2="170" /><line x1="235" y1="170" x2="215" y2="190" />
+        <line x1="285" y1="150" x2="265" y2="170" /><line x1="265" y1="170" x2="285" y2="190" />
+      </g>
+    </g>
+
+    <!-- المرحلة 2: الطور الاستوائي (الاصطفاف الاستوائي) -->
+    <g id="stage2" class="stage-group">
+      <ellipse cx="250" cy="160" rx="130" ry="95" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+      <line x1="250" y1="75" x2="250" y2="245" stroke="#C17A2E" stroke-width="2" stroke-dasharray="5 4" />
+      <g stroke="#3B6E8F" stroke-width="6" stroke-linecap="round">
+        <line x1="230" y1="120" x2="250" y2="140" /><line x1="250" y1="140" x2="230" y2="160" />
+        <line x1="270" y1="120" x2="250" y2="140" />
+        <line x1="230" y1="160" x2="250" y2="180" /><line x1="250" y1="180" x2="230" y2="200" />
+        <line x1="270" y1="160" x2="250" y2="180" /><line x1="270" y1="200" x2="250" y2="180" />
+      </g>
+    </g>
+
+    <!-- المرحلة 3: الطور الانفصالي (انفصال الصبغيات) -->
+    <g id="stage3" class="stage-group">
+      <ellipse cx="250" cy="160" rx="150" ry="100" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+      <line x1="250" y1="70" x2="250" y2="250" stroke="#C17A2E" stroke-width="2" stroke-dasharray="5 4" />
+      <g stroke="#3B6E8F" stroke-width="6" stroke-linecap="round">
+        <line x1="150" y1="130" x2="165" y2="150" /><line x1="150" y1="170" x2="165" y2="150" />
+        <line x1="180" y1="120" x2="195" y2="140" /><line x1="180" y1="160" x2="195" y2="140" />
+        <line x1="350" y1="130" x2="335" y2="150" /><line x1="350" y1="170" x2="335" y2="150" />
+        <line x1="320" y1="120" x2="305" y2="140" /><line x1="320" y1="160" x2="305" y2="140" />
+      </g>
+      <text x="150" y="220" text-anchor="middle" font-size="12" fill="#8B4A2B">←</text>
+      <text x="350" y="220" text-anchor="middle" font-size="12" fill="#8B4A2B">→</text>
+    </g>
+
+    <!-- المرحلة 4: الطور النهائي والانعزال الخلوي (خليتان بنتان) -->
+    <g id="stage4" class="stage-group">
+      <circle cx="150" cy="160" r="80" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+      <circle cx="150" cy="160" r="34" fill="#F0F1F0" stroke="#3C7A63" stroke-width="2" />
+      <circle cx="350" cy="160" r="80" fill="#E3E8D6" stroke="#204F3F" stroke-width="3" />
+      <circle cx="350" cy="160" r="34" fill="#F0F1F0" stroke="#3C7A63" stroke-width="2" />
+      <g stroke="#3B6E8F" stroke-width="4" stroke-linecap="round">
+        <path d="M135 145 q8 12 0 24" fill="none" /><path d="M165 145 q8 12 0 24" fill="none" />
+        <path d="M335 145 q8 12 0 24" fill="none" /><path d="M365 145 q8 12 0 24" fill="none" />
+      </g>
+    </g>
+  </svg>
+
+  <div class="progress" id="progressDots"></div>
+
+  <div class="controls">
+    <button id="nextBtn" onclick="nextStage()">المرحلة التالية / Étape suivante</button>
+    <button id="resetBtn" class="reset-btn" onclick="resetStages()">إعادة / Réinitialiser</button>
+  </div>
+
+  <p class="desc" id="stageDesc"></p>
+</div>
+
+<script>
+  var stages = [
+    {
+      ar: "الطور البيني", fr: "Interphase",
+      desc: "الخلية في وضعها الطبيعي، تنمو وتنسخ مادتها الوراثية استعدادا للانقسام؛ الصبغيات غير مكثفة وغير مرئية بوضوح."
+    },
+    {
+      ar: "الطور التمهيدي", fr: "Prophase",
+      desc: "تتكاثف الصبغيات وتصبح مرئية على شكل خيوط قصيرة وسميكة داخل الخلية."
+    },
+    {
+      ar: "الطور الاستوائي", fr: "Métaphase",
+      desc: "تصطف الصبغيات على مستوى المستوى الاستوائي لمغزل الانقسام، استعدادا للانفصال."
+    },
+    {
+      ar: "الطور الانفصالي", fr: "Anaphase",
+      desc: "تنفصل الصبغيات وتتحرك نحو قطبي الخلية المتقابلين، بفعل خيوط المغزل."
+    },
+    {
+      ar: "الطور النهائي والانعزال الخلوي", fr: "Télophase et cytodiérèse",
+      desc: "تتشكل نواتان جديدتان وينقسم هيولى الخلية لتنتج خليتان بنتان متماثلتان."
+    }
+  ];
+
+  var current = 0;
+
+  function renderDots() {
+    var container = document.getElementById("progressDots");
+    container.innerHTML = "";
+    for (var i = 0; i < stages.length; i++) {
+      var dot = document.createElement("div");
+      dot.className = "dot" + (i === current ? " active" : "");
+      container.appendChild(dot);
+    }
+  }
+
+  function renderStage() {
+    for (var i = 0; i < stages.length; i++) {
+      var el = document.getElementById("stage" + i);
+      if (el) el.classList.toggle("visible", i === current);
+    }
+    document.getElementById("stageNameAr").textContent = (current + 1) + ". " + stages[current].ar;
+    document.getElementById("stageNameFr").textContent = stages[current].fr;
+    document.getElementById("stageDesc").textContent = stages[current].desc;
+    document.getElementById("nextBtn").disabled = current === stages.length - 1;
+    renderDots();
+  }
+
+  function nextStage() {
+    if (current < stages.length - 1) {
+      current++;
+      renderStage();
+    }
+  }
+
+  function resetStages() {
+    current = 0;
+    renderStage();
+  }
+
+  renderStage();
+</script>
+</body>
+</html>
