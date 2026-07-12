@@ -2,13 +2,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT } from "./lib/content-loader.js";
-import { collectLessonRoutes, collectEncyclopediaRoutes, collectBlogRoutes, collectResumeRoutes, collectVirtualLabRoutes, STATIC_ROUTES } from "./lib/routes.js";
+import { collectLessonRoutes, collectUnitRoutes, collectEncyclopediaRoutes, collectBlogRoutes, collectResumeRoutes, collectVirtualLabRoutes, STATIC_ROUTES } from "./lib/routes.js";
 
 const BASE_URL = "https://novasvt.ma";
 
 function main() {
   const dynamicUrls = [
     ...collectLessonRoutes(),
+    ...collectUnitRoutes(),
     ...collectEncyclopediaRoutes(),
     ...collectBlogRoutes(),
     ...collectResumeRoutes(),

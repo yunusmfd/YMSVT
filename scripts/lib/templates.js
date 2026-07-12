@@ -15,7 +15,7 @@ function imageMarkup(src, alt, deps, extraAttrs = "") {
   return `<img src="/${src}" alt="${escapeHtml(alt)}" loading="lazy" ${extraAttrs} />`;
 }
 
-export function lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, track }) {
+export function lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, track, siblings = [], uniteUrl }) {
   const { sectionsHtml: sectionsAr, tocHtml: tocAr, quizHtml: quizAr } = renderLessonLangBlock(lecon, "ar", deps);
   const { sectionsHtml: sectionsFr, tocHtml: tocFr, quizHtml: quizFr } = renderLessonLangBlock(lecon, "fr", deps);
 
@@ -25,23 +25,44 @@ export function lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, tra
   const filiereTxtFr = track && FILIERES[track] ? FILIERES[track].fr : "";
   const uniteTxt = unite.titre.ar;
   const uniteTxtFr = unite.titre.fr;
+  const uHref = uniteUrl || `/lecons/${track}/${unite.slug}/`;
 
   const breadcrumb = renderBreadcrumb(
     [
       { ar: "الدروس", fr: "Leçons", href: "/lecons/" },
       { ar: niveauTxt, fr: niveauTxtFr, href: `/lecons/#${lecon.niveau}` },
-      { ar: uniteTxt, fr: uniteTxtFr, href: `/lecons/${track}/${unite.slug}/` },
+      { ar: uniteTxt, fr: uniteTxtFr, href: uHref },
     ],
     lecon.titre.ar,
     lecon.titre.fr
   );
 
   const prevHtml = prevLecon
-    ? `<a href="/lecons/${prevLecon.track}/${prevLecon.uniteSlug}/${prevLecon.slug}/">← <span data-lang="ar">${prevLecon.titre.ar}</span><span data-lang="fr">${prevLecon.titre.fr}</span></a>`
+    ? `<a class="lesson-nav-prev" href="${prevLecon.url}"><span class="lesson-nav-dir">← <span data-lang="ar">السابق</span><span data-lang="fr">Précédent</span></span><span class="lesson-nav-t"><span data-lang="ar">${prevLecon.titre.ar}</span><span data-lang="fr">${prevLecon.titre.fr}</span></span></a>`
     : `<span></span>`;
   const nextHtml = nextLecon
-    ? `<a href="/lecons/${nextLecon.track}/${nextLecon.uniteSlug}/${nextLecon.slug}/"><span data-lang="ar">${nextLecon.titre.ar}</span><span data-lang="fr">${nextLecon.titre.fr}</span> →</a>`
+    ? `<a class="lesson-nav-next" href="${nextLecon.url}"><span class="lesson-nav-dir"><span data-lang="ar">التالي</span><span data-lang="fr">Suivant</span> →</span><span class="lesson-nav-t"><span data-lang="ar">${nextLecon.titre.ar}</span><span data-lang="fr">${nextLecon.titre.fr}</span></span></a>`
     : `<span></span>`;
+
+  // قائمة "دروس هذه الوحدة" — الوحدة تضم عدة دروس (القسم 3.3)؛ الدرس الحالي مميّز
+  const uniteLessonsHtml =
+    siblings.length > 1
+      ? `<aside class="unit-lessons no-print" aria-label="دروس الوحدة">
+      <div class="unit-lessons-head">
+        <span class="eyebrow"><span data-lang="ar">دروس الوحدة</span><span data-lang="fr">Leçons de l'unité</span></span>
+        <a href="${uHref}"><span data-lang="ar">${uniteTxt}</span><span data-lang="fr">${uniteTxtFr}</span> · ${siblings.length}</a>
+      </div>
+      <ol class="unit-lessons-list">
+        ${siblings
+          .map(
+            (s) => `<li class="${s.id === lecon.id ? "is-current" : ""}">
+          <a href="${s.url}"><span class="unit-lesson-num">${s.ordre}</span><span data-lang="ar">${s.titre.ar}</span><span data-lang="fr">${s.titre.fr}</span></a>
+        </li>`
+          )
+          .join("")}
+      </ol>
+    </aside>`
+      : "";
 
   return `
 <div class="progress-bar-top" data-progress-bar></div>
@@ -52,7 +73,7 @@ export function lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, tra
     <div class="item"><strong data-lang="ar">المستوى</strong><strong data-lang="fr">Niveau</strong>${niveauTxt ? `<span data-lang="ar">${niveauTxt}</span><span data-lang="fr">${niveauTxtFr}</span>` : ""}</div>
     ${isSecondaire(lecon.niveau) ? `<div class="item"><strong data-lang="ar">السلك</strong><strong data-lang="fr">Cycle</strong><span data-lang="ar">الثانوي التأهيلي</span><span data-lang="fr">Secondaire qualifiant</span></div>` : ""}
     ${filiereTxt ? `<div class="item"><strong data-lang="ar">المسلك</strong><strong data-lang="fr">Filière</strong><span data-lang="ar">${filiereTxt}</span><span data-lang="fr">${filiereTxtFr}</span></div>` : ""}
-    <div class="item"><strong data-lang="ar">الوحدة</strong><strong data-lang="fr">Unité</strong><span data-lang="ar">${uniteTxt}</span><span data-lang="fr">${uniteTxtFr}</span></div>
+    <div class="item"><strong data-lang="ar">الوحدة</strong><strong data-lang="fr">Unité</strong><a href="${uHref}"><span data-lang="ar">${uniteTxt}</span><span data-lang="fr">${uniteTxtFr}</span></a></div>
     <div class="item"><strong data-lang="ar">الدورة</strong><strong data-lang="fr">Semestre</strong><span data-lang="ar">${lecon.dorra === 1 ? "الأولى" : "الثانية"}</span><span data-lang="fr">${lecon.dorra}</span></div>
     <div class="item"><strong data-lang="ar">المدة</strong><strong data-lang="fr">Durée</strong>${DUREE_LABEL(lecon.duree_estimee_min)}</div>
   </div>
@@ -68,6 +89,7 @@ export function lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, tra
         <div data-lang="ar">${tocAr}</div>
         <div data-lang="fr">${tocFr}</div>
       </div>
+      ${uniteLessonsHtml}
     </aside>
     <div data-lesson-content data-content-src="" data-lecon-id="${lecon.id}">
       <div data-lang="ar">${sectionsAr}${quizAr}</div>
@@ -80,6 +102,46 @@ export function lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, tra
     <button class="btn btn-ghost btn-sm" onclick="window.print()"><span data-lang="ar">🖨️ طباعة / تنزيل PDF</span><span data-lang="fr">🖨️ Imprimer / PDF</span></button>
     ${nextHtml}
   </div>
+</div>`;
+}
+
+// صفحة فهرس الوحدة — تعرض كل دروس الوحدة مرتّبة (القسم 3.3: الوحدة تضم عدة دروس)
+export function uniteDetailBody({ group }) {
+  const { unite, track, lecons } = group;
+  const niveauTxt = niveauLabel(unite.niveau, "ar");
+  const niveauTxtFr = niveauLabel(unite.niveau, "fr");
+  const filiereTxt = FILIERES[track] ? FILIERES[track].ar : "";
+  const filiereTxtFr = FILIERES[track] ? FILIERES[track].fr : "";
+
+  const breadcrumb = renderBreadcrumb(
+    [
+      { ar: "الدروس", fr: "Leçons", href: "/lecons/" },
+      { ar: niveauTxt, fr: niveauTxtFr, href: `/lecons/#${unite.niveau}` },
+    ],
+    unite.titre.ar,
+    unite.titre.fr
+  );
+
+  const cards = lecons
+    .map(
+      (it) => `<a class="unit-lesson-card card-link" href="${it.url}">
+      <span class="unit-lesson-card-num">${it.ordre}</span>
+      <span class="unit-lesson-card-body">
+        <span class="unit-lesson-card-title"><span data-lang="ar">${it.lecon.titre.ar}</span><span data-lang="fr">${it.lecon.titre.fr}</span></span>
+        <span class="unit-lesson-card-meta mono">${it.lecon.duree_estimee_min} <span data-lang="ar">د</span><span data-lang="fr">min</span></span>
+      </span>
+      <span class="unit-lesson-card-arrow" aria-hidden="true">←</span>
+    </a>`
+    )
+    .join("");
+
+  return `
+<div class="container" style="padding-top:var(--sp-6);max-width:840px">
+  ${breadcrumb}
+  <span class="chip">${filiereTxt ? `<span data-lang="ar">${filiereTxt}</span><span data-lang="fr">${filiereTxtFr}</span>` : `<span data-lang="ar">${niveauTxt}</span><span data-lang="fr">${niveauTxtFr}</span>`} · <span data-lang="ar">الدورة ${unite.dorra || 1}</span><span data-lang="fr">Semestre ${unite.dorra || 1}</span></span>
+  <h1 style="margin-top:var(--sp-3)"><span data-lang="ar">${unite.titre.ar}</span><span data-lang="fr">${unite.titre.fr}</span></h1>
+  <p class="unit-count mono"><span aria-hidden="true">📚</span> ${lecons.length} <span data-lang="ar">دروس في هذه الوحدة</span><span data-lang="fr">leçons dans cette unité</span></p>
+  <div class="unit-lessons-cards">${cards}</div>
 </div>`;
 }
 

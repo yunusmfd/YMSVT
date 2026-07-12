@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="tHs dHs">
+  <title id="tHs">الوراثة المرتبطة بالجنس</title>
+  <desc id="dHs">مخطّط انتقال مورثة محمولة على الصبغي X: أم ناقلة سليمة وأب سليم، وينتج أبناء ذكور نصفهم مصاب لأنهم يرثون X الوحيد من الأم.</desc>
+  <rect width="800" height="400" fill="#F9FAF7"/>
+
+  <!-- الآباء -->
+  <rect x="180" y="50" width="44" height="44" rx="4" fill="#3B6E8F"/>
+  <text x="202" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="14" fill="#fff">XY</text>
+  <text x="202" y="118" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">أب سليم</text>
+  <text x="202" y="118" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Père sain</text>
+
+  <circle cx="600" cy="72" r="24" fill="#C17A2E"/>
+  <text x="600" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#fff">XᵐX</text>
+  <text x="600" y="118" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">أم ناقلة (سليمة)</text>
+  <text x="600" y="118" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Mère conductrice</text>
+
+  <line x1="226" y1="72" x2="576" y2="72" stroke="#8B4A2B" stroke-width="2"/>
+  <line x1="401" y1="72" x2="401" y2="150" stroke="#8B4A2B" stroke-width="2"/>
+  <line x1="150" y1="150" x2="650" y2="150" stroke="#8B4A2B" stroke-width="2"/>
+
+  <!-- الأبناء -->
+  <g font-family="IBM Plex Mono, monospace" font-size="12" text-anchor="middle">
+    <line x1="150" y1="150" x2="150" y2="175" stroke="#8B4A2B" stroke-width="2"/>
+    <circle cx="150" cy="200" r="20" fill="#204F3F"/><text x="150" y="205" fill="#fff">XX</text>
+    <line x1="350" y1="150" x2="350" y2="175" stroke="#8B4A2B" stroke-width="2"/>
+    <circle cx="350" cy="200" r="20" fill="#C17A2E"/><text x="350" y="205" fill="#fff">XᵐX</text>
+    <line x1="450" y1="150" x2="450" y2="175" stroke="#8B4A2B" stroke-width="2"/>
+    <rect x="430" y="180" width="40" height="40" rx="4" fill="#3B6E8F"/><text x="450" y="205" fill="#fff">XY</text>
+    <line x1="650" y1="150" x2="650" y2="175" stroke="#8B4A2B" stroke-width="2"/>
+    <rect x="630" y="180" width="40" height="40" rx="4" fill="#8B4A2B"/><text x="650" y="205" fill="#fff">XᵐY</text>
+  </g>
+
+  <text x="250" y="255" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#204F3F" data-lang="ar">بنات: سليمات (بعضهنّ ناقلات)</text>
+  <text x="250" y="255" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#204F3F" data-lang="fr">Filles : saines (dont conductrices)</text>
+  <text x="550" y="255" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#8B4A2B" data-lang="ar">أبناء: نصفهم مصاب (XᵐY)</text>
+  <text x="550" y="255" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#8B4A2B" data-lang="fr">Garçons : la moitié atteinte (XᵐY)</text>
+
+  <rect x="180" y="300" width="440" height="60" rx="10" fill="#E3E8D6"/>
+  <text x="400" y="326" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">Xᵐ = أليل متنحٍّ محمول على الصبغي X</text>
+  <text x="400" y="326" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Xᵐ = allèle récessif porté par le chromosome X</text>
+  <text x="400" y="348" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#1B241F" data-lang="ar">الذكر يُصاب بأليل واحد لأنه يملك X واحدا فقط</text>
+  <text x="400" y="348" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#1B241F" data-lang="fr">Le garçon est atteint avec un seul allèle (un seul X)</text>
+</svg>

@@ -1,0 +1,122 @@
+{
+  "id": "svt-2bac-svt-immunite-vaccination",
+  "slug": "vaccination-serotherapie",
+  "cycle": "thanawi-taahili",
+  "niveau": "2bac",
+  "filieres": ["2bac-svt"],
+  "unite_id": "unite-immunite-2bac",
+  "dorra": 2,
+  "ordre_dans_unite": 3,
+  "titre": { "ar": "دعم المناعة: التلقيح والاستمصال", "fr": "Le soutien de l'immunité : vaccination et sérothérapie" },
+  "duree_estimee_min": 25,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": ["تفسير مبدأ التلقيح والاستمصال", "التمييز بين المناعة النشيطة والسلبية"],
+    "fr": ["Expliquer le principe de la vaccination et de la sérothérapie", "Distinguer immunité active et passive"]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "التلقيح: مناعة نشيطة وقائية", "fr": "La vaccination : une immunité active préventive" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "التلقيح إجراء وقائي يقوم على حقن {{terme:vaccin|لقاح}} يحتوي على مولّد ضدّ ضعيف أو ميّت لا يسبّب المرض، لكنه يحفّز الجهاز المناعي على إنتاج {{terme:anticorps|أضداد}} و**خلايا ذاكرة**. عند التعرّض الحقيقي لاحقا للعامل الممرض تكون الاستجابة سريعة وقوية بفضل هذه الذاكرة.",
+            "fr": "La vaccination est un acte préventif consistant à injecter un {{terme:vaccin|vaccin}} contenant un antigène atténué ou inactivé qui ne provoque pas la maladie, mais stimule le système immunitaire à produire des {{terme:anticorps|anticorps}} et des **cellules mémoire**. Lors d'un contact réel ultérieur avec l'agent pathogène, la réponse est rapide et intense grâce à cette mémoire."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "maaloumaMouhima",
+          "titre": { "ar": "معلومة مهمة", "fr": "Info clé" },
+          "texte": {
+            "ar": "بفضل التلقيح واسع النطاق، قُضي على بعض الأمراض عالميا (كالجدري)، وهو ما يُبرز الدور الوقائي الحاسم لهذه الاستراتيجية على مستوى المجتمع.",
+            "fr": "Grâce à la vaccination à grande échelle, certaines maladies ont été éradiquées à l'échelle mondiale (comme la variole), soulignant le rôle préventif décisif de cette stratégie au niveau collectif."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "الاستمصال: مناعة سلبية إسعافية", "fr": "La sérothérapie : une immunité passive d'urgence" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "الاستمصال علاج إسعافي يقوم على حقن أضداد جاهزة مأخوذة من مصدر خارجي، فتتدخّل فورا لتحييد العامل الممرض أو سمّه. لكن هذه المناعة **سلبية ومؤقّتة**، لأن الجسم لم يُنتج الأضداد بنفسه ولم يكوّن ذاكرة مناعية.",
+            "fr": "La sérothérapie est un traitement d'urgence consistant à injecter des anticorps déjà prêts, prélevés d'une source externe, qui agissent immédiatement pour neutraliser l'agent pathogène ou sa toxine. Mais cette immunité est **passive et temporaire**, car le corps n'a pas produit lui-même les anticorps ni formé de mémoire immunitaire."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/vaccination-serotherapie.svg",
+          "legende": { "ar": "مقارنة بين التلقيح (وقاية) والاستمصال (علاج إسعافي)", "fr": "Comparaison vaccination (prévention) et sérothérapie (urgence)" }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "التلقيح مقابل الاستمصال", "fr": "Vaccination / Sérothérapie" },
+          "entetes": { "ar": ["المعيار", "التلقيح", "الاستمصال"], "fr": ["Critère", "Vaccination", "Sérothérapie"] },
+          "lignes": [
+            { "ar": ["ما يُحقن", "مولّد ضدّ ضعيف", "أضداد جاهزة"], "fr": ["Injecté", "Antigène atténué", "Anticorps prêts"] },
+            { "ar": ["نوع المناعة", "نشيطة", "سلبية"], "fr": ["Type d'immunité", "Active", "Passive"] },
+            { "ar": ["السرعة والمدة", "بطيئة ودائمة", "سريعة ومؤقّتة"], "fr": ["Rapidité / durée", "Lente, durable", "Rapide, temporaire"] },
+            { "ar": ["الهدف", "الوقاية", "العلاج الإسعافي"], "fr": ["But", "Prévention", "Urgence"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "يدعم الإنسان مناعته بطريقتين متكاملتين: التلقيح الذي يمنح مناعة نشيطة دائمة للوقاية، والاستمصال الذي يمنح مناعة سلبية سريعة ومؤقّتة للعلاج الإسعافي.",
+            "fr": "L'être humain soutient son immunité de deux façons complémentaires : la vaccination qui confère une immunité active durable pour prévenir, et la sérothérapie qui apporte une immunité passive rapide et temporaire pour traiter en urgence."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما نوع المناعة التي يمنحها التلقيح؟", "fr": "Quel type d'immunité confère la vaccination ?" },
+        "options": [
+          { "ar": "مناعة سلبية مؤقّتة", "fr": "Immunité passive temporaire" },
+          { "ar": "مناعة نشيطة دائمة", "fr": "Immunité active durable" },
+          { "ar": "لا يمنح أي مناعة", "fr": "Aucune immunité" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "التلقيح يحفّز الجسم على إنتاج أضدائه وخلايا ذاكرة، فيمنح مناعة نشيطة ودائمة.",
+          "fr": "La vaccination stimule le corps à produire ses anticorps et des cellules mémoire, conférant une immunité active et durable."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "متى نلجأ للاستمصال بدل التلقيح؟", "fr": "Quand recourt-on à la sérothérapie plutôt qu'à la vaccination ?" },
+        "options": [
+          { "ar": "للوقاية طويلة الأمد", "fr": "Pour une prévention à long terme" },
+          { "ar": "عند الحاجة لتدخّل سريع بعد التعرّض للخطر", "fr": "Pour une action rapide après exposition" },
+          { "ar": "لتكوين ذاكرة مناعية", "fr": "Pour créer une mémoire immunitaire" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الاستمصال يمنح أضدادا جاهزة تتدخّل فورا، لذا يُستعمل كعلاج إسعافي عند الحاجة لمفعول سريع.",
+          "fr": "La sérothérapie fournit des anticorps prêts agissant immédiatement ; elle sert donc de traitement d'urgence quand une action rapide est nécessaire."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": null },
+  "tags": ["مناعة", "تلقيح", "vaccination", "immunité"],
+  "date_maj": "2026-07-12",
+  "statut": "publie"
+}

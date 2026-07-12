@@ -2,6 +2,10 @@
 // (مصدر حقيقة واحد لبنية الروابط، يطابق القسم 3.5)
 import { listLecons, listUnites, listAllEncyclopedia, listBlog, listRevision, listVirtualLab } from "./content-loader.js";
 
+function tracksForLecon(lecon) {
+  return lecon.filieres && lecon.filieres.length ? lecon.filieres : [lecon.niveau];
+}
+
 export function collectLessonRoutes() {
   const lecons = listLecons();
   const unites = listUnites();
@@ -10,8 +14,7 @@ export function collectLessonRoutes() {
   for (const lecon of lecons) {
     const unite = uniteById[lecon.unite_id];
     if (!unite) continue;
-    const tracks = lecon.filieres && lecon.filieres.length ? lecon.filieres : [lecon.niveau];
-    for (const track of tracks) {
+    for (const track of tracksForLecon(lecon)) {
       routes.push({
         type: "lecon",
         title: lecon.titre,
@@ -24,6 +27,59 @@ export function collectLessonRoutes() {
     }
   }
   return routes;
+}
+
+// يجمّع الدروس في وحدات لكل (وحدة × مسلك)، مرتّبة داخليا حسب ordre_dans_unite (القسم 3.3، 6.1) —
+// مصدر واحد يستهلكه: صفحة الوحدة، قائمة "دروس الوحدة" داخل الدرس، حساب السابق/التالي داخل الوحدة، والتجميع في القائمة.
+export function collectUnitGroups() {
+  const lecons = listLecons();
+  const unites = listUnites();
+  const uniteById = Object.fromEntries(unites.map((u) => [u.id, u]));
+  const groups = new Map(); // key: `${track}::${uniteId}`
+
+  for (const lecon of lecons) {
+    const unite = uniteById[lecon.unite_id];
+    if (!unite) continue;
+    for (const track of tracksForLecon(lecon)) {
+      const key = `${track}::${unite.id}`;
+      if (!groups.has(key)) {
+        groups.set(key, {
+          track,
+          unite,
+          url: `/lecons/${track}/${unite.slug}/`,
+          lecons: [],
+        });
+      }
+      groups.get(key).lecons.push(lecon);
+    }
+  }
+
+  for (const g of groups.values()) {
+    g.lecons.sort((a, b) => (a.ordre_dans_unite || 0) - (b.ordre_dans_unite || 0));
+    g.lecons = g.lecons.map((lecon, i) => ({
+      lecon,
+      ordre: i + 1,
+      url: `/lecons/${g.track}/${g.unite.slug}/${lecon.slug || lecon.id}/`,
+      prev: null,
+      next: null,
+    }));
+    // سابق/تالي داخل نفس الوحدة (سلسلة خطّية طبيعية عبر ترتيب الوحدة)
+    g.lecons.forEach((item, i) => {
+      item.prev = i > 0 ? g.lecons[i - 1] : null;
+      item.next = i < g.lecons.length - 1 ? g.lecons[i + 1] : null;
+    });
+  }
+  return [...groups.values()];
+}
+
+export function collectUnitRoutes() {
+  return collectUnitGroups().map((g) => ({
+    type: "unite",
+    title: g.unite.titre,
+    url: g.url,
+    tags: [],
+    group: g,
+  }));
 }
 
 export function collectEncyclopediaRoutes() {

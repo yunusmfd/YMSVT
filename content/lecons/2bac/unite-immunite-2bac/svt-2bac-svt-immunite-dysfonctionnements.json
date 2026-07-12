@@ -1,0 +1,121 @@
+{
+  "id": "svt-2bac-svt-immunite-dysfonctionnements",
+  "slug": "dysfonctionnements-immunitaires",
+  "cycle": "thanawi-taahili",
+  "niveau": "2bac",
+  "filieres": ["2bac-svt"],
+  "unite_id": "unite-immunite-2bac",
+  "dorra": 2,
+  "ordre_dans_unite": 2,
+  "titre": { "ar": "اضطرابات الجهاز المناعي", "fr": "Les dysfonctionnements immunitaires" },
+  "duree_estimee_min": 25,
+  "domaine_specialite": "physiologie",
+  "objectifs": {
+    "ar": ["تمييز الأنواع الرئيسية لاختلالات المناعة", "ربط داء السيدا بنقص المناعة"],
+    "fr": ["Distinguer les principaux dysfonctionnements immunitaires", "Relier le SIDA à l'immunodéficience"]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "حين يختلّ الجهاز المناعي", "fr": "Quand le système immunitaire se dérègle" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "الجهاز المناعي فعّال في حماية الجسم، لكنه قد يختلّ في ثلاث اتجاهات: إمّا بالإفراط في الاستجابة تجاه مواد غير ضارّة (فرط الحساسية)، أو بمهاجمة مكوّنات الجسم نفسه (المناعة الذاتية)، أو بالضعف عن أداء دوره الدفاعي (نقص المناعة).",
+            "fr": "Le système immunitaire protège efficacement l'organisme, mais il peut se dérégler dans trois directions : réagir de façon excessive à des substances inoffensives (allergie), attaquer les propres constituants du corps (auto-immunité), ou devenir incapable d'assurer sa défense (immunodéficience)."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/dysfonctionnements-immunitaires.svg",
+          "legende": { "ar": "الفئات الثلاث لاضطرابات المناعة", "fr": "Les trois catégories de dysfonctionnements immunitaires" }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "نقص المناعة: مثال داء السيدا", "fr": "L'immunodéficience : l'exemple du SIDA" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "داء فقدان المناعة المكتسب (السيدا) ناتج عن الفيروس VIH الذي يهاجم أساسا {{terme:lymphocyte|اللمفاويات}} من نوع LT4، وهي خلايا محورية في تنسيق الاستجابة المناعية. تناقص هذه الخلايا يُضعف الدفاع تدريجيا حتى يصبح الجسم عاجزا عن مقاومة عدوى انتهازية بسيطة.",
+            "fr": "Le SIDA (syndrome d'immunodéficience acquise) est dû au virus VIH qui attaque principalement les {{terme:lymphocyte|lymphocytes}} LT4, cellules pivots de la coordination de la réponse immunitaire. La chute de ces cellules affaiblit progressivement la défense jusqu'à rendre l'organisme incapable de résister à de simples infections opportunistes."
+          }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "مقارنة بين ثلاثة اختلالات مناعية", "fr": "Comparaison de trois dysfonctionnements" },
+          "entetes": { "ar": ["الاختلال", "الآلية", "مثال"], "fr": ["Trouble", "Mécanisme", "Exemple"] },
+          "lignes": [
+            { "ar": ["فرط الحساسية", "استجابة مفرطة", "الحساسية التنفسية"], "fr": ["Allergie", "Réponse excessive", "Allergie respiratoire"] },
+            { "ar": ["المناعة الذاتية", "مهاجمة الذات", "التصلّب المتعدّد"], "fr": ["Auto-immunité", "Attaque du soi", "Sclérose en plaques"] },
+            { "ar": ["نقص المناعة", "ضعف الدفاع", "السيدا"], "fr": ["Immunodéficience", "Défense affaiblie", "SIDA"] }
+          ]
+        },
+        {
+          "type": "encadre",
+          "variante": "istintaj",
+          "titre": { "ar": "استنتاج", "fr": "Déduction" },
+          "texte": {
+            "ar": "سلامة الجهاز المناعي تتطلّب توازنا دقيقا: لا إفراط يؤذي الجسم، ولا تفريط يتركه بلا حماية.",
+            "fr": "L'intégrité du système immunitaire exige un équilibre fin : ni excès qui nuit au corps, ni défaut qui le laisse sans protection."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "قد يختلّ الجهاز المناعي بالإفراط (فرط الحساسية)، أو بالخطأ في التمييز (المناعة الذاتية)، أو بالضعف (نقص المناعة كما في السيدا الذي يستهدف اللمفاويات LT4).",
+            "fr": "Le système immunitaire peut se dérégler par excès (allergie), par erreur de reconnaissance (auto-immunité) ou par déficit (immunodéficience, comme le SIDA qui cible les lymphocytes LT4)."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما الخلايا التي يستهدفها فيروس VIH أساسا؟", "fr": "Quelles cellules le virus VIH cible-t-il principalement ?" },
+        "options": [
+          { "ar": "الكريات الحمراء", "fr": "Les globules rouges" },
+          { "ar": "اللمفاويات LT4", "fr": "Les lymphocytes LT4" },
+          { "ar": "الخلايا العصبية", "fr": "Les neurones" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "يهاجم VIH اللمفاويات LT4 المنسّقة للاستجابة المناعية، ما يؤدي تدريجيا لانهيار الدفاع المناعي.",
+          "fr": "Le VIH attaque les lymphocytes LT4 coordinateurs de la réponse immunitaire, provoquant l'effondrement progressif de la défense."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "أي اختلال يهاجم فيه الجهاز المناعي خلايا الجسم نفسه؟", "fr": "Dans quel trouble le système immunitaire attaque-t-il les cellules du corps ?" },
+        "options": [
+          { "ar": "فرط الحساسية", "fr": "L'allergie" },
+          { "ar": "المناعة الذاتية", "fr": "L'auto-immunité" },
+          { "ar": "نقص المناعة", "fr": "L'immunodéficience" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "في المناعة الذاتية يفقد الجهاز المناعي القدرة على تمييز الذات، فيهاجم خلايا الجسم السليمة.",
+          "fr": "Dans l'auto-immunité, le système perd la reconnaissance du soi et attaque les cellules saines de l'organisme."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": null },
+  "tags": ["مناعة", "السيدا", "immunité", "SIDA"],
+  "date_maj": "2026-07-12",
+  "statut": "publie"
+}

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="tMo dMo">
+  <title id="tMo">تزاوج أحادي الهجونة</title>
+  <desc id="dMo">مخطّط تزاوج بين سلالتين نقيّتين يعطي جيلا أول متماثلا، ثم جدول تقاطع الأمشاج في الجيل الثاني يبيّن نسبة 3:1.</desc>
+  <rect width="800" height="420" fill="#F9FAF7"/>
+
+  <!-- الآباء -->
+  <text x="400" y="34" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الجيل الأول: تزاوج سلالتين نقيّتين</text>
+  <text x="400" y="34" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Génération P : croisement de deux lignées pures</text>
+
+  <circle cx="230" cy="80" r="24" fill="#204F3F"/><text x="230" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" fill="#fff">AA</text>
+  <text x="400" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" fill="#8B4A2B">×</text>
+  <circle cx="570" cy="80" r="24" fill="#D99A56"/><text x="570" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" fill="#1B241F">aa</text>
+
+  <path d="M400 108 L400 140" stroke="#8B4A2B" stroke-width="2" marker-end="url(#arMo)"/>
+  <defs><marker id="arMo" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#8B4A2B"/></marker></defs>
+  <text x="400" y="165" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#204F3F" data-lang="ar">الجيل الأول F1 كله Aa (سيادة A)</text>
+  <text x="400" y="165" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#204F3F" data-lang="fr">F1 : tous Aa (A dominant)</text>
+
+  <!-- جدول التقاطع F2 -->
+  <text x="400" y="205" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">تقاطع أمشاج F1 × F1</text>
+  <text x="400" y="205" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Échiquier de croisement F1 × F1</text>
+
+  <g font-family="IBM Plex Mono, monospace" font-size="18">
+    <text x="300" y="235" text-anchor="middle" fill="#204F3F">A</text>
+    <text x="360" y="235" text-anchor="middle" fill="#204F3F">a</text>
+    <text x="228" y="290" text-anchor="middle" fill="#204F3F">A</text>
+    <text x="228" y="350" text-anchor="middle" fill="#204F3F">a</text>
+  </g>
+  <g stroke="#DADDD5" stroke-width="1.5">
+    <rect x="255" y="245" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="345" y="245" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="255" y="300" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="345" y="300" width="90" height="55" fill="#D99A56" fill-opacity=".35"/>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="18" fill="#1B241F" text-anchor="middle">
+    <text x="300" y="278">AA</text><text x="390" y="278">Aa</text>
+    <text x="300" y="333">Aa</text><text x="390" y="333">aa</text>
+  </g>
+
+  <text x="590" y="300" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#204F3F" data-lang="ar">3 يُظهرون صفة A</text>
+  <text x="590" y="300" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#204F3F" data-lang="fr">3 expriment A</text>
+  <text x="590" y="330" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#8B4A2B" data-lang="ar">1 يُظهر صفة a</text>
+  <text x="590" y="330" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#8B4A2B" data-lang="fr">1 exprime a</text>
+  <text x="400" y="398" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="17" fill="#C17A2E">3 : 1</text>
+</svg>

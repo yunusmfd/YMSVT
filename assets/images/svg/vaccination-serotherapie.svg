@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" role="img" aria-labelledby="tVs dVs">
+  <title id="tVs">التلقيح مقابل الاستمصال</title>
+  <desc id="dVs">مقارنة بين التلقيح (حقن مولّد ضدّ ضعيف، مناعة نشيطة بطيئة ودائمة) والاستمصال (حقن أضداد جاهزة، مناعة سلبية سريعة ومؤقّتة).</desc>
+  <rect width="800" height="360" fill="#F9FAF7"/>
+
+  <!-- التلقيح -->
+  <rect x="30" y="40" width="350" height="290" rx="14" fill="#E3E8D6" stroke="#204F3F" stroke-width="2"/>
+  <text x="205" y="76" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="19" fill="#204F3F" data-lang="ar">التلقيح</text>
+  <text x="205" y="76" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#204F3F" data-lang="fr">Vaccination</text>
+
+  <circle cx="120" cy="130" r="26" fill="#3C7A63"/><path d="M110 130 h20 M120 120 v20" stroke="#fff" stroke-width="3"/>
+  <text x="205" y="126" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">حقن مولّد ضدّ</text>
+  <text x="205" y="145" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">ضعيف/ميّت</text>
+  <text x="205" y="126" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Injection d'antigène</text>
+  <text x="205" y="144" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">atténué/inactivé</text>
+
+  <g font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#204F3F">
+    <text x="360" y="200" text-anchor="end" data-lang="ar">✔ مناعة نشيطة (الجسم ينتج أضداده)</text>
+    <text x="360" y="228" text-anchor="end" data-lang="ar">✔ بطيئة الظهور</text>
+    <text x="360" y="256" text-anchor="end" data-lang="ar">✔ دائمة (ذاكرة مناعية)</text>
+    <text x="360" y="284" text-anchor="end" data-lang="ar">→ الهدف: الوقاية</text>
+  </g>
+  <g font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#204F3F">
+    <text x="50" y="200" data-lang="fr">✔ Immunité active (le corps produit ses anticorps)</text>
+    <text x="50" y="228" data-lang="fr">✔ Lente à apparaître</text>
+    <text x="50" y="256" data-lang="fr">✔ Durable (mémoire immunitaire)</text>
+    <text x="50" y="284" data-lang="fr">→ But : prévention</text>
+  </g>
+
+  <!-- الاستمصال -->
+  <rect x="420" y="40" width="350" height="290" rx="14" fill="#E3E8D6" stroke="#C17A2E" stroke-width="2"/>
+  <text x="595" y="76" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="19" fill="#C17A2E" data-lang="ar">الاستمصال</text>
+  <text x="595" y="76" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="#C17A2E" data-lang="fr">Sérothérapie</text>
+
+  <circle cx="510" cy="130" r="26" fill="#C17A2E"/><path d="M498 122 q12 16 24 0 M498 134 q12 16 24 0" stroke="#fff" stroke-width="2.5" fill="none"/>
+  <text x="595" y="126" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">حقن أضداد</text>
+  <text x="595" y="145" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#1B241F" data-lang="ar">جاهزة</text>
+  <text x="595" y="126" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">Injection d'anticorps</text>
+  <text x="595" y="144" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#1B241F" data-lang="fr">déjà prêts</text>
+
+  <g font-family="IBM Plex Sans Arabic, sans-serif" font-size="14" fill="#C17A2E">
+    <text x="750" y="200" text-anchor="end" data-lang="ar">✔ مناعة سلبية (أضداد من مصدر خارجي)</text>
+    <text x="750" y="228" text-anchor="end" data-lang="ar">✔ سريعة المفعول</text>
+    <text x="750" y="256" text-anchor="end" data-lang="ar">✔ مؤقّتة (بلا ذاكرة)</text>
+    <text x="750" y="284" text-anchor="end" data-lang="ar">→ الهدف: العلاج الإسعافي</text>
+  </g>
+  <g font-family="IBM Plex Sans, sans-serif" font-size="13" fill="#C17A2E">
+    <text x="440" y="200" data-lang="fr">✔ Immunité passive (anticorps externes)</text>
+    <text x="440" y="228" data-lang="fr">✔ Action rapide</text>
+    <text x="440" y="256" data-lang="fr">✔ Temporaire (sans mémoire)</text>
+    <text x="440" y="284" data-lang="fr">→ But : traitement d'urgence</text>
+  </g>
+</svg>

@@ -1,0 +1,120 @@
+{
+  "id": "svt-2bac-svt-genetique-lois-mendel",
+  "slug": "lois-mendel",
+  "cycle": "thanawi-taahili",
+  "niveau": "2bac",
+  "filieres": ["2bac-svt", "2bac-pc"],
+  "unite_id": "unite-genetique-2bac",
+  "dorra": 1,
+  "ordre_dans_unite": 2,
+  "titre": { "ar": "القوانين الإحصائية للوراثة", "fr": "Les lois statistiques de l'hérédité" },
+  "duree_estimee_min": 30,
+  "domaine_specialite": "genetique",
+  "objectifs": {
+    "ar": ["تفسير نتائج تزاوج أحادي الهجونة", "تطبيق قانوني التجانس والتفصّل"],
+    "fr": ["Interpréter un croisement monohybride", "Appliquer les lois d'uniformité et de disjonction"]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "مصطلحات أساسية", "fr": "Notions de base" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "درس العالم النمساوي غريغور مندل انتقال الصفات عبر تزاوجات منظّمة على نبات البازلاء. تحمل كل صفة **أليلين**: أحدهما سائد يُرمز له بحرف كبير (A) والآخر متنحّي بحرف صغير (a). يكون الفرد متماثل الاقتران إذا حمل أليلين متطابقين (AA أو aa)، ومختلطا إذا حمل أليلين مختلفين (Aa).",
+            "fr": "Le savant autrichien Gregor Mendel a étudié la transmission des caractères par des croisements méthodiques sur le pois. Chaque caractère est porté par deux **allèles** : un dominant noté en majuscule (A) et un récessif en minuscule (a). L'individu est homozygote s'il porte deux allèles identiques (AA ou aa), et hétérozygote s'ils diffèrent (Aa)."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "molahada",
+          "titre": { "ar": "ملاحظة", "fr": "Remarque" },
+          "texte": {
+            "ar": "نميّز بين **النمط الظاهري** (Phénotype: الصفة المرئية) و**النمط الوراثي** (Génotype: تركيبة الأليلات). الفردان AA وAa لهما نفس النمط الظاهري لكن نمطان وراثيان مختلفان.",
+            "fr": "On distingue le **phénotype** (caractère visible) du **génotype** (combinaison d'allèles). AA et Aa ont le même phénotype mais des génotypes différents."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "التزاوج أحادي الهجونة", "fr": "Le croisement monohybride" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "عند تزاوج سلالتين نقيّتين تختلفان في صفة واحدة (AA × aa)، يكون الجيل الأول F1 كله مختلط الاقتران Aa ومتماثل الظاهر (**القانون الأول: قانون تجانس الجيل الأول**). وعند تزاوج أفراد F1 فيما بينها، يظهر في الجيل الثاني F2 نمطان ظاهريان بنسبة **3 سائد : 1 متنحٍّ** (**القانون الثاني: قانون تفصّل الأليلات**).",
+            "fr": "En croisant deux lignées pures différant par un seul caractère (AA × aa), la F1 est entièrement hétérozygote Aa et uniforme (**1re loi : uniformité de la F1**). En croisant les individus F1 entre eux, la F2 présente deux phénotypes dans le rapport **3 dominant : 1 récessif** (**2e loi : disjonction des allèles**)."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/monohybridisme-croisement.svg",
+          "legende": { "ar": "تزاوج أحادي الهجونة: تجانس F1 ثم نسبة 3:1 في F2", "fr": "Croisement monohybride : uniformité de F1 puis rapport 3:1 en F2" }
+        },
+        {
+          "type": "encadre",
+          "variante": "qaida",
+          "titre": { "ar": "قاعدة", "fr": "Règle" },
+          "texte": {
+            "ar": "أثناء تشكّل الأمشاج ينفصل الأليلان لنفس المورثة، فلا يحمل كل مشيج إلا **أليلا واحدا**. هذا الانفصال يفسّره {{terme:crossing-over|السلوك الصبغي}} أثناء الانقسام المنصف.",
+            "fr": "Lors de la formation des gamètes, les deux allèles d'un gène se séparent : chaque gamète ne porte qu'**un seul allèle**. Cette séparation s'explique par le comportement des chromosomes durant la méiose."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "تخضع وراثة الصفات لقوانين إحصائية: تجانس الجيل الأول ثم تفصّل الأليلات في الجيل الثاني بنسبة 3:1، ويرتبط ذلك بانفصال الأليلات أثناء الانقسام المنصف.",
+            "fr": "L'hérédité des caractères obéit à des lois statistiques : uniformité de la F1 puis disjonction en F2 avec un rapport 3:1, en lien avec la séparation des allèles durant la méiose."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "ما نمط الجيل الأول الناتج عن تزاوج AA × aa؟", "fr": "Quel est le génotype de la F1 issue de AA × aa ?" },
+        "options": [
+          { "ar": "كله Aa", "fr": "Tous Aa" },
+          { "ar": "نصف AA ونصف aa", "fr": "Moitié AA, moitié aa" },
+          { "ar": "كله AA", "fr": "Tous AA" }
+        ],
+        "reponse_correcte": 0,
+        "justification": {
+          "ar": "كل فرد من F1 يأخذ أليلا A من الأب وأليلا a من الأم، فيكون مختلط الاقتران Aa (قانون التجانس).",
+          "fr": "Chaque individu F1 reçoit A d'un parent et a de l'autre : il est hétérozygote Aa (loi d'uniformité)."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "ما نسبة الأنماط الظاهرية في الجيل الثاني F2؟", "fr": "Quel est le rapport phénotypique en F2 ?" },
+        "options": [
+          { "ar": "1 : 1", "fr": "1 : 1" },
+          { "ar": "3 : 1", "fr": "3 : 1" },
+          { "ar": "9 : 3 : 3 : 1", "fr": "9 : 3 : 3 : 1" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "في التزاوج أحادي الهجونة يعطي F2 نسبة 3 سائد : 1 متنحٍّ نتيجة تفصّل الأليلات.",
+          "fr": "En monohybridisme, la F2 donne 3 dominant : 1 récessif, du fait de la disjonction des allèles."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": null },
+  "tags": ["وراثة", "مندل", "mendel", "génétique"],
+  "date_maj": "2026-07-12",
+  "statut": "publie"
+}

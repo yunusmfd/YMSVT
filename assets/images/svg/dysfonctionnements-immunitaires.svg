@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" role="img" aria-labelledby="tDy dDy">
+  <title id="tDy">اضطرابات الجهاز المناعي</title>
+  <desc id="dDy">ثلاث فئات لاختلالات المناعة: فرط الحساسية، المناعة الذاتية، ونقص المناعة، معروضة كثلاث بطاقات.</desc>
+  <rect width="800" height="340" fill="#F9FAF7"/>
+
+  <!-- بطاقة 1: فرط الحساسية -->
+  <rect x="30" y="60" width="230" height="220" rx="14" fill="#E3E8D6" stroke="#C17A2E" stroke-width="2"/>
+  <circle cx="145" cy="120" r="30" fill="#C17A2E"/><text x="145" y="128" text-anchor="middle" font-size="26" fill="#fff">!</text>
+  <text x="145" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">فرط الحساسية</text>
+  <text x="145" y="185" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Allergie</text>
+  <text x="145" y="222" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#4D554E" data-lang="ar">استجابة مفرطة تجاه</text>
+  <text x="145" y="242" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#4D554E" data-lang="ar">مواد غير ضارّة</text>
+  <text x="145" y="222" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#4D554E" data-lang="fr">Réaction excessive à des</text>
+  <text x="145" y="240" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#4D554E" data-lang="fr">substances inoffensives</text>
+
+  <!-- بطاقة 2: المناعة الذاتية -->
+  <rect x="285" y="60" width="230" height="220" rx="14" fill="#E3E8D6" stroke="#B4483F" stroke-width="2"/>
+  <circle cx="400" cy="120" r="30" fill="#B4483F"/><path d="M388 120 h24 M400 108 v24" stroke="#fff" stroke-width="3"/>
+  <text x="400" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">المناعة الذاتية</text>
+  <text x="400" y="185" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Auto-immunité</text>
+  <text x="400" y="222" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#4D554E" data-lang="ar">مهاجمة الجسم</text>
+  <text x="400" y="242" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#4D554E" data-lang="ar">لخلاياه الذاتية</text>
+  <text x="400" y="222" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#4D554E" data-lang="fr">Le corps attaque</text>
+  <text x="400" y="240" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#4D554E" data-lang="fr">ses propres cellules</text>
+
+  <!-- بطاقة 3: نقص المناعة -->
+  <rect x="540" y="60" width="230" height="220" rx="14" fill="#E3E8D6" stroke="#3B6E8F" stroke-width="2"/>
+  <circle cx="655" cy="120" r="30" fill="#3B6E8F"/><path d="M643 120 h24" stroke="#fff" stroke-width="3"/>
+  <text x="655" y="185" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="17" fill="#1B241F" data-lang="ar">نقص المناعة</text>
+  <text x="655" y="185" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Immunodéficience</text>
+  <text x="655" y="222" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#4D554E" data-lang="ar">ضعف الدفاع المناعي</text>
+  <text x="655" y="242" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="13" fill="#4D554E" data-lang="ar">مثل داء السيدا</text>
+  <text x="655" y="222" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#4D554E" data-lang="fr">Défense affaiblie</text>
+  <text x="655" y="240" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#4D554E" data-lang="fr">ex. le SIDA</text>
+</svg>

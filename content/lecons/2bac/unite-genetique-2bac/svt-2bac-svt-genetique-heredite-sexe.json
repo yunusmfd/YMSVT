@@ -1,0 +1,120 @@
+{
+  "id": "svt-2bac-svt-genetique-heredite-sexe",
+  "slug": "heredite-liee-au-sexe",
+  "cycle": "thanawi-taahili",
+  "niveau": "2bac",
+  "filieres": ["2bac-svt", "2bac-pc"],
+  "unite_id": "unite-genetique-2bac",
+  "dorra": 1,
+  "ordre_dans_unite": 4,
+  "titre": { "ar": "الوراثة المرتبطة بالجنس", "fr": "L'hérédité liée au sexe" },
+  "duree_estimee_min": 25,
+  "domaine_specialite": "genetique",
+  "objectifs": {
+    "ar": ["تمييز المورثات المحمولة على الصبغيات الجنسية", "تفسير انتقال مرض وراثي مرتبط بالصبغي X"],
+    "fr": ["Distinguer les gènes portés par les gonosomes", "Expliquer la transmission d'une maladie liée à X"]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "مورثات على الصبغيات الجنسية", "fr": "Des gènes sur les gonosomes" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "بعض المورثات محمولة على الصبغيات الجنسية، خصوصا على الصبغي X الأكبر من Y. نظرا لأن الذكر يملك صبغيا X واحدا فقط (XY)، فإن أليلا متنحّيا واحدا محمولا على X يكفي لظهور الصفة عنده، بينما تحتاج الأنثى (XX) لأليلين متنحّيين لتُصاب. لهذا تكون بعض الأمراض الوراثية أكثر شيوعا عند الذكور.",
+            "fr": "Certains gènes sont portés par les gonosomes, surtout par le chromosome X, plus grand que Y. Comme l'homme ne possède qu'un seul X (XY), un seul allèle récessif sur X suffit à exprimer le caractère chez lui, alors que la femme (XX) doit porter deux allèles récessifs pour être atteinte. C'est pourquoi certaines maladies héréditaires sont plus fréquentes chez les garçons."
+          }
+        },
+        {
+          "type": "encadre",
+          "variante": "maaloumaMouhima",
+          "titre": { "ar": "معلومة مهمة", "fr": "Info clé" },
+          "texte": {
+            "ar": "من أشهر الأمراض المرتبطة بالصبغي X: **عمى الألوان** و**الناعور (Hémophilie)**، وكلاهما ناتج عن أليل متنحٍّ محمول على X.",
+            "fr": "Parmi les maladies liées à X les plus connues : le **daltonisme** et l'**hémophilie**, dues à un allèle récessif porté par X."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "انتقال مرض مرتبط بالصبغي X", "fr": "Transmission d'une maladie liée à X" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "إذا كانت الأم **ناقلة** سليمة (تحمل أليلا مصابا واحدا على أحد صبغييها X) والأب سليما، فإن الأبناء الذكور معرّضون للإصابة باحتمال النصف، لأنهم يرثون صبغي X الوحيد من الأم. أما البنات فيبقين سليمات ظاهريا، وقد يصبحن ناقلات بدورهنّ.",
+            "fr": "Si la mère est **conductrice** saine (elle porte un allèle muté sur l'un de ses X) et le père sain, les garçons ont un risque de 1/2 d'être atteints, car ils héritent leur unique X de la mère. Les filles restent saines en apparence, mais peuvent devenir conductrices à leur tour."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/heredite-liee-sexe.svg",
+          "legende": { "ar": "انتقال أليل متنحٍّ محمول على X من أم ناقلة", "fr": "Transmission d'un allèle récessif porté par X depuis une mère conductrice" }
+        },
+        {
+          "type": "encadre",
+          "variante": "tanbih",
+          "titre": { "ar": "تنبيه", "fr": "Attention" },
+          "texte": {
+            "ar": "لا يورّث الأب المصاب المرض لأبنائه الذكور أبدا، لأنه يمنحهم الصبغي Y لا X — بل يورّثه لبناته كنقل صامت.",
+            "fr": "Un père atteint ne transmet jamais la maladie à ses fils (il leur donne Y, pas X) ; il la transmet à ses filles sous forme de portage silencieux."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "المورثات المحمولة على الصبغي X لها نمط انتقال خاص مرتبط بالجنس: تُصيب الذكور أكثر، وتنتقل غالبا عبر الأمهات الناقلات، ما يجعل تحليل شجرة النسب أداة أساسية لتتبّعها.",
+            "fr": "Les gènes portés par X ont un mode de transmission particulier lié au sexe : ils atteignent surtout les garçons et se transmettent souvent via des mères conductrices, faisant de l'arbre généalogique un outil essentiel de suivi."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "لماذا تكون الأمراض المرتبطة بالصبغي X أكثر شيوعا عند الذكور؟", "fr": "Pourquoi les maladies liées à X sont-elles plus fréquentes chez les garçons ?" },
+        "options": [
+          { "ar": "لأن الذكور يملكون صبغيين X", "fr": "Car les garçons ont deux X" },
+          { "ar": "لأن الذكر يملك X واحدا فيكفيه أليل متنحٍّ واحد", "fr": "Car un seul X suffit : un seul allèle récessif exprime la maladie" },
+          { "ar": "لأن الصبغي Y يحمل المرض", "fr": "Car le chromosome Y porte la maladie" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الذكر (XY) لا يملك إلا نسخة واحدة من الصبغي X، فأليل متنحٍّ واحد يكفي لظهور المرض، بخلاف الأنثى التي تحتاج نسختين.",
+          "fr": "Le garçon (XY) ne possède qu'un X : un seul allèle récessif suffit à exprimer la maladie, contrairement à la fille qui en nécessite deux."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "أب مصاب بمرض مرتبط بالصبغي X: من يرث منه الأليل المصاب مباشرة؟", "fr": "Un père atteint : qui hérite directement de son allèle muté ?" },
+        "options": [
+          { "ar": "كل أبنائه الذكور", "fr": "Tous ses fils" },
+          { "ar": "كل بناته (كنقل صامت)", "fr": "Toutes ses filles (portage)" },
+          { "ar": "لا أحد", "fr": "Personne" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الأب يمنح صبغي X (الحامل للأليل) لبناته فقط، ويمنح أبناءه الذكور الصبغي Y، لذا لا يُصابون منه مباشرة.",
+          "fr": "Le père transmet son X (porteur de l'allèle) uniquement à ses filles ; il donne Y à ses fils, qui ne sont donc pas atteints par lui."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": null },
+  "tags": ["وراثة", "الجنس", "hérédité", "génétique"],
+  "date_maj": "2026-07-12",
+  "statut": "publie"
+}

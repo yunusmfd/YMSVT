@@ -1,0 +1,129 @@
+{
+  "id": "svt-2bac-svt-genetique-caryotype",
+  "slug": "caryotype",
+  "cycle": "thanawi-taahili",
+  "niveau": "2bac",
+  "filieres": ["2bac-svt", "2bac-pc"],
+  "unite_id": "unite-genetique-2bac",
+  "dorra": 1,
+  "ordre_dans_unite": 1,
+  "titre": { "ar": "الصبغيات والنمط النووي", "fr": "Les chromosomes et le caryotype" },
+  "duree_estimee_min": 20,
+  "domaine_specialite": "genetique",
+  "objectifs": {
+    "ar": ["وصف البنية الدقيقة للصبغي", "تعريف النمط النووي وقراءته"],
+    "fr": ["Décrire la structure du chromosome", "Définir et lire un caryotype"]
+  },
+  "sections": [
+    {
+      "id": "sec-1",
+      "titre": { "ar": "بنية الصبغي", "fr": "Structure du chromosome" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "الصبغي (Chromosome) بنية توجد داخل نواة الخلية وتحمل المعلومة الوراثية على شكل جزيء **ADN** ملتفّ. أثناء انقسام الخلية يظهر الصبغي مضاعفا، مكوّنا من كروماتيدتين شقيقتين متطابقتين متّصلتين عند منطقة تُسمّى المركزين.",
+            "fr": "Le chromosome est une structure présente dans le noyau cellulaire, portant l'information génétique sous forme d'une molécule d'**ADN** condensée. Lors de la division cellulaire, le chromosome apparaît dédoublé, formé de deux chromatides sœurs identiques reliées au niveau du centromère."
+          }
+        },
+        {
+          "type": "image",
+          "src": "assets/images/svg/chromosome-structure.svg",
+          "legende": { "ar": "بنية صبغي مضاعف: كروماتيدتان + المركزين + جزيء ADN", "fr": "Structure d'un chromosome dédoublé : deux chromatides, centromère et ADN" }
+        },
+        {
+          "type": "encadre",
+          "variante": "taarif",
+          "titre": { "ar": "تعريف", "fr": "Définition" },
+          "texte": {
+            "ar": "**المورثة (Gène)**: جزء من جزيء ADN يحدّد صفة وراثية معيّنة. يقع كل مورثة في موقع ثابت على صبغي معيّن.",
+            "fr": "**Gène** : segment d'ADN déterminant un caractère héréditaire. Chaque gène occupe une position fixe (locus) sur un chromosome donné."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-2",
+      "titre": { "ar": "النمط النووي", "fr": "Le caryotype" },
+      "blocs": [
+        {
+          "type": "paragraphe",
+          "texte": {
+            "ar": "النمط النووي (Caryotype) هو ترتيب مصنّف لصبغيات خلية حسب الحجم وموضع المركزين. تحتوي الخلية الجسدية البشرية على **46 صبغيا** موزّعة على 23 زوجا: 22 زوجا من الصبغيات الجسدية (Autosomes) وزوج واحد من الصبغيات الجنسية (Gonosomes)، وهو XX عند الأنثى وXY عند الذكر.",
+            "fr": "Le caryotype est le classement ordonné des chromosomes d'une cellule selon leur taille et la position du centromère. Une cellule somatique humaine contient **46 chromosomes** répartis en 23 paires : 22 paires d'autosomes et une paire de gonosomes, XX chez la femme et XY chez l'homme."
+          }
+        },
+        {
+          "type": "tableau",
+          "titre": { "ar": "الصيغة الصبغية حسب نوع الخلية", "fr": "Formule chromosomique selon le type cellulaire" },
+          "entetes": { "ar": ["الخلية", "الصيغة", "العدد"], "fr": ["Cellule", "Formule", "Nombre"] },
+          "lignes": [
+            { "ar": ["خلية جسدية", "2n", "46 صبغيا"], "fr": ["Cellule somatique", "2n", "46"] },
+            { "ar": ["مشيج (بويضة/نطفة)", "n", "23 صبغيا"], "fr": ["Gamète (ovule/spermatozoïde)", "n", "23"] }
+          ]
+        },
+        {
+          "type": "encadre",
+          "variante": "maaloumaMouhima",
+          "titre": { "ar": "معلومة مهمة", "fr": "Info clé" },
+          "texte": {
+            "ar": "تحليل النمط النووي يسمح بالكشف عن الشذوذات الصبغية، مثل ثلاثي الصبغي 21 (متلازمة داون) حيث يوجد ثلاثة صبغيات بدل زوج في الموقع 21.",
+            "fr": "L'analyse du caryotype permet de détecter des anomalies chromosomiques, comme la trisomie 21 où trois chromosomes remplacent la paire au niveau de la paire 21."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec-3",
+      "titre": { "ar": "خلاصة", "fr": "Synthèse" },
+      "blocs": [
+        {
+          "type": "encadre",
+          "variante": "khoulasa",
+          "titre": { "ar": "خلاصة الدرس", "fr": "Synthèse de la leçon" },
+          "texte": {
+            "ar": "الصبغيات بنيات حاملة للمورثات على جزيء ADN؛ ويشكّل النمط النووي بطاقة هوية صبغية للنوع (2n=46 عند الإنسان) تكشف عن جنس الفرد وعن أي شذوذ صبغي.",
+            "fr": "Les chromosomes portent les gènes sur l'ADN ; le caryotype constitue la carte d'identité chromosomique de l'espèce (2n=46 chez l'humain), révélant le sexe et d'éventuelles anomalies."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "titre": { "ar": "اختبر فهمك", "fr": "Testez votre compréhension" },
+    "questions": [
+      {
+        "id": "q1",
+        "question": { "ar": "كم عدد الصبغيات في خلية جسدية بشرية؟", "fr": "Combien de chromosomes dans une cellule somatique humaine ?" },
+        "options": [
+          { "ar": "23 صبغيا", "fr": "23 chromosomes" },
+          { "ar": "46 صبغيا", "fr": "46 chromosomes" },
+          { "ar": "48 صبغيا", "fr": "48 chromosomes" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الخلية الجسدية ثنائية الصيغة الصبغية (2n) وتحتوي على 46 صبغيا موزّعة على 23 زوجا.",
+          "fr": "La cellule somatique est diploïde (2n) et contient 46 chromosomes en 23 paires."
+        }
+      },
+      {
+        "id": "q2",
+        "question": { "ar": "ما الصيغة الصبغية الجنسية عند الذكر؟", "fr": "Quelle est la formule des gonosomes chez l'homme ?" },
+        "options": [
+          { "ar": "XX", "fr": "XX" },
+          { "ar": "XY", "fr": "XY" },
+          { "ar": "YY", "fr": "YY" }
+        ],
+        "reponse_correcte": 1,
+        "justification": {
+          "ar": "الذكر يملك صبغيين جنسيين مختلفين X وY، بينما الأنثى تملك XX.",
+          "fr": "L'homme possède deux gonosomes différents X et Y, alors que la femme possède XX."
+        }
+      }
+    ]
+  },
+  "navigation": { "lecon_precedente": null, "lecon_suivante": null },
+  "tags": ["وراثة", "صبغيات", "caryotype", "génétique"],
+  "date_maj": "2026-07-12",
+  "statut": "publie"
+}

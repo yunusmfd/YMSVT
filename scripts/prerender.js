@@ -2,11 +2,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT, listLecons, listUnites, listBlog } from "./lib/content-loader.js";
-import { collectLessonRoutes, collectEncyclopediaRoutes, collectBlogRoutes, collectResumeRoutes } from "./lib/routes.js";
+import { collectUnitGroups, collectEncyclopediaRoutes, collectBlogRoutes, collectResumeRoutes } from "./lib/routes.js";
 import { makeRenderDeps } from "./lib/render-deps-node.js";
 import { wrapPage } from "./lib/partials.js";
 import {
   lessonDetailBody,
+  uniteDetailBody,
   articleDetailBody,
   glossaireDetailBody,
   scientifiqueDetailBody,
@@ -25,47 +26,57 @@ function writePage(routeUrl, html) {
 
 function main() {
   const deps = makeRenderDeps();
-  const lecons = listLecons();
-  const unites = listUnites();
-  const uniteById = Object.fromEntries(unites.map((u) => [u.id, u]));
-  const leconById = Object.fromEntries(lecons.map((l) => [l.id, l]));
 
   const blogRoutes = collectBlogRoutes();
   const latestBlogPost = blogRoutes[0] ? { id: blogRoutes[0].item.id, titre_ar: blogRoutes[0].item.titre_ar, titre_fr: blogRoutes[0].item.titre_fr } : null;
 
   let generated = 0;
 
-  function tracksForLecon(lecon) {
-    if (lecon.filieres && lecon.filieres.length) return lecon.filieres;
-    return [lecon.niveau];
-  }
+  // ---------- 1) الدروس + صفحات الوحدات ----------
+  // كل درس يستمد سابقه/تاليه وقائمة أشقّائه من ترتيب الوحدة (collectUnitGroups)، لا من حقل navigation اليدوي —
+  // يعالج مباشرة واقع "الوحدة تضم عدة دروس" ويُبقي التنقّل متماسكا داخل الوحدة.
+  const nav = (item) => (item ? { titre: item.lecon.titre, url: item.url } : null);
 
-  function resolveNavTarget(targetId, currentTrack) {
-    const target = leconById[targetId];
-    if (!target) return null;
-    const targetUnite = uniteById[target.unite_id];
-    if (!targetUnite) return null;
-    const tracks = tracksForLecon(target);
-    const track = tracks.includes(currentTrack) ? currentTrack : tracks[0];
-    return { titre: target.titre, track, uniteSlug: targetUnite.slug, slug: target.slug || target.id };
-  }
+  for (const group of collectUnitGroups()) {
+    const { unite, track } = group;
+    const siblings = group.lecons.map((it) => ({ titre: it.lecon.titre, url: it.url, ordre: it.ordre, id: it.lecon.id }));
 
-  // ---------- 1) الدروس ----------
-  for (const route of collectLessonRoutes()) {
-    const { lecon, unite, track, url } = route;
-    const prevLecon = lecon.navigation && lecon.navigation.lecon_precedente ? resolveNavTarget(lecon.navigation.lecon_precedente, track) : null;
-    const nextLecon = lecon.navigation && lecon.navigation.lecon_suivante ? resolveNavTarget(lecon.navigation.lecon_suivante, track) : null;
-
-    const bodyHtml = lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, track });
-    writePage(
-      url,
-      wrapPage({
-        title: `${lecon.titre.ar} | Nova SVT`,
-        description: (lecon.objectifs && lecon.objectifs.ar && lecon.objectifs.ar[0]) || lecon.titre.ar,
-        bodyHtml,
-        activeNav: "lecons",
-        ogType: "article",
+    for (const item of group.lecons) {
+      const { lecon, url } = item;
+      const bodyHtml = lessonDetailBody({
+        lecon,
+        unite,
+        deps,
+        track,
+        prevLecon: nav(item.prev),
+        nextLecon: nav(item.next),
+        siblings,
+        uniteUrl: group.url,
+      });
+      writePage(
         url,
+        wrapPage({
+          title: `${lecon.titre.ar} | Nova SVT`,
+          description: (lecon.objectifs && lecon.objectifs.ar && lecon.objectifs.ar[0]) || lecon.titre.ar,
+          bodyHtml,
+          activeNav: "lecons",
+          ogType: "article",
+          url,
+          latestBlogPost,
+        })
+      );
+      generated++;
+    }
+
+    // صفحة فهرس الوحدة (تُصلح رابط مسار التنقّل المكسور سابقا)
+    writePage(
+      group.url,
+      wrapPage({
+        title: `${unite.titre.ar} | Nova SVT`,
+        description: `${unite.titre.ar} — ${group.lecons.length} دروس`,
+        bodyHtml: uniteDetailBody({ group }),
+        activeNav: "lecons",
+        url: group.url,
         latestBlogPost,
       })
     );

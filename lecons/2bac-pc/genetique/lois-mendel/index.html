@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>القوانين الإحصائية للوراثة | Nova SVT</title>
+<meta name="description" content="تفسير نتائج تزاوج أحادي الهجونة" />
+<link rel="canonical" href="https://novasvt.ma/lecons/2bac-pc/genetique/lois-mendel/" />
+<meta property="og:title" content="القوانين الإحصائية للوراثة | Nova SVT" />
+<meta property="og:description" content="تفسير نتائج تزاوج أحادي الهجونة" />
+<meta property="og:image" content="https://novasvt.ma/assets/images/hero/og-default.webp" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://novasvt.ma/lecons/2bac-pc/genetique/lois-mendel/" />
+<meta property="og:locale" content="ar_MA" />
+<meta property="og:locale:alternate" content="fr_MA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#204F3F" />
+<link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="any" />
+<link rel="icon" type="image/svg+xml" href="/assets/images/favicons/favicon.svg" />
+<link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" />
+<link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/tokens.css" />
+<link rel="stylesheet" href="/assets/css/base.css" />
+<link rel="stylesheet" href="/assets/css/components.css" />
+<script>/*
+  سكريبت أوّلي حرج (Critical Inline Script)
+  يُحقن حرفيا داخل <head> كل صفحة (عبر scripts/lib/partials.js وقت البناء)
+  قبل أول Paint، لتفادي وميض تبديل الثيم/الاتجاه (FOUC/RTL flash) — القسم 3.1.3 و4.1.1.
+  ملاحظة: يبقى هذا الملف مصدر المرجعية المقروءة؛ partials.js يُضمّن نسخة مطابقة inline.
+*/
+(function () {
+  try {
+    var theme = localStorage.getItem("nova-svt:theme");
+    if (!theme) {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", theme);
+
+    var lang = localStorage.getItem("nova-svt:lang") || document.documentElement.getAttribute("lang") || "ar";
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", lang === "fr" ? "ltr" : "rtl");
+  } catch (e) {
+    /* localStorage قد يكون معطّلا (وضع خاص) — لا كسر للصفحة، القيم الافتراضية في HTML تبقى فعّالة */
+  }
+})();
+</script>
+
+</head>
+<body>
+
+<a href="#main" class="skip-link" data-i18n="skip_to_content">تخطَّ إلى المحتوى</a>
+<header class="navbar" data-navbar>
+  <div class="navbar-inner">
+    <a href="/" class="nova-logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
+  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
+  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
+</svg><span class="nova-logo-text">Nova SVT</span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/" data-i18n="nav_home"></a></li>
+        <li><a class="nav-link" href="/lecons/" data-i18n="nav_lecons" aria-current="page"></a></li><li><a class="nav-link" href="/devoirs-examens/" data-i18n="nav_exams"></a></li><li><a class="nav-link" href="/labo-virtuel/" data-i18n="nav_labo"></a></li><li><a class="nav-link" href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li><li><a class="nav-link" href="/revision/" data-i18n="nav_revision"></a></li>
+      </ul>
+    </nav>
+    <div class="nav-more" data-nav-more>
+      <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false" data-i18n="nav_more"></button>
+      <span class="arrow" aria-hidden="true">▾</span>
+      <div class="nav-more-menu" data-nav-more-menu hidden><a href="/blog/" data-i18n="nav_blog"></a><a href="/a-propos/" data-i18n="nav_apropos"></a><a href="/contact/" data-i18n="nav_contact"></a></div>
+    </div>
+    <div class="nav-actions">
+      <form class="search-bar-inline" role="search" data-search-open>
+        <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        <input type="search" data-i18n-placeholder="search_placeholder" readonly />
+      </form>
+      <button class="icon-btn search-icon-btn" data-search-open data-i18n-aria="search_title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button>
+      <button class="icon-btn" data-lang-toggle data-i18n-aria="lang_toggle">FR</button>
+      <button class="icon-btn theme-toggle" data-theme-toggle data-i18n-aria="theme_toggle"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></button>
+      <div class="nav-more" data-nav-more>
+        <button class="icon-btn" data-nav-more-trigger="bell" aria-expanded="false" data-i18n-aria="blog_menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="bell-dot"></span></button>
+        <div class="nav-more-menu" data-nav-more-menu hidden><a href="/blog/comment-cerveau-memorise/"><strong data-lang="ar">كيف يتذكر الدماغ؟</strong><strong data-lang="fr">Comment le cerveau se souvient-il ?</strong></a><a href="/blog/" class="mono" data-i18n="nav_blog" style="font-size:var(--fs-12)"></a></div>
+      </div>
+      <button class="icon-btn hamburger-btn" data-hamburger-btn data-i18n-aria="menu_open"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+  <div class="nav-divider-bar"></div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu hidden>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-6)">
+    <span class="nova-logo"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
+  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
+  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
+  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
+</svg><span>Nova SVT</span></span>
+    <button class="icon-btn" data-mobile-menu-close data-i18n-aria="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <nav>
+    <ul>
+      <li><a class="nav-link" href="/" data-i18n="nav_home"></a></li>
+      <li><a class="nav-link" href="/lecons/" data-i18n="nav_lecons"></a></li><li><a class="nav-link" href="/devoirs-examens/" data-i18n="nav_exams"></a></li><li><a class="nav-link" href="/labo-virtuel/" data-i18n="nav_labo"></a></li><li><a class="nav-link" href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li><li><a class="nav-link" href="/revision/" data-i18n="nav_revision"></a></li>
+      <li class="mobile-submenu">
+        <a class="nav-link" href="/blog/" data-i18n="nav_blog"></a><a class="nav-link" href="/a-propos/" data-i18n="nav_apropos"></a><a class="nav-link" href="/contact/" data-i18n="nav_contact"></a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-box" role="dialog" aria-modal="true" data-i18n-aria="search_title">
+    <div class="search-box-header">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" data-search-input data-i18n-placeholder="search_placeholder" autocomplete="off" />
+      <button class="icon-btn" data-search-close data-i18n-aria="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    </div>
+    <div class="search-suggestions">
+      <button class="chip" data-search-suggestion>الانقسام المنصف</button>
+      <button class="chip" data-search-suggestion>التركيب الضوئي</button>
+      <button class="chip" data-search-suggestion>المناعة</button>
+      <button class="chip" data-search-suggestion>الخلية</button>
+    </div>
+    <div class="search-results" data-search-results></div>
+  </div>
+</div>
+
+<main id="main">
+
+<div class="progress-bar-top" data-progress-bar></div>
+<div class="container" style="padding-top:var(--sp-5)">
+  <nav class="breadcrumb" aria-label="مسار التنقل">
+    <a href="/"><span data-lang="ar">الرئيسية</span><span data-lang="fr">Accueil</span></a><span aria-hidden="true">/</span> <a href="/lecons/"><span data-lang="ar">الدروس</span><span data-lang="fr">Leçons</span></a><span aria-hidden="true">/</span> <a href="/lecons/#2bac"><span data-lang="ar">الثانية باك</span><span data-lang="fr">2e année Bac</span></a><span aria-hidden="true">/</span> <a href="/lecons/2bac-pc/genetique/"><span data-lang="ar">الوراثة</span><span data-lang="fr">Génétique</span></a><span aria-hidden="true">/</span>
+    <span class="current"><span data-lang="ar">القوانين الإحصائية للوراثة</span><span data-lang="fr">Les lois statistiques de l'hérédité</span></span>
+  </nav>
+
+  <div class="lesson-info-bar">
+    <div class="item"><strong data-lang="ar">المستوى</strong><strong data-lang="fr">Niveau</strong><span data-lang="ar">الثانية باك</span><span data-lang="fr">2e année Bac</span></div>
+    <div class="item"><strong data-lang="ar">السلك</strong><strong data-lang="fr">Cycle</strong><span data-lang="ar">الثانوي التأهيلي</span><span data-lang="fr">Secondaire qualifiant</span></div>
+    <div class="item"><strong data-lang="ar">المسلك</strong><strong data-lang="fr">Filière</strong><span data-lang="ar">الثانية باك علوم فيزيائية وكيميائية</span><span data-lang="fr">2e Bac PC</span></div>
+    <div class="item"><strong data-lang="ar">الوحدة</strong><strong data-lang="fr">Unité</strong><a href="/lecons/2bac-pc/genetique/"><span data-lang="ar">الوراثة</span><span data-lang="fr">Génétique</span></a></div>
+    <div class="item"><strong data-lang="ar">الدورة</strong><strong data-lang="fr">Semestre</strong><span data-lang="ar">الأولى</span><span data-lang="fr">1</span></div>
+    <div class="item"><strong data-lang="ar">المدة</strong><strong data-lang="fr">Durée</strong><span data-lang="ar">30 د</span><span data-lang="fr">30 min</span></div>
+  </div>
+
+  <h1><span data-lang="ar">القوانين الإحصائية للوراثة</span><span data-lang="fr">Les lois statistiques de l'hérédité</span></h1>
+
+  <div class="lesson-layout">
+    <aside class="lesson-toc" aria-label="فهرس المحاور">
+      <button class="btn btn-ghost btn-sm toc-mobile-toggle" data-toc-mobile-toggle aria-expanded="false" style="display:none">
+        <span data-lang="ar">محاور الدرس</span><span data-lang="fr">Sommaire</span>
+      </button>
+      <div data-toc-list>
+        <div data-lang="ar"><ul>
+    <li><a href="#sec-1-ar" data-toc-link="sec-1-ar">مصطلحات أساسية</a></li><li><a href="#sec-2-ar" data-toc-link="sec-2-ar">التزاوج أحادي الهجونة</a></li><li><a href="#sec-3-ar" data-toc-link="sec-3-ar">خلاصة</a></li>
+  </ul></div>
+        <div data-lang="fr"><ul>
+    <li><a href="#sec-1-fr" data-toc-link="sec-1-fr">Notions de base</a></li><li><a href="#sec-2-fr" data-toc-link="sec-2-fr">Le croisement monohybride</a></li><li><a href="#sec-3-fr" data-toc-link="sec-3-fr">Synthèse</a></li>
+  </ul></div>
+      </div>
+      <aside class="unit-lessons no-print" aria-label="دروس الوحدة">
+      <div class="unit-lessons-head">
+        <span class="eyebrow"><span data-lang="ar">دروس الوحدة</span><span data-lang="fr">Leçons de l'unité</span></span>
+        <a href="/lecons/2bac-pc/genetique/"><span data-lang="ar">الوراثة</span><span data-lang="fr">Génétique</span> · 4</a>
+      </div>
+      <ol class="unit-lessons-list">
+        <li class="">
+          <a href="/lecons/2bac-pc/genetique/caryotype/"><span class="unit-lesson-num">1</span><span data-lang="ar">الصبغيات والنمط النووي</span><span data-lang="fr">Les chromosomes et le caryotype</span></a>
+        </li><li class="is-current">
+          <a href="/lecons/2bac-pc/genetique/lois-mendel/"><span class="unit-lesson-num">2</span><span data-lang="ar">القوانين الإحصائية للوراثة</span><span data-lang="fr">Les lois statistiques de l'hérédité</span></a>
+        </li><li class="">
+          <a href="/lecons/2bac-pc/genetique/meiose/"><span class="unit-lesson-num">3</span><span data-lang="ar">الانقسام المنصف وتنوّع الأمشاج</span><span data-lang="fr">La méiose et la diversité des gamètes</span></a>
+        </li><li class="">
+          <a href="/lecons/2bac-pc/genetique/heredite-liee-au-sexe/"><span class="unit-lesson-num">4</span><span data-lang="ar">الوراثة المرتبطة بالجنس</span><span data-lang="fr">L'hérédité liée au sexe</span></a>
+        </li>
+      </ol>
+    </aside>
+    </aside>
+    <div data-lesson-content data-content-src="" data-lecon-id="svt-2bac-svt-genetique-lois-mendel">
+      <div data-lang="ar"><section class="lesson-section" id="sec-1-ar" data-lesson-section tabindex="-1">
+    <h2>مصطلحات أساسية</h2>
+    <p>درس العالم النمساوي غريغور مندل انتقال الصفات عبر تزاوجات منظّمة على نبات البازلاء. تحمل كل صفة <strong>أليلين</strong>: أحدهما سائد يُرمز له بحرف كبير (A) والآخر متنحّي بحرف صغير (a). يكون الفرد متماثل الاقتران إذا حمل أليلين متطابقين (AA أو aa)، ومختلطا إذا حمل أليلين مختلفين (Aa).</p>
+
+<aside class="encadre encadre-molahada" role="note" aria-label="ملاحظة">
+    <span class="encadre-icon" aria-hidden="true">ℹ️</span>
+    <p class="encadre-titre">ملاحظة</p>
+    <p>نميّز بين <strong>النمط الظاهري</strong> (Phénotype: الصفة المرئية) و<strong>النمط الوراثي</strong> (Génotype: تركيبة الأليلات). الفردان AA وAa لهما نفس النمط الظاهري لكن نمطان وراثيان مختلفان.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-2-ar" data-lesson-section tabindex="-1">
+    <h2>التزاوج أحادي الهجونة</h2>
+    <p>عند تزاوج سلالتين نقيّتين تختلفان في صفة واحدة (AA × aa)، يكون الجيل الأول F1 كله مختلط الاقتران Aa ومتماثل الظاهر (<strong>القانون الأول: قانون تجانس الجيل الأول</strong>). وعند تزاوج أفراد F1 فيما بينها، يظهر في الجيل الثاني F2 نمطان ظاهريان بنسبة <strong>3 سائد : 1 متنحٍّ</strong> (<strong>القانون الثاني: قانون تفصّل الأليلات</strong>).</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="tMo dMo">
+  <title id="tMo">تزاوج أحادي الهجونة</title>
+  <desc id="dMo">مخطّط تزاوج بين سلالتين نقيّتين يعطي جيلا أول متماثلا، ثم جدول تقاطع الأمشاج في الجيل الثاني يبيّن نسبة 3:1.</desc>
+  <rect width="800" height="420" fill="#F9FAF7"/>
+
+  <!-- الآباء -->
+  <text x="400" y="34" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الجيل الأول: تزاوج سلالتين نقيّتين</text>
+  <text x="400" y="34" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Génération P : croisement de deux lignées pures</text>
+
+  <circle cx="230" cy="80" r="24" fill="#204F3F"/><text x="230" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" fill="#fff">AA</text>
+  <text x="400" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" fill="#8B4A2B">×</text>
+  <circle cx="570" cy="80" r="24" fill="#D99A56"/><text x="570" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" fill="#1B241F">aa</text>
+
+  <path d="M400 108 L400 140" stroke="#8B4A2B" stroke-width="2" marker-end="url(#arMo)"/>
+  <defs><marker id="arMo" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#8B4A2B"/></marker></defs>
+  <text x="400" y="165" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#204F3F" data-lang="ar">الجيل الأول F1 كله Aa (سيادة A)</text>
+  <text x="400" y="165" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#204F3F" data-lang="fr">F1 : tous Aa (A dominant)</text>
+
+  <!-- جدول التقاطع F2 -->
+  <text x="400" y="205" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">تقاطع أمشاج F1 × F1</text>
+  <text x="400" y="205" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Échiquier de croisement F1 × F1</text>
+
+  <g font-family="IBM Plex Mono, monospace" font-size="18">
+    <text x="300" y="235" text-anchor="middle" fill="#204F3F">A</text>
+    <text x="360" y="235" text-anchor="middle" fill="#204F3F">a</text>
+    <text x="228" y="290" text-anchor="middle" fill="#204F3F">A</text>
+    <text x="228" y="350" text-anchor="middle" fill="#204F3F">a</text>
+  </g>
+  <g stroke="#DADDD5" stroke-width="1.5">
+    <rect x="255" y="245" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="345" y="245" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="255" y="300" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="345" y="300" width="90" height="55" fill="#D99A56" fill-opacity=".35"/>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="18" fill="#1B241F" text-anchor="middle">
+    <text x="300" y="278">AA</text><text x="390" y="278">Aa</text>
+    <text x="300" y="333">Aa</text><text x="390" y="333">aa</text>
+  </g>
+
+  <text x="590" y="300" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#204F3F" data-lang="ar">3 يُظهرون صفة A</text>
+  <text x="590" y="300" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#204F3F" data-lang="fr">3 expriment A</text>
+  <text x="590" y="330" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#8B4A2B" data-lang="ar">1 يُظهر صفة a</text>
+  <text x="590" y="330" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#8B4A2B" data-lang="fr">1 exprime a</text>
+  <text x="400" y="398" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="17" fill="#C17A2E">3 : 1</text>
+</svg>
+
+        <figcaption>تزاوج أحادي الهجونة: تجانس F1 ثم نسبة 3:1 في F2</figcaption>
+      </figure>
+<aside class="encadre encadre-qaida" role="note" aria-label="قاعدة">
+    <span class="encadre-icon" aria-hidden="true">📐</span>
+    <p class="encadre-titre">قاعدة</p>
+    <p>أثناء تشكّل الأمشاج ينفصل الأليلان لنفس المورثة، فلا يحمل كل مشيج إلا <strong>أليلا واحدا</strong>. هذا الانفصال يفسّره <span class="terme-link" data-terme="crossing-over" tabindex="0">السلوك الصبغي</span> أثناء الانقسام المنصف.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-3-ar" data-lesson-section tabindex="-1">
+    <h2>خلاصة</h2>
+    <aside class="encadre encadre-khoulasa" role="note" aria-label="خلاصة الدرس">
+    <span class="encadre-icon" aria-hidden="true">📋</span>
+    <p class="encadre-titre">خلاصة الدرس</p>
+    <p>تخضع وراثة الصفات لقوانين إحصائية: تجانس الجيل الأول ثم تفصّل الأليلات في الجيل الثاني بنسبة 3:1، ويرتبط ذلك بانفصال الأليلات أثناء الانقسام المنصف.</p>
+
+  </aside>
+  </section><div class="quiz" aria-label="اختبر فهمك">
+    <h3>اختبر فهمك</h3>
+    <div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>1. ما نمط الجيل الأول الناتج عن تزاوج AA × aa؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">كله Aa</button><button type="button" class="quiz-option" data-option-index="1">نصف AA ونصف aa</button><button type="button" class="quiz-option" data-option-index="2">كله AA</button>
+      </div>
+      <div class="quiz-justification" hidden><p>كل فرد من F1 يأخذ أليلا A من الأب وأليلا a من الأم، فيكون مختلط الاقتران Aa (قانون التجانس).</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="1">
+      <p><strong>2. ما نسبة الأنماط الظاهرية في الجيل الثاني F2؟</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">1 : 1</button><button type="button" class="quiz-option" data-option-index="1">3 : 1</button><button type="button" class="quiz-option" data-option-index="2">9 : 3 : 3 : 1</button>
+      </div>
+      <div class="quiz-justification" hidden><p>في التزاوج أحادي الهجونة يعطي F2 نسبة 3 سائد : 1 متنحٍّ نتيجة تفصّل الأليلات.</p>
+</div>
+    </div>
+  </div></div>
+      <div data-lang="fr"><section class="lesson-section" id="sec-1-fr" data-lesson-section tabindex="-1">
+    <h2>Notions de base</h2>
+    <p>Le savant autrichien Gregor Mendel a étudié la transmission des caractères par des croisements méthodiques sur le pois. Chaque caractère est porté par deux <strong>allèles</strong> : un dominant noté en majuscule (A) et un récessif en minuscule (a). L'individu est homozygote s'il porte deux allèles identiques (AA ou aa), et hétérozygote s'ils diffèrent (Aa).</p>
+
+<aside class="encadre encadre-molahada" role="note" aria-label="Remarque">
+    <span class="encadre-icon" aria-hidden="true">ℹ️</span>
+    <p class="encadre-titre">Remarque</p>
+    <p>On distingue le <strong>phénotype</strong> (caractère visible) du <strong>génotype</strong> (combinaison d'allèles). AA et Aa ont le même phénotype mais des génotypes différents.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-2-fr" data-lesson-section tabindex="-1">
+    <h2>Le croisement monohybride</h2>
+    <p>En croisant deux lignées pures différant par un seul caractère (AA × aa), la F1 est entièrement hétérozygote Aa et uniforme (<strong>1re loi : uniformité de la F1</strong>). En croisant les individus F1 entre eux, la F2 présente deux phénotypes dans le rapport <strong>3 dominant : 1 récessif</strong> (<strong>2e loi : disjonction des allèles</strong>).</p>
+
+<figure class="lesson-figure">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="tMo dMo">
+  <title id="tMo">تزاوج أحادي الهجونة</title>
+  <desc id="dMo">مخطّط تزاوج بين سلالتين نقيّتين يعطي جيلا أول متماثلا، ثم جدول تقاطع الأمشاج في الجيل الثاني يبيّن نسبة 3:1.</desc>
+  <rect width="800" height="420" fill="#F9FAF7"/>
+
+  <!-- الآباء -->
+  <text x="400" y="34" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#1B241F" data-lang="ar">الجيل الأول: تزاوج سلالتين نقيّتين</text>
+  <text x="400" y="34" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#1B241F" data-lang="fr">Génération P : croisement de deux lignées pures</text>
+
+  <circle cx="230" cy="80" r="24" fill="#204F3F"/><text x="230" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" fill="#fff">AA</text>
+  <text x="400" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="20" fill="#8B4A2B">×</text>
+  <circle cx="570" cy="80" r="24" fill="#D99A56"/><text x="570" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" fill="#1B241F">aa</text>
+
+  <path d="M400 108 L400 140" stroke="#8B4A2B" stroke-width="2" marker-end="url(#arMo)"/>
+  <defs><marker id="arMo" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" fill="#8B4A2B"/></marker></defs>
+  <text x="400" y="165" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#204F3F" data-lang="ar">الجيل الأول F1 كله Aa (سيادة A)</text>
+  <text x="400" y="165" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#204F3F" data-lang="fr">F1 : tous Aa (A dominant)</text>
+
+  <!-- جدول التقاطع F2 -->
+  <text x="400" y="205" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="15" fill="#1B241F" data-lang="ar">تقاطع أمشاج F1 × F1</text>
+  <text x="400" y="205" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="#1B241F" data-lang="fr">Échiquier de croisement F1 × F1</text>
+
+  <g font-family="IBM Plex Mono, monospace" font-size="18">
+    <text x="300" y="235" text-anchor="middle" fill="#204F3F">A</text>
+    <text x="360" y="235" text-anchor="middle" fill="#204F3F">a</text>
+    <text x="228" y="290" text-anchor="middle" fill="#204F3F">A</text>
+    <text x="228" y="350" text-anchor="middle" fill="#204F3F">a</text>
+  </g>
+  <g stroke="#DADDD5" stroke-width="1.5">
+    <rect x="255" y="245" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="345" y="245" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="255" y="300" width="90" height="55" fill="#204F3F" fill-opacity=".16"/>
+    <rect x="345" y="300" width="90" height="55" fill="#D99A56" fill-opacity=".35"/>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="18" fill="#1B241F" text-anchor="middle">
+    <text x="300" y="278">AA</text><text x="390" y="278">Aa</text>
+    <text x="300" y="333">Aa</text><text x="390" y="333">aa</text>
+  </g>
+
+  <text x="590" y="300" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#204F3F" data-lang="ar">3 يُظهرون صفة A</text>
+  <text x="590" y="300" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#204F3F" data-lang="fr">3 expriment A</text>
+  <text x="590" y="330" text-anchor="middle" font-family="IBM Plex Sans Arabic, sans-serif" font-size="16" fill="#8B4A2B" data-lang="ar">1 يُظهر صفة a</text>
+  <text x="590" y="330" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#8B4A2B" data-lang="fr">1 exprime a</text>
+  <text x="400" y="398" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="17" fill="#C17A2E">3 : 1</text>
+</svg>
+
+        <figcaption>Croisement monohybride : uniformité de F1 puis rapport 3:1 en F2</figcaption>
+      </figure>
+<aside class="encadre encadre-qaida" role="note" aria-label="Règle">
+    <span class="encadre-icon" aria-hidden="true">📐</span>
+    <p class="encadre-titre">Règle</p>
+    <p>Lors de la formation des gamètes, les deux allèles d'un gène se séparent : chaque gamète ne porte qu'<strong>un seul allèle</strong>. Cette séparation s'explique par le comportement des chromosomes durant la méiose.</p>
+
+  </aside>
+  </section>
+<section class="lesson-section" id="sec-3-fr" data-lesson-section tabindex="-1">
+    <h2>Synthèse</h2>
+    <aside class="encadre encadre-khoulasa" role="note" aria-label="Synthèse de la leçon">
+    <span class="encadre-icon" aria-hidden="true">📋</span>
+    <p class="encadre-titre">Synthèse de la leçon</p>
+    <p>L'hérédité des caractères obéit à des lois statistiques : uniformité de la F1 puis disjonction en F2 avec un rapport 3:1, en lien avec la séparation des allèles durant la méiose.</p>
+
+  </aside>
+  </section><div class="quiz" aria-label="Testez votre compréhension">
+    <h3>Testez votre compréhension</h3>
+    <div class="quiz-question" data-quiz-question data-correct="0">
+      <p><strong>1. Quel est le génotype de la F1 issue de AA × aa ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">Tous Aa</button><button type="button" class="quiz-option" data-option-index="1">Moitié AA, moitié aa</button><button type="button" class="quiz-option" data-option-index="2">Tous AA</button>
+      </div>
+      <div class="quiz-justification" hidden><p>Chaque individu F1 reçoit A d'un parent et a de l'autre : il est hétérozygote Aa (loi d'uniformité).</p>
+</div>
+    </div><div class="quiz-question" data-quiz-question data-correct="1">
+      <p><strong>2. Quel est le rapport phénotypique en F2 ?</strong></p>
+      <div class="quiz-options" role="group">
+        <button type="button" class="quiz-option" data-option-index="0">1 : 1</button><button type="button" class="quiz-option" data-option-index="1">3 : 1</button><button type="button" class="quiz-option" data-option-index="2">9 : 3 : 3 : 1</button>
+      </div>
+      <div class="quiz-justification" hidden><p>En monohybridisme, la F2 donne 3 dominant : 1 récessif, du fait de la disjonction des allèles.</p>
+</div>
+    </div>
+  </div></div>
+    </div>
+  </div>
+
+  <div class="lesson-nav no-print">
+    <a class="lesson-nav-prev" href="/lecons/2bac-pc/genetique/caryotype/"><span class="lesson-nav-dir">← <span data-lang="ar">السابق</span><span data-lang="fr">Précédent</span></span><span class="lesson-nav-t"><span data-lang="ar">الصبغيات والنمط النووي</span><span data-lang="fr">Les chromosomes et le caryotype</span></span></a>
+    <button class="btn btn-ghost btn-sm" onclick="window.print()"><span data-lang="ar">🖨️ طباعة / تنزيل PDF</span><span data-lang="fr">🖨️ Imprimer / PDF</span></button>
+    <a class="lesson-nav-next" href="/lecons/2bac-pc/genetique/meiose/"><span class="lesson-nav-dir"><span data-lang="ar">التالي</span><span data-lang="fr">Suivant</span> →</span><span class="lesson-nav-t"><span data-lang="ar">الانقسام المنصف وتنوّع الأمشاج</span><span data-lang="fr">La méiose et la diversité des gamètes</span></span></a>
+  </div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <span class="nova-logo" style="color:#fff"><span>Nova SVT</span></span>
+        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="ar">المرجع الرقمي لعلوم الحياة والأرض بالمغرب — بالعربية والفرنسية.</p>
+        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="fr">La référence numérique des SVT au Maroc — en arabe et en français.</p>
+      </div>
+      <div>
+        <h5 data-i18n="nav_lecons"></h5>
+        <ul>
+          <li><a href="/lecons/">1AC · 2AC · 3AC</a></li>
+          <li><a href="/lecons/">TC · 1BAC · 2BAC</a></li>
+          <li><a href="/devoirs-examens/" data-i18n="nav_exams"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="nav_encyclopedie"></h5>
+        <ul>
+          <li><a href="/encyclopedie/">Glossaire / معجم</a></li>
+          <li><a href="/labo-virtuel/" data-i18n="nav_labo"></a></li>
+          <li><a href="/revision/" data-i18n="nav_revision"></a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="nav_apropos"></h5>
+        <ul>
+          <li><a href="/a-propos/" data-i18n="nav_apropos"></a></li>
+          <li><a href="/contact/" data-i18n="nav_contact"></a></li>
+          <li><a href="/confidentialite/" data-i18n="footer_privacy"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-current-year>2026</span> Nova SVT — <span data-i18n="footer_rights"></span></span>
+      <span data-lang="ar">صُنع بعناية للتلميذ والأستاذ المغربي 🇲🇦</span>
+      <span data-lang="fr">Conçu avec soin pour l'élève et l'enseignant marocain 🇲🇦</span>
+    </div>
+  </div>
+</footer>
+<script src="/assets/vendor/marked.min.js"></script>
+<script src="/assets/vendor/purify.min.js"></script>
+<script type="module" src="/assets/js/site.js"></script>
+<script>document.querySelectorAll('[data-current-year]').forEach(function(el){el.textContent = new Date().getFullYear();});</script>
+
+</body>
+</html>

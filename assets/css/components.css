@@ -512,9 +512,45 @@ table.tableau tr:nth-child(even) td { background: color-mix(in srgb, var(--bg-al
 .quiz-justification { margin-top: var(--sp-3); padding: var(--sp-3) var(--sp-4); border-radius: var(--radius); background: var(--bg-alt); font-size: var(--fs-14); }
 .quiz-justification[hidden] { display: none; }
 
-.lesson-nav { display: flex; justify-content: space-between; gap: var(--sp-4); margin-top: var(--sp-8); }
-.lesson-nav a { flex: 1; padding: var(--sp-4); border: 1px solid var(--line); border-radius: var(--radius); }
-.lesson-nav a:last-child { text-align: end; }
+.lesson-nav { display: flex; justify-content: space-between; align-items: stretch; gap: var(--sp-4); margin-top: var(--sp-8); }
+.lesson-nav a { flex: 1; display: flex; flex-direction: column; gap: 4px; padding: var(--sp-4); border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); transition: border-color var(--motion-fast), box-shadow var(--motion-fast); }
+.lesson-nav a:hover { border-color: color-mix(in srgb, var(--primary) 40%, var(--line)); box-shadow: var(--shadow-sm); text-decoration: none; }
+.lesson-nav-next { text-align: end; }
+.lesson-nav-dir { font-family: var(--font-mono); font-size: var(--fs-12); letter-spacing: .05em; color: var(--secondary); }
+.lesson-nav-t { font-weight: 600; color: var(--ink); }
+@media (max-width: 679px) { .lesson-nav { flex-direction: column; } .lesson-nav > .btn { order: 3; } }
+
+/* قائمة "دروس هذه الوحدة" داخل الشريط الجانبي للدرس (القسم 3.3) */
+.unit-lessons { margin-top: var(--sp-6); padding-top: var(--sp-5); border-top: 1px solid var(--line); }
+.unit-lessons-head { display: flex; flex-direction: column; gap: 4px; margin-bottom: var(--sp-3); }
+.unit-lessons-head .eyebrow { color: var(--secondary); }
+.unit-lessons-head a { font-size: var(--fs-14); color: var(--ink-soft); }
+.unit-lessons-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.unit-lessons-list a { display: flex; align-items: center; gap: var(--sp-2); padding: var(--sp-2) var(--sp-2); border-radius: var(--radius-sm); color: var(--ink-soft); font-size: var(--fs-14); }
+.unit-lessons-list a:hover { background: var(--bg-alt); text-decoration: none; color: var(--ink); }
+.unit-lesson-num { flex: none; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: var(--fs-12); background: var(--bg-alt); color: var(--ink-soft); }
+.unit-lessons-list .is-current > a { background: color-mix(in srgb, var(--primary) 10%, transparent); color: var(--primary); font-weight: 600; }
+.unit-lessons-list .is-current .unit-lesson-num { background: var(--primary); color: #fff; }
+
+/* صفحة فهرس الوحدة */
+.unit-count { color: var(--ink-soft); font-size: var(--fs-14); margin: var(--sp-3) 0 var(--sp-6); display: flex; align-items: center; gap: 8px; }
+.unit-lessons-cards { display: flex; flex-direction: column; gap: var(--sp-3); }
+.unit-lesson-card { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-4) var(--sp-5); border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); color: inherit; transition: transform var(--motion-fast), box-shadow var(--motion-fast), border-color var(--motion-fast); }
+.unit-lesson-card:hover { transform: translateX(-4px); box-shadow: var(--shadow-md); border-color: transparent; text-decoration: none; }
+[dir="ltr"] .unit-lesson-card:hover { transform: translateX(4px); }
+.unit-lesson-card-num { flex: none; width: 36px; height: 36px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: var(--fs-18); background: color-mix(in srgb, var(--primary) 10%, transparent); color: var(--primary); }
+.unit-lesson-card-body { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.unit-lesson-card-title { font-family: var(--font-display); font-size: var(--fs-18); font-weight: 600; }
+.unit-lesson-card-meta { font-size: var(--fs-12); color: var(--ink-soft); }
+.unit-lesson-card-arrow { color: var(--ink-soft); }
+[dir="ltr"] .unit-lesson-card-arrow { transform: scaleX(-1); }
+
+/* تجميع قائمة الدروس حسب الوحدة */
+.unit-group { margin-bottom: var(--sp-7); }
+.unit-group-head { display: flex; align-items: baseline; gap: var(--sp-3); margin-bottom: var(--sp-4); padding-bottom: var(--sp-2); border-bottom: 2px solid var(--line); }
+.unit-group-head h3 { margin: 0; font-size: var(--fs-20); }
+.unit-group-head .unit-group-count { font-family: var(--font-mono); font-size: var(--fs-12); color: var(--secondary); }
+.unit-group-head a { margin-inline-start: auto; font-size: var(--fs-14); color: var(--primary); white-space: nowrap; }
 
 /* ============ 20. بطاقات المراجعة (Flashcards) ============ */
 .flashcard { perspective: 1000px; height: 200px; cursor: pointer; }
