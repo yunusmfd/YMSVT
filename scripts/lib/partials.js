@@ -20,7 +20,7 @@ const MORE_ITEMS = [
   { key: "contact", href: "/contact/", i18n: "nav_contact" },
 ];
 
-export function renderNavbar({ activeNav = "", latestBlogPost = null } = {}) {
+export function renderNavbar({ activeNav = "", latestBlogPost = null, overHero = false } = {}) {
   const navLinks = NAV_ITEMS.map(
     (item) => `<li><a class="nav-link" href="${item.href}" data-i18n="${item.i18n}"${item.key === activeNav ? ' aria-current="page"' : ""}></a></li>`
   ).join("");
@@ -35,7 +35,7 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null } = {}) {
 
   return `
 <a href="#main" class="skip-link" data-i18n="skip_to_content">تخطَّ إلى المحتوى</a>
-<header class="navbar" data-navbar>
+<header class="navbar${overHero ? " navbar-over-hero" : ""}" data-navbar>
   <div class="navbar-inner">
     <a href="/" class="nova-logo">${LOGO_SVG}<span class="nova-logo-text">Nova SVT</span></a>
     <nav aria-label="التنقل الرئيسي">
@@ -45,8 +45,10 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null } = {}) {
       </ul>
     </nav>
     <div class="nav-more" data-nav-more>
-      <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false" data-i18n="nav_more"></button>
-      <span class="arrow" aria-hidden="true">▾</span>
+      <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false">
+        <span data-i18n="nav_more"></span>
+        <span class="arrow" aria-hidden="true">▾</span>
+      </button>
       <div class="nav-more-menu" data-nav-more-menu hidden>${moreLinks}</div>
     </div>
     <div class="nav-actions">
@@ -211,8 +213,8 @@ export function wrapPage({
 <head>
 ${renderHead({ title, description, ogImage, ogType, url, extraHead })}
 </head>
-<body${bodyClass ? ` class="${bodyClass}"` : ""}>
-${renderNavbar({ activeNav, latestBlogPost })}
+<body${bodyClass || activeNav === "home" ? ` class="${[bodyClass, activeNav === "home" ? "has-hero" : ""].filter(Boolean).join(" ")}"` : ""}>
+${renderNavbar({ activeNav, latestBlogPost, overHero: activeNav === "home" })}
 <main id="main">
 ${bodyHtml}
 </main>
