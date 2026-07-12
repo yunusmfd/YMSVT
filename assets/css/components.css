@@ -31,12 +31,10 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: linear-gradient(to bottom, rgba(8, 16, 11, .72), rgba(8, 16, 11, .2) 70%, transparent);
 }
-.navbar-over-hero:not(.is-scrolled) .nova-logo-text,
 .navbar-over-hero:not(.is-scrolled) .nav-link,
 .navbar-over-hero:not(.is-scrolled) .nav-more-trigger,
 .navbar-over-hero:not(.is-scrolled) .icon-btn { color: #fff; }
 .navbar-over-hero:not(.is-scrolled) .icon-btn { border-color: rgba(255,255,255,.35); }
-.navbar-over-hero:not(.is-scrolled) .search-bar-inline { border-color: rgba(255,255,255,.35); color: #fff; }
 .navbar.is-scrolled { box-shadow: var(--shadow-sm); }
 
 .navbar-inner { display: flex; align-items: center; gap: var(--sp-6); width: 100%; max-width: var(--container-max); margin-inline: auto; }
@@ -66,9 +64,11 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
 .nav-actions { display: flex; align-items: center; gap: var(--sp-2); }
 .nav-divider-bar { display: none; }
 
-.nova-logo { display: flex; align-items: center; gap: var(--sp-2); font-family: var(--font-display); font-weight: 700; font-size: var(--fs-20); color: var(--primary); }
+/* الشعار صورة ثابتة الألوان (لا يمكنها التكيّف مع الوضع الليلي) — لذا تُوضع دوما فوق شارة فاتحة
+   لضمان التباين على كل الخلفيات (النافبار الداكن، الفوتر، حالة الهيرو الشفّافة). */
+.nova-logo { display: flex; align-items: center; background: #fdfdfa; padding: 5px 12px; border-radius: var(--radius-sm, 10px); box-shadow: var(--shadow-sm); }
 .nova-logo:hover { text-decoration: none; }
-.nova-logo .nova-logo-text { color: var(--primary); }
+.nova-logo-img { display: block; height: 30px; width: auto; }
 
 /* ============ 2. الأزرار ============ */
 .btn {
@@ -195,28 +195,6 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
 }
 
 /* ============ 7. البحث ============ */
-.search-bar-inline {
-  display: none;
-  align-items: center; gap: var(--sp-2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-pill);
-  padding: var(--sp-1) var(--sp-4);
-  min-width: 240px;
-  background: var(--bg-alt);
-  color: var(--ink-soft);
-  cursor: text;
-  transition: border-color var(--motion-fast), background-color var(--motion-fast);
-}
-.search-bar-inline:hover { border-color: color-mix(in srgb, var(--primary) 40%, var(--line)); }
-/* الحالة الشفّافة (الرئيسية فقط): زجاجي أبيض فوق الهيرو الداكن */
-.navbar-over-hero:not(.is-scrolled) .search-bar-inline { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.3); color: rgba(255,255,255,.85); }
-.search-bar-inline input {
-  border: none; background: transparent; outline: none; color: inherit;
-  font-family: var(--font-body); font-size: var(--fs-14); width: 100%;
-}
-.search-bar-inline input::placeholder { color: currentColor; opacity: .7; }
-@media (min-width: 900px) { .search-bar-inline { display: flex; } .search-icon-btn { display: none; } }
-
 .search-overlay {
   position: fixed; inset: 0; z-index: 1000;
   background: rgba(10, 16, 12, .6);
@@ -280,12 +258,6 @@ body.has-hero .hero { margin-top: calc(-1 * (var(--sp-3) * 2 + 44px + 1px)); }
 @media (max-width: 899px) {
   .nav-links, .nav-more { display: none; }
   .hamburger-btn { display: inline-flex; }
-}
-@media (min-width: 680px) and (max-width: 899px) {
-  .search-icon-btn { display: inline-flex; }
-}
-@media (max-width: 679px) {
-  .search-icon-btn { display: inline-flex; }
 }
 
 /* ============ 11. الأطر التربوية (Encadrés، القسم 6.1.1) ============ */

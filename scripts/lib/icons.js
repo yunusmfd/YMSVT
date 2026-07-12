@@ -7,13 +7,6 @@ export const ICON_HAMBURGER = `<svg viewBox="0 0 24 24" fill="none" stroke="curr
 export const ICON_CLOSE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
 export const ICON_ARROW = `<svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`;
 
-export const LOGO_SVG = `<svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-  <circle cx="20" cy="20" r="19" fill="var(--primary)"/>
-  <path d="M3 24c4-3 8-3 12 0s8 3 12 0 8-3 10-1" stroke="var(--secondary)" stroke-width="2" fill="none" opacity=".8"/>
-  <path d="M2 29c4-3 8-3 12 0s8 3 12 0 9-3 12-1" stroke="var(--rust)" stroke-width="2" fill="none" opacity=".6"/>
-  <path d="M20 10c-4 2-5 6-3 10 3-1 5-4 5-8 2 3 1 7-2 9 4 0 7-4 6-8-1-3-3-4-6-3z" fill="#F9FAF7"/>
-</svg>`;
-
 /*
   أيقونات الواجهة المخصّصة (خطّية موحّدة: 24×24، stroke-width 1.6، أطراف مدوّرة) —
   تحلّ محل الـEmoji في شبكات الوصول السريع/الثقة/التخصصات لكسر الطابع القالبي (القسم 4.4).

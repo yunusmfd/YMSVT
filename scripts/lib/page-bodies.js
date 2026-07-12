@@ -165,7 +165,7 @@ export function leconsListBody() {
       </div>
     </aside>
     <div>
-      <div class="grid grid-3" data-lecons-grid></div>
+      <div data-lecons-grid></div>
       <div class="state-empty" data-lecons-grid-empty hidden>
         <span class="icon">📭</span>
         <p><span data-lang="ar">لا توجد دروس بعد لهذا الاختيار، جرّب مستوى آخر.</span><span data-lang="fr">Aucune leçon pour ce choix, essayez un autre niveau.</span></p>

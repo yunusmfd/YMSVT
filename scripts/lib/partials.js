@@ -3,7 +3,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT } from "./content-loader.js";
-import { ICON_SEARCH, ICON_BELL, ICON_MOON, ICON_SUN, ICON_HAMBURGER, ICON_CLOSE, ICON_ARROW, LOGO_SVG } from "./icons.js";
+import { ICON_SEARCH, ICON_BELL, ICON_MOON, ICON_SUN, ICON_HAMBURGER, ICON_CLOSE, ICON_ARROW } from "./icons.js";
+
+const NOVA_LOGO_IMG = `<img src="/assets/images/logo/nova-svt-logo.png" alt="Nova SVT" class="nova-logo-img" width="211" height="72" />`;
 
 const INLINE_INIT = fs.readFileSync(path.join(ROOT, "assets/js/inline-init.js"), "utf-8");
 
@@ -37,7 +39,7 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null, overHero =
 <a href="#main" class="skip-link" data-i18n="skip_to_content">تخطَّ إلى المحتوى</a>
 <header class="navbar${overHero ? " navbar-over-hero" : ""}" data-navbar>
   <div class="navbar-inner">
-    <a href="/" class="nova-logo">${LOGO_SVG}<span class="nova-logo-text">Nova SVT</span></a>
+    <a href="/" class="nova-logo">${NOVA_LOGO_IMG}</a>
     <nav aria-label="التنقل الرئيسي">
       <ul class="nav-links">
         <li><a class="nav-link" href="/" data-i18n="nav_home"${activeNav === "home" ? ' aria-current="page"' : ""}></a></li>
@@ -52,11 +54,7 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null, overHero =
       <div class="nav-more-menu" data-nav-more-menu hidden>${moreLinks}</div>
     </div>
     <div class="nav-actions">
-      <form class="search-bar-inline" role="search" data-search-open>
-        <span aria-hidden="true">${ICON_SEARCH}</span>
-        <input type="search" data-i18n-placeholder="search_placeholder" readonly />
-      </form>
-      <button class="icon-btn search-icon-btn" data-search-open data-i18n-aria="search_title">${ICON_SEARCH}</button>
+      <button class="icon-btn" data-search-open data-i18n-aria="search_title">${ICON_SEARCH}</button>
       <button class="icon-btn" data-lang-toggle data-i18n-aria="lang_toggle">FR</button>
       <button class="icon-btn theme-toggle" data-theme-toggle data-i18n-aria="theme_toggle">${ICON_MOON}${ICON_SUN}</button>
       <div class="nav-more" data-nav-more>
@@ -71,7 +69,7 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null, overHero =
 
 <div class="mobile-menu" data-mobile-menu hidden>
   <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-6)">
-    <span class="nova-logo">${LOGO_SVG}<span>Nova SVT</span></span>
+    <span class="nova-logo">${NOVA_LOGO_IMG}</span>
     <button class="icon-btn" data-mobile-menu-close data-i18n-aria="close">${ICON_CLOSE}</button>
   </div>
   <nav>
@@ -110,7 +108,7 @@ export function renderFooter() {
   <div class="container">
     <div class="footer-grid">
       <div>
-        <span class="nova-logo" style="color:#fff"><span>Nova SVT</span></span>
+        <span class="nova-logo">${NOVA_LOGO_IMG}</span>
         <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="ar">المرجع الرقمي لعلوم الحياة والأرض بالمغرب — بالعربية والفرنسية.</p>
         <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="fr">La référence numérique des SVT au Maroc — en arabe et en français.</p>
       </div>
