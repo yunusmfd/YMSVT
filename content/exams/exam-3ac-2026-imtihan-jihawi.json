@@ -1,0 +1,12 @@
+{
+  "id": "exam-3ac-2026-imtihan-jihawi",
+  "type": "imtihan",
+  "sous_type": "jihawi",
+  "niveau": "3ac",
+  "dorra": 2,
+  "numero": 1,
+  "annee_scolaire": "2025-2026",
+  "titre": { "ar": "الامتحان الجهوي الموحد", "fr": "Examen régional unifié" },
+  "fichier_pdf": "content/exams/files/exam-3ac-2026-imtihan-jihawi.pdf",
+  "corrige_pdf": "content/exams/files/exam-3ac-2026-imtihan-jihawi-corrige.pdf"
+}

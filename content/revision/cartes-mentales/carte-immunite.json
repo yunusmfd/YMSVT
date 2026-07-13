@@ -1,6 +1,8 @@
 {
   "id": "carte-immunite",
   "niveau": "2bac",
+  "dorra": 2,
+  "filieres": ["2bac-svt", "2bac-pc"],
   "unite": "المناعة",
   "titre": { "ar": "خريطة ذهنية: المناعة", "fr": "Carte mentale : l'immunité" },
   "image": "assets/images/svg/carte-immunite.svg"

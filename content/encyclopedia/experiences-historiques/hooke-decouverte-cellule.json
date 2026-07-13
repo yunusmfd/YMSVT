@@ -1,0 +1,20 @@
+{
+  "id": "hooke-decouverte-cellule",
+  "titre": { "ar": "تجربة روبرت هوك: اكتشاف الخلية", "fr": "L'observation de Robert Hooke : la découverte de la cellule" },
+  "savant": { "ar": "روبرت هوك", "fr": "Robert Hooke" },
+  "annee": 1665,
+  "question": {
+    "ar": "ما البنية الدقيقة للمواد العضوية كالخشب، وهل تحمل تركيبا متكرّرا غير مرئي بالعين المجرّدة؟",
+    "fr": "Quelle est la structure fine des matériaux organiques comme le liège, et présentent-ils une organisation répétitive invisible à l'œil nu ?"
+  },
+  "protocole": {
+    "ar": "استعمل هوك مجهرا مركَّبا من صنعه، ذا قدرة تكبير محدودة، لفحص شريحة رقيقة من لحاء شجرة الفلين (القُطلب)، ودوّن ملاحظاته الدقيقة في كتابه الشهير Micrographia.",
+    "fr": "Hooke utilisa un microscope composé de sa propre fabrication, à grossissement limité, pour examiner une fine tranche de liège (écorce de chêne-liège), consignant ses observations minutieuses dans son célèbre ouvrage Micrographia."
+  },
+  "resultat": {
+    "ar": "لاحظ هوك بنية مسامية منتظمة تشبه أقراص العسل، فأطلق عليها اسم 'خلايا' (cells) تشبيها بالغرف الصغيرة التي يقطنها الرهبان. كانت هذه أول مرة يُستعمل فيها مصطلح 'الخلية' في العلوم، رغم أن ما رآه فعليا كان جدرانا خلوية فارغة من خلايا نباتية ميتة.",
+    "fr": "Hooke observa une structure poreuse et régulière évoquant un nid d'abeilles, qu'il nomma « cellules » (cells) par analogie avec les petites chambres qu'occupaient les moines. Ce fut la première utilisation du terme « cellule » en science, bien qu'il observait en réalité les parois vides de cellules végétales mortes."
+  },
+  "image": "assets/images/thumbs/experience-hooke.png",
+  "date": "2026-04-15"
+}

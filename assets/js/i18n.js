@@ -32,6 +32,7 @@ export const I18N = {
     filter_all: "الكل",
     semester_1: "الدورة الأولى",
     semester_2: "الدورة الثانية",
+    mon_espace: "لوحة المتعلم",
   },
   fr: {
     nav_home: "Accueil",
@@ -65,6 +66,7 @@ export const I18N = {
     filter_all: "Tous",
     semester_1: "1er semestre",
     semester_2: "2e semestre",
+    mon_espace: "Tableau de bord",
   },
 };
 

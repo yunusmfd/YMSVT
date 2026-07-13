@@ -1,0 +1,20 @@
+{
+  "id": "griffith-transformation",
+  "titre": { "ar": "تجربة غريفيث: اكتشاف التحوّل البكتيري", "fr": "L'expérience de Griffith : la découverte de la transformation bactérienne" },
+  "savant": { "ar": "فريدريك غريفيث", "fr": "Frederick Griffith" },
+  "annee": 1928,
+  "question": {
+    "ar": "كيف يمكن لبكتيريا غير ممرضة أن تكتسب صفة الإمراض؟ وهل يمكن انتقال صفة وراثية بين خلايا مختلفة؟",
+    "fr": "Comment une bactérie non pathogène peut-elle acquérir un caractère pathogène ? Un caractère héréditaire peut-il se transmettre entre cellules différentes ?"
+  },
+  "protocole": {
+    "ar": "حقن غريفيث فئران تجارب بأربع عيّنات: بكتيريا ممرضة حية، بكتيريا غير ممرضة حية، بكتيريا ممرضة مقتولة بالحرارة، ومزيج من البكتيريا الممرضة المقتولة مع غير الممرضة الحية.",
+    "fr": "Griffith injecta à des souris quatre échantillons : bactéries pathogènes vivantes, bactéries non pathogènes vivantes, bactéries pathogènes tuées par la chaleur, et un mélange de bactéries pathogènes tuées avec des non pathogènes vivantes."
+  },
+  "resultat": {
+    "ar": "ماتت الفئران التي حُقنت بالمزيج الأخير رغم أن كلا مكوّنيه بمفرده غير قاتل، مما كشف أن مادة ما من البكتيريا الميتة انتقلت إلى البكتيريا الحية وحوّلتها إلى شكل ممرض وراثيا. مهّدت هذه النتيجة الطريق لاحقا لتحديد الحمض النووي (DNA) كمادة وراثية.",
+    "fr": "Les souris injectées avec ce dernier mélange moururent, bien qu'aucun des deux composants ne fût létal seul — révélant qu'une substance des bactéries mortes avait transformé génétiquement les bactéries vivantes. Ce résultat ouvrit la voie à l'identification ultérieure de l'ADN comme support de l'hérédité."
+  },
+  "image": "assets/images/thumbs/experience-griffith.png",
+  "date": "2026-04-14"
+}

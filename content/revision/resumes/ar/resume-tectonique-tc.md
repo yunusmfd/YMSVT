@@ -3,6 +3,8 @@ id: resume-tectonique-tc
 titre_ar: "ملخص: تكتونية الصفائح"
 titre_fr: "Résumé : la tectonique des plaques"
 niveau: tc
+dorra: 2
+filieres: ["tcs"]
 unite: "تكتونية الصفائح"
 ---
 

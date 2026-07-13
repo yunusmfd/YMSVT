@@ -1,0 +1,15 @@
+{
+  "id": "rif",
+  "titre": { "ar": "سلسلة الريف", "fr": "La chaîne du Rif" },
+  "region": { "ar": "شمال المغرب", "fr": "Nord du Maroc" },
+  "description": {
+    "ar": "سلسلة جبلية تمتد بمحاذاة الساحل المتوسطي، تتميّز بتضاريس وعرة ومناخ رطب نسبيا مقارنة ببقية سلاسل المغرب، وتحتضن غطاء غابويا كثيفا.",
+    "fr": "Chaîne montagneuse longeant le littoral méditerranéen, caractérisée par un relief accidenté et un climat relativement humide comparé au reste des chaînes marocaines, avec un couvert forestier dense."
+  },
+  "particularite_geologique": {
+    "ar": "جزء من الحزام الجبلي الألبي المحيط بالبحر الأبيض المتوسط (امتداد لسلسلة البيتيك بإسبانيا)، تكوّنت بفعل تقارب الصفيحتين الإفريقية والأوروبية، وتتميّز بتراكيب معقدة من الصخور المتراكبة (Nappes) نتيجة الضغط الجانبي الشديد.",
+    "fr": "Fait partie de la ceinture orogénique alpine bordant la Méditerranée (prolongement des cordillères bétiques d'Espagne), formée par la convergence des plaques africaine et européenne, avec des structures complexes de nappes de charriage dues à une forte compression latérale."
+  },
+  "image": "assets/images/thumbs/geologie-rif.png",
+  "date": "2026-04-10"
+}

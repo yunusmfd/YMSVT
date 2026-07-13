@@ -1,0 +1,21 @@
+{
+  "id": "hobara",
+  "nom": { "ar": "الحبارى", "fr": "Outarde houbara" },
+  "nom_scientifique": "Chlamydotis undulata",
+  "regne": "animal",
+  "habitat": {
+    "ar": "المناطق الصحراوية وشبه الصحراوية بجنوب شرق المغرب، حيث تتمويه ألوانها الترابية مع محيطها.",
+    "fr": "Zones désertiques et semi-désertiques du sud-est du Maroc, où sa robe couleur sable la camoufle dans son environnement."
+  },
+  "description": {
+    "ar": "طائر بري متوسط الحجم يفضّل الجري على الطيران عند الشعور بالخطر. يتغذى على الحشرات والنباتات الصحراوية، ويُعرف بطقوس تزاوج استعراضية مميزة.",
+    "fr": "Oiseau terrestre de taille moyenne qui préfère courir plutôt que voler face au danger. Il se nourrit d'insectes et de plantes désertiques et pratique une parade nuptiale spectaculaire."
+  },
+  "particularite": {
+    "ar": "تعرَّض عدده للتراجع الحاد بسبب الصيد الجائر وتدهور الموئل الصحراوي، ما جعله محور برامج إكثار وإطلاق لإعادة التوازن لأعداده بالمغرب.",
+    "fr": "Ses effectifs ont fortement chuté à cause du braconnage et de la dégradation de l'habitat désertique, faisant de lui l'objet de programmes d'élevage et de réintroduction au Maroc."
+  },
+  "statut": { "ar": "معرَّض للخطر", "fr": "Vulnérable" },
+  "image": "assets/images/thumbs/organisme-hobara.png",
+  "date": "2026-04-03"
+}

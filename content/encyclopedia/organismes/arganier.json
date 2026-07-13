@@ -1,0 +1,21 @@
+{
+  "id": "arganier",
+  "nom": { "ar": "شجرة الأركان", "fr": "Arganier" },
+  "nom_scientifique": "Argania spinosa",
+  "regne": "vegetal",
+  "habitat": {
+    "ar": "المناطق شبه القاحلة بجنوب غرب المغرب، خصوصا حوض سوس، حيث تتحمل الجفاف وملوحة التربة.",
+    "fr": "Zones semi-arides du sud-ouest du Maroc, notamment le bassin du Souss, où elle tolère la sécheresse et la salinité du sol."
+  },
+  "description": {
+    "ar": "شجرة معمّرة مستوطنة بالمغرب حصريا تقريبا، قد يفوق عمرها 200 سنة وتتحمل ظروف الجفاف بفضل جذورها العميقة. تنتج ثمارا زيتية تُستخرج منها زيت الأركان الشهير.",
+    "fr": "Arbre pluriannuel quasi endémique du Maroc, pouvant dépasser 200 ans, résistant à la sécheresse grâce à ses racines profondes. Il produit des fruits oléagineux dont on extrait la célèbre huile d'argan."
+  },
+  "particularite": {
+    "ar": "تُصنَّف غابة الأركان محمية حيوية من طرف اليونسكو منذ 1998، وهي من الأنظمة البيئية النادرة التي تجمع بين حماية التربة من التصحر وتوفير مورد اقتصادي محلي.",
+    "fr": "La forêt d'arganiers est classée réserve de biosphère par l'UNESCO depuis 1998 — un écosystème rare qui protège les sols de la désertification tout en fournissant une ressource économique locale."
+  },
+  "statut": { "ar": "شبه مستوطنة بالمغرب", "fr": "Quasi endémique du Maroc" },
+  "image": "assets/images/thumbs/organisme-arganier.png",
+  "date": "2026-04-01"
+}

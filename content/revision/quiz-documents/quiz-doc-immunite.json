@@ -1,6 +1,8 @@
 {
   "id": "quiz-doc-immunite",
   "niveau": "2bac",
+  "dorra": 2,
+  "filieres": ["2bac-svt", "2bac-pc"],
   "unite": "المناعة",
   "titre": { "ar": "تحليل وثيقة: الاستجابة المناعية الأولية والثانوية", "fr": "Analyse de document : réponses immunitaires primaire et secondaire" },
   "document": {

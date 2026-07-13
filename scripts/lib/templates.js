@@ -268,3 +268,77 @@ export function galerieDetailBody(item, deps) {
   }
 </div>`;
 }
+
+const REGNE_LABEL = { animal: { ar: "مملكة الحيوان", fr: "Règne animal" }, vegetal: { ar: "مملكة النبات", fr: "Règne végétal" } };
+
+export function organismeDetailBody(o) {
+  const regne = REGNE_LABEL[o.regne];
+  return `
+<div class="container" style="padding-top:var(--sp-5);max-width:760px">
+  ${renderBreadcrumb([{ ar: "الموسوعة", fr: "Encyclopédie", href: "/encyclopedie/" }, { ar: "الكائنات الحية", fr: "Êtres vivants", href: "/encyclopedie/organismes/" }], o.nom.ar, o.nom.fr)}
+  <div style="border-radius:var(--radius-lg);overflow:hidden">${imageMarkup(o.image, o.nom.ar)}</div>
+  ${regne ? `<span class="chip chip-spec" data-spec="${o.regne === "animal" ? "zoologie" : "botanique"}" style="margin-top:var(--sp-4)"><span data-lang="ar">${regne.ar}</span><span data-lang="fr">${regne.fr}</span></span>` : ""}
+  <h1><span data-lang="ar">${o.nom.ar}</span><span data-lang="fr">${o.nom.fr}</span></h1>
+  ${o.nom_scientifique ? `<p class="eyebrow" style="font-style:italic">${escapeHtml(o.nom_scientifique)}</p>` : ""}
+  <p style="font-size:var(--fs-18)"><span data-lang="ar">${o.description.ar}</span><span data-lang="fr">${o.description.fr}</span></p>
+  <h3 data-lang="ar">الموطن</h3><h3 data-lang="fr">Habitat</h3>
+  <p><span data-lang="ar">${o.habitat.ar}</span><span data-lang="fr">${o.habitat.fr}</span></p>
+  ${
+    o.particularite
+      ? `<h3 data-lang="ar">خاصية مميّزة</h3><h3 data-lang="fr">Particularité</h3>
+  <p><span data-lang="ar">${o.particularite.ar}</span><span data-lang="fr">${o.particularite.fr}</span></p>`
+      : ""
+  }
+  ${o.statut ? `<span class="chip">🌱 <span data-lang="ar">${o.statut.ar}</span><span data-lang="fr">${o.statut.fr}</span></span>` : ""}
+</div>`;
+}
+
+export function rocheMineralDetailBody(r) {
+  return `
+<div class="container" style="padding-top:var(--sp-5);max-width:760px">
+  ${renderBreadcrumb([{ ar: "الموسوعة", fr: "Encyclopédie", href: "/encyclopedie/" }, { ar: "الصخور والمعادن", fr: "Roches et minéraux", href: "/encyclopedie/roches-mineraux/" }], r.nom.ar, r.nom.fr)}
+  <div style="border-radius:var(--radius-lg);overflow:hidden">${imageMarkup(r.image, r.nom.ar)}</div>
+  <span class="chip" style="margin-top:var(--sp-4)"><span data-lang="ar">${r.type.ar}</span><span data-lang="fr">${r.type.fr}</span></span>
+  <h1><span data-lang="ar">${r.nom.ar}</span><span data-lang="fr">${r.nom.fr}</span></h1>
+  <p style="font-size:var(--fs-18)"><span data-lang="ar">${r.description.ar}</span><span data-lang="fr">${r.description.fr}</span></p>
+  <h3 data-lang="ar">التركيب</h3><h3 data-lang="fr">Composition</h3>
+  <p><span data-lang="ar">${r.composition.ar}</span><span data-lang="fr">${r.composition.fr}</span></p>
+  <h3 data-lang="ar">الاستعمالات</h3><h3 data-lang="fr">Utilisations</h3>
+  <p><span data-lang="ar">${r.utilisation.ar}</span><span data-lang="fr">${r.utilisation.fr}</span></p>
+  ${
+    r.gisement_maroc
+      ? `<h3 data-lang="ar">بالمغرب</h3><h3 data-lang="fr">Au Maroc</h3>
+  <p><span data-lang="ar">${r.gisement_maroc.ar}</span><span data-lang="fr">${r.gisement_maroc.fr}</span></p>`
+      : ""
+  }
+</div>`;
+}
+
+export function geologieMarocDetailBody(g) {
+  return `
+<div class="container" style="padding-top:var(--sp-5);max-width:760px">
+  ${renderBreadcrumb([{ ar: "الموسوعة", fr: "Encyclopédie", href: "/encyclopedie/" }, { ar: "جيولوجيا المغرب", fr: "Géologie du Maroc", href: "/encyclopedie/geologie-maroc/" }], g.titre.ar, g.titre.fr)}
+  <div style="border-radius:var(--radius-lg);overflow:hidden">${imageMarkup(g.image, g.titre.ar)}</div>
+  <span class="chip chip-secondary" style="margin-top:var(--sp-4)">🌍 <span data-lang="ar">${g.region.ar}</span><span data-lang="fr">${g.region.fr}</span></span>
+  <h1><span data-lang="ar">${g.titre.ar}</span><span data-lang="fr">${g.titre.fr}</span></h1>
+  <p style="font-size:var(--fs-18)"><span data-lang="ar">${g.description.ar}</span><span data-lang="fr">${g.description.fr}</span></p>
+  <h3 data-lang="ar">الخاصية الجيولوجية</h3><h3 data-lang="fr">Particularité géologique</h3>
+  <p><span data-lang="ar">${g.particularite_geologique.ar}</span><span data-lang="fr">${g.particularite_geologique.fr}</span></p>
+</div>`;
+}
+
+export function experienceHistoriqueDetailBody(e) {
+  return `
+<div class="container" style="padding-top:var(--sp-5);max-width:760px">
+  ${renderBreadcrumb([{ ar: "الموسوعة", fr: "Encyclopédie", href: "/encyclopedie/" }, { ar: "التجارب العلمية التاريخية", fr: "Expériences historiques", href: "/encyclopedie/experiences-historiques/" }], e.titre.ar, e.titre.fr)}
+  <div style="border-radius:var(--radius-lg);overflow:hidden">${imageMarkup(e.image, e.titre.ar)}</div>
+  <span class="chip chip-secondary" style="margin-top:var(--sp-4)"><bdi dir="ltr">${e.annee}</bdi> · <span data-lang="ar">${e.savant.ar}</span><span data-lang="fr">${e.savant.fr}</span></span>
+  <h1><span data-lang="ar">${e.titre.ar}</span><span data-lang="fr">${e.titre.fr}</span></h1>
+  <h3 data-lang="ar">السؤال المطروح</h3><h3 data-lang="fr">La question posée</h3>
+  <p style="font-size:var(--fs-18)"><span data-lang="ar">${e.question.ar}</span><span data-lang="fr">${e.question.fr}</span></p>
+  <h3 data-lang="ar">البروتوكول</h3><h3 data-lang="fr">Protocole</h3>
+  <p><span data-lang="ar">${e.protocole.ar}</span><span data-lang="fr">${e.protocole.fr}</span></p>
+  <h3 data-lang="ar">النتيجة</h3><h3 data-lang="fr">Résultat</h3>
+  <p><span data-lang="ar">${e.resultat.ar}</span><span data-lang="fr">${e.resultat.fr}</span></p>
+</div>`;
+}

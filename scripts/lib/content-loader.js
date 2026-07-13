@@ -80,7 +80,19 @@ export function listVirtualLab() {
     .map((e) => readJSON(path.join(dir, e.name, "meta.json")));
 }
 
-const ENCYCLOPEDIA_TYPES = ["articles", "scientifiques", "decouvertes", "glossaire", "chronologies", "saviez-vous", "galerie"];
+const ENCYCLOPEDIA_TYPES = [
+  "articles",
+  "scientifiques",
+  "decouvertes",
+  "glossaire",
+  "chronologies",
+  "saviez-vous",
+  "galerie",
+  "organismes",
+  "roches-mineraux",
+  "geologie-maroc",
+  "experiences-historiques",
+];
 
 export function listEncyclopedia(type) {
   const dir = path.join(CONTENT_DIR, "encyclopedia", type);

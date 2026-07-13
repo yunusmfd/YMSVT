@@ -3,6 +3,7 @@ id: resume-digestion-1ac
 titre_ar: "ملخص: الجهاز الهضمي"
 titre_fr: "Résumé : le système digestif"
 niveau: 1ac
+dorra: 2
 unite: "التغذية"
 ---
 

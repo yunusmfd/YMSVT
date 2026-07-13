@@ -1,6 +1,8 @@
 {
   "id": "fiche-2bac-immunite-01",
   "niveau": "2bac",
+  "dorra": 2,
+  "filieres": ["2bac-svt", "2bac-pc"],
   "unite": "المناعة",
   "question": { "ar": "ما الفرق بين المناعة الفطرية والمناعة النوعية؟", "fr": "Quelle est la différence entre l'immunité innée et l'immunité spécifique ?" },
   "reponse": { "ar": "المناعة الفطرية سريعة وغير انتقائية (بلعمة، التهاب)، أما المناعة النوعية فهي أبطأ لكنها دقيقة وتعتمد على الخلايا اللمفاوية والأجسام المضادة، مع الاحتفاظ بذاكرة مناعية.", "fr": "L'immunité innée est rapide et non spécifique (phagocytose, inflammation), tandis que l'immunité spécifique est plus lente mais précise, reposant sur les lymphocytes et les anticorps, avec une mémoire immunitaire." }

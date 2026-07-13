@@ -1,6 +1,8 @@
 {
   "id": "carte-cellule",
   "niveau": "tc",
+  "dorra": 1,
+  "filieres": ["tcs"],
   "unite": "الخلية",
   "titre": { "ar": "خريطة ذهنية: عضيات الخلية", "fr": "Carte mentale : les organites de la cellule" },
   "image": "assets/images/svg/carte-cellule.svg"

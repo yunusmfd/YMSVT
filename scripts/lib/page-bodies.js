@@ -1,5 +1,4 @@
 // قوالب أجسام الصفحات الساكنة (Shells) — القسم 7. المحتوى الديناميكي يُملأ عبر assets/js/pages/*.js وقت التصفح (fetch /manifest.json، القسم 12.2)
-import { HERO_STRATA_SVG } from "./hero-strata.js";
 import { ICON_ARROW, uiIcon } from "./icons.js";
 
 // عنوان قسم موحّد: تسمية Mono صغيرة (eyebrow) + شرطة طبقية + عنوان — يعطي إيقاعا تحريريا متّسقا عبر الصفحة
@@ -13,127 +12,57 @@ function sectionHead(eyebrowAr, eyebrowFr, titleAr, titleFr, linkHref, linkAr, l
   </div>`;
 }
 
-const QUICK_ACCESS = [
-  { href: "/lecons/", icon: "lecons", i18n: "nav_lecons", spec: "genetique", descAr: "دروس مفصّلة لكل المستويات", descFr: "Leçons détaillées, tous niveaux" },
-  { href: "/devoirs-examens/", icon: "exams", i18n: "nav_exams", spec: "physiologie", descAr: "فروض وامتحانات مع التصحيح", descFr: "Devoirs et examens corrigés" },
-  { href: "/labo-virtuel/", icon: "labo", i18n: "nav_labo", spec: "microbiologie", descAr: "تجارب تفاعلية وفيديوهات", descFr: "Expériences interactives" },
-  { href: "/encyclopedie/", icon: "encyclopedie", i18n: "nav_encyclopedie", spec: "taxonomie", descAr: "علماء، اكتشافات ومعجم", descFr: "Scientifiques, découvertes, glossaire" },
-  { href: "/revision/", icon: "revision", i18n: "nav_revision", spec: "ecologie", descAr: "ملخصات وبطاقات مراجعة", descFr: "Résumés et fiches de révision" },
-];
-
-const FEATURES = [
-  { icon: "free", ar: "مجاني بالكامل", fr: "100% gratuit", subAr: "لا اشتراكات، لا إعلانات مزعجة", subFr: "Sans abonnement ni publicité" },
-  { icon: "bilingual", ar: "ثنائي اللغة كاملا", fr: "Entièrement bilingue", subAr: "العربية والفرنسية بنفس الجودة", subFr: "Arabe et français, même qualité" },
-  { icon: "curriculum", ar: "مطابق للمنهاج الرسمي", fr: "Conforme au programme", subAr: "كل درس مرتبط ببند من المنهاج", subFr: "Aligné au programme officiel" },
-  { icon: "secure", ar: "بدون تسجيل", fr: "Sans inscription", subAr: "تقدّمك محفوظ محليا في متصفّحك", subFr: "Progression locale, dans le navigateur" },
+const BENEFITS = [
+  { icon: "download", spec: "microbiologie", ar: "ملخصات للتحميل", fr: "Résumés à télécharger", subAr: "ملفات PDF جاهزة للطباعة لكل درس", subFr: "Fiches PDF prêtes à imprimer" },
+  { icon: "quiz", spec: "physiologie", ar: "اختبارات فورية", fr: "Quiz instantanés", subAr: "تصحيح لحظي مع تبرير كل إجابة", subFr: "Correction immédiate et justifiée" },
+  { icon: "layers", spec: "genetique", ar: "رسوم تخطيطية", fr: "Schémas clairs", subAr: "رسوم أصلية توضّح كل مفهوم", subFr: "Schémas originaux pour chaque notion" },
+  { icon: "video", spec: "ecologie", ar: "فيديوهات شرح", fr: "Vidéos explicatives", subAr: "شرح مرئي للتجارب والظواهر", subFr: "Explications visuelles des phénomènes" },
 ];
 
 export function homeBody() {
   return `
-<section class="hero">
-  ${HERO_STRATA_SVG}
+<section class="hero hero-simple">
   <div class="hero-content">
-    <span class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span><span data-lang="ar">منصة تعليمية مجانية · المغرب</span><span data-lang="fr">Plateforme éducative gratuite · Maroc</span></span>
+    <span class="hero-eyebrow"><span data-lang="ar">منصة تعليمية مجانية · المغرب</span><span data-lang="fr">Plateforme éducative gratuite · Maroc</span></span>
     <h1>
-      <span data-lang="ar">مرجعك الكامل<br><em>لعلوم الحياة والأرض</em></span>
-      <span data-lang="fr">Votre référence complète<br><em>en SVT</em></span>
+      <span data-lang="ar">علوم الحياة <em>و الأرض</em></span>
+      <span data-lang="fr">Sciences de la Vie <em>et de la Terre</em></span>
     </h1>
     <p class="lead">
       <span data-lang="ar">دروس، فروض، امتحانات، مختبر افتراضي وموسوعة علمية — بالعربية والفرنسية، مطابقة للمنهاج الرسمي المغربي.</span>
       <span data-lang="fr">Leçons, devoirs, examens, labo virtuel et encyclopédie — en arabe et en français, conformes au programme officiel marocain.</span>
     </p>
     <div class="hero-ctas">
+      <a class="btn btn-glass btn-lg" href="/encyclopedie/"><span data-lang="ar">تصفح الموسوعة</span><span data-lang="fr">Explorer l'encyclopédie</span></a>
       <a class="btn btn-primary btn-lg" href="/lecons/"><span data-lang="ar">ابدأ التعلّم</span><span data-lang="fr">Commencer</span> ${ICON_ARROW}</a>
-      <a class="btn btn-glass btn-lg" href="/labo-virtuel/"><span data-lang="ar">جرّب المختبر الافتراضي</span><span data-lang="fr">Essayer le labo virtuel</span></a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><strong>100%</strong><span data-lang="ar">مجاني بدون تسجيل</span><span data-lang="fr">Gratuit, sans inscription</span></div>
-      <div class="hero-stat"><strong>12</strong><span data-lang="ar">مسارا دراسيا</span><span data-lang="fr">parcours scolaires</span></div>
-      <div class="hero-stat"><strong>7</strong><span data-lang="ar">أقسام بالموسوعة</span><span data-lang="fr">sections encyclopédiques</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="level-picker container section">
-  ${sectionHead("ابدأ من مستواك", "Choisis ton niveau", "أنا في...", "Je suis en...", "", "", "", "")}
-  <div class="level-picker-grid">
-    <a class="level-btn" href="/lecons/#1ac"><span class="level-btn-code">1·2·3 AC</span><strong data-lang="ar">الإعدادي</strong><strong data-lang="fr">Collège</strong><span class="level-btn-sub">1AC · 2AC · 3AC</span></a>
-    <a class="level-btn" href="/lecons/#tc"><span class="level-btn-code">TC</span><strong data-lang="ar">الجذع المشترك</strong><strong data-lang="fr">Tronc commun</strong><span class="level-btn-sub">TCS · TCL</span></a>
-    <a class="level-btn" href="/lecons/#1bac"><span class="level-btn-code">1 BAC</span><strong data-lang="ar">الأولى باك</strong><strong data-lang="fr">1re Bac</strong><span class="level-btn-sub">SE · L · SM</span></a>
-    <a class="level-btn" href="/lecons/#2bac"><span class="level-btn-code">2 BAC</span><strong data-lang="ar">الثانية باك</strong><strong data-lang="fr">2e Bac</strong><span class="level-btn-sub">SVT · PC · SM · SA</span></a>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    ${sectionHead("منصة واحدة", "Une seule plateforme", "كل ما تحتاجه في مكان واحد", "Tout au même endroit", "", "", "", "")}
-    <div class="quick-grid">
-      ${QUICK_ACCESS.map(
-        (q) => `<a class="quick-card card-link" href="${q.href}">
-        <span class="quick-icon" data-spec="${q.spec}">${uiIcon(q.icon)}</span>
-        <span class="quick-body">
-          <span class="quick-title" data-i18n="${q.i18n}"></span>
-          <span class="quick-desc"><span data-lang="ar">${q.descAr}</span><span data-lang="fr">${q.descFr}</span></span>
-        </span>
-        <span class="quick-arrow" aria-hidden="true">${ICON_ARROW}</span>
-      </a>`
-      ).join("")}
     </div>
   </div>
 </section>
 
 <section class="section container">
-  ${sectionHead("مجالان، منهج واحد", "Deux domaines", "علوم الحياة وعلوم الأرض", "Vie et Terre", "", "", "", "")}
-  <div class="dual-cards">
-    <a class="dual-card bio card-link" href="/lecons/#biologie">
-      <span class="dual-card-icon">${uiIcon("bio")}</span>
-      <div class="dual-card-body">
-        <h3><span data-lang="ar">علوم الحياة</span><span data-lang="fr">Biologie</span></h3>
-        <p><span data-lang="ar">من الخلية إلى الأنظمة البيئية: الوراثة، المناعة، التنفّس والتركيب الضوئي.</span><span data-lang="fr">De la cellule aux écosystèmes : génétique, immunité, respiration et photosynthèse.</span></p>
-        <span class="dual-card-link"><span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span> ${ICON_ARROW}</span>
-      </div>
-    </a>
-    <a class="dual-card geo card-link" href="/lecons/#geologie">
-      <span class="dual-card-icon">${uiIcon("geo")}</span>
-      <div class="dual-card-body">
-        <h3><span data-lang="ar">علوم الأرض</span><span data-lang="fr">Géologie</span></h3>
-        <p><span data-lang="ar">الصخور، تكتونية الصفائح، الزلازل والبراكين والمخاطر الطبيعية.</span><span data-lang="fr">Roches, tectonique des plaques, séismes, volcans et risques naturels.</span></p>
-        <span class="dual-card-link"><span data-lang="ar">استكشف الدروس</span><span data-lang="fr">Explorer</span> ${ICON_ARROW}</span>
-      </div>
-    </a>
+  <div class="benefits-head">
+    <h2><span data-lang="ar">كل ما تحتاجه للنجاح في علوم الحياة والأرض</span><span data-lang="fr">Tout ce qu'il faut pour réussir en SVT</span></h2>
   </div>
-</section>
-
-<section class="section container">
-  ${sectionHead("محتوى حقيقي", "Contenu réel", "أحدث الدروس", "Dernières leçons", "/lecons/", "كل الدروس", "Toutes les leçons")}
-  <div class="tabs" role="tablist" style="margin-bottom:var(--sp-6)">
-    <button class="tab" data-home-tab="1ac" aria-selected="false">1AC</button>
-    <button class="tab" data-home-tab="3ac" aria-selected="false">3AC</button>
-    <button class="tab" data-home-tab="tc" aria-selected="false">TC</button>
-    <button class="tab" data-home-tab="1bac" aria-selected="false">1BAC</button>
-    <button class="tab" data-home-tab="2bac" aria-selected="true">2BAC</button>
-  </div>
-  <div class="grid grid-3" data-latest-lecons></div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    ${sectionHead("فضول علمي", "Curiosité", "من الموسوعة العلمية", "De l'encyclopédie", "/encyclopedie/", "استكشف الموسوعة", "Explorer")}
-    <div class="encyclopedia-scroller" data-ency-scroller></div>
-  </div>
-</section>
-
-<section class="section container">
-  ${sectionHead("لماذا نحن", "Pourquoi nous", "لماذا Nova SVT؟", "Pourquoi Nova SVT ?", "", "", "", "")}
-  <div class="features-grid">
-    ${FEATURES.map(
-      (f) => `<div class="feature-card">
-      <span class="feature-icon">${uiIcon(f.icon)}</span>
-      <h4><span data-lang="ar">${f.ar}</span><span data-lang="fr">${f.fr}</span></h4>
-      <p><span data-lang="ar">${f.subAr}</span><span data-lang="fr">${f.subFr}</span></p>
+  <div class="benefits-grid">
+    ${BENEFITS.map(
+      (b) => `<div class="benefit-card">
+      <span class="benefit-icon" data-spec="${b.spec}">${uiIcon(b.icon)}</span>
+      <h4><span data-lang="ar">${b.ar}</span><span data-lang="fr">${b.fr}</span></h4>
+      <p><span data-lang="ar">${b.subAr}</span><span data-lang="fr">${b.subFr}</span></p>
     </div>`
     ).join("")}
   </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    ${sectionHead("محتوى حقيقي", "Contenu réel", "أحدث الدروس والمراجعات", "Dernières leçons et révisions", "/lecons/", "عرض جميع الدروس", "Voir toutes les leçons")}
+    <div class="grid grid-3" data-latest-lecons></div>
+  </div>
+</section>
+
+<section class="section container">
+  <div data-saviez-featured></div>
 </section>`;
 }
 
@@ -146,6 +75,18 @@ const FILIERE_CHIPS = [
   { v: "1bac-se", l: "1BAC SE" }, { v: "1bac-l", l: "1BAC L" }, { v: "1bac-sm", l: "1BAC SM" },
   { v: "2bac-svt", l: "2BAC SVT" }, { v: "2bac-pc", l: "2BAC PC" }, { v: "2bac-sm", l: "2BAC SM" }, { v: "2bac-sa", l: "2BAC SA" },
 ];
+const FILIERE_2BAC_CHIPS = FILIERE_CHIPS.filter((c) => c.v.startsWith("2bac-"));
+
+// قائمة منسدلة موحّدة لفلاتر المستوى/الدورة/الوحدة (تُستعمل في صفحتي الدروس والفروض والامتحانات وفضاء المراجعة)
+function filterDropdown(key, labelAr, labelFr, extraOptions = "") {
+  return `<div class="filter-group">
+    <h4><span data-lang="ar">${labelAr}</span><span data-lang="fr">${labelFr}</span></h4>
+    <select class="filter-select" data-revision-filter="${key}">
+      <option value="" data-i18n="filter_all"></option>
+      ${extraOptions}
+    </select>
+  </div>`;
+}
 
 export function leconsListBody() {
   return `
@@ -199,62 +140,90 @@ export function examsListBody() {
   return `
 <div class="container" style="padding-top:var(--sp-6)">
   <h1><span data-lang="ar">الفروض والامتحانات</span><span data-lang="fr">Devoirs et examens</span></h1>
-  <div class="layout-with-sidebar" data-filters data-filters-target="[data-exams-grid]" data-filters-empty="[data-exams-grid-empty]">
-    <aside class="filters-sidebar">
-      <div class="filter-group" data-filter-key="type">
-        <h4><span data-lang="ar">النوع</span><span data-lang="fr">Type</span></h4>
-        <div class="tabs">
-          <button class="tab" data-filter-value="fard" aria-selected="false"><span data-lang="ar">فرض</span><span data-lang="fr">Devoir</span></button>
-          <button class="tab" data-filter-value="imtihan" aria-selected="false"><span data-lang="ar">امتحان</span><span data-lang="fr">Examen</span></button>
+
+  <div class="tabs" role="tablist" style="margin-bottom:var(--sp-6)" data-exams-section>
+    <button class="tab" data-exsection-value="fard" aria-selected="true"><span data-lang="ar">الفروض</span><span data-lang="fr">Devoirs</span></button>
+    <button class="tab" data-exsection-value="imtihan" aria-selected="false"><span data-lang="ar">الامتحانات</span><span data-lang="fr">Examens</span></button>
+  </div>
+
+  <!-- ========== 1) الفروض — مستوى + مسلك (عند الاقتضاء) + دورة ========== -->
+  <div data-exsection-panel="fard">
+    <div class="layout-with-sidebar">
+      <aside class="filters-sidebar">
+        ${filterDropdown("ex-fard-niveau", "المستوى", "Niveau", NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join(""))}
+        <div class="filter-group" data-filter-key="ex-fard-filiere-group" hidden>
+          <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
+          <select class="filter-select" data-revision-filter="ex-fard-filiere">
+            <option value="" data-i18n="filter_all"></option>
+            ${FILIERE_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
+          </select>
+        </div>
+        ${filterDropdown("ex-fard-dorra", "الدورة", "Semestre", `<option value="1" data-i18n="semester_1"></option><option value="2" data-i18n="semester_2"></option>`)}
+      </aside>
+      <div>
+        <div class="grid grid-2" data-exams-fard-grid></div>
+        <div class="state-empty" data-exams-fard-empty hidden>
+          <span class="icon">📭</span>
+          <p><span data-lang="ar">لا توجد فروض بعد لهذا الاختيار.</span><span data-lang="fr">Aucun devoir pour ce choix.</span></p>
         </div>
       </div>
-      <div class="filter-group" data-filter-key="niveau">
-        <h4><span data-lang="ar">المستوى</span><span data-lang="fr">Niveau</span></h4>
-        <div class="tabs">${NIVEAU_CHIPS.map((c) => `<button class="tab" data-filter-value="${c.v}" aria-selected="false">${c.l}</button>`).join("")}</div>
-      </div>
-      <div class="filter-group" data-filter-key="filiere" hidden>
+    </div>
+  </div>
+
+  <!-- ========== 2) الامتحانات — مستويان إشهاديان فقط: 3AC و2BAC ========== -->
+  <div data-exsection-panel="imtihan" hidden>
+    <p><span data-lang="ar">الامتحانات الإشهادية بالمغرب محصورة في مستويين: الثالثة إعدادي (امتحانان محلي وجهوي) والثانية بكالوريا (امتحان وطني حسب المسلك).</span><span data-lang="fr">Au Maroc, les examens certificatifs concernent deux niveaux : la 3AC (examens local et régional) et la 2BAC (examen national selon la filière).</span></p>
+    <div class="tabs" role="tablist" style="margin:var(--sp-4) 0 var(--sp-6)" data-exams-imtihan-niveau>
+      <button class="tab" data-exams-imtihan-niveau-value="3ac" aria-selected="true">3AC</button>
+      <button class="tab" data-exams-imtihan-niveau-value="2bac" aria-selected="false">2BAC</button>
+    </div>
+
+    <div data-exams-imtihan-panel="3ac">
+      <div class="grid grid-2" data-exams-imtihan-3ac-grid></div>
+    </div>
+    <div data-exams-imtihan-panel="2bac" hidden>
+      <div class="filter-group" style="max-width:280px;margin-bottom:var(--sp-5)">
         <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
-        <div class="tabs">${FILIERE_CHIPS.map((c) => `<button class="tab" data-filter-value="${c.v}" aria-selected="false">${c.l}</button>`).join("")}</div>
+        <select class="filter-select" data-exams-imtihan-2bac-filiere>
+          <option value="" data-i18n="filter_all"></option>
+          ${FILIERE_2BAC_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
+        </select>
       </div>
-      <div class="filter-group" data-filter-key="dorra">
-        <h4><span data-lang="ar">الدورة</span><span data-lang="fr">Semestre</span></h4>
-        <div class="tabs">
-          <button class="tab" data-filter-value="1" aria-selected="false"><span data-lang="ar">الأولى</span><span data-lang="fr">1</span></button>
-          <button class="tab" data-filter-value="2" aria-selected="false"><span data-lang="ar">الثانية</span><span data-lang="fr">2</span></button>
-        </div>
-      </div>
-    </aside>
-    <div>
-      <div class="grid grid-2" data-exams-grid></div>
-      <div class="state-empty" data-exams-grid-empty hidden>
-        <span class="icon">📭</span>
-        <p><span data-lang="ar">لا توجد نتائج، جرّب فلترة مختلفة.</span><span data-lang="fr">Aucun résultat, essayez d'autres filtres.</span></p>
-      </div>
+      <div class="grid grid-2" data-exams-imtihan-2bac-grid></div>
     </div>
   </div>
 </div>`;
 }
 
 const ENCY_SECTIONS = [
-  { slug: "scientifiques", icon: "🧑‍🔬", ar: "علماء", fr: "Scientifiques" },
-  { slug: "decouvertes", icon: "💡", ar: "اكتشافات", fr: "Découvertes" },
-  { slug: "glossaire", icon: "🔤", ar: "معجم", fr: "Glossaire" },
-  { slug: "chronologies", icon: "📅", ar: "خطوط زمنية", fr: "Chronologies" },
-  { slug: "articles", icon: "📰", ar: "آفاق ومقالات علمية", fr: "Articles scientifiques" },
-  { slug: "saviez-vous", icon: "✨", ar: "هل تعلم؟", fr: "Le saviez-vous ?" },
-  { slug: "galerie", icon: "🖼️", ar: "المعرض", fr: "Galerie" },
+  { slug: "glossaire", icon: "📖", ar: "معجم المصطلحات", fr: "Glossaire des termes", descAr: "تعريفات دقيقة لأهم مصطلحات SVT.", descFr: "Définitions précises des principaux termes de SVT." },
+  { slug: "scientifiques", icon: "🔬", ar: "العلماء", fr: "Scientifiques", descAr: "أعلام العلم الذين شكّلوا فهمنا للحياة والأرض.", descFr: "Les figures scientifiques qui ont façonné notre compréhension du vivant et de la Terre." },
+  { slug: "decouvertes", icon: "💡", ar: "الاكتشافات", fr: "Découvertes", descAr: "لحظات فارقة غيّرت مسار العلم.", descFr: "Des moments charnières qui ont changé le cours de la science." },
+  { slug: "organismes", icon: "🧬", ar: "الكائنات الحية", fr: "Êtres vivants", descAr: "أنواع حيوانية ونباتية مغربية وخصائصها.", descFr: "Espèces animales et végétales marocaines et leurs particularités." },
+  { slug: "roches-mineraux", icon: "🪨", ar: "الصخور والمعادن", fr: "Roches et minéraux", descAr: "تركيب الصخور والمعادن الشائعة ومنشؤها.", descFr: "Composition et origine des roches et minéraux courants." },
+  { slug: "geologie-maroc", icon: "🌍", ar: "جيولوجيا المغرب", fr: "Géologie du Maroc", descAr: "التكوينات الجيولوجية الكبرى بالمغرب.", descFr: "Les grandes formations géologiques du Maroc." },
+  { slug: "galerie", icon: "🗺️", ar: "الرسوم والخرائط العلمية", fr: "Schémas et cartes", descAr: "رسوم تخطيطية موسومة للمراجعة البصرية.", descFr: "Schémas annotés pour la révision visuelle." },
+  { slug: "experiences-historiques", icon: "🧪", ar: "التجارب العلمية التاريخية", fr: "Expériences historiques", descAr: "تجارب غيّرت فهمنا للحياة: السؤال، البروتوكول، النتيجة.", descFr: "Des expériences qui ont changé notre compréhension du vivant." },
+  { slug: "chronologies", icon: "📅", ar: "الخطوط الزمنية", fr: "Chronologies", descAr: "تسلسل الأحداث الكبرى في تاريخ العلوم.", descFr: "La chronologie des grands événements de l'histoire des sciences." },
+  { slug: "articles", icon: "📰", ar: "آفاق ومقالات علمية", fr: "Articles scientifiques", descAr: "مقالات معمّقة في البيولوجيا والجيولوجيا والبيئة.", descFr: "Articles approfondis en biologie, géologie et environnement." },
+  { slug: "saviez-vous", icon: "✨", ar: "هل تعلم؟", fr: "Le saviez-vous ?", descAr: "حقائق علمية قصيرة ومثيرة للفضول.", descFr: "De courts faits scientifiques surprenants." },
 ];
 
 export function encyclopedieHubBody() {
   return `
 <div class="container" style="padding-top:var(--sp-6)">
-  <h1><span data-lang="ar">الموسوعة العلمية</span><span data-lang="fr">Encyclopédie scientifique</span></h1>
-  <p><span data-lang="ar">سبعة أقسام مستقلة لاستكشاف عالم علوم الحياة والأرض.</span><span data-lang="fr">Sept sections indépendantes pour explorer les sciences de la vie et de la Terre.</span></p>
-  <div class="grid grid-3" style="margin-top:var(--sp-6)">
+  <div class="ency-masthead">
+    <span class="section-eyebrow"><span class="eyebrow-tick" aria-hidden="true"></span><span data-lang="ar">مجلّة Nova SVT</span><span data-lang="fr">Le magazine Nova SVT</span></span>
+    <h1><span data-lang="ar">الموسوعة العلمية</span><span data-lang="fr">Encyclopédie scientifique</span></h1>
+    <p><span data-lang="ar">${ENCY_SECTIONS.length} أقسام لاستكشاف عالم علوم الحياة والأرض — من المعجم إلى جيولوجيا المغرب.</span><span data-lang="fr">${ENCY_SECTIONS.length} sections pour explorer les sciences de la vie et de la Terre — du glossaire à la géologie du Maroc.</span></p>
+  </div>
+  <div class="ency-sections-grid">
     ${ENCY_SECTIONS.map(
-      (s) => `<a class="card card-link" href="/encyclopedie/${s.slug}/">
-      <span aria-hidden="true" style="font-size:var(--fs-28)">${s.icon}</span>
-      <h3 style="margin-top:var(--sp-3)"><span data-lang="ar">${s.ar}</span><span data-lang="fr">${s.fr}</span></h3>
+      (s, i) => `<a class="ency-section-card" href="/encyclopedie/${s.slug}/">
+      <span class="ency-section-num mono" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
+      <span class="ency-section-icon" aria-hidden="true">${s.icon}</span>
+      <h3><span data-lang="ar">${s.ar}</span><span data-lang="fr">${s.fr}</span></h3>
+      <p><span data-lang="ar">${s.descAr}</span><span data-lang="fr">${s.descFr}</span></p>
     </a>`
     ).join("")}
   </div>
@@ -322,10 +291,50 @@ export function encySaviezVousListBody() {
 export function encyGalerieListBody() {
   return `
 <div class="container" style="padding-top:var(--sp-6)">
-  ${encyBreadcrumb("المعرض", "Galerie")}
-  <h1><span data-lang="ar">معرض الرسوم التخطيطية</span><span data-lang="fr">Galerie des schémas</span></h1>
+  ${encyBreadcrumb("الرسوم والخرائط العلمية", "Schémas et cartes scientifiques")}
+  <h1><span data-lang="ar">الرسوم والخرائط العلمية</span><span data-lang="fr">Schémas et cartes scientifiques</span></h1>
   <div class="masonry" data-galerie-grid></div>
   <div class="lightbox" data-lightbox hidden><img data-lightbox-img alt="" /></div>
+</div>`;
+}
+
+export function encyOrganismesListBody() {
+  return `
+<div class="container" style="padding-top:var(--sp-6)">
+  ${encyBreadcrumb("الكائنات الحية", "Êtres vivants")}
+  <h1><span data-lang="ar">الكائنات الحية</span><span data-lang="fr">Êtres vivants</span></h1>
+  <p><span data-lang="ar">أنواع حيوانية ونباتية مغربية، موطنها وخصائصها المميّزة.</span><span data-lang="fr">Espèces animales et végétales marocaines, leur habitat et leurs particularités.</span></p>
+  <div class="grid grid-3" data-organismes-grid></div>
+</div>`;
+}
+
+export function encyRochesMineralListBody() {
+  return `
+<div class="container" style="padding-top:var(--sp-6)">
+  ${encyBreadcrumb("الصخور والمعادن", "Roches et minéraux")}
+  <h1><span data-lang="ar">الصخور والمعادن</span><span data-lang="fr">Roches et minéraux</span></h1>
+  <p><span data-lang="ar">تركيب الصخور والمعادن الشائعة، منشؤها، واستعمالاتها.</span><span data-lang="fr">Composition, origine et usages des roches et minéraux courants.</span></p>
+  <div class="grid grid-3" data-roches-grid></div>
+</div>`;
+}
+
+export function encyGeologieMarocListBody() {
+  return `
+<div class="container" style="padding-top:var(--sp-6)">
+  ${encyBreadcrumb("جيولوجيا المغرب", "Géologie du Maroc")}
+  <h1><span data-lang="ar">جيولوجيا المغرب</span><span data-lang="fr">Géologie du Maroc</span></h1>
+  <p><span data-lang="ar">أبرز التكوينات الجيولوجية المغربية وقصة تشكّلها.</span><span data-lang="fr">Les grandes formations géologiques du Maroc et l'histoire de leur formation.</span></p>
+  <div class="grid grid-2" data-geologie-maroc-grid></div>
+</div>`;
+}
+
+export function encyExperiencesHistoriquesListBody() {
+  return `
+<div class="container" style="padding-top:var(--sp-6)">
+  ${encyBreadcrumb("التجارب العلمية التاريخية", "Expériences historiques")}
+  <h1><span data-lang="ar">التجارب العلمية التاريخية</span><span data-lang="fr">Expériences scientifiques historiques</span></h1>
+  <p><span data-lang="ar">تجارب غيّرت فهمنا للحياة والطبيعة: السؤال، البروتوكول، والنتيجة.</span><span data-lang="fr">Des expériences qui ont changé notre compréhension du vivant : la question, le protocole, le résultat.</span></p>
+  <div class="grid grid-3" data-experiences-grid></div>
 </div>`;
 }
 
@@ -337,23 +346,92 @@ export function revisionBody() {
   return `
 <div class="container" style="padding-top:var(--sp-6)">
   <h1><span data-lang="ar">فضاء المراجعة</span><span data-lang="fr">Espace révision</span></h1>
-  <div class="tabs" style="margin-bottom:var(--sp-4)" data-revision-niveau>
-    ${NIVEAU_CHIPS.map((c, i) => `<button class="tab" data-niveau-value="${c.v}" aria-selected="${i === 0}">${c.l}</button>`).join("")}
-  </div>
-  <div class="tabs" role="tablist" style="margin-bottom:var(--sp-6)" data-revision-type>
-    <button class="tab" data-type-value="resumes" aria-selected="true"><span data-lang="ar">ملخصات</span><span data-lang="fr">Résumés</span></button>
-    <button class="tab" data-type-value="cartesMentales" aria-selected="false"><span data-lang="ar">خرائط ذهنية</span><span data-lang="fr">Cartes mentales</span></button>
-    <button class="tab" data-type-value="flashcards" aria-selected="false"><span data-lang="ar">بطاقات مراجعة</span><span data-lang="fr">Flashcards</span></button>
-    <button class="tab" data-type-value="quizDocuments" aria-selected="false"><span data-lang="ar">اختبارات استدلال علمي</span><span data-lang="fr">Quiz documents</span></button>
+
+  <div class="tabs" role="tablist" style="margin-bottom:var(--sp-6)" data-revision-section>
+    <button class="tab" data-section-value="lecons" aria-selected="true"><span data-lang="ar">مراجعة الدروس</span><span data-lang="fr">Révision des leçons</span></button>
+    <button class="tab" data-section-value="froud" aria-selected="false"><span data-lang="ar">الاستعداد للفروض</span><span data-lang="fr">Préparation aux devoirs</span></button>
+    <button class="tab" data-section-value="imtihanat" aria-selected="false"><span data-lang="ar">الاستعداد للامتحانات</span><span data-lang="fr">Préparation aux examens</span></button>
   </div>
 
-  <div data-revision-panel="resumes" class="grid grid-3"></div>
-  <div data-revision-panel="cartesMentales" class="grid grid-3" hidden></div>
-  <div data-revision-panel="flashcards" hidden>
-    <button class="btn btn-ghost btn-sm" data-flashcards-shuffle style="margin-bottom:var(--sp-4)">🔀 <span data-lang="ar">خلط البطاقات</span><span data-lang="fr">Mélanger</span></button>
-    <div class="grid grid-3" data-flashcards-grid></div>
+  <!-- ========== 1) مراجعة الدروس ========== -->
+  <div data-section-panel="lecons">
+    <div class="layout-with-sidebar">
+      <aside class="filters-sidebar">
+        ${filterDropdown("niveau", "المستوى", "Niveau", NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join(""))}
+        <div class="filter-group" data-filter-key="filiere-group" hidden>
+          <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
+          <select class="filter-select" data-revision-filter="filiere">
+            <option value="" data-i18n="filter_all"></option>
+            ${FILIERE_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
+          </select>
+        </div>
+        ${filterDropdown("dorra", "الدورة", "Semestre", `<option value="1" data-i18n="semester_1"></option><option value="2" data-i18n="semester_2"></option>`)}
+        ${filterDropdown("unite", "الوحدة", "Unité")}
+      </aside>
+      <div>
+        <div class="tabs" role="tablist" style="margin-bottom:var(--sp-5)" data-revision-type>
+          <button class="tab" data-type-value="resumes" aria-selected="true"><span data-lang="ar">ملخصات</span><span data-lang="fr">Résumés</span></button>
+          <button class="tab" data-type-value="cartesMentales" aria-selected="false"><span data-lang="ar">خرائط ذهنية</span><span data-lang="fr">Cartes mentales</span></button>
+          <button class="tab" data-type-value="flashcards" aria-selected="false"><span data-lang="ar">بطاقات مراجعة</span><span data-lang="fr">Flashcards</span></button>
+          <button class="tab" data-type-value="quizDocuments" aria-selected="false"><span data-lang="ar">اختبارات استدلال علمي</span><span data-lang="fr">Quiz documents</span></button>
+        </div>
+        <div data-revision-panel="resumes" class="grid grid-3"></div>
+        <div data-revision-panel="cartesMentales" class="grid grid-3" hidden></div>
+        <div data-revision-panel="flashcards" hidden>
+          <button class="btn btn-ghost btn-sm" data-flashcards-shuffle style="margin-bottom:var(--sp-4)">🔀 <span data-lang="ar">خلط البطاقات</span><span data-lang="fr">Mélanger</span></button>
+          <div class="grid grid-3" data-flashcards-grid></div>
+        </div>
+        <div data-revision-panel="quizDocuments" hidden></div>
+      </div>
+    </div>
   </div>
-  <div data-revision-panel="quizDocuments" hidden></div>
+
+  <!-- ========== 2) الاستعداد للفروض ========== -->
+  <div data-section-panel="froud" hidden>
+    <div class="layout-with-sidebar">
+      <aside class="filters-sidebar">
+        ${filterDropdown("fard-niveau", "المستوى", "Niveau", NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join(""))}
+        <div class="filter-group" data-filter-key="fard-filiere-group" hidden>
+          <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
+          <select class="filter-select" data-revision-filter="fard-filiere">
+            <option value="" data-i18n="filter_all"></option>
+            ${FILIERE_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
+          </select>
+        </div>
+        ${filterDropdown("fard-dorra", "الدورة", "Semestre", `<option value="1" data-i18n="semester_1"></option><option value="2" data-i18n="semester_2"></option>`)}
+      </aside>
+      <div>
+        <div class="grid grid-2" data-fard-grid></div>
+        <div class="state-empty" data-fard-empty hidden>
+          <span class="icon">📭</span>
+          <p><span data-lang="ar">لا توجد فروض بعد لهذا الاختيار.</span><span data-lang="fr">Aucun devoir pour ce choix.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 3) الاستعداد للامتحانات (مستويان إشهاديان فقط: 3AC و2BAC) ========== -->
+  <div data-section-panel="imtihanat" hidden>
+    <p><span data-lang="ar">الامتحانات الإشهادية بالمغرب محصورة في مستويين: الثالثة إعدادي (امتحانان محلي وجهوي) والثانية بكالوريا (امتحان وطني حسب المسلك).</span><span data-lang="fr">Au Maroc, les examens certificatifs concernent deux niveaux : la 3AC (examens local et régional) et la 2BAC (examen national selon la filière).</span></p>
+    <div class="tabs" role="tablist" style="margin:var(--sp-4) 0 var(--sp-6)" data-imtihan-niveau>
+      <button class="tab" data-imtihan-niveau-value="3ac" aria-selected="true">3AC</button>
+      <button class="tab" data-imtihan-niveau-value="2bac" aria-selected="false">2BAC</button>
+    </div>
+
+    <div data-imtihan-panel="3ac">
+      <div class="grid grid-2" data-imtihan-3ac-grid></div>
+    </div>
+    <div data-imtihan-panel="2bac" hidden>
+      <div class="filter-group" style="max-width:280px;margin-bottom:var(--sp-5)">
+        <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
+        <select class="filter-select" data-imtihan-2bac-filiere>
+          <option value="" data-i18n="filter_all"></option>
+          ${FILIERE_2BAC_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
+        </select>
+      </div>
+      <div class="grid grid-2" data-imtihan-2bac-grid></div>
+    </div>
+  </div>
 
   <div class="lightbox" data-lightbox hidden><img data-lightbox-img alt="" /></div>
 </div>`;

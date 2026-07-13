@@ -1,6 +1,7 @@
 {
   "id": "fiche-3ac-photosynthese-01",
   "niveau": "3ac",
+  "dorra": 2,
   "unite": "التغذية عند النباتات",
   "question": { "ar": "ما هي العناصر الضرورية لحدوث التركيب الضوئي؟", "fr": "Quels sont les éléments nécessaires à la réalisation de la photosynthèse ?" },
   "reponse": { "ar": "ثاني أكسيد الكربون، الماء، الضوء، والبلاستيدات الخضراء الحاوية على الكلوروفيل.", "fr": "Le dioxyde de carbone, l'eau, la lumière, et les chloroplastes contenant la chlorophylle." }

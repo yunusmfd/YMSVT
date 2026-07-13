@@ -3,6 +3,8 @@ id: resume-meiose-2bac
 titre_ar: "ملخص: الانقسام الاختزالي (الميوز)"
 titre_fr: "Résumé : la méiose"
 niveau: 2bac
+dorra: 1
+filieres: ["2bac-svt", "2bac-pc"]
 unite: "الوراثة"
 ---
 

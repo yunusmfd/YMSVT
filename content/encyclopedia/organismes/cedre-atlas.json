@@ -1,0 +1,21 @@
+{
+  "id": "cedre-atlas",
+  "nom": { "ar": "أرز الأطلس", "fr": "Cèdre de l'Atlas" },
+  "nom_scientifique": "Cedrus atlantica",
+  "regne": "vegetal",
+  "habitat": {
+    "ar": "الأحراش الجبلية بالمتوسط الأطلس والريف، على ارتفاعات تتراوح بين 1300 و2600 متر.",
+    "fr": "Forêts montagnardes du Moyen Atlas et du Rif, entre 1300 et 2600 mètres d'altitude."
+  },
+  "description": {
+    "ar": "شجرة مخروطية معمِّرة قد يفوق ارتفاعها 40 مترا وعمرها عدة قرون، تشكّل غابات كثيفة تُعدّ من أهم مستجمعات المياه بالمغرب.",
+    "fr": "Conifère pluriannuel pouvant dépasser 40 mètres de hauteur et plusieurs siècles d'âge, formant des forêts denses qui comptent parmi les principaux châteaux d'eau du Maroc."
+  },
+  "particularite": {
+    "ar": "تتعرض غابات الأرز لضغط متزايد بسبب الجفاف المتكرر وتغيّر المناخ وآفة حشرية (دودة أرز الأطلس)، ما يجعل صونها أولوية بيئية وطنية.",
+    "fr": "Les cédraies subissent une pression croissante liée aux sécheresses répétées, au changement climatique et à un ravageur (la tordeuse du cèdre), ce qui en fait une priorité écologique nationale."
+  },
+  "statut": { "ar": "شبه مستوطنة بشمال إفريقيا", "fr": "Quasi endémique d'Afrique du Nord" },
+  "image": "assets/images/thumbs/organisme-cedre-atlas.png",
+  "date": "2026-04-04"
+}

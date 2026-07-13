@@ -1,0 +1,13 @@
+{
+  "id": "exam-2bac-pc-2026-imtihan-watani",
+  "type": "imtihan",
+  "sous_type": "watani",
+  "niveau": "2bac",
+  "filiere": "2bac-pc",
+  "dorra": 2,
+  "numero": 1,
+  "annee_scolaire": "2025-2026",
+  "titre": { "ar": "الامتحان الوطني الموحد للبكالوريا — شعبة العلوم الفيزيائية (PC)", "fr": "Examen national unifié du baccalauréat — Sciences Physiques" },
+  "fichier_pdf": "content/exams/files/exam-2bac-pc-2026-imtihan-watani.pdf",
+  "corrige_pdf": null
+}

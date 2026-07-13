@@ -1,0 +1,15 @@
+{
+  "id": "atlas",
+  "titre": { "ar": "جبال الأطلس", "fr": "Les montagnes de l'Atlas" },
+  "region": { "ar": "وسط وجنوب المغرب", "fr": "Centre et sud du Maroc" },
+  "description": {
+    "ar": "سلسلة جبلية ضخمة تمتد من الجنوب الغربي إلى الشمال الشرقي عبر ثلاثة فروع رئيسية: الأطلس الكبير والمتوسط والصغير، وتضم أعلى قمة بشمال إفريقيا (جبل توبقال، 4167 م).",
+    "fr": "Vaste chaîne montagneuse s'étendant du sud-ouest au nord-est en trois branches principales : le Haut, le Moyen et l'Anti-Atlas, abritant le plus haut sommet d'Afrique du Nord (le Toubkal, 4167 m)."
+  },
+  "particularite_geologique": {
+    "ar": "تكوّنت جبال الأطلس أساسا خلال الحقبة الثالثة (الأوروجينية الألبية) نتيجة تصادم الصفيحتين الإفريقية والأوراسية، بعد أن كانت المنطقة حوضا بحريا قديما، وهو ما تفسّره الطبقات الرسوبية البحرية المطويّة الظاهرة اليوم على ارتفاعات شاهقة.",
+    "fr": "L'Atlas s'est formé principalement au Tertiaire (orogenèse alpine) suite à la collision des plaques africaine et eurasienne, sur une ancienne zone marine — ce qui explique les couches sédimentaires marines plissées visibles aujourd'hui à haute altitude."
+  },
+  "image": "assets/images/thumbs/geologie-atlas.png",
+  "date": "2026-04-09"
+}

@@ -26,6 +26,7 @@ function main() {
     duree: r.lecon.duree_estimee_min,
     tags: r.lecon.tags || [],
     domaine_specialite: r.lecon.domaine_specialite || null,
+    description: { ar: (r.lecon.objectifs && r.lecon.objectifs.ar && r.lecon.objectifs.ar[0]) || "", fr: (r.lecon.objectifs && r.lecon.objectifs.fr && r.lecon.objectifs.fr[0]) || "" },
     date_maj: r.lecon.date_maj,
     vignette: leconVignette(r.lecon.id),
     url: r.url,
@@ -34,6 +35,7 @@ function main() {
   const exams = listExams().map((e) => ({
     id: e.id,
     type: e.type,
+    sous_type: e.sous_type || null,
     niveau: e.niveau,
     filiere: e.filiere || "",
     dorra: e.dorra,
@@ -62,14 +64,18 @@ function main() {
     chronologies: ency.chronologies.map((c) => ({ id: c.id, titre: c.titre, nbEvenements: c.evenements.length })),
     saviezVous: ency["saviez-vous"].map((sv) => ({ id: sv.id, texte: sv.texte })),
     galerie: ency.galerie.map((g) => ({ id: g.id, titre: g.titre, domaine: g.domaine, image: g.image })),
+    organismes: ency.organismes.map((o) => ({ id: o.id, nom: o.nom, nom_scientifique: o.nom_scientifique, regne: o.regne, image: o.image })),
+    rochesMineraux: ency["roches-mineraux"].map((r) => ({ id: r.id, nom: r.nom, type: r.type, image: r.image })),
+    geologieMaroc: ency["geologie-maroc"].map((g) => ({ id: g.id, titre: g.titre, region: g.region, image: g.image })),
+    experiencesHistoriques: ency["experiences-historiques"].map((e) => ({ id: e.id, titre: e.titre, annee: e.annee, image: e.image })),
   };
 
   const rev = listAllRevision();
   const revision = {
-    resumes: rev.resumes.map((r) => ({ id: r.id, titre: { ar: r.titre_ar, fr: r.titre_fr }, niveau: r.niveau, unite: r.unite })),
-    cartesMentales: rev["cartes-mentales"].map((c) => ({ id: c.id, titre: c.titre, niveau: c.niveau, unite: c.unite, image: c.image })),
-    flashcards: rev.flashcards.map((f) => ({ id: f.id, niveau: f.niveau, unite: f.unite, question: f.question, reponse: f.reponse })),
-    quizDocuments: rev["quiz-documents"].map((q) => ({ id: q.id, titre: q.titre, niveau: q.niveau, unite: q.unite, document: q.document, questions: q.questions })),
+    resumes: rev.resumes.map((r) => ({ id: r.id, titre: { ar: r.titre_ar, fr: r.titre_fr }, niveau: r.niveau, dorra: r.dorra || null, filieres: r.filieres || [], unite: r.unite })),
+    cartesMentales: rev["cartes-mentales"].map((c) => ({ id: c.id, titre: c.titre, niveau: c.niveau, dorra: c.dorra || null, filieres: c.filieres || [], unite: c.unite, image: c.image })),
+    flashcards: rev.flashcards.map((f) => ({ id: f.id, niveau: f.niveau, dorra: f.dorra || null, filieres: f.filieres || [], unite: f.unite, question: f.question, reponse: f.reponse })),
+    quizDocuments: rev["quiz-documents"].map((q) => ({ id: q.id, titre: q.titre, niveau: q.niveau, dorra: q.dorra || null, filieres: q.filieres || [], unite: q.unite, document: q.document, questions: q.questions })),
   };
 
   const blog = collectBlogRoutes().map((r) => ({

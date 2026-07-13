@@ -1,0 +1,23 @@
+{
+  "id": "sel-gemme",
+  "nom": { "ar": "الملح الصخري (الهاليت)", "fr": "Sel gemme (halite)" },
+  "type": { "ar": "معدن تبخّري", "fr": "Minéral évaporitique" },
+  "composition": {
+    "ar": "معدن بسيط التركيب (كلوريد الصوديوم) يتبلور في مكعبات شفافة إلى بيضاء، يتشكّل من تبخّر مياه بحرية أو بحيرات مالحة على مدى طويل.",
+    "fr": "Minéral de composition simple (chlorure de sodium) cristallisant en cubes transparents à blancs, formé par l'évaporation prolongée d'eaux marines ou de lacs salés."
+  },
+  "description": {
+    "ar": "يذوب بسهولة في الماء وله مذاق مالح مميّز، وغالبا ما يترسّب في طبقات سميكة تحت طبقات صخرية أخرى بعد أن كانت البيئة بحرا مغلقا جفّ تدريجيا.",
+    "fr": "Très soluble dans l'eau et de saveur salée caractéristique, il se dépose souvent en couches épaisses sous d'autres strates rocheuses, vestige d'une mer fermée qui s'est progressivement asséchée."
+  },
+  "utilisation": {
+    "ar": "يُستخرج للاستهلاك الغذائي وصناعة الكلور والصودا الكاوية، ويُستعمل تاريخيا كذلك في حفظ الأغذية.",
+    "fr": "Extrait pour la consommation alimentaire et l'industrie du chlore et de la soude caustique, il a aussi historiquement servi à la conservation des aliments."
+  },
+  "gisement_maroc": {
+    "ar": "توجد مناجم ملح تقليدية وحديثة بمناطق متعددة بالمغرب، أشهرها منجم الملح التقليدي بتافراوت بمحيط سوس.",
+    "fr": "Des mines de sel traditionnelles et modernes existent dans plusieurs régions du Maroc, la plus connue étant la mine traditionnelle de Tafraoute, dans la région du Souss."
+  },
+  "image": "assets/images/thumbs/roche-sel-gemme.png",
+  "date": "2026-04-08"
+}

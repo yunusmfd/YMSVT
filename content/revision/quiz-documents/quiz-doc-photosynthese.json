@@ -1,6 +1,7 @@
 {
   "id": "quiz-doc-photosynthese",
   "niveau": "3ac",
+  "dorra": 2,
   "unite": "التغذية عند النباتات",
   "titre": { "ar": "تحليل وثيقة: سرعة التركيب الضوئي بدلالة شدة الإضاءة", "fr": "Analyse de document : vitesse de photosynthèse selon l'intensité lumineuse" },
   "document": {

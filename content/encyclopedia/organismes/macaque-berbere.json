@@ -1,0 +1,21 @@
+{
+  "id": "macaque-berbere",
+  "nom": { "ar": "القرد المغربي (عقدون بربري)", "fr": "Magot (macaque berbère)" },
+  "nom_scientifique": "Macaca sylvanus",
+  "regne": "animal",
+  "habitat": {
+    "ar": "غابات الأرز والبلوط بجبال الأطلس المتوسط والريف، على ارتفاعات قد تتجاوز 2000 متر.",
+    "fr": "Forêts de cèdres et de chênes du Moyen Atlas et du Rif, à des altitudes dépassant parfois 2000 mètres."
+  },
+  "description": {
+    "ar": "أحد أكبر أنواع القرود العلوية الطليقة في شمال إفريقيا، ومن النادر بين القرود عدم امتلاكه ذيلا. يعيش في مجموعات اجتماعية معقدة ويتغذى على النباتات واللحاء والحشرات.",
+    "fr": "L'une des plus grandes espèces de primates sauvages d'Afrique du Nord, rare parmi les singes pour son absence de queue. Il vit en groupes sociaux complexes et se nourrit de végétaux, d'écorce et d'insectes."
+  },
+  "particularite": {
+    "ar": "يُصنَّف من الأنواع المهدَّدة بالانقراض بسبب تراجع مساحة غابات الأرز وضغط السياحة، ويُعدّ من الأنواع الرئيسية لصون التنوع البيولوجي بجبال الأطلس.",
+    "fr": "Classé espèce en danger en raison du recul des forêts de cèdres et de la pression touristique — une espèce clé pour la conservation de la biodiversité de l'Atlas."
+  },
+  "statut": { "ar": "مهدَّد بالانقراض", "fr": "En danger" },
+  "image": "assets/images/thumbs/organisme-macaque-berbere.png",
+  "date": "2026-04-02"
+}

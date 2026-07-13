@@ -106,6 +106,18 @@ export function collectEncyclopediaRoutes() {
   for (const item of ency.galerie) {
     routes.push({ type: "galerie", title: item.titre, url: `/encyclopedie/galerie/${item.id}/`, tags: [item.domaine].filter(Boolean), item });
   }
+  for (const item of ency.organismes) {
+    routes.push({ type: "organisme", title: item.nom, url: `/encyclopedie/organismes/${item.id}/`, tags: [item.regne].filter(Boolean), item });
+  }
+  for (const item of ency["roches-mineraux"]) {
+    routes.push({ type: "roche-mineral", title: item.nom, url: `/encyclopedie/roches-mineraux/${item.id}/`, tags: [], item });
+  }
+  for (const item of ency["geologie-maroc"]) {
+    routes.push({ type: "geologie-maroc", title: item.titre, url: `/encyclopedie/geologie-maroc/${item.id}/`, tags: [], item });
+  }
+  for (const item of ency["experiences-historiques"]) {
+    routes.push({ type: "experience-historique", title: item.titre, url: `/encyclopedie/experiences-historiques/${item.id}/`, tags: [], item });
+  }
   return routes;
 }
 

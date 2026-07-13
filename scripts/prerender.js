@@ -15,6 +15,10 @@ import {
   chronologieDetailBody,
   saviezVousDetailBody,
   galerieDetailBody,
+  organismeDetailBody,
+  rocheMineralDetailBody,
+  geologieMarocDetailBody,
+  experienceHistoriqueDetailBody,
 } from "./lib/templates.js";
 
 function writePage(routeUrl, html) {
@@ -94,6 +98,10 @@ function main() {
     chronologie: (item) => chronologieDetailBody(item),
     "saviez-vous": (item) => saviezVousDetailBody(item),
     galerie: (item) => galerieDetailBody(item, deps),
+    organisme: (item) => organismeDetailBody(item),
+    "roche-mineral": (item) => rocheMineralDetailBody(item),
+    "geologie-maroc": (item) => geologieMarocDetailBody(item),
+    "experience-historique": (item) => experienceHistoriqueDetailBody(item),
   };
   const descriptionOf = (type, item) => {
     if (type === "article") return item.titre_ar;
@@ -101,12 +109,17 @@ function main() {
     if (type === "scientifique") return item.resume.ar;
     if (type === "decouverte") return item.resume.ar;
     if (type === "saviez-vous") return item.texte.ar;
+    if (type === "organisme") return item.description.ar;
+    if (type === "roche-mineral") return item.description.ar;
+    if (type === "geologie-maroc") return item.description.ar;
+    if (type === "experience-historique") return item.question.ar;
     return item.titre ? item.titre.ar : "";
   };
   const ogImageOf = (type, item) => {
     if (type === "article" && item.image_cover) return `/${item.image_cover}`;
     if (type === "scientifique" && item.photo) return `/${item.photo}`;
     if (type === "galerie" && item.image) return `/${item.image}`;
+    if ((type === "organisme" || type === "roche-mineral" || type === "geologie-maroc" || type === "experience-historique") && item.image) return `/${item.image}`;
     return undefined;
   };
 

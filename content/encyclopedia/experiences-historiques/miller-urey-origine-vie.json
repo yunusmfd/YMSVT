@@ -1,0 +1,20 @@
+{
+  "id": "miller-urey-origine-vie",
+  "titre": { "ar": "تجربة ميلر-يوري: محاكاة أصل الحياة", "fr": "L'expérience de Miller-Urey : simuler l'origine de la vie" },
+  "savant": { "ar": "ستانلي ميلر وهارولد يوري", "fr": "Stanley Miller et Harold Urey" },
+  "annee": 1953,
+  "question": {
+    "ar": "هل يمكن أن تتشكّل الجزيئات العضوية الأساسية للحياة (كالأحماض الأمينية) تلقائيا في ظروف شبيهة بغلاف الأرض البدائي؟",
+    "fr": "Des molécules organiques essentielles à la vie (comme les acides aminés) peuvent-elles se former spontanément dans des conditions proches de l'atmosphère primitive de la Terre ?"
+  },
+  "protocole": {
+    "ar": "أعدّ الباحثان جهازا مغلقا يحاكي الغلاف الجوي البدائي المفترض (خليط من الميثان والأمونيا والهيدروجين وبخار الماء)، وعرّضاه لتفريغات كهربائية متكرّرة تحاكي البرق، مع تدوير الخليط لأسابيع.",
+    "fr": "Les chercheurs conçurent un appareil fermé simulant l'atmosphère primitive supposée (mélange de méthane, d'ammoniac, d'hydrogène et de vapeur d'eau), soumis à des décharges électriques répétées imitant la foudre, en circulation continue pendant des semaines."
+  },
+  "resultat": {
+    "ar": "تكوّنت في المحلول عدة أحماض أمينية (اللبنات الأساسية للبروتينات) بشكل تلقائي، مما قدّم أول دليل تجريبي على أن الجزيئات العضوية المعقدة يمكن أن تنشأ من مواد غير عضوية بسيطة في ظروف طبيعية، داعما فرضية 'الحساء البدائي' لأصل الحياة على الأرض.",
+    "fr": "Plusieurs acides aminés (briques de base des protéines) se formèrent spontanément dans la solution, fournissant la première preuve expérimentale que des molécules organiques complexes peuvent naître de matière inorganique simple dans des conditions naturelles, appuyant l'hypothèse de la « soupe primitive » sur l'origine de la vie sur Terre."
+  },
+  "image": "assets/images/thumbs/experience-miller-urey.png",
+  "date": "2026-04-16"
+}

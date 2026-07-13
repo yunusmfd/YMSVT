@@ -1,0 +1,15 @@
+{
+  "id": "bassin-phosphate",
+  "titre": { "ar": "الحوض الفوسفاطي", "fr": "Le bassin phosphaté" },
+  "region": { "ar": "الهضبة الوسطى (خريبكة، اليوسفية، بنجرير)", "fr": "Plateau central (Khouribga, Youssoufia, Benguerir)" },
+  "description": {
+    "ar": "منطقة رسوبية واسعة بالهضبة الوسطى تحتضن أهم احتياطي فوسفاط في العالم، وتشكّل ركيزة اقتصادية كبرى للمغرب منذ اكتشافها في عشرينيات القرن الماضي.",
+    "fr": "Vaste zone sédimentaire du plateau central abritant les plus importantes réserves de phosphate au monde, pilier économique majeur du Maroc depuis sa découverte dans les années 1920."
+  },
+  "particularite_geologique": {
+    "ar": "تكوّنت طبقات الفوسفاط خلال العصر الطباشيري والباليوجيني عندما كانت المنطقة بحرا ضحلا دافئا غنيا بالحياة البحرية، إذ تراكمت بقايا عضوية غنية بالفوسفور في قاع البحر على مدى ملايين السنين لتتحوّل تدريجيا إلى طبقات صخرية فوسفاطية.",
+    "fr": "Les couches phosphatées se sont formées au Crétacé et au Paléogène, lorsque la région était une mer chaude peu profonde riche en vie marine : des restes organiques riches en phosphore se sont accumulés au fond marin sur des millions d'années, se transformant progressivement en strates rocheuses phosphatées."
+  },
+  "image": "assets/images/thumbs/geologie-bassin-phosphate.png",
+  "date": "2026-04-11"
+}

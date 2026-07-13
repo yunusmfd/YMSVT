@@ -1,0 +1,20 @@
+{
+  "id": "pasteur-generation-spontanee",
+  "titre": { "ar": "تجربة باستور: دحض نظرية التولد التلقائي", "fr": "L'expérience de Pasteur : réfuter la génération spontanée" },
+  "savant": { "ar": "لويس باستور", "fr": "Louis Pasteur" },
+  "annee": 1862,
+  "question": {
+    "ar": "هل يمكن أن تنشأ الكائنات الدقيقة تلقائيا من مادة عضوية غير حية، كما كان يُعتقد شائعا آنذاك؟",
+    "fr": "Des micro-organismes peuvent-ils naître spontanément de matière organique non vivante, comme on le croyait communément à l'époque ?"
+  },
+  "protocole": {
+    "ar": "صمّم باستور قارورات ذات عنق طويل منحنٍ على شكل رقبة البجعة، تسمح بدخول الهواء لكن تحجز الغبار والجراثيم في أسفل الانحناء. وضع فيها مرقا مغذّيا معقَّما، فبقي صافيا دون نمو ميكروبي لأشهر، وعند كسر العنق تلوّث المرق فورا.",
+    "fr": "Pasteur conçut des flacons à long col recourbé en forme de cou de cygne, laissant entrer l'air mais piégeant poussières et germes au fond de la courbure. Rempli de bouillon nutritif stérilisé, celui-ci resta limpide pendant des mois sans croissance microbienne ; en brisant le col, le bouillon se contaminait aussitôt."
+  },
+  "resultat": {
+    "ar": "أثبتت التجربة أن الكائنات الدقيقة لا تنشأ تلقائيا من المادة غير الحية، بل تأتي من جراثيم موجودة في الهواء والغبار، مؤسِّسة بذلك لنظرية التولد الحيوي (كل حي من حي) وواضعة حجر الأساس لعلم الجراثيم الحديث.",
+    "fr": "L'expérience démontra que les micro-organismes ne naissent pas spontanément de matière inerte, mais proviennent de germes présents dans l'air et la poussière, fondant ainsi la théorie de la biogenèse (tout vivant provient du vivant) et posant les bases de la microbiologie moderne."
+  },
+  "image": "assets/images/thumbs/experience-pasteur.png",
+  "date": "2026-04-13"
+}

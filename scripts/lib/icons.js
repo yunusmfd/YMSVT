@@ -6,6 +6,7 @@ export const ICON_SUN = `<svg class="icon-sun" viewBox="0 0 24 24" fill="none" s
 export const ICON_HAMBURGER = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`;
 export const ICON_CLOSE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
 export const ICON_ARROW = `<svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`;
+export const ICON_USER = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>`;
 
 /*
   أيقونات الواجهة المخصّصة (خطّية موحّدة: 24×24، stroke-width 1.6، أطراف مدوّرة) —
@@ -40,6 +41,18 @@ export const UI_ICONS = {
   geo: I(`<path d="M3 19l5-8 3.5 4.5L15 10l6 9z"/><path d="M3 19h18"/><circle cx="8.5" cy="6.5" r="1.6"/>`),
   // نقطة/شرارة معرفية (هل تعلم) — بريق
   spark: I(`<path d="M12 3l1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7z"/>`),
+  // تحميل — سهم نحو أسفل فوق خط
+  download: I(`<path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/>`),
+  // اختبار فوري — ورقة بعلامتي تحقق
+  quiz: I(`<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M7.5 8.3l1.3 1.3L11 7.2"/><line x1="13.3" y1="8.3" x2="17" y2="8.3"/><path d="M7.5 14.3l1.3 1.3L11 13.2"/><line x1="13.3" y1="14.3" x2="17" y2="14.3"/>`),
+  // رسوم تخطيطية — طبقات
+  layers: I(`<polygon points="12 3 21 8.5 12 14 3 8.5 12 3"/><polyline points="3 14.5 12 20 21 14.5"/><polyline points="3 11.3 12 16.8 21 11.3"/>`),
+  // فيديوهات شرح — زر تشغيل
+  video: I(`<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M10 9l5.5 3-5.5 3z"/>`),
+  // مصباح — هل تعلم
+  bulb: I(`<path d="M9.5 18h5"/><path d="M10.3 21h3.4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>`),
+  // مشاركة
+  share: I(`<circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><line x1="8.3" y1="10.7" x2="15.7" y2="6.3"/><line x1="8.3" y1="13.3" x2="15.7" y2="17.7"/>`),
 };
 
 export function uiIcon(name) {

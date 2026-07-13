@@ -1,0 +1,12 @@
+{
+  "id": "exam-3ac-2026-imtihan-mahali",
+  "type": "imtihan",
+  "sous_type": "mahali",
+  "niveau": "3ac",
+  "dorra": 1,
+  "numero": 1,
+  "annee_scolaire": "2025-2026",
+  "titre": { "ar": "الامتحان المحلي الموحد", "fr": "Examen local unifié" },
+  "fichier_pdf": "content/exams/files/exam-3ac-2026-imtihan-mahali.pdf",
+  "corrige_pdf": "content/exams/files/exam-3ac-2026-imtihan-mahali-corrige.pdf"
+}

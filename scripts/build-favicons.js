@@ -1,4 +1,4 @@
-// يولّد مجموعة Favicon الكاملة من assets/images/favicons/favicon.svg — القسم 12.6
+// يولّد مجموعة Favicon الكاملة من شعار الأيقونة الحقيقي — القسم 12.6
 // سكريبت مستقل (لا يُشغَّل تلقائيا ضمن npm run build لأن الشعار لا يتغيّر مع كل نشر) — نفّذه يدويا عند تغيير اللوغو فقط
 import fs from "node:fs";
 import path from "node:path";
@@ -6,7 +6,8 @@ import sharp from "sharp";
 import { ROOT } from "./lib/content-loader.js";
 
 const DIR = path.join(ROOT, "assets/images/favicons");
-const svgPath = path.join(DIR, "favicon.svg");
+const svgPath = path.join(ROOT, "assets/images/logo/nova-svt-icon.png");
+// الأيقونة رسم خطّي بلا خلفية مصمتة — تُسطَّح على أبيض حتى لا تختفي حلقتها الخضراء الداكنة فوق تبويبات داكنة
 
 // يبني ملف .ico صالحا (حاوية ICO حديثة تُضمّن بيانات PNG مباشرة — مدعومة من كل المتصفحات الحديثة)
 function buildIco(pngBuffer, size) {
@@ -31,12 +32,12 @@ function buildIco(pngBuffer, size) {
 async function main() {
   const svg = fs.readFileSync(svgPath);
 
-  const png32 = await sharp(svg).resize(32, 32).png().toBuffer();
+  const png32 = await sharp(svg).resize(32, 32).flatten({ background: { r: 255, g: 255, b: 255 } }).png().toBuffer();
   fs.writeFileSync(path.join(DIR, "favicon.ico"), buildIco(png32, 32));
 
-  await sharp(svg).resize(180, 180).flatten({ color: "#204F3F" }).png().toFile(path.join(DIR, "apple-touch-icon.png"));
-  await sharp(svg).resize(192, 192).png().toFile(path.join(DIR, "icon-192.png"));
-  await sharp(svg).resize(512, 512).png().toFile(path.join(DIR, "icon-512.png"));
+  await sharp(svg).resize(180, 180).flatten({ background: { r: 255, g: 255, b: 255 } }).png().toFile(path.join(DIR, "apple-touch-icon.png"));
+  await sharp(svg).resize(192, 192).flatten({ background: { r: 255, g: 255, b: 255 } }).png().toFile(path.join(DIR, "icon-192.png"));
+  await sharp(svg).resize(512, 512).flatten({ background: { r: 255, g: 255, b: 255 } }).png().toFile(path.join(DIR, "icon-512.png"));
 
   const manifest = {
     name: "Nova SVT",

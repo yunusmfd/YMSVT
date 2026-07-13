@@ -3,9 +3,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT } from "./content-loader.js";
-import { ICON_SEARCH, ICON_BELL, ICON_MOON, ICON_SUN, ICON_HAMBURGER, ICON_CLOSE, ICON_ARROW } from "./icons.js";
+import { ICON_SEARCH, ICON_BELL, ICON_MOON, ICON_SUN, ICON_HAMBURGER, ICON_CLOSE, ICON_ARROW, ICON_USER } from "./icons.js";
 
-const NOVA_LOGO_IMG = `<img src="/assets/images/logo/nova-svt-logo.png" alt="Nova SVT" class="nova-logo-img" width="211" height="72" />`;
+const NOVA_LOGO_IMG = `<img src="/assets/images/logo/nova-svt-icon.png" alt="" class="nova-logo-img" width="49" height="48" /><span class="nova-logo-text">Nova <span class="nova-logo-accent">SVT</span></span>`;
 
 const INLINE_INIT = fs.readFileSync(path.join(ROOT, "assets/js/inline-init.js"), "utf-8");
 
@@ -40,19 +40,19 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null } = {}) {
 <header class="navbar" data-navbar>
   <div class="navbar-inner">
     <a href="/" class="nova-logo">${NOVA_LOGO_IMG}</a>
-    <nav aria-label="التنقل الرئيسي">
+    <nav class="nav-center" aria-label="التنقل الرئيسي">
       <ul class="nav-links">
         <li><a class="nav-link" href="/" data-i18n="nav_home"${activeNav === "home" ? ' aria-current="page"' : ""}></a></li>
         ${navLinks}
       </ul>
+      <div class="nav-more" data-nav-more>
+        <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false">
+          <span data-i18n="nav_more"></span>
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="nav-more-menu" data-nav-more-menu hidden>${moreLinks}</div>
+      </div>
     </nav>
-    <div class="nav-more" data-nav-more>
-      <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false">
-        <span data-i18n="nav_more"></span>
-        <span class="arrow" aria-hidden="true">▾</span>
-      </button>
-      <div class="nav-more-menu" data-nav-more-menu hidden>${moreLinks}</div>
-    </div>
     <div class="nav-actions">
       <button class="icon-btn" data-search-open data-i18n-aria="search_title">${ICON_SEARCH}</button>
       <button class="icon-btn" data-lang-toggle data-i18n-aria="lang_toggle">FR</button>
@@ -61,6 +61,7 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null } = {}) {
         <button class="icon-btn" data-nav-more-trigger="bell" aria-expanded="false" data-i18n-aria="blog_menu">${ICON_BELL}<span class="bell-dot"></span></button>
         <div class="nav-more-menu" data-nav-more-menu hidden>${bellContent}</div>
       </div>
+      <a class="icon-btn" href="/mon-espace/" data-i18n-aria="mon_espace">${ICON_USER}</a>
       <button class="icon-btn hamburger-btn" data-hamburger-btn data-i18n-aria="menu_open">${ICON_HAMBURGER}</button>
     </div>
   </div>
@@ -164,7 +165,7 @@ export function renderHead({ title, description, ogImage = "/assets/images/hero/
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#204F3F" />
 <link rel="icon" href="/assets/images/favicons/favicon.ico" sizes="any" />
-<link rel="icon" type="image/svg+xml" href="/assets/images/favicons/favicon.svg" />
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/icon-192.png" />
 <link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" />
 <link rel="manifest" href="/assets/images/favicons/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />

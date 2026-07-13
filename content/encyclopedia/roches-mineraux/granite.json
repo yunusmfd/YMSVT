@@ -1,0 +1,23 @@
+{
+  "id": "granite",
+  "nom": { "ar": "الغرانيت", "fr": "Granite" },
+  "type": { "ar": "صخرة ناريّة جوفية", "fr": "Roche magmatique plutonique" },
+  "composition": {
+    "ar": "صخرة ناريّة تتكوّن أساسا من الكوارتز والفلدسبات والميكا، تبلورت ببطء شديد في العمق مما أعطاها نسيجا حُبيبيا خشنا مرئيا بالعين المجرّدة.",
+    "fr": "Roche magmatique composée essentiellement de quartz, de feldspath et de mica, cristallisée très lentement en profondeur, ce qui lui donne une texture grenue visible à l'œil nu."
+  },
+  "description": {
+    "ar": "تتراوح ألوانه بين الرمادي الفاتح والوردي حسب نسبة الفلدسبات، ويتميّز بصلابة عالية ومقاومة للتعرية تجعله يبرز كتلا صخرية شاهقة عند تعرّيه.",
+    "fr": "Sa couleur varie du gris clair au rose selon la proportion de feldspath. Sa grande dureté et sa résistance à l'érosion le font souvent affleurer sous forme de reliefs massifs."
+  },
+  "utilisation": {
+    "ar": "يُستعمل على نطاق واسع في البناء والرصف وصناعة الأثاث الحجري نظرا لصلابته ومقاومته للعوامل الجوية.",
+    "fr": "Très utilisé en construction, en dallage et en ameublement de pierre grâce à sa dureté et sa résistance aux intempéries."
+  },
+  "gisement_maroc": {
+    "ar": "توجد كتل غرانيتية بارزة بالهضبة الوسطى وبمناطق من الأطلس الصغير، شاهدة على نشاط بركاني جوفي قديم.",
+    "fr": "Des massifs granitiques affleurent sur le plateau central et dans certaines zones de l'Anti-Atlas, témoins d'une ancienne activité magmatique profonde."
+  },
+  "image": "assets/images/thumbs/roche-granite.png",
+  "date": "2026-04-06"
+}

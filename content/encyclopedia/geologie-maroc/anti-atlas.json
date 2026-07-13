@@ -1,0 +1,15 @@
+{
+  "id": "anti-atlas",
+  "titre": { "ar": "الأنتي أطلس", "fr": "L'Anti-Atlas" },
+  "region": { "ar": "جنوب المغرب", "fr": "Sud du Maroc" },
+  "description": {
+    "ar": "سلسلة جبلية جنوبية تفصل الأطلس الكبير عن الصحراء، تُعرف بتضاريسها القاحلة وألوانها الصخرية المتنوّعة التي تكشف طبقات جيولوجية بالغة القِدم.",
+    "fr": "Chaîne montagneuse méridionale séparant le Haut Atlas du Sahara, connue pour son relief aride et ses couleurs rocheuses variées qui exposent des strates géologiques extrêmement anciennes."
+  },
+  "particularite_geologique": {
+    "ar": "يحتضن الأنتي أطلس بعضا من أقدم الصخور المكشوفة بالمغرب، يعود بعضها إلى الحقبة السحيقة (ما قبل الكمبري، أكثر من 540 مليون سنة)، ما يجعله موقعا مرجعيا عالميا لدراسة تاريخ الأرض المبكر وتطوّر الحياة الأولى.",
+    "fr": "L'Anti-Atlas expose certaines des roches les plus anciennes du Maroc, remontant parfois au Précambrien (plus de 540 millions d'années), ce qui en fait un site de référence mondial pour l'étude de l'histoire précoce de la Terre et des premières formes de vie."
+  },
+  "image": "assets/images/thumbs/geologie-anti-atlas.png",
+  "date": "2026-04-12"
+}

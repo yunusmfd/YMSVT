@@ -1,0 +1,23 @@
+{
+  "id": "phosphate",
+  "nom": { "ar": "الفوسفاط", "fr": "Phosphate" },
+  "type": { "ar": "صخرة رسوبية", "fr": "Roche sédimentaire" },
+  "composition": {
+    "ar": "صخرة رسوبية غنية بمعادن الأباتيت، تكوّنت في بيئات بحرية ضحلة منذ عشرات ملايين السنين من ترسّب بقايا عضوية غنية بالفوسفور.",
+    "fr": "Roche sédimentaire riche en minéraux du groupe de l'apatite, formée en milieu marin peu profond il y a des dizaines de millions d'années par le dépôt de restes organiques riches en phosphore."
+  },
+  "description": {
+    "ar": "يظهر الفوسفاط عادة بلون رمادي إلى بني فاتح، ويُستخرج من طبقات رسوبية سميكة قرب سطح الأرض عبر مناجم مكشوفة واسعة.",
+    "fr": "Le phosphate se présente généralement en gris à brun clair, extrait de couches sédimentaires épaisses proches de la surface via de vastes mines à ciel ouvert."
+  },
+  "utilisation": {
+    "ar": "يُستعمل أساسا في صناعة الأسمدة الفلاحية، ويدخل أيضا في صناعة بعض المنتجات الكيميائية والغذائية.",
+    "fr": "Utilisé principalement dans la fabrication d'engrais agricoles, il entre aussi dans certains procédés chimiques et alimentaires."
+  },
+  "gisement_maroc": {
+    "ar": "يحتضن المغرب أكبر احتياطي عالمي معروف من الفوسفاط (أكثر من ثلثي الاحتياطي العالمي)، خصوصا في الحوض الفوسفاطي بمنطقة خريبكة-يوسفية.",
+    "fr": "Le Maroc détient la plus grande réserve mondiale connue de phosphate (plus des deux tiers des réserves mondiales), notamment dans le bassin phosphaté de Khouribga-Youssoufia."
+  },
+  "image": "assets/images/thumbs/roche-phosphate.png",
+  "date": "2026-04-05"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "calcaire",
+  "nom": { "ar": "الحجر الجيري", "fr": "Calcaire" },
+  "type": { "ar": "صخرة رسوبية", "fr": "Roche sédimentaire" },
+  "composition": {
+    "ar": "صخرة رسوبية تتكوّن أساسا من كربونات الكالسيوم، تنشأ إما من ترسّب بقايا هياكل كائنات بحرية (مرجان، أصداف) أو ترسّب كيميائي مباشر في مياه بحرية دافئة.",
+    "fr": "Roche sédimentaire composée essentiellement de carbonate de calcium, issue soit de l'accumulation de débris d'organismes marins (coraux, coquillages), soit d'une précipitation chimique directe en eaux chaudes."
+  },
+  "description": {
+    "ar": "غالبا ما يحتوي على أحافير مرئية تشهد على البيئة البحرية القديمة التي تكوّن فيها، وهو صخر قابل للذوبان تدريجيا في المياه الحمضية، مما يفسّر تشكّل الكهوف الجيرية.",
+    "fr": "Il contient souvent des fossiles visibles témoignant du milieu marin ancien dans lequel il s'est formé. Soluble progressivement dans les eaux acides, il est à l'origine de la formation des grottes karstiques."
+  },
+  "utilisation": {
+    "ar": "مادة أولية أساسية في صناعة الإسمنت والجير، ويُستعمل أيضا كحجر بناء وفي تصحيح حموضة التربة الفلاحية.",
+    "fr": "Matière première essentielle pour le ciment et la chaux, utilisé aussi comme pierre de construction et pour corriger l'acidité des sols agricoles."
+  },
+  "gisement_maroc": {
+    "ar": "تنتشر التكوينات الجيرية بكثرة في الأطلس المتوسط والكبير، وتشكّل الهضاب الجيرية التي تحتضن كهوفا شهيرة مثل مغارة فريواطو.",
+    "fr": "Les formations calcaires sont très répandues dans le Moyen et le Haut Atlas, formant des plateaux karstiques qui abritent des grottes célèbres comme celle de Friouato."
+  },
+  "image": "assets/images/thumbs/roche-calcaire.png",
+  "date": "2026-04-07"
+}
