@@ -7,15 +7,24 @@
   حتى يعمل نفس الكود في المتصفح (marked.min.js/purify.min.js عبر <script> عادي) وفي Node (حزم npm).
 */
 
+// أيقونات خطّية مضمَّنة محليا (لا استيراد من scripts/lib/icons.js) لأن هذا الملف يعمل حرفيا
+// في كل من المتصفح (fetch عبر render-engine.js) والبناء (Node عبر prerender.js) دون أي مسار بناء —
+// مسار scripts/lib غير متاح وقت التصفح، فتُكرَّر أيقونات صغيرة متّسقة الأسلوب (24×24، stroke 1.6) هنا فقط.
+const SVG_ICON = (paths) =>
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+
 const ENCADRE_ICONS = {
-  molahada: "ℹ️",
-  tanbih: "⚠️",
-  qaida: "📐",
-  istintaj: "←",
-  khoulasa: "📋",
-  maaloumaMouhima: "💡",
-  taarif: "🔤",
+  molahada: SVG_ICON(`<circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16.5"/><circle cx="12" cy="7.8" r="0.6" fill="currentColor" stroke="none"/>`),
+  tanbih: SVG_ICON(`<path d="M12 4L21.5 20H2.5z"/><line x1="12" y1="10" x2="12" y2="14.2"/><circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none"/>`),
+  qaida: SVG_ICON(`<rect x="3" y="9" width="18" height="6" rx="1.2"/><line x1="7.5" y1="9" x2="7.5" y2="12"/><line x1="11.5" y1="9" x2="11.5" y2="12"/><line x1="15.5" y1="9" x2="15.5" y2="12"/>`),
+  istintaj: SVG_ICON(`<line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/>`),
+  khoulasa: SVG_ICON(`<rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/>`),
+  maaloumaMouhima: SVG_ICON(`<path d="M9.5 18h5"/><path d="M10.3 21h3.4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>`),
+  taarif: SVG_ICON(`<path d="M20 12.2L11.8 20.4a1.6 1.6 0 0 1-2.3 0L3.6 14.5a1.6 1.6 0 0 1 0-2.3L11.8 4h6.6a1.6 1.6 0 0 1 1.6 1.6z"/><circle cx="15.3" cy="8.7" r="1.3"/>`),
 };
+
+const ICON_BULB = SVG_ICON(`<path d="M9.5 18h5"/><path d="M10.3 21h3.4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/>`);
+const ICON_FLASK = SVG_ICON(`<path d="M9 3h6"/><path d="M10 3v6l-4.5 8a1.6 1.6 0 0 0 1.4 2.4h10.2A1.6 1.6 0 0 0 18.5 17L14 9V3"/><path d="M7.3 14h9.4"/>`);
 
 const ENCADRE_TITRES_DEFAUT = {
   molahada: { ar: "ملاحظة", fr: "Remarque" },
@@ -81,7 +90,7 @@ function renderLeSaviezVous(block, lang, deps) {
   const titre = block.titre ? block.titre[lang] || block.titre.ar : lang === "fr" ? "Le saviez-vous ?" : "أضف إلى معلوماتك";
   const lien = block.lien_encyclopedie ? `<a href="/encyclopedie/saviez-vous/${block.lien_encyclopedie}/">${lang === "fr" ? "Lire la suite" : "اقرأ المزيد"} ←</a>` : "";
   return `<div class="le-saviez-vous">
-    <span class="le-saviez-vous-icon" aria-hidden="true">💡</span>
+    <span class="le-saviez-vous-icon" aria-hidden="true">${ICON_BULB}</span>
     <p class="encadre-titre">${escapeHtml(titre)}</p>
     ${mdToSafeHtml(block.texte[lang] || block.texte.ar, lang, deps)}
     ${lien}
@@ -118,7 +127,7 @@ function renderBlock(block, lang, deps) {
       </figure>`;
     case "lien_labo":
       return `<a class="lien-labo-card" href="/labo-virtuel/${block.experience_id}/">
-        <span aria-hidden="true">🔬</span>
+        <span aria-hidden="true">${ICON_FLASK}</span>
         <span>${escapeHtml(block.texte[lang] || block.texte.ar)}</span>
       </a>`;
     case "encadre":

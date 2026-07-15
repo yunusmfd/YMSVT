@@ -1,8 +1,9 @@
 import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { ICON_BULB } from "../icons.js";
 
 function card(sv) {
   return `<a class="card card-link le-saviez-vous" href="/encyclopedie/saviez-vous/${sv.id}/" style="margin:0">
-    <span class="le-saviez-vous-icon" aria-hidden="true">💡</span>
+    <span class="le-saviez-vous-icon" aria-hidden="true">${ICON_BULB}</span>
     <p><span data-lang="ar">${escapeHtml(sv.texte.ar)}</span><span data-lang="fr">${escapeHtml(sv.texte.fr)}</span></p>
   </a>`;
 }

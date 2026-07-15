@@ -1,8 +1,9 @@
 import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { ICON_CALENDAR } from "../icons.js";
 
 function card(c) {
   return `<a class="card card-link" href="/encyclopedie/chronologies/${c.id}/">
-    <span aria-hidden="true" style="font-size:var(--fs-24)">📅</span>
+    <span class="card-icon-lg" aria-hidden="true">${ICON_CALENDAR}</span>
     <h4 style="margin-top:var(--sp-3)"><span data-lang="ar">${escapeHtml(c.titre.ar)}</span><span data-lang="fr">${escapeHtml(c.titre.fr)}</span></h4>
     <p class="mono" style="font-size:var(--fs-12)">${c.nbEvenements} <span data-lang="ar">أحداث</span><span data-lang="fr">événements</span></p>
   </a>`;

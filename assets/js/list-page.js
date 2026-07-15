@@ -1,4 +1,6 @@
 // أدوات مشتركة لصفحات القوائم: هيكل تحميل/فراغ/خطأ (القسم 5.2) + جلب manifest.json
+import { ICON_WARNING, ICON_SEARCH_EMPTY } from "./icons.js";
+
 export function showSkeleton(container, count = 6) {
   container.innerHTML = Array.from({ length: count }, () => `<div class="skeleton-card"></div>`).join("");
 }
@@ -6,7 +8,7 @@ export function showSkeleton(container, count = 6) {
 export function showError(container, onRetry) {
   const lang = document.documentElement.getAttribute("lang") || "ar";
   container.innerHTML = `<div class="state-error">
-    <span class="icon" aria-hidden="true">⚠️</span>
+    <span class="icon" aria-hidden="true">${ICON_WARNING}</span>
     <p>${lang === "fr" ? "Échec du chargement du contenu." : "تعذّر تحميل المحتوى."}</p>
     <button class="btn btn-ghost btn-sm" data-retry>${lang === "fr" ? "Réessayer" : "إعادة المحاولة"}</button>
   </div>`;
@@ -17,7 +19,7 @@ export function showError(container, onRetry) {
 export function showEmpty(container, messageAr, messageFr) {
   const lang = document.documentElement.getAttribute("lang") || "ar";
   container.innerHTML = `<div class="state-empty">
-    <span class="icon" aria-hidden="true">🔎</span>
+    <span class="icon" aria-hidden="true">${ICON_SEARCH_EMPTY}</span>
     <p>${lang === "fr" ? messageFr : messageAr}</p>
   </div>`;
 }

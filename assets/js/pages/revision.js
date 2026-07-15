@@ -1,10 +1,11 @@
 import { fetchSection, showError, escapeHtml } from "../list-page.js";
 import { initFlashcards } from "../flashcards.js";
 import { t } from "../i18n.js";
+import { ICON_DOCUMENT } from "../icons.js";
 
 function resumeCard(r) {
   return `<a class="card card-link" href="/revision/resumes/${r.id}/">
-    <span aria-hidden="true" style="font-size:var(--fs-24)">📄</span>
+    <span class="card-icon-lg" aria-hidden="true">${ICON_DOCUMENT}</span>
     <h4 style="margin-top:var(--sp-3)"><span data-lang="ar">${escapeHtml(r.titre.ar)}</span><span data-lang="fr">${escapeHtml(r.titre.fr)}</span></h4>
   </a>`;
 }

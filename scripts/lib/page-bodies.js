@@ -96,6 +96,7 @@ export function leconsListBody() {
   </div>
   <div class="layout-with-sidebar" data-filters data-filters-target="[data-lecons-grid]" data-filters-empty="[data-lecons-grid-empty]">
     <aside class="filters-sidebar">
+      <div class="filters-sidebar-head">${uiIcon("filter")}<span data-lang="ar">تصفية النتائج</span><span data-lang="fr">Filtrer les résultats</span></div>
       <div class="filter-group">
         <h4><span data-lang="ar">المستوى</span><span data-lang="fr">Niveau</span></h4>
         <select class="filter-select" data-filter-key="niveau">
@@ -128,7 +129,7 @@ export function leconsListBody() {
     <div>
       <div data-lecons-grid></div>
       <div class="state-empty" data-lecons-grid-empty hidden>
-        <span class="icon">📭</span>
+        <span class="icon">${uiIcon("empty")}</span>
         <p><span data-lang="ar">لا توجد دروس بعد لهذا الاختيار، جرّب مستوى آخر.</span><span data-lang="fr">Aucune leçon pour ce choix, essayez un autre niveau.</span></p>
       </div>
     </div>
@@ -150,6 +151,7 @@ export function examsListBody() {
   <div data-exsection-panel="fard">
     <div class="layout-with-sidebar">
       <aside class="filters-sidebar">
+      <div class="filters-sidebar-head">${uiIcon("filter")}<span data-lang="ar">تصفية النتائج</span><span data-lang="fr">Filtrer les résultats</span></div>
         ${filterDropdown("ex-fard-niveau", "المستوى", "Niveau", NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join(""))}
         <div class="filter-group" data-filter-key="ex-fard-filiere-group" hidden>
           <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
@@ -163,7 +165,7 @@ export function examsListBody() {
       <div>
         <div class="grid grid-2" data-exams-fard-grid></div>
         <div class="state-empty" data-exams-fard-empty hidden>
-          <span class="icon">📭</span>
+          <span class="icon">${uiIcon("empty")}</span>
           <p><span data-lang="ar">لا توجد فروض بعد لهذا الاختيار.</span><span data-lang="fr">Aucun devoir pour ce choix.</span></p>
         </div>
       </div>
@@ -196,17 +198,17 @@ export function examsListBody() {
 }
 
 const ENCY_SECTIONS = [
-  { slug: "glossaire", icon: "📖", ar: "معجم المصطلحات", fr: "Glossaire des termes", descAr: "تعريفات دقيقة لأهم مصطلحات SVT.", descFr: "Définitions précises des principaux termes de SVT." },
-  { slug: "scientifiques", icon: "🔬", ar: "العلماء", fr: "Scientifiques", descAr: "أعلام العلم الذين شكّلوا فهمنا للحياة والأرض.", descFr: "Les figures scientifiques qui ont façonné notre compréhension du vivant et de la Terre." },
-  { slug: "decouvertes", icon: "💡", ar: "الاكتشافات", fr: "Découvertes", descAr: "لحظات فارقة غيّرت مسار العلم.", descFr: "Des moments charnières qui ont changé le cours de la science." },
-  { slug: "organismes", icon: "🧬", ar: "الكائنات الحية", fr: "Êtres vivants", descAr: "أنواع حيوانية ونباتية مغربية وخصائصها.", descFr: "Espèces animales et végétales marocaines et leurs particularités." },
-  { slug: "roches-mineraux", icon: "🪨", ar: "الصخور والمعادن", fr: "Roches et minéraux", descAr: "تركيب الصخور والمعادن الشائعة ومنشؤها.", descFr: "Composition et origine des roches et minéraux courants." },
-  { slug: "geologie-maroc", icon: "🌍", ar: "جيولوجيا المغرب", fr: "Géologie du Maroc", descAr: "التكوينات الجيولوجية الكبرى بالمغرب.", descFr: "Les grandes formations géologiques du Maroc." },
-  { slug: "galerie", icon: "🗺️", ar: "الرسوم والخرائط العلمية", fr: "Schémas et cartes", descAr: "رسوم تخطيطية موسومة للمراجعة البصرية.", descFr: "Schémas annotés pour la révision visuelle." },
-  { slug: "experiences-historiques", icon: "🧪", ar: "التجارب العلمية التاريخية", fr: "Expériences historiques", descAr: "تجارب غيّرت فهمنا للحياة: السؤال، البروتوكول، النتيجة.", descFr: "Des expériences qui ont changé notre compréhension du vivant." },
-  { slug: "chronologies", icon: "📅", ar: "الخطوط الزمنية", fr: "Chronologies", descAr: "تسلسل الأحداث الكبرى في تاريخ العلوم.", descFr: "La chronologie des grands événements de l'histoire des sciences." },
-  { slug: "articles", icon: "📰", ar: "آفاق ومقالات علمية", fr: "Articles scientifiques", descAr: "مقالات معمّقة في البيولوجيا والجيولوجيا والبيئة.", descFr: "Articles approfondis en biologie, géologie et environnement." },
-  { slug: "saviez-vous", icon: "✨", ar: "هل تعلم؟", fr: "Le saviez-vous ?", descAr: "حقائق علمية قصيرة ومثيرة للفضول.", descFr: "De courts faits scientifiques surprenants." },
+  { slug: "glossaire", icon: "tag", tone: "--spec-taxonomie", ar: "معجم المصطلحات", fr: "Glossaire des termes", descAr: "تعريفات دقيقة لأهم مصطلحات SVT.", descFr: "Définitions précises des principaux termes de SVT." },
+  { slug: "scientifiques", icon: "person", tone: "--spec-genetique", ar: "العلماء", fr: "Scientifiques", descAr: "أعلام العلم الذين شكّلوا فهمنا للحياة والأرض.", descFr: "Les figures scientifiques qui ont façonné notre compréhension du vivant et de la Terre." },
+  { slug: "decouvertes", icon: "bulb", tone: "--spec-biomol", ar: "الاكتشافات", fr: "Découvertes", descAr: "لحظات فارقة غيّرت مسار العلم.", descFr: "Des moments charnières qui ont changé le cours de la science." },
+  { slug: "organismes", icon: "bio", tone: "--spec-ecologie", ar: "الكائنات الحية", fr: "Êtres vivants", descAr: "أنواع حيوانية ونباتية مغربية وخصائصها.", descFr: "Espèces animales et végétales marocaines et leurs particularités." },
+  { slug: "roches-mineraux", icon: "rock", tone: "--spec-zoologie", ar: "الصخور والمعادن", fr: "Roches et minéraux", descAr: "تركيب الصخور والمعادن الشائعة ومنشؤها.", descFr: "Composition et origine des roches et minéraux courants." },
+  { slug: "geologie-maroc", icon: "geo", tone: "--spec-geologie", ar: "جيولوجيا المغرب", fr: "Géologie du Maroc", descAr: "التكوينات الجيولوجية الكبرى بالمغرب.", descFr: "Les grandes formations géologiques du Maroc." },
+  { slug: "galerie", icon: "map", tone: "--spec-microbiologie", ar: "الرسوم والخرائط العلمية", fr: "Schémas et cartes", descAr: "رسوم تخطيطية موسومة للمراجعة البصرية.", descFr: "Schémas annotés pour la révision visuelle." },
+  { slug: "experiences-historiques", icon: "labo", tone: "--spec-physiologie", ar: "التجارب العلمية التاريخية", fr: "Expériences historiques", descAr: "تجارب غيّرت فهمنا للحياة: السؤال، البروتوكول، النتيجة.", descFr: "Des expériences qui ont changé notre compréhension du vivant." },
+  { slug: "chronologies", icon: "calendar", tone: "--spec-cytologie", ar: "الخطوط الزمنية", fr: "Chronologies", descAr: "تسلسل الأحداث الكبرى في تاريخ العلوم.", descFr: "La chronologie des grands événements de l'histoire des sciences." },
+  { slug: "articles", icon: "newspaper", tone: "--spec-botanique", ar: "آفاق ومقالات علمية", fr: "Articles scientifiques", descAr: "مقالات معمّقة في البيولوجيا والجيولوجيا والبيئة.", descFr: "Articles approfondis en biologie, géologie et environnement." },
+  { slug: "saviez-vous", icon: "spark", tone: "--secondary", ar: "هل تعلم؟", fr: "Le saviez-vous ?", descAr: "حقائق علمية قصيرة ومثيرة للفضول.", descFr: "De courts faits scientifiques surprenants." },
 ];
 
 export function encyclopedieHubBody() {
@@ -221,7 +223,7 @@ export function encyclopedieHubBody() {
     ${ENCY_SECTIONS.map(
       (s, i) => `<a class="ency-section-card" href="/encyclopedie/${s.slug}/">
       <span class="ency-section-num mono" aria-hidden="true">${String(i + 1).padStart(2, "0")}</span>
-      <span class="ency-section-icon" aria-hidden="true">${s.icon}</span>
+      <span class="ency-section-icon" aria-hidden="true" style="--tone:var(${s.tone})">${uiIcon(s.icon)}</span>
       <h3><span data-lang="ar">${s.ar}</span><span data-lang="fr">${s.fr}</span></h3>
       <p><span data-lang="ar">${s.descAr}</span><span data-lang="fr">${s.descFr}</span></p>
     </a>`
@@ -357,6 +359,7 @@ export function revisionBody() {
   <div data-section-panel="lecons">
     <div class="layout-with-sidebar">
       <aside class="filters-sidebar">
+      <div class="filters-sidebar-head">${uiIcon("filter")}<span data-lang="ar">تصفية النتائج</span><span data-lang="fr">Filtrer les résultats</span></div>
         ${filterDropdown("niveau", "المستوى", "Niveau", NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join(""))}
         <div class="filter-group" data-filter-key="filiere-group" hidden>
           <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
@@ -378,7 +381,7 @@ export function revisionBody() {
         <div data-revision-panel="resumes" class="grid grid-3"></div>
         <div data-revision-panel="cartesMentales" class="grid grid-3" hidden></div>
         <div data-revision-panel="flashcards" hidden>
-          <button class="btn btn-ghost btn-sm" data-flashcards-shuffle style="margin-bottom:var(--sp-4)">🔀 <span data-lang="ar">خلط البطاقات</span><span data-lang="fr">Mélanger</span></button>
+          <button class="btn btn-ghost btn-sm" data-flashcards-shuffle style="margin-bottom:var(--sp-4)">${uiIcon("shuffle")} <span data-lang="ar">خلط البطاقات</span><span data-lang="fr">Mélanger</span></button>
           <div class="grid grid-3" data-flashcards-grid></div>
         </div>
         <div data-revision-panel="quizDocuments" hidden></div>
@@ -390,6 +393,7 @@ export function revisionBody() {
   <div data-section-panel="froud" hidden>
     <div class="layout-with-sidebar">
       <aside class="filters-sidebar">
+      <div class="filters-sidebar-head">${uiIcon("filter")}<span data-lang="ar">تصفية النتائج</span><span data-lang="fr">Filtrer les résultats</span></div>
         ${filterDropdown("fard-niveau", "المستوى", "Niveau", NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join(""))}
         <div class="filter-group" data-filter-key="fard-filiere-group" hidden>
           <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
@@ -403,7 +407,7 @@ export function revisionBody() {
       <div>
         <div class="grid grid-2" data-fard-grid></div>
         <div class="state-empty" data-fard-empty hidden>
-          <span class="icon">📭</span>
+          <span class="icon">${uiIcon("empty")}</span>
           <p><span data-lang="ar">لا توجد فروض بعد لهذا الاختيار.</span><span data-lang="fr">Aucun devoir pour ce choix.</span></p>
         </div>
       </div>
@@ -527,13 +531,13 @@ export function laboListBody() {
     <div class="filter-group" data-filter-key="type">
       <div class="tabs" style="margin-bottom:var(--sp-6)">
         <button class="tab" data-filter-value="" aria-selected="true"><span data-lang="ar">الكل</span><span data-lang="fr">Tout</span></button>
-        <button class="tab" data-filter-value="interactif" aria-selected="false">🔬 <span data-lang="ar">تفاعلي</span><span data-lang="fr">Interactif</span></button>
-        <button class="tab" data-filter-value="video" aria-selected="false">🎬 <span data-lang="ar">فيديو</span><span data-lang="fr">Vidéo</span></button>
-        <button class="tab" data-filter-value="animation" aria-selected="false">✏️ <span data-lang="ar">رسوم متحركة</span><span data-lang="fr">Animation</span></button>
+        <button class="tab" data-filter-value="interactif" aria-selected="false">${uiIcon("labo")} <span data-lang="ar">تفاعلي</span><span data-lang="fr">Interactif</span></button>
+        <button class="tab" data-filter-value="video" aria-selected="false">${uiIcon("video")} <span data-lang="ar">فيديو</span><span data-lang="fr">Vidéo</span></button>
+        <button class="tab" data-filter-value="animation" aria-selected="false">${uiIcon("animation")} <span data-lang="ar">رسوم متحركة</span><span data-lang="fr">Animation</span></button>
       </div>
     </div>
     <div class="grid grid-3" data-labo-grid></div>
-    <div class="state-empty" data-labo-grid-empty hidden><span class="icon">📭</span><p><span data-lang="ar">لا توجد تجارب لهذا النوع بعد.</span><span data-lang="fr">Aucune expérience pour ce type.</span></p></div>
+    <div class="state-empty" data-labo-grid-empty hidden><span class="icon">${uiIcon("empty")}</span><p><span data-lang="ar">لا توجد تجارب لهذا النوع بعد.</span><span data-lang="fr">Aucune expérience pour ce type.</span></p></div>
   </div>
 </div>`;
 }

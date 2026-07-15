@@ -103,21 +103,17 @@ text[data-lang] { display: none; }
 html[lang="ar"] text[data-lang="ar"] { display: inline; }
 html[lang="fr"] text[data-lang="fr"] { display: inline; }
 
-/* --- 8.1 نقاط الكسر: قواعد عامة للشبكات --- */
+/* --- 8.1 نقاط الكسر: قواعد عامة للشبكات ---
+   auto-fit + minmax بدل عدد أعمدة ثابت: يحلّ مشكلتين معا —
+   (أ) لا تتمدّد الشبكة عبر نقاط كسر يدوية منفصلة، تتدفّق البطاقات تلقائيا حسب العرض المتاح.
+   (ب) صف بعنصر واحد فقط (وحدة بدرس وحيد، آخر صف غير مكتمل...) لا يترك فراغا بصريا ضخما بجانبه —
+       الأعمدة الفارغة تُحذف (auto-fit) فتتمدّد البطاقة الوحيدة حتى الحد الأقصى المسموح بدل بقاء 1/3 العرض. */
 .grid { display: grid; gap: var(--sp-5); }
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-5 { grid-template-columns: repeat(5, 1fr); }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); }
+.grid-5 { grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr)); }
 
-@media (max-width: 1179px) {
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
-  .grid-5 { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 899px) {
-  .grid-5 { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 679px) {
-  .grid-2, .grid-3, .grid-5 { grid-template-columns: 1fr; }
   body { font-size: var(--fs-15); }
   h1 { font-size: var(--fs-28); }
 }

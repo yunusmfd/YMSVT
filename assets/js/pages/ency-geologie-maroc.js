@@ -1,9 +1,10 @@
 import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { ICON_PIN } from "../icons.js";
 
 function card(g) {
   return `<a class="card card-link" href="/encyclopedie/geologie-maroc/${g.id}/">
     ${g.image ? `<img src="/${g.image}" alt="${escapeHtml(g.titre.ar)}" loading="lazy" width="480" height="270" />` : ""}
-    <span class="chip chip-secondary">🌍 <span data-lang="ar">${escapeHtml(g.region.ar)}</span><span data-lang="fr">${escapeHtml(g.region.fr)}</span></span>
+    <span class="chip chip-secondary">${ICON_PIN} <span data-lang="ar">${escapeHtml(g.region.ar)}</span><span data-lang="fr">${escapeHtml(g.region.fr)}</span></span>
     <h4 style="margin-top:var(--sp-3)"><span data-lang="ar">${escapeHtml(g.titre.ar)}</span><span data-lang="fr">${escapeHtml(g.titre.fr)}</span></h4>
   </a>`;
 }

@@ -5,32 +5,33 @@
 */
 
 :root {
-  /* --- 4.1 لوحة الألوان (فاتح) --- */
-  --bg: #F0F1F0;
-  --bg-alt: #E3E8D6;
-  --ink: #1B241F;
-  --ink-soft: #4D554E;
-  --primary: #204F3F;
-  --primary-light: #3C7A63;
-  --secondary: #C17A2E;
-  --accent: #3B6E8F;
-  --rust: #8B4A2B;
-  --line: #DADDD5;
-  --card-bg: #F9FAF7;
+  /* --- 4.1 لوحة الألوان (فاتح) — "دفء حيوي متوازن": تطوّر الهوية الأصلية بتشبّع أعلى
+     وخلفيات نظيفة بدل النبرة الزيتونية الباهتة (مراجعة الهوية اللونية نحو طابع أكثر حيوية) --- */
+  --bg: #F7F8F4;
+  --bg-alt: #EAF3EA;
+  --ink: #17231C;
+  --ink-soft: #4C5C50;
+  --primary: #1B7A55;
+  --primary-light: #2FA374;
+  --secondary: #E8823C;
+  --accent: #3E8FC4;
+  --rust: #C2482E;
+  --line: #DEE7DD;
+  --card-bg: #FFFFFF;
   /* سطح داكن ثابت لا يتبدّل مع الوضع الليلي (الفوتر مصمّم داكنا دوما، بخلاف --ink التي تنعكس) */
-  --surface-dark: #1B241F;
+  --surface-dark: #131E17;
 
   /* --- 4.1.2 بليتة ألوان التخصصات (فاتح) --- */
-  --spec-genetique: #3D5A96;
-  --spec-cytologie: #8B4F73;
+  --spec-genetique: #3D6FA8;
+  --spec-cytologie: #8A5FB0;
   --spec-physiologie: #B4483F;
-  --spec-ecologie: #4C7A3E;
-  --spec-biomol: #6B4F8C;
+  --spec-ecologie: #4C8C3E;
+  --spec-biomol: #6B4F9E;
   --spec-geologie: var(--secondary);
-  --spec-microbiologie: #2E7A82;
-  --spec-botanique: #7A8F3E;
-  --spec-zoologie: #B5652E;
-  --spec-taxonomie: #8B7355;
+  --spec-microbiologie: #2E8A92;
+  --spec-botanique: #8A9F3E;
+  --spec-zoologie: #C46A2E;
+  --spec-taxonomie: #93765A;
 
   /* --- 4.2 الطباعة --- */
   --font-display-ar: "Markazi Text", serif;
@@ -99,27 +100,30 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #142219;
-  --bg-alt: #1A2C21;
-  --ink: #E9ECE2;
-  --ink-soft: #A3B3A5;
-  --primary: #3C8A6D;
-  --primary-light: #5AAE8C;
-  --secondary: #D68F45;
-  --accent: #6FAFCB;
-  --line: #2E4536;
-  --card-bg: #1C2F24;
+  --bg: #131E17;
+  --bg-alt: #182920;
+  --ink: #E9F0E9;
+  --ink-soft: #9FB3A5;
+  /* --primary/--rust مضبوطتان كي يجتاز نص أبيض فوقهما (الأزرار الصلبة/نقطة الجرس) 4.5:1 —
+     أفتح من هذا يكسر AA على تعبئة صلبة، أغمق يفقد --primary وضوحه كلون تمييز فوق خلفية داكنة */
+  --primary: #32855F;
+  --primary-light: #4CA97A;
+  --secondary: #F0985A;
+  --accent: #62ABD9;
+  --rust: #C85032;
+  --line: #28402F;
+  --card-bg: #1A2B22;
 
-  --spec-genetique: #6B87C4;
-  --spec-cytologie: #B87CA0;
-  --spec-physiologie: #D97668;
-  --spec-ecologie: #7AAD68;
-  --spec-biomol: #9A7AB8;
-  --spec-geologie: #D68F45;
-  --spec-microbiologie: #4FA3AC;
-  --spec-botanique: #A8C066;
-  --spec-zoologie: #D68251;
-  --spec-taxonomie: #B89A78;
+  --spec-genetique: #6D93C8;
+  --spec-cytologie: #AC87CE;
+  --spec-physiologie: #DC7A62;
+  --spec-ecologie: #7AB868;
+  --spec-biomol: #9B85D6;
+  --spec-geologie: #F0985A;
+  --spec-microbiologie: #5FB0B8;
+  --spec-botanique: #B8C878;
+  --spec-zoologie: #E0935F;
+  --spec-taxonomie: #BBA084;
 
   color-scheme: dark;
 }
@@ -127,16 +131,17 @@
 /* دعم تفضيل نظام التشغيل قبل أي اختيار يدوي محفوظ (يُطبَّق فقط إن لم يوجد nova-svt:theme محفوظ، القسم 4.1.1) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="dark"]) {
-    --bg: #142219;
-    --bg-alt: #1A2C21;
-    --ink: #E9ECE2;
-    --ink-soft: #A3B3A5;
-    --primary: #3C8A6D;
-    --primary-light: #5AAE8C;
-    --secondary: #D68F45;
-    --accent: #6FAFCB;
-    --line: #2E4536;
-    --card-bg: #1C2F24;
+    --bg: #131E17;
+    --bg-alt: #182920;
+    --ink: #E9F0E9;
+    --ink-soft: #9FB3A5;
+    --primary: #32855F;
+    --primary-light: #4CA97A;
+    --secondary: #F0985A;
+    --accent: #62ABD9;
+    --rust: #C85032;
+    --line: #28402F;
+    --card-bg: #1A2B22;
     color-scheme: dark;
   }
 }

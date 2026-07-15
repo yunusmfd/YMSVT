@@ -21,20 +21,20 @@ function contrastRatio(hex1, hex2) {
 
 const PALETTES = {
   light: {
-    bg: "#F0F1F0", "bg-alt": "#E3E8D6", ink: "#1B241F", "ink-soft": "#4D554E",
-    primary: "#204F3F", "primary-light": "#3C7A63", secondary: "#C17A2E", accent: "#3B6E8F",
-    rust: "#8B4A2B", "card-bg": "#F9FAF7",
+    bg: "#F7F8F4", "bg-alt": "#EAF3EA", ink: "#17231C", "ink-soft": "#4C5C50",
+    primary: "#1B7A55", "primary-light": "#2FA374", secondary: "#E8823C", accent: "#3E8FC4",
+    rust: "#C2482E", "card-bg": "#FFFFFF",
   },
   dark: {
-    bg: "#142219", "bg-alt": "#1A2C21", ink: "#E9ECE2", "ink-soft": "#A3B3A5",
-    primary: "#3C8A6D", "primary-light": "#5AAE8C", secondary: "#D68F45", accent: "#6FAFCB",
-    rust: "#8B4A2B", "card-bg": "#1C2F24",
+    bg: "#131E17", "bg-alt": "#182920", ink: "#E9F0E9", "ink-soft": "#9FB3A5",
+    primary: "#32855F", "primary-light": "#4CA97A", secondary: "#F0985A", accent: "#62ABD9",
+    rust: "#C85032", "card-bg": "#1A2B22",
   },
 };
 
 const SPEC = {
-  light: { genetique: "#3D5A96", cytologie: "#8B4F73", physiologie: "#B4483F", ecologie: "#4C7A3E", biomol: "#6B4F8C", geologie: "#C17A2E", microbiologie: "#2E7A82", botanique: "#7A8F3E", zoologie: "#B5652E", taxonomie: "#8B7355" },
-  dark: { genetique: "#6B87C4", cytologie: "#B87CA0", physiologie: "#D97668", ecologie: "#7AAD68", biomol: "#9A7AB8", geologie: "#D68F45", microbiologie: "#4FA3AC", botanique: "#A8C066", zoologie: "#D68251", taxonomie: "#B89A78" },
+  light: { genetique: "#3D6FA8", cytologie: "#8A5FB0", physiologie: "#B4483F", ecologie: "#4C8C3E", biomol: "#6B4F9E", geologie: "#E8823C", microbiologie: "#2E8A92", botanique: "#8A9F3E", zoologie: "#C46A2E", taxonomie: "#93765A" },
+  dark: { genetique: "#6D93C8", cytologie: "#AC87CE", physiologie: "#DC7A62", ecologie: "#7AB868", biomol: "#9B85D6", geologie: "#F0985A", microbiologie: "#5FB0B8", botanique: "#B8C878", taxonomie: "#BBA084", zoologie: "#E0935F" },
 };
 
 // أزواج النص/الخلفية الفعلية المستخدمة في نظام التصميم (القسم 4.1: قاعدة التباين)

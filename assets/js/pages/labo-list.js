@@ -1,10 +1,11 @@
 import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
 import { initFilters } from "../filters.js";
+import { ICON_FLASK, ICON_VIDEO, ICON_ANIMATION } from "../icons.js";
 
 const TYPE_BADGE = {
-  interactif: { icon: "🔬", ar: "تفاعلي", fr: "Interactif", cls: "chip-primary" },
-  video: { icon: "🎬", ar: "فيديو", fr: "Vidéo", cls: "chip-accent" },
-  animation: { icon: "✏️", ar: "رسوم متحركة", fr: "Animation", cls: "chip-secondary" },
+  interactif: { icon: ICON_FLASK, ar: "تفاعلي", fr: "Interactif", cls: "chip-primary" },
+  video: { icon: ICON_VIDEO, ar: "فيديو", fr: "Vidéo", cls: "chip-accent" },
+  animation: { icon: ICON_ANIMATION, ar: "رسوم متحركة", fr: "Animation", cls: "chip-secondary" },
 };
 
 function card(exp) {

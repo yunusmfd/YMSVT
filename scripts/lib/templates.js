@@ -2,6 +2,7 @@
 import { renderLessonLangBlock, renderMarkdownArticle, escapeHtml } from "../../assets/js/render-core.js";
 import { niveauLabel, filiereLabel, isSecondaire, NIVEAUX, FILIERES } from "../../assets/js/taxonomy.js";
 import { renderBreadcrumb } from "./partials.js";
+import { uiIcon } from "./icons.js";
 
 const DUREE_LABEL = (min) => `<span data-lang="ar">${min} د</span><span data-lang="fr">${min} min</span>`;
 
@@ -100,7 +101,7 @@ export function lessonDetailBody({ lecon, unite, deps, prevLecon, nextLecon, tra
 
   <div class="lesson-nav no-print">
     ${prevHtml}
-    <button class="btn btn-ghost btn-sm" onclick="window.print()"><span data-lang="ar">🖨️ طباعة / تنزيل PDF</span><span data-lang="fr">🖨️ Imprimer / PDF</span></button>
+    <button class="btn btn-ghost btn-sm" onclick="window.print()">${uiIcon("print")} <span data-lang="ar">طباعة / تنزيل PDF</span><span data-lang="fr">Imprimer / PDF</span></button>
     ${nextHtml}
   </div>
 </div>`;
@@ -141,7 +142,7 @@ export function uniteDetailBody({ group }) {
   ${breadcrumb}
   <span class="chip">${filiereTxt ? `<span data-lang="ar">${filiereTxt}</span><span data-lang="fr">${filiereTxtFr}</span>` : `<span data-lang="ar">${niveauTxt}</span><span data-lang="fr">${niveauTxtFr}</span>`} · <span data-lang="ar">الدورة ${unite.dorra || 1}</span><span data-lang="fr">Semestre ${unite.dorra || 1}</span></span>
   <h1 style="margin-top:var(--sp-3)"><span data-lang="ar">${unite.titre.ar}</span><span data-lang="fr">${unite.titre.fr}</span></h1>
-  <p class="unit-count mono"><span aria-hidden="true">📚</span> ${lecons.length} <span data-lang="ar">دروس في هذه الوحدة</span><span data-lang="fr">leçons dans cette unité</span></p>
+  <p class="unit-count mono"><span aria-hidden="true">${uiIcon("books")}</span> ${lecons.length} <span data-lang="ar">دروس في هذه الوحدة</span><span data-lang="fr">leçons dans cette unité</span></p>
   <div class="unit-lessons-cards">${cards}</div>
 </div>`;
 }
@@ -156,7 +157,7 @@ export function articleDetailBody({ article, kind = "article", relatedHtml = "",
   const crumb = ARTICLE_KIND_CRUMB[kind] || ARTICLE_KIND_CRUMB.article;
   const htmlAr = article.bodyAr ? renderMarkdownArticle(article.bodyAr, "ar", deps) : "";
   const htmlFr = article.bodyFr ? renderMarkdownArticle(article.bodyFr, "fr", deps) : "";
-  const printBtn = kind === "resume" ? `<button class="btn btn-ghost btn-sm no-print" onclick="window.print()" style="margin-bottom:var(--sp-5)">🖨️ <span data-lang="ar">طباعة</span><span data-lang="fr">Imprimer</span></button>` : "";
+  const printBtn = kind === "resume" ? `<button class="btn btn-ghost btn-sm no-print" onclick="window.print()" style="margin-bottom:var(--sp-5)">${uiIcon("print")} <span data-lang="ar">طباعة</span><span data-lang="fr">Imprimer</span></button>` : "";
   return `
 <div class="container" style="padding-top:var(--sp-5);max-width:760px">
   ${renderBreadcrumb([crumb], article.titre_ar, article.titre_fr)}
@@ -175,7 +176,7 @@ export function glossaireDetailBody(term) {
   return `
 <div class="container" style="padding-top:var(--sp-5);max-width:680px">
   ${renderBreadcrumb([{ ar: "الموسوعة", fr: "Encyclopédie", href: "/encyclopedie/" }, { ar: "المعجم", fr: "Glossaire", href: "/encyclopedie/glossaire/" }], term.terme.ar, term.terme.fr)}
-  <span class="chip chip-accent">🔤 <span data-lang="ar">مصطلح معجمي</span><span data-lang="fr">Terme</span></span>
+  <span class="chip chip-accent">${uiIcon("tag")} <span data-lang="ar">مصطلح معجمي</span><span data-lang="fr">Terme</span></span>
   <h1><span data-lang="ar">${term.terme.ar}</span><span data-lang="fr">${term.terme.fr}</span></h1>
   <p style="font-size:var(--fs-18)"><span data-lang="ar">${term.definition.ar}</span><span data-lang="fr">${term.definition.fr}</span></p>
   ${
@@ -243,7 +244,7 @@ export function saviezVousDetailBody(item) {
 <div class="container" style="padding-top:var(--sp-5);max-width:600px;text-align:center">
   ${renderBreadcrumb([{ ar: "الموسوعة", fr: "Encyclopédie", href: "/encyclopedie/" }, { ar: "هل تعلم؟", fr: "Le saviez-vous", href: "/encyclopedie/saviez-vous/" }], "هل تعلم؟", "Le saviez-vous ?")}
   <div class="le-saviez-vous">
-    <span class="le-saviez-vous-icon">💡</span>
+    <span class="le-saviez-vous-icon">${uiIcon("bulb")}</span>
     <p style="font-size:var(--fs-20)"><span data-lang="ar">${item.texte.ar}</span><span data-lang="fr">${item.texte.fr}</span></p>
     ${item.lien_article ? `<a href="/encyclopedie/articles/${item.lien_article}/"><span data-lang="ar">اقرأ المزيد ←</span><span data-lang="fr">Lire la suite ←</span></a>` : ""}
   </div>
@@ -289,7 +290,7 @@ export function organismeDetailBody(o) {
   <p><span data-lang="ar">${o.particularite.ar}</span><span data-lang="fr">${o.particularite.fr}</span></p>`
       : ""
   }
-  ${o.statut ? `<span class="chip">🌱 <span data-lang="ar">${o.statut.ar}</span><span data-lang="fr">${o.statut.fr}</span></span>` : ""}
+  ${o.statut ? `<span class="chip">${uiIcon("leaf")} <span data-lang="ar">${o.statut.ar}</span><span data-lang="fr">${o.statut.fr}</span></span>` : ""}
 </div>`;
 }
 
@@ -319,7 +320,7 @@ export function geologieMarocDetailBody(g) {
 <div class="container" style="padding-top:var(--sp-5);max-width:760px">
   ${renderBreadcrumb([{ ar: "الموسوعة", fr: "Encyclopédie", href: "/encyclopedie/" }, { ar: "جيولوجيا المغرب", fr: "Géologie du Maroc", href: "/encyclopedie/geologie-maroc/" }], g.titre.ar, g.titre.fr)}
   <div style="border-radius:var(--radius-lg);overflow:hidden">${imageMarkup(g.image, g.titre.ar)}</div>
-  <span class="chip chip-secondary" style="margin-top:var(--sp-4)">🌍 <span data-lang="ar">${g.region.ar}</span><span data-lang="fr">${g.region.fr}</span></span>
+  <span class="chip chip-secondary" style="margin-top:var(--sp-4)">${uiIcon("pin")} <span data-lang="ar">${g.region.ar}</span><span data-lang="fr">${g.region.fr}</span></span>
   <h1><span data-lang="ar">${g.titre.ar}</span><span data-lang="fr">${g.titre.fr}</span></h1>
   <p style="font-size:var(--fs-18)"><span data-lang="ar">${g.description.ar}</span><span data-lang="fr">${g.description.fr}</span></p>
   <h3 data-lang="ar">الخاصية الجيولوجية</h3><h3 data-lang="fr">Particularité géologique</h3>

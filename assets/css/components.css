@@ -84,6 +84,9 @@
 .card-link { display: block; color: inherit; }
 .card-link:hover { text-decoration: none; }
 .card img { border-radius: calc(var(--radius) - 6px); margin-bottom: var(--sp-3); aspect-ratio: 16/9; object-fit: cover; }
+/* أيقونة بطاقة بلا صورة (بطاقات نصّية بسيطة: ملخّص، خط زمني...) */
+.card-icon-lg { display: inline-flex; color: var(--primary); }
+.card-icon-lg svg { width: 26px; height: 26px; }
 
 /* ============ 4. الشارات/الوسوم (Chips) ============ */
 .chip {
@@ -98,6 +101,7 @@
   color: var(--ink-soft);
   border: 1px solid var(--line);
 }
+.chip svg { width: 13px; height: 13px; flex: none; }
 /* --primary يبقى تعبئة صلبة (يجتاز AA بفارق مريح في الوضعين: 9.33:1 فاتح / 4.16:1 داكن،
    وهو الأقرب لعتبة 4.5 بين الثلاثة ويُستخدم كهوية نوع أساسية — الفارق الطفيف في الوضع الداكن موثّق كملاحظة أداء متبقية) */
 .chip-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
@@ -141,6 +145,7 @@
 /* ============ 5. التبويبات (Tabs) ============ */
 .tabs { display: flex; gap: var(--sp-2); flex-wrap: wrap; }
 .tab {
+  display: inline-flex; align-items: center; gap: 7px;
   padding: var(--sp-2) var(--sp-4);
   border-radius: var(--radius-pill);
   border: 1px solid var(--line);
@@ -149,6 +154,7 @@
   font-weight: 500; font-size: var(--fs-14);
   cursor: pointer;
 }
+.tab svg { width: 15px; height: 15px; flex: none; }
 .tab[aria-selected="true"] { background: var(--primary); color: #fff; border-color: var(--primary); }
 
 /* ============ 6. الجرس ============ */
@@ -246,19 +252,27 @@
   margin: var(--sp-5) 0;
   background: var(--bg-alt);
 }
-/* الأيقونة والعنوان معا في سطر واحد (inline-block متجاوران) بدل تكديسهما عموديا */
-.encadre-icon { font-size: var(--fs-18); display: inline-block; vertical-align: middle; margin-inline-end: var(--sp-2); }
+/* الأيقونة والعنوان معا في سطر واحد (inline-flex متجاوران) بدل تكديسهما عموديا */
+.encadre-icon { display: inline-flex; vertical-align: middle; margin-inline-end: var(--sp-2); color: var(--ink-soft); }
+.encadre-icon svg { width: 19px; height: 19px; display: block; }
 .encadre-titre { display: inline-block; vertical-align: middle; font-weight: 700; margin-bottom: var(--sp-2); font-family: var(--font-display); }
 .encadre p:last-child { margin-bottom: 0; }
 
 .encadre-molahada { border-inline-start-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--card-bg)); }
+.encadre-molahada .encadre-icon { color: var(--accent); }
 .encadre-tanbih { border-inline-start-color: var(--rust); background: color-mix(in srgb, var(--rust) 10%, var(--card-bg)); }
+.encadre-tanbih .encadre-icon { color: var(--rust); }
 .encadre-qaida { border-inline-start-width: 6px; border-inline-start-color: var(--primary); background: color-mix(in srgb, var(--primary) 8%, var(--card-bg)); }
+.encadre-qaida .encadre-icon { color: var(--primary); }
 .encadre-istintaj { border-inline-start-color: var(--primary-light); background: color-mix(in srgb, var(--primary-light) 10%, var(--card-bg)); }
+.encadre-istintaj .encadre-icon { color: var(--primary-light); }
 /* خلاصة: تمييز أقوى بلون العلامة التجارية بدل خلفية سوداء تقريبا */
 .encadre-khoulasa { border-inline-start-width: 6px; border-inline-start-color: var(--primary); background: color-mix(in srgb, var(--primary) 16%, var(--card-bg)); }
+.encadre-khoulasa .encadre-icon { color: var(--primary); }
 .encadre-maaloumaMouhima { border-inline-start-color: var(--secondary); background: color-mix(in srgb, var(--secondary) 10%, var(--card-bg)); }
+.encadre-maaloumaMouhima .encadre-icon { color: var(--secondary); }
 .encadre-taarif { border-inline-start: 2px double var(--accent); background: color-mix(in srgb, var(--accent) 6%, var(--card-bg)); }
+.encadre-taarif .encadre-icon { color: var(--accent); }
 
 /* صندوق "هل تعلم؟" — مستقل بصريا عن encadre (القسم 7.3.4) */
 .le-saviez-vous {
@@ -268,7 +282,8 @@
   padding: var(--sp-5);
   margin: var(--sp-5) 0;
 }
-.le-saviez-vous-icon { font-size: var(--fs-24); }
+.le-saviez-vous-icon { display: inline-flex; vertical-align: middle; margin-inline-end: var(--sp-2); color: var(--secondary); }
+.le-saviez-vous-icon svg { width: 24px; height: 24px; display: block; }
 
 /* ============ 12. الرابط المعجمي المضمّن ============ */
 .terme-link { text-decoration: underline dotted var(--accent); text-underline-offset: 3px; cursor: help; color: inherit; }
@@ -308,10 +323,24 @@
 }
 @keyframes skeleton-sweep { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
 .state-empty, .state-error { text-align: center; padding: var(--sp-8) var(--sp-4); color: var(--ink-soft); }
-.state-empty .icon, .state-error .icon { font-size: var(--fs-32); margin-bottom: var(--sp-3); display: block; }
+.state-empty .icon, .state-error .icon { display: inline-flex; margin-bottom: var(--sp-3); color: var(--ink-soft); opacity: .7; }
+.state-empty .icon svg, .state-error .icon svg { width: 34px; height: 34px; }
 
-/* ============ 16. الفلاتر الجانبية ============ */
-.filters-sidebar { position: sticky; top: 90px; align-self: start; display: flex; flex-direction: column; gap: var(--sp-5); }
+/* ============ 16. الفلاتر الجانبية ============
+   لوحة متكاملة الحواف (بطاقة بخلفية/حدّ/ظل) بدل عناصر <select> عائمة بلا إطار —
+   كانت تبدو معزولة بصريا وسط الفراغ الكبير في الصفحات العريضة. */
+.filters-sidebar {
+  position: sticky; top: 90px; align-self: start;
+  display: flex; flex-direction: column; gap: var(--sp-5);
+  background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--sp-5);
+}
+.filters-sidebar-head {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: var(--fs-12); text-transform: uppercase; letter-spacing: .06em;
+  color: var(--ink-soft); padding-bottom: var(--sp-4); border-bottom: 1px solid var(--line);
+}
+.filters-sidebar-head svg { width: 16px; height: 16px; flex: none; color: var(--primary); }
 .filter-group h4 { font-size: var(--fs-14); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); font-family: var(--font-mono); margin-bottom: var(--sp-2); }
 .filter-option { display: flex; align-items: center; gap: var(--sp-2); padding: 4px 0; cursor: pointer; }
 .filter-select {
@@ -471,7 +500,13 @@
 }
 .ency-section-card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); }
 .ency-section-num { position: absolute; top: var(--sp-4); inset-inline-end: var(--sp-4); font-size: var(--fs-12); color: var(--ink-soft); opacity: .6; }
-.ency-section-icon { font-size: var(--fs-32); display: block; margin-bottom: var(--sp-3); }
+.ency-section-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 12px; margin-bottom: var(--sp-4);
+  color: var(--tone, var(--primary));
+  background: color-mix(in srgb, var(--tone, var(--primary)) 14%, transparent);
+}
+.ency-section-icon svg { width: 23px; height: 23px; }
 .ency-section-card h3 { margin: 0 0 var(--sp-2); font-size: var(--fs-20); }
 .ency-section-card p { margin: 0; font-size: var(--fs-14); color: var(--ink-soft); }
 @media (max-width: 899px) { .ency-sections-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -503,6 +538,8 @@ table.tableau th { background: var(--bg-alt); font-family: var(--font-mono); fon
 table.tableau tr:nth-child(even) td { background: color-mix(in srgb, var(--bg-alt) 40%, transparent); }
 
 .lien-labo-card { display: flex; align-items: center; gap: var(--sp-4); border: 1px solid var(--accent); border-radius: var(--radius); padding: var(--sp-4); background: color-mix(in srgb, var(--accent) 8%, var(--card-bg)); margin: var(--sp-5) 0; }
+.lien-labo-card > span:first-child { display: inline-flex; flex: none; color: var(--accent); }
+.lien-labo-card > span:first-child svg { width: 26px; height: 26px; display: block; }
 
 .quiz { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--sp-6); margin-top: var(--sp-8); background: var(--card-bg); }
 .quiz-question { margin-bottom: var(--sp-6); }
@@ -535,6 +572,7 @@ table.tableau tr:nth-child(even) td { background: color-mix(in srgb, var(--bg-al
 
 /* صفحة فهرس الوحدة */
 .unit-count { color: var(--ink-soft); font-size: var(--fs-14); margin: var(--sp-3) 0 var(--sp-6); display: flex; align-items: center; gap: 8px; }
+.unit-count svg { width: 16px; height: 16px; flex: none; }
 .unit-lessons-cards { display: flex; flex-direction: column; gap: var(--sp-3); }
 .unit-lesson-card { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-4) var(--sp-5); border: 1px solid var(--line); border-radius: var(--radius); background: var(--card-bg); color: inherit; transition: transform var(--motion-fast), box-shadow var(--motion-fast), border-color var(--motion-fast); }
 .unit-lesson-card:hover { transform: translateX(-4px); box-shadow: var(--shadow-md); border-color: transparent; text-decoration: none; }
