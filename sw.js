@@ -5,7 +5,7 @@
 //    (يحلّ مشكلة بقاء نسخة قديمة لدى الزوّار العائدين رغم كاش HTTP الطويل).
 //  - DATA_CACHE: الصور والمحتوى وملفات manifest — stale-while-revalidate كي تتحدّث دون انتظار تحديث SW.
 // لا تُخزَّن صفحات HTML إطلاقا (تبقى دائما طازجة عبر الشبكة).
-const CODE_CACHE = "nova-svt-code-12c707e5ad";
+const CODE_CACHE = "nova-svt-code-405865fb62";
 const DATA_CACHE = "nova-svt-data-v1";
 const KEEP = [CODE_CACHE, DATA_CACHE];
 

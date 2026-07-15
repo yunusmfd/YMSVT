@@ -15,10 +15,11 @@
 }
 .navbar.is-scrolled { box-shadow: var(--shadow-sm); }
 
-/* شبكة بثلاثة أعمدة: الشعار وأزرار الإجراءات في الطرفين، والتنقّل الرئيسي يبقى في المنتصف فعليا
-   (وليس مجرّد ملء المساحة المتبقية بعد الشعار) بصرف النظر عن تفاوت عرض الطرفين. */
-.navbar-inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--sp-4); width: 100%; max-width: var(--container-max); margin-inline: auto; }
-.nav-center { display: flex; align-items: center; justify-content: center; gap: var(--sp-5); }
+/* مجموعتان تتباعدان بالكامل: الشعار+التنقّل ملتصقان في جهة، أزرار الإجراءات+البحث في الجهة المقابلة —
+   بدل شبكة ثلاثية تُوسّط التنقّل في منتصف الشريط. */
+.navbar-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); width: 100%; max-width: var(--container-max); margin-inline: auto; }
+.navbar-start { display: flex; align-items: center; gap: var(--sp-7); }
+.nav-center { display: flex; align-items: center; gap: var(--sp-5); }
 .nav-links { display: flex; align-items: center; gap: var(--sp-5); list-style: none; margin: 0; padding: 0; }
 
 /* روابط التنقّل: وزن أوضح + مؤشّر نشط بخط سفلي ملوّن (لا خط بلون النص الباهت) */
@@ -40,13 +41,36 @@
 .nav-actions { display: flex; align-items: center; gap: var(--sp-2); }
 .nav-divider-bar { display: none; }
 
-.nova-logo { display: flex; align-items: center; gap: 8px; }
+.nova-logo { display: flex; align-items: center; gap: 9px; }
 .nova-logo:hover { text-decoration: none; }
-.nova-logo-img { display: block; height: 30px; width: auto; }
-.nova-logo-text { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-20); color: var(--primary); }
-.nova-logo-accent { color: var(--secondary); }
-.site-footer .nova-logo-text { color: #fff; }
-.site-footer .nova-logo-accent { color: var(--secondary); }
+.nova-logo-img { display: block; height: 34px; width: auto; }
+/* شعار نصّي مكدَّس بسطرين (Nova فوق SVT) بدل سطر أفقي واحد */
+.nova-logo-text-stack { display: flex; flex-direction: column; line-height: 1.05; gap: 1px; }
+.nova-logo-line { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-14); color: var(--primary); letter-spacing: .01em; }
+.nova-logo-line-accent { font-weight: 700; font-size: var(--fs-16); }
+.site-footer .nova-logo-line { color: #fff; }
+
+/* صندوق البحث المضمّن في الشريط العلوي — زر بمظهر حقل بحث، يفتح Overlay البحث الكامل عند النقر */
+.nav-search-trigger {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-width: 190px; padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line); background: var(--bg-alt);
+  color: var(--ink-soft); font: inherit; font-size: var(--fs-14);
+  cursor: pointer; transition: border-color var(--motion-fast), background-color var(--motion-fast);
+}
+.nav-search-trigger:hover { border-color: color-mix(in srgb, var(--primary) 35%, var(--line)); background: var(--card-bg); }
+.nav-search-trigger svg { width: 16px; height: 16px; flex: none; }
+.nav-search-trigger span { text-align: start; }
+@media (max-width: 679px) {
+  .nav-search-trigger { min-width: auto; padding: 8px; }
+  .nav-search-trigger span { display: none; }
+  /* تضييق زر اللغة إلى أيقونة فقط على الجوال — نص "FR/AR" الإضافي كان يدفع الشعار للالتفاف */
+  .lang-toggle-btn { width: 40px; padding-inline: 0; justify-content: center; }
+  .lang-toggle-btn [data-lang-code] { display: none; }
+}
+
+/* زر تبديل اللغة بأيقونة كرة أرضية + رمز اللغة */
 
 /* ============ 2. الأزرار ============ */
 .btn {
@@ -60,7 +84,7 @@
 }
 .btn svg { width: 16px; height: 16px; }
 .btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--primary); color: #fff; box-shadow: var(--shadow-primary); }
+.btn-primary { background: var(--primary); color: var(--on-primary); box-shadow: var(--shadow-primary); }
 .btn-primary:hover { background: var(--primary-light); box-shadow: 0 10px 28px rgba(32,79,63,.36); text-decoration: none; }
 .btn-primary:hover svg { transform: translateX(2px); }
 [dir="rtl"] .btn-primary:hover svg { transform: translateX(-2px); }
@@ -104,7 +128,7 @@
 .chip svg { width: 13px; height: 13px; flex: none; }
 /* --primary يبقى تعبئة صلبة (يجتاز AA بفارق مريح في الوضعين: 9.33:1 فاتح / 4.16:1 داكن،
    وهو الأقرب لعتبة 4.5 بين الثلاثة ويُستخدم كهوية نوع أساسية — الفارق الطفيف في الوضع الداكن موثّق كملاحظة أداء متبقية) */
-.chip-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.chip-primary { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
 
 /* --secondary و--accent كتعبئة صلبة بنص أبيض لا يحققان 4.5:1 في كل الحالات (فحص القسم 10.2، check-contrast.js)؛
    الحل: نفس الاستخدام الثاني الموثّق أصلا في القسم 4.1.2 (حدّ ملوّن + نقطة) بدل التعبئة الصلبة، بدل تغيير قيم الألوان نفسها */
@@ -155,7 +179,7 @@
   cursor: pointer;
 }
 .tab svg { width: 15px; height: 15px; flex: none; }
-.tab[aria-selected="true"] { background: var(--primary); color: #fff; border-color: var(--primary); }
+.tab[aria-selected="true"] { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
 
 /* ============ 6. الجرس ============ */
 .icon-btn {
@@ -171,6 +195,12 @@
 .icon-btn { border-color: var(--line); }
 .icon-btn:hover { background: var(--bg-alt); }
 .icon-btn svg { stroke: currentColor; width: 18px; height: 18px; }
+
+/* زر تبديل اللغة يحمل أيقونة + رمزا نصّيا، فيحتاج عرضا تلقائيا بدل مربّع 40px الثابت — override بعد
+   .icon-btn الأساسي (ترتيب المصدر) كي يفوز على width/height الثابتتين */
+.lang-toggle-btn { width: auto; height: 34px; min-height: 34px; gap: 5px; padding-inline: var(--sp-3); }
+.lang-toggle-btn svg { width: 16px; height: 16px; }
+.lang-toggle-btn [data-lang-code] { font-family: var(--font-mono); font-size: var(--fs-12); font-weight: 600; }
 .bell-dot {
   position: absolute; top: 6px; inset-inline-end: 6px;
   width: 8px; height: 8px; border-radius: 50%;
@@ -288,8 +318,9 @@
 /* ============ 12. الرابط المعجمي المضمّن ============ */
 .terme-link { text-decoration: underline dotted var(--accent); text-underline-offset: 3px; cursor: help; color: inherit; }
 .glossary-tooltip {
+  /* --surface-dark سطح داكن ثابت لا ينعكس: يبقى النص الأبيض مقروءا في الوضعين (--ink يصير فاتحا في الداكن) */
   position: absolute; z-index: 200; max-width: 280px;
-  background: var(--ink); color: #fff;
+  background: var(--surface-dark); color: #fff;
   padding: var(--sp-3) var(--sp-4); border-radius: var(--radius);
   font-size: var(--fs-14); box-shadow: 0 12px 30px rgba(0,0,0,.3);
 }
@@ -411,25 +442,26 @@
 .section-head-link:hover { text-decoration: none; gap: 10px; }
 .section-head-link svg { width: 15px; height: 15px; }
 
-/* ---- الرئيسية: "كل ما تحتاجه للنجاح" — شبكة مزايا 4 أعمدة ---- */
-.benefits-head { text-align: center; max-width: 620px; margin: 0 auto var(--sp-7); }
+/* ---- الرئيسية: "كل ما تحتاجه للنجاح" — شبكة مزايا 4 أعمدة (بطاقات محاذاة للبداية كما في التصميم المرجعي) ---- */
+.benefits-head { text-align: center; max-width: 640px; margin: 0 auto var(--sp-7); }
 .benefits-head h2 { margin: 0; }
 .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-4); }
-.benefit-card { text-align: center; padding: var(--sp-6) var(--sp-5); border-radius: var(--radius); border: 1px solid var(--line); background: var(--card-bg); transition: box-shadow var(--motion-fast), transform var(--motion-fast); }
-.benefit-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+.benefit-card { text-align: start; padding: var(--sp-6) var(--sp-5); border-radius: var(--radius); border: 1px solid var(--line); background: var(--card-bg); transition: box-shadow var(--motion-fast), transform var(--motion-fast), border-color var(--motion-fast); }
+.benefit-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); border-color: color-mix(in srgb, var(--primary) 28%, var(--line)); }
 .benefit-icon {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 52px; height: 52px; border-radius: 14px; margin-bottom: var(--sp-4);
+  width: 48px; height: 48px; border-radius: 12px; margin-bottom: var(--sp-4);
   color: var(--spec-color, var(--primary));
-  background: color-mix(in srgb, var(--spec-color, var(--primary)) 14%, transparent);
+  background: color-mix(in srgb, var(--spec-color, var(--primary)) 16%, transparent);
 }
-.benefit-icon svg { width: 26px; height: 26px; }
+.benefit-icon svg { width: 24px; height: 24px; }
 .benefit-icon[data-spec="genetique"] { --spec-color: var(--spec-genetique); }
 .benefit-icon[data-spec="physiologie"] { --spec-color: var(--spec-physiologie); }
 .benefit-icon[data-spec="microbiologie"] { --spec-color: var(--spec-microbiologie); }
 .benefit-icon[data-spec="ecologie"] { --spec-color: var(--spec-ecologie); }
-.benefit-card h4 { margin-bottom: 6px; font-size: var(--fs-17); }
-.benefit-card p { margin: 0; font-size: var(--fs-14); color: var(--ink-soft); }
+.benefit-icon[data-spec="geologie"] { --spec-color: var(--spec-geologie); }
+.benefit-card h4 { margin-bottom: 6px; font-size: var(--fs-18); }
+.benefit-card p { margin: 0; font-size: var(--fs-14); color: var(--ink-soft); line-height: 1.55; }
 @media (max-width: 899px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 479px) { .benefits-grid { grid-template-columns: 1fr; } }
 
@@ -460,30 +492,45 @@
 .lesson-card-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: var(--sp-2); }
 .lesson-card-desc { font-size: var(--fs-14); color: var(--ink-soft); margin: var(--sp-2) 0 0; }
 
-/* ---- الرئيسية: بطاقة "هل تعلم؟" المميّزة ---- */
+/* ---- الرئيسية: بطاقة "هل تعلم؟" المميّزة — سطح أخضر غابيّ ممتلئ بنص كريمي (Material primary-container) ---- */
 .saviez-featured {
   position: relative; overflow: hidden; display: flex; gap: var(--sp-6); align-items: flex-start;
-  background: var(--card-bg); border-inline-start: 4px solid var(--secondary);
+  /* لون أخضر غابيّ ثابت لا ينعكس: البطاقة كتلة خضراء ممتلئة في الوضعين (كما بالتصميم المرجعي) */
+  background: #214e3f; color: #eaf3ec;
+  border: 1px solid color-mix(in srgb, #ffffff 12%, transparent);
   border-radius: var(--radius-lg); padding: var(--sp-8) var(--sp-7);
 }
-.saviez-featured::before {
-  content: "\201C"; position: absolute; top: -50px; inset-inline-end: 20px;
-  font-family: var(--font-display); font-size: 220px; line-height: 1;
-  color: var(--line); z-index: 0; pointer-events: none;
+:root[data-theme="dark"] .saviez-featured { background: #234f40; }
+/* علامة اقتباس ضخمة زخرفية في الزاوية */
+.saviez-quotemark {
+  position: absolute; top: 6px; inset-inline-start: var(--sp-6);
+  font-family: var(--font-display); font-size: 150px; line-height: 1;
+  color: rgba(255,255,255,.12); z-index: 0; pointer-events: none;
 }
-.saviez-icon {
-  position: relative; z-index: 1; flex: none; width: 56px; height: 56px; border-radius: 16px;
-  display: inline-flex; align-items: center; justify-content: center;
-  background: color-mix(in srgb, var(--secondary) 14%, transparent); color: var(--secondary);
-}
-.saviez-icon svg { width: 28px; height: 28px; }
 .saviez-body { position: relative; z-index: 1; }
-.saviez-quote { font-family: var(--font-display); font-style: italic; font-size: var(--fs-22); line-height: 1.5; margin: var(--sp-3) 0 var(--sp-5); }
-.saviez-share { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--primary); background: none; border: none; padding: 0; cursor: pointer; font-size: var(--fs-15); font-family: inherit; }
-.saviez-share svg { width: 16px; height: 16px; }
+.saviez-eyebrow {
+  display: block; font-family: var(--font-mono); font-size: var(--fs-12);
+  letter-spacing: .08em; text-transform: uppercase; color: color-mix(in srgb, var(--secondary) 65%, #fff);
+  margin-bottom: var(--sp-3);
+}
+.saviez-quote { font-family: var(--font-display); font-size: var(--fs-24); font-weight: 500; line-height: 1.5; margin: 0 0 var(--sp-6); color: #f4f9f5; }
+.saviez-actions { display: flex; align-items: center; gap: var(--sp-5); flex-wrap: wrap; }
+/* زر مشاركة نعناعي فاتح ثابت (يبرز فوق الكتلة الخضراء في الوضعين) */
+.saviez-share {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: #bbedd7; color: #05271c; border: none;
+  padding: var(--sp-2) var(--sp-4); border-radius: var(--radius-pill);
+  font: inherit; font-size: var(--fs-14); font-weight: 600; cursor: pointer;
+  transition: background-color var(--motion-fast);
+}
+.saviez-share:hover { background: #a0d1bc; }
+.saviez-share.is-copied { background: var(--secondary); }
+.saviez-share svg { width: 15px; height: 15px; }
+.saviez-link { color: #eaf3ec; text-decoration: underline; text-underline-offset: 3px; font-size: var(--fs-14); }
+.saviez-link:hover { color: #fff; }
 @media (max-width: 679px) {
   .saviez-featured { flex-direction: column; padding: var(--sp-6); }
-  .saviez-featured::before { font-size: 140px; top: -30px; }
+  .saviez-quotemark { font-size: 110px; }
 }
 
 .encyclopedia-scroller { display: flex; gap: var(--sp-4); overflow-x: auto; padding-bottom: var(--sp-3); scroll-snap-type: x proximity; }
@@ -568,7 +615,7 @@ table.tableau tr:nth-child(even) td { background: color-mix(in srgb, var(--bg-al
 .unit-lessons-list a:hover { background: var(--bg-alt); text-decoration: none; color: var(--ink); }
 .unit-lesson-num { flex: none; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: var(--fs-12); background: var(--bg-alt); color: var(--ink-soft); }
 .unit-lessons-list .is-current > a { background: color-mix(in srgb, var(--primary) 10%, transparent); color: var(--primary); font-weight: 600; }
-.unit-lessons-list .is-current .unit-lesson-num { background: var(--primary); color: #fff; }
+.unit-lessons-list .is-current .unit-lesson-num { background: var(--primary); color: var(--on-primary); }
 
 /* صفحة فهرس الوحدة */
 .unit-count { color: var(--ink-soft); font-size: var(--fs-14); margin: var(--sp-3) 0 var(--sp-6); display: flex; align-items: center; gap: 8px; }

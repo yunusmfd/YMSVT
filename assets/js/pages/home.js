@@ -1,7 +1,6 @@
 import { fetchSection, renderGrid, showSkeleton, showError, escapeHtml } from "../list-page.js";
 
-const ICON_BULB = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 18h5"/><path d="M10.3 21h3.4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.3 1 2.1h5c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>`;
-const ICON_SHARE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><line x1="8.3" y1="10.7" x2="15.7" y2="6.3"/><line x1="8.3" y1="13.3" x2="15.7" y2="17.7"/></svg>`;
+const ICON_SHARE =`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="2.6"/><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="19" r="2.6"/><line x1="8.3" y1="10.7" x2="15.7" y2="6.3"/><line x1="8.3" y1="13.3" x2="15.7" y2="17.7"/></svg>`;
 
 const DOMAINE_LABEL = {
   genetique: { ar: "وراثة", fr: "Génétique" },
@@ -49,14 +48,16 @@ function renderSaviezFeatured(container, item) {
   if (!item) return;
   const url = `${window.location.origin}/encyclopedie/saviez-vous/${item.id}/`;
   container.innerHTML = `<div class="saviez-featured">
-    <span class="saviez-icon" aria-hidden="true">${ICON_BULB}</span>
+    <span class="saviez-quotemark" aria-hidden="true">&ldquo;</span>
     <div class="saviez-body">
-      <span class="eyebrow"><span data-lang="ar">معرفة عجيبة</span><span data-lang="fr">Anecdote</span></span>
+      <span class="saviez-eyebrow"><span data-lang="ar">هل تعلم؟</span><span data-lang="fr">Le saviez-vous ?</span></span>
       <p class="saviez-quote"><span data-lang="ar">${escapeHtml(item.texte.ar)}</span><span data-lang="fr">${escapeHtml(item.texte.fr)}</span></p>
-      <button class="saviez-share" type="button" data-saviez-share>
-        ${ICON_SHARE}
-        <span data-lang="ar">مشاركة المعلومة مع زملائك</span><span data-lang="fr">Partager avec tes camarades</span>
-      </button>
+      <div class="saviez-actions">
+        <button class="saviez-share" type="button" data-saviez-share>
+          ${ICON_SHARE}<span data-lang="ar">مشاركة المعلومة</span><span data-lang="fr">Partager le fait</span>
+        </button>
+        <a class="saviez-link" href="${`/encyclopedie/saviez-vous/${item.id}/`}"><span data-lang="ar">اقرأ المزيد</span><span data-lang="fr">En savoir plus</span></a>
+      </div>
     </div>
   </div>`;
 

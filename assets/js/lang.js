@@ -34,8 +34,12 @@ export function initLang() {
 
 function updateLangButtons() {
   const current = document.documentElement.getAttribute("lang") === "fr" ? "fr" : "ar";
+  const label = current === "fr" ? "AR" : "FR";
   document.querySelectorAll("[data-lang-toggle]").forEach((btn) => {
-    btn.textContent = current === "fr" ? "AR" : "FR";
+    // بعض الأزرار تحمل أيقونة قبل الرمز (data-lang-code) — لا نستبدل محتوى الزر كاملا كي لا تُمحى الأيقونة
+    const codeEl = btn.querySelector("[data-lang-code]");
+    if (codeEl) codeEl.textContent = label;
+    else btn.textContent = label;
     btn.setAttribute("aria-label", t("lang_toggle", current));
   });
 }

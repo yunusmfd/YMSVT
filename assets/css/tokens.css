@@ -5,21 +5,23 @@
 */
 
 :root {
-  /* --- 4.1 لوحة الألوان (فاتح) — "دفء حيوي متوازن": تطوّر الهوية الأصلية بتشبّع أعلى
-     وخلفيات نظيفة بدل النبرة الزيتونية الباهتة (مراجعة الهوية اللونية نحو طابع أكثر حيوية) --- */
-  --bg: #F7F8F4;
-  --bg-alt: #EAF3EA;
-  --ink: #17231C;
-  --ink-soft: #4C5C50;
-  --primary: #1B7A55;
-  --primary-light: #2FA374;
-  --secondary: #E8823C;
-  --accent: #3E8FC4;
-  --rust: #C2482E;
-  --line: #DEE7DD;
+  /* --- 4.1 لوحة الألوان (فاتح) — "Modern Academic": هوية أخضر الغابة العميق (Material 3)
+     المستمدّة من نظام تصميم Nova SVT الرسمي — خلفية ورقية فاتحة بلمسة خضراء، وأخضر غابيّ للأساسي. --- */
+  --bg: #F1F6F2;
+  --bg-alt: #E4EEE6;
+  --ink: #151D19;
+  --ink-soft: #404944;
+  --primary: #204F3F;
+  --primary-light: #2F6A54;
+  /* لون النص/الأيقونة فوق تعبئة --primary الصلبة (يُقلَب في الوضع الداكن حيث يصير الأساسي نعناعيا فاتحا) */
+  --on-primary: #FFFFFF;
+  --secondary: #8C5000;
+  --accent: #0F4B6A;
+  --rust: #B0472E;
+  --line: #C9D6CC;
   --card-bg: #FFFFFF;
   /* سطح داكن ثابت لا يتبدّل مع الوضع الليلي (الفوتر مصمّم داكنا دوما، بخلاف --ink التي تنعكس) */
-  --surface-dark: #131E17;
+  --surface-dark: #08130E;
 
   /* --- 4.1.2 بليتة ألوان التخصصات (فاتح) --- */
   --spec-genetique: #3D6FA8;
@@ -100,19 +102,20 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #131E17;
-  --bg-alt: #182920;
-  --ink: #E9F0E9;
-  --ink-soft: #9FB3A5;
-  /* --primary/--rust مضبوطتان كي يجتاز نص أبيض فوقهما (الأزرار الصلبة/نقطة الجرس) 4.5:1 —
-     أفتح من هذا يكسر AA على تعبئة صلبة، أغمق يفقد --primary وضوحه كلون تمييز فوق خلفية داكنة */
-  --primary: #32855F;
-  --primary-light: #4CA97A;
-  --secondary: #F0985A;
-  --accent: #62ABD9;
-  --rust: #C85032;
-  --line: #28402F;
-  --card-bg: #1A2B22;
+  --bg: #0F1F18;
+  --bg-alt: #14261D;
+  --ink: #E9F3EB;
+  --ink-soft: #A6C0B0;
+  /* الوضع الداكن يقلب الأساسي إلى نعناع فاتح (Material primary-fixed): يعمل لونَ تمييز فوق الخلفية الداكنة،
+     وتعبئةً صلبة بنص داكن (--on-primary) — كما في زر "ابدأ التعلّم" النعناعي بالتصميم المرجعي */
+  --primary: #9FD3BC;
+  --primary-light: #B9E4CE;
+  --on-primary: #05271C;
+  --secondary: #F0B15C;
+  --accent: #8FBEDF;
+  --rust: #E58368;
+  --line: #26382F;
+  --card-bg: #16281F;
 
   --spec-genetique: #6D93C8;
   --spec-cytologie: #AC87CE;
@@ -131,17 +134,29 @@
 /* دعم تفضيل نظام التشغيل قبل أي اختيار يدوي محفوظ (يُطبَّق فقط إن لم يوجد nova-svt:theme محفوظ، القسم 4.1.1) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="dark"]) {
-    --bg: #131E17;
-    --bg-alt: #182920;
-    --ink: #E9F0E9;
-    --ink-soft: #9FB3A5;
-    --primary: #32855F;
-    --primary-light: #4CA97A;
-    --secondary: #F0985A;
-    --accent: #62ABD9;
-    --rust: #C85032;
-    --line: #28402F;
-    --card-bg: #1A2B22;
+    --bg: #0F1F18;
+    --bg-alt: #14261D;
+    --ink: #E9F3EB;
+    --ink-soft: #A6C0B0;
+    --primary: #9FD3BC;
+    --primary-light: #B9E4CE;
+    --on-primary: #05271C;
+    --secondary: #F0B15C;
+    --accent: #8FBEDF;
+    --rust: #E58368;
+    --line: #26382F;
+    --card-bg: #16281F;
+
+    --spec-genetique: #6D93C8;
+    --spec-cytologie: #AC87CE;
+    --spec-physiologie: #DC7A62;
+    --spec-ecologie: #7AB868;
+    --spec-biomol: #9B85D6;
+    --spec-geologie: #F0985A;
+    --spec-microbiologie: #5FB0B8;
+    --spec-botanique: #B8C878;
+    --spec-zoologie: #E0935F;
+    --spec-taxonomie: #BBA084;
     color-scheme: dark;
   }
 }

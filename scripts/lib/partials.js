@@ -3,9 +3,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT } from "./content-loader.js";
-import { ICON_SEARCH, ICON_BELL, ICON_MOON, ICON_SUN, ICON_HAMBURGER, ICON_CLOSE, ICON_ARROW, ICON_USER } from "./icons.js";
+import { ICON_SEARCH, ICON_BELL, ICON_MOON, ICON_SUN, ICON_HAMBURGER, ICON_CLOSE, ICON_ARROW, ICON_USER, uiIcon } from "./icons.js";
 
-const NOVA_LOGO_IMG = `<img src="/assets/images/logo/nova-svt-icon.png" alt="" class="nova-logo-img" width="49" height="48" /><span class="nova-logo-text">Nova <span class="nova-logo-accent">SVT</span></span>`;
+// شعار نصّي مكدَّس بسطرين (Nova / SVT) بدل سطر واحد — القسم الجديد لتصميم النافبار
+const NOVA_LOGO_IMG = `<img src="/assets/images/logo/nova-svt-icon.png" alt="" class="nova-logo-img" width="40" height="39" /><span class="nova-logo-text-stack"><span class="nova-logo-line">Nova</span><span class="nova-logo-line nova-logo-line-accent">SVT</span></span>`;
 
 const INLINE_INIT = fs.readFileSync(path.join(ROOT, "assets/js/inline-init.js"), "utf-8");
 
@@ -39,23 +40,25 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null } = {}) {
 <a href="#main" class="skip-link" data-i18n="skip_to_content">تخطَّ إلى المحتوى</a>
 <header class="navbar" data-navbar>
   <div class="navbar-inner">
-    <a href="/" class="nova-logo">${NOVA_LOGO_IMG}</a>
-    <nav class="nav-center" aria-label="التنقل الرئيسي">
-      <ul class="nav-links">
-        <li><a class="nav-link" href="/" data-i18n="nav_home"${activeNav === "home" ? ' aria-current="page"' : ""}></a></li>
-        ${navLinks}
-      </ul>
-      <div class="nav-more" data-nav-more>
-        <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false">
-          <span data-i18n="nav_more"></span>
-          <span class="arrow" aria-hidden="true">▾</span>
-        </button>
-        <div class="nav-more-menu" data-nav-more-menu hidden>${moreLinks}</div>
-      </div>
-    </nav>
+    <div class="navbar-start">
+      <a href="/" class="nova-logo">${NOVA_LOGO_IMG}</a>
+      <nav class="nav-center" aria-label="التنقل الرئيسي">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="/" data-i18n="nav_home"${activeNav === "home" ? ' aria-current="page"' : ""}></a></li>
+          ${navLinks}
+        </ul>
+        <div class="nav-more" data-nav-more>
+          <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false">
+            <span data-i18n="nav_more"></span>
+            <span class="arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav-more-menu" data-nav-more-menu hidden>${moreLinks}</div>
+        </div>
+      </nav>
+    </div>
     <div class="nav-actions">
-      <button class="icon-btn" data-search-open data-i18n-aria="search_title">${ICON_SEARCH}</button>
-      <button class="icon-btn" data-lang-toggle data-i18n-aria="lang_toggle">FR</button>
+      <button class="nav-search-trigger" data-search-open data-i18n-aria="search_title">${ICON_SEARCH}<span data-i18n="search_placeholder"></span></button>
+      <button class="icon-btn lang-toggle-btn" data-lang-toggle data-i18n-aria="lang_toggle">${uiIcon("bilingual")}<span data-lang-code>FR</span></button>
       <button class="icon-btn theme-toggle" data-theme-toggle data-i18n-aria="theme_toggle">${ICON_MOON}${ICON_SUN}</button>
       <div class="nav-more" data-nav-more>
         <button class="icon-btn" data-nav-more-trigger="bell" aria-expanded="false" data-i18n-aria="blog_menu">${ICON_BELL}<span class="bell-dot"></span></button>

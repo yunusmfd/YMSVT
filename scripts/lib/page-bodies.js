@@ -13,28 +13,28 @@ function sectionHead(eyebrowAr, eyebrowFr, titleAr, titleFr, linkHref, linkAr, l
 }
 
 const BENEFITS = [
-  { icon: "download", spec: "microbiologie", ar: "ملخصات للتحميل", fr: "Résumés à télécharger", subAr: "ملفات PDF جاهزة للطباعة لكل درس", subFr: "Fiches PDF prêtes à imprimer" },
-  { icon: "quiz", spec: "physiologie", ar: "اختبارات فورية", fr: "Quiz instantanés", subAr: "تصحيح لحظي مع تبرير كل إجابة", subFr: "Correction immédiate et justifiée" },
-  { icon: "layers", spec: "genetique", ar: "رسوم تخطيطية", fr: "Schémas clairs", subAr: "رسوم أصلية توضّح كل مفهوم", subFr: "Schémas originaux pour chaque notion" },
-  { icon: "video", spec: "ecologie", ar: "فيديوهات شرح", fr: "Vidéos explicatives", subAr: "شرح مرئي للتجارب والظواهر", subFr: "Explications visuelles des phénomènes" },
+  { icon: "lecons", spec: "ecologie", ar: "دروس شاملة", fr: "Cours complets", subAr: "محتوى ثنائي اللغة مُنظَّم وفق المنهاج الوطني المغربي.", subFr: "Contenu bilingue structuré selon le programme national marocain." },
+  { icon: "quiz", spec: "geologie", ar: "امتحانات واختبارات", fr: "Examens & Quiz", subAr: "تدرّب على الامتحانات المصحَّحة والاختبارات التفاعلية.", subFr: "S'entraîner avec des annales corrigées et des tests interactifs." },
+  { icon: "labo", spec: "genetique", ar: "المختبر الافتراضي", fr: "Labo Virtuel", subAr: "استكشف التجارب المعقّدة عبر المحاكاة والرسوم التوضيحية.", subFr: "Visualisez les expériences complexes en simulations." },
+  { icon: "encyclopedie", spec: "ecologie", ar: "الموسوعة العلمية", fr: "Encyclopédie", subAr: "معجم علمي مفصَّل من الألف إلى الياء.", subFr: "Un glossaire scientifique détaillé de A à Z." },
 ];
 
 export function homeBody() {
   return `
 <section class="hero hero-simple">
   <div class="hero-content">
-    <span class="hero-eyebrow"><span data-lang="ar">منصة تعليمية مجانية · المغرب</span><span data-lang="fr">Plateforme éducative gratuite · Maroc</span></span>
+    <span class="hero-eyebrow">Nova SVT</span>
     <h1>
-      <span data-lang="ar">علوم الحياة <em>و الأرض</em></span>
-      <span data-lang="fr">Sciences de la Vie <em>et de la Terre</em></span>
+      <span data-lang="ar">التميّز في علوم الحياة والأرض</span>
+      <span data-lang="fr">Excellence en Sciences de la Vie et de la Terre</span>
     </h1>
     <p class="lead">
-      <span data-lang="ar">دروس، فروض، امتحانات، مختبر افتراضي وموسوعة علمية — بالعربية والفرنسية، مطابقة للمنهاج الرسمي المغربي.</span>
-      <span data-lang="fr">Leçons, devoirs, examens, labo virtuel et encyclopédie — en arabe et en français, conformes au programme officiel marocain.</span>
+      <span data-lang="ar">منصة أكاديمية حديثة مخصّصة لتلاميذ المغرب. أتقن المفاهيم البيولوجية والجيولوجية بصرامة علمية لا مثيل لها.</span>
+      <span data-lang="fr">Une plateforme académique moderne dédiée aux élèves marocains. Maîtrisez les concepts biologiques et géologiques avec une rigueur scientifique inégalée.</span>
     </p>
     <div class="hero-ctas">
-      <a class="btn btn-glass btn-lg" href="/encyclopedie/"><span data-lang="ar">تصفح الموسوعة</span><span data-lang="fr">Explorer l'encyclopédie</span></a>
-      <a class="btn btn-primary btn-lg" href="/lecons/"><span data-lang="ar">ابدأ التعلّم</span><span data-lang="fr">Commencer</span> ${ICON_ARROW}</a>
+      <a class="btn btn-primary btn-lg" href="/lecons/"><span data-lang="ar">ابدأ التعلّم</span><span data-lang="fr">Commencer l'apprentissage</span></a>
+      <a class="btn btn-glass btn-lg" href="/encyclopedie/"><span data-lang="ar">تصفح الموسوعة</span><span data-lang="fr">Explorer l'Encyclopédie</span></a>
     </div>
   </div>
 </section>
