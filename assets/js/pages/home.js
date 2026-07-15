@@ -19,13 +19,12 @@ const DOMAINE_LABEL = {
 function leconCard(l) {
   const spec = l.domaine_specialite;
   const badge = spec && DOMAINE_LABEL[spec] ? DOMAINE_LABEL[spec] : null;
-  const badgeStyle = spec ? `background:var(--spec-${spec}, var(--primary))` : "";
   return `<a class="card card-link" href="${l.url}" data-item>
     ${
       l.vignette
         ? `<span class="lesson-card-img-wrap">
       <img src="/${l.vignette}" alt="${escapeHtml(l.titre.ar)}" loading="lazy" width="480" height="270" />
-      ${badge ? `<span class="lesson-card-badge" style="${badgeStyle}"><span data-lang="ar">${badge.ar}</span><span data-lang="fr">${badge.fr}</span></span>` : ""}
+      ${badge ? `<span class="lesson-card-badge" data-spec="${spec}"><span data-lang="ar">${badge.ar}</span><span data-lang="fr">${badge.fr}</span></span>` : ""}
     </span>`
         : ""
     }

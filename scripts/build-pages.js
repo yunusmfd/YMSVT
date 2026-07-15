@@ -29,6 +29,7 @@ import {
   aproposBody,
   contactBody,
   confidentialiteBody,
+  notFoundBody,
 } from "./lib/page-bodies.js";
 
 function writePage(routeUrl, html) {
@@ -102,7 +103,19 @@ function main() {
     );
   }
 
-  console.log(`✅ build-pages: ${pages.length} صفحة ساكنة + ${experiences.length} صفحة تجربة مختبر.`);
+  // ---------- صفحة 404 (في جذر الموقع، لا في مجلد فرعي) ----------
+  const notFoundHtml = wrapPage({
+    title: "404 | Nova SVT",
+    description: "الصفحة المطلوبة غير موجودة.",
+    bodyHtml: notFoundBody(),
+    activeNav: "",
+    url: "/404.html",
+    extraHead: '<meta name="robots" content="noindex" />',
+    ...common,
+  });
+  fs.writeFileSync(path.join(ROOT, "404.html"), notFoundHtml, "utf-8");
+
+  console.log(`✅ build-pages: ${pages.length} صفحة ساكنة + ${experiences.length} صفحة تجربة مختبر + 404.`);
 }
 
 function virtualLabDetailBody(exp) {

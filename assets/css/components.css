@@ -410,11 +410,24 @@
 /* ---- الرئيسية: بطاقات "أحدث الدروس" — صورة + شارة تخصّص في الزاوية ---- */
 .lesson-card-img-wrap { position: relative; margin-bottom: var(--sp-3); }
 .lesson-card-img-wrap img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: calc(var(--radius) - 6px); }
+/* خلفية الشارة تُغمَّق (لون التخصّص + 40% أسود) لضمان تباين AA للنص الأبيض فوقها في الوضعين
+   الفاتح والداكن — لأن قيَم --spec-* تنعكس بين الثيمين (تفتحّ في الداكن) وتسقط بدونها. */
 .lesson-card-badge {
   position: absolute; top: var(--sp-3); inset-inline-end: var(--sp-3);
   font-size: var(--fs-12); font-weight: 600; color: #fff;
   padding: 4px 12px; border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--spec-color, var(--primary)) 60%, #000);
 }
+.lesson-card-badge[data-spec="genetique"] { --spec-color: var(--spec-genetique); }
+.lesson-card-badge[data-spec="cytologie"] { --spec-color: var(--spec-cytologie); }
+.lesson-card-badge[data-spec="physiologie"] { --spec-color: var(--spec-physiologie); }
+.lesson-card-badge[data-spec="ecologie"] { --spec-color: var(--spec-ecologie); }
+.lesson-card-badge[data-spec="biomol"] { --spec-color: var(--spec-biomol); }
+.lesson-card-badge[data-spec="geologie"] { --spec-color: var(--spec-geologie); }
+.lesson-card-badge[data-spec="microbiologie"] { --spec-color: var(--spec-microbiologie); }
+.lesson-card-badge[data-spec="botanique"] { --spec-color: var(--spec-botanique); }
+.lesson-card-badge[data-spec="zoologie"] { --spec-color: var(--spec-zoologie); }
+.lesson-card-badge[data-spec="taxonomie"] { --spec-color: var(--spec-taxonomie); }
 .lesson-card-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: var(--sp-2); }
 .lesson-card-desc { font-size: var(--fs-14); color: var(--ink-soft); margin: var(--sp-2) 0 0; }
 

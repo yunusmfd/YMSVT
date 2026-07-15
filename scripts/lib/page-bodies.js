@@ -504,6 +504,20 @@ export function confidentialiteBody() {
 </div>`;
 }
 
+// صفحة 404 — تُكتب في جذر الموقع (404.html) لا في مجلد فرعي، بمسارات أصول مطلقة تعمل من أي عمق رابط
+export function notFoundBody() {
+  return `
+<div class="container" style="padding:var(--sp-9) var(--sp-5);max-width:560px;text-align:center">
+  <p class="mono" style="font-size:var(--fs-32);color:var(--secondary);margin-bottom:var(--sp-3)">404</p>
+  <h1><span data-lang="ar">هذه الصفحة غير موجودة</span><span data-lang="fr">Page introuvable</span></h1>
+  <p style="color:var(--ink-soft);margin-bottom:var(--sp-6)"><span data-lang="ar">قد يكون الرابط قديما أو خاطئا. يمكنك العودة إلى الرئيسية أو تصفّح الدروس والموسوعة.</span><span data-lang="fr">Le lien est peut-être ancien ou erroné. Revenez à l'accueil ou parcourez les leçons et l'encyclopédie.</span></p>
+  <div class="hero-ctas" style="justify-content:center">
+    <a class="btn btn-primary" href="/"><span data-lang="ar">العودة إلى الرئيسية</span><span data-lang="fr">Retour à l'accueil</span></a>
+    <a class="btn btn-ghost" href="/lecons/"><span data-lang="ar">تصفّح الدروس</span><span data-lang="fr">Parcourir les leçons</span></a>
+  </div>
+</div>`;
+}
+
 export function laboListBody() {
   return `
 <div class="container" style="padding-top:var(--sp-6)">
