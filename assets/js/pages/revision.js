@@ -1,4 +1,4 @@
-import { fetchManifest, showError, escapeHtml } from "../list-page.js";
+import { fetchSection, showError, escapeHtml } from "../list-page.js";
 import { initFlashcards } from "../flashcards.js";
 import { t } from "../i18n.js";
 
@@ -289,11 +289,11 @@ async function init() {
   const root = document.querySelector("[data-revision-section]");
   if (!root) return;
   try {
-    const manifest = await fetchManifest();
+    const [revision, exams] = await Promise.all([fetchSection("revision"), fetchSection("exams")]);
     initSectionTabs();
-    initLeconsSection(manifest.revision);
-    initFroudSection(manifest.exams);
-    initImtihanatSection(manifest.exams);
+    initLeconsSection(revision);
+    initFroudSection(exams);
+    initImtihanatSection(exams);
   } catch (e) {
     showError(document.querySelector('[data-revision-panel="resumes"]'), init);
   }

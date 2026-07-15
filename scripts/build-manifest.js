@@ -87,9 +87,28 @@ function main() {
     url: r.url,
   }));
 
-  const manifest = { lecons, exams, virtualLab, encyclopedia, revision, blog, generated_at: new Date().toISOString() };
-  fs.writeFileSync(path.join(ROOT, "manifest.json"), JSON.stringify(manifest), "utf-8");
-  console.log(`✅ manifest.json: ${lecons.length} درسا، ${exams.length} فرض/امتحان، ${virtualLab.length} تجربة، ${blog.length} مقال مدونة.`);
+  // manifest مقسّم حسب القسم بدل ملف واحد ضخم (كان ~60KB يُجلب كاملا في كل صفحة قائمة).
+  // كل صفحة تجلب قسمها فقط عبر fetchSection() — القسم 11.2 (أداء 3G).
+  const outDir = path.join(ROOT, "manifest");
+  fs.mkdirSync(outDir, { recursive: true });
+  const sections = {
+    lecons,
+    exams,
+    "virtual-lab": virtualLab,
+    encyclopedia,
+    revision,
+    blog,
+    // حمولة صغيرة مخصّصة للصفحة الرئيسية (أحدث 3 دروس + معلومة "هل تعلم؟" واحدة) بدل جلب كل الدروس/الموسوعة
+    home: {
+      lecons: [...lecons].sort((a, b) => (b.date_maj || "").localeCompare(a.date_maj || "")).slice(0, 3),
+      saviezVous: (encyclopedia.saviezVous || []).slice(0, 1),
+    },
+  };
+  for (const [name, payload] of Object.entries(sections)) {
+    fs.writeFileSync(path.join(outDir, `${name}.json`), JSON.stringify(payload), "utf-8");
+  }
+  const totalKb = (Buffer.byteLength(JSON.stringify(sections)) / 1024).toFixed(1);
+  console.log(`✅ manifest/: ${Object.keys(sections).length} أقسام (${totalKb}KB إجمالا) — ${lecons.length} درسا، ${exams.length} فرض/امتحان، ${virtualLab.length} تجربة، ${blog.length} مقال.`);
 }
 
 main();

@@ -1,4 +1,4 @@
-import { fetchManifest, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
 
 function card(g) {
   return `<div class="card" data-lightbox-trigger data-src="/${g.image}" data-title="${escapeHtml(g.titre.ar)}">
@@ -14,8 +14,8 @@ async function init() {
   if (!grid) return;
   showSkeleton(grid, 6);
   try {
-    const manifest = await fetchManifest();
-    grid.innerHTML = manifest.encyclopedia.galerie.map(card).join("") || `<p class="state-empty">—</p>`;
+    const encyclopedia = await fetchSection("encyclopedia");
+    grid.innerHTML = encyclopedia.galerie.map(card).join("") || `<p class="state-empty">—</p>`;
 
     grid.querySelectorAll("[data-lightbox-trigger]").forEach((el) => {
       el.addEventListener("click", () => {

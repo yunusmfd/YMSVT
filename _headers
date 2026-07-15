@@ -1,8 +1,32 @@
+# قواعد الكاش (القسم 11.2). الترتيب: الأكثر تحديدا أولا.
+
+# محتوى تربوي قابل للتحديث
 /content/*
   Cache-Control: public, max-age=3600, must-revalidate
 
-/assets/*
+# ملفات manifest المقسّمة (مولّدة كل بناء) — كاش قصير مع إعادة تحقّق
+/manifest/*
+  Cache-Control: public, max-age=600, must-revalidate
+
+# مكتبات خارجية ثابتة (marked/purify) لا تتغيّر أبدا
+/assets/vendor/*
   Cache-Control: public, max-age=31536000, immutable
 
+# صور/أيقونات نادرة التغيّر — كاش أسبوع مع إمكان التحديث
+/assets/images/*
+  Cache-Control: public, max-age=604800
+
+# شيفرة الموقع (CSS/JS غير مبصومة الاسم): يجب إعادة التحقّق كي تصل التحديثات للزوّار العائدين
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ملف الـService Worker: لا يُخزّن كي تُكتشف تحديثاته فورا
+/sw.js
+  Cache-Control: no-cache
+
+# صفحات HTML تبقى دائما طازجة
 /*.html
   Cache-Control: public, max-age=0, must-revalidate

@@ -4,7 +4,7 @@ import path from "node:path";
 import { ROOT, listLecons, listUnites, listBlog } from "./lib/content-loader.js";
 import { collectUnitGroups, collectEncyclopediaRoutes, collectBlogRoutes, collectResumeRoutes } from "./lib/routes.js";
 import { makeRenderDeps } from "./lib/render-deps-node.js";
-import { wrapPage } from "./lib/partials.js";
+import { wrapPage, learningResourceJsonLd } from "./lib/partials.js";
 import {
   lessonDetailBody,
   uniteDetailBody,
@@ -67,6 +67,14 @@ function main() {
           ogType: "article",
           url,
           latestBlogPost,
+          extraHead: learningResourceJsonLd({
+            type: "LearningResource",
+            titleAr: lecon.titre.ar,
+            description: (lecon.objectifs && lecon.objectifs.ar && lecon.objectifs.ar[0]) || lecon.titre.ar,
+            url,
+            image: item.vignette ? `/${item.vignette}` : undefined,
+            datePublished: lecon.date_maj,
+          }),
           // يفعّل تفاعلية الدرس (اختبار/فهرس محاور/شريط تقدم القراءة) — القسم 12.2.1 نقطة 5
           extraScripts: '<script type="module" src="/assets/js/render-engine.js"></script>',
         })
@@ -136,6 +144,16 @@ function main() {
         ogImage: ogImageOf(route.type, route.item),
         url: route.url,
         latestBlogPost,
+        extraHead:
+          route.type === "article"
+            ? learningResourceJsonLd({
+                type: "Article",
+                titleAr: route.title.ar,
+                description: descriptionOf(route.type, route.item),
+                url: route.url,
+                image: ogImageOf(route.type, route.item),
+              })
+            : "",
       })
     );
     generated++;
@@ -155,6 +173,14 @@ function main() {
         ogImage: route.item.image_cover ? `/${route.item.image_cover}` : undefined,
         url: route.url,
         latestBlogPost,
+        extraHead: learningResourceJsonLd({
+          type: "Article",
+          titleAr: route.item.titre_ar,
+          description: route.item.titre_ar,
+          url: route.url,
+          image: route.item.image_cover ? `/${route.item.image_cover}` : undefined,
+          datePublished: route.item.date,
+        }),
       })
     );
     generated++;

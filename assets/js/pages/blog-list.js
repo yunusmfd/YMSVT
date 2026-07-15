@@ -1,4 +1,4 @@
-import { fetchManifest, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
 
 function card(p) {
   return `<a class="card card-link" href="${p.url}">
@@ -14,8 +14,8 @@ async function init() {
   if (!grid) return;
   showSkeleton(grid, 4);
   try {
-    const manifest = await fetchManifest();
-    grid.innerHTML = manifest.blog.map(card).join("") || `<p class="state-empty">—</p>`;
+    const blog = await fetchSection("blog");
+    grid.innerHTML = blog.map(card).join("") || `<p class="state-empty">—</p>`;
   } catch (e) {
     showError(grid, init);
   }

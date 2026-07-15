@@ -4,8 +4,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { ROOT, listVirtualLab } from "./lib/content-loader.js";
 import { svgInliner } from "./lib/render-deps-node.js";
+import { assetVersion } from "./lib/asset-version.js";
 import { collectBlogRoutes } from "./lib/routes.js";
-import { wrapPage } from "./lib/partials.js";
+import { wrapPage, orgAndWebsiteJsonLd } from "./lib/partials.js";
 import {
   homeBody,
   leconsListBody,
@@ -48,7 +49,7 @@ function main() {
   const common = { latestBlogPost };
 
   const pages = [
-    { url: "/", title: "Nova SVT | المرجع الرقمي لعلوم الحياة والأرض بالمغرب", description: "منصة تعليمية مجانية وثنائية اللغة لمادة علوم الحياة والأرض بالمغرب.", body: homeBody(), activeNav: "home", scripts: "/assets/js/pages/home.js" },
+    { url: "/", title: "Nova SVT | المرجع الرقمي لعلوم الحياة والأرض بالمغرب", description: "منصة تعليمية مجانية وثنائية اللغة لمادة علوم الحياة والأرض بالمغرب.", body: homeBody(), activeNav: "home", scripts: "/assets/js/pages/home.js", extraHead: orgAndWebsiteJsonLd() },
     { url: "/lecons/", title: "الدروس | Nova SVT", description: "دروس علوم الحياة والأرض لكل المستويات، بالعربية والفرنسية.", body: leconsListBody(), activeNav: "lecons", scripts: "/assets/js/pages/lecons-list.js" },
     { url: "/devoirs-examens/", title: "الفروض والامتحانات | Nova SVT", description: "فروض وامتحانات SVT قابلة للتحميل مع التصحيح.", body: examsListBody(), activeNav: "exams", scripts: "/assets/js/pages/exams-list.js" },
     { url: "/labo-virtuel/", title: "المختبر الافتراضي | Nova SVT", description: "تجارب تفاعلية وفيديوهات ورسوم متحركة في SVT.", body: laboListBody(), activeNav: "labo", scripts: "/assets/js/pages/labo-list.js" },
@@ -79,6 +80,7 @@ function main() {
       bodyHtml: p.body,
       activeNav: p.activeNav,
       url: p.url,
+      extraHead: p.extraHead || "",
       extraScripts: p.scripts ? scriptTag(p.scripts) : "",
       ...common,
     });
@@ -115,7 +117,13 @@ function main() {
   });
   fs.writeFileSync(path.join(ROOT, "404.html"), notFoundHtml, "utf-8");
 
-  console.log(`✅ build-pages: ${pages.length} صفحة ساكنة + ${experiences.length} صفحة تجربة مختبر + 404.`);
+  // ختم بصمة الشيفرة في اسم كاش الـService Worker كي يتحدّث تلقائيا عند كل تغيير فعلي في CSS/JS
+  const swPath = path.join(ROOT, "sw.js");
+  const version = assetVersion();
+  const swSrc = fs.readFileSync(swPath, "utf-8").replace(/nova-svt-code-[A-Za-z0-9_]+/, `nova-svt-code-${version}`);
+  fs.writeFileSync(swPath, swSrc, "utf-8");
+
+  console.log(`✅ build-pages: ${pages.length} صفحة ساكنة + ${experiences.length} صفحة تجربة مختبر + 404 (SW build ${version}).`);
 }
 
 function virtualLabDetailBody(exp) {

@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 if ("serviceWorker" in navigator) {
+  // sw.js في الجذر كي يكون نطاقه "/" ويتحكّم في كل الصفحات (لا /assets/js/ فقط)
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/assets/js/sw.js").catch(() => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {
       /* تجاهل صامت — الموقع يعمل بدون Service Worker أيضا */
     });
   });

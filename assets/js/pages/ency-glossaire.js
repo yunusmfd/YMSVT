@@ -1,4 +1,4 @@
-import { fetchManifest, showSkeleton, showError, showEmpty, escapeHtml } from "../list-page.js";
+import { fetchSection, showSkeleton, showError, showEmpty, escapeHtml } from "../list-page.js";
 
 function card(g) {
   return `<a class="card card-link" href="/encyclopedie/glossaire/${g.id}/">
@@ -17,9 +17,9 @@ async function init() {
   if (!grid) return;
   showSkeleton(grid, 6);
   try {
-    const manifest = await fetchManifest();
+    const encyclopedia = await fetchSection("encyclopedia");
     const lang = document.documentElement.getAttribute("lang") || "ar";
-    const terms = [...manifest.encyclopedia.glossaire].sort((a, b) => (a.terme[lang] || a.terme.ar).localeCompare(b.terme[lang] || b.terme.ar, "ar"));
+    const terms = [...encyclopedia.glossaire].sort((a, b) => (a.terme[lang] || a.terme.ar).localeCompare(b.terme[lang] || b.terme.ar, "ar"));
 
     const letters = [...new Set(terms.map((t) => (t.terme.ar || "")[0]))];
     alphabetWrap.innerHTML =

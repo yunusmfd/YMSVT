@@ -147,6 +147,59 @@ export function renderFooter() {
 </footer>`;
 }
 
+// بيانات مهيكلة JSON-LD (schema.org) — تحسّن ظهور البحث والنتائج الغنية. inLanguage يوضّح ثنائية اللغة
+// للمحرّكات بما أن الصفحة الواحدة تحمل النسختين العربية والفرنسية معا (القسم 12.2.1).
+const SITE_URL = "https://novasvt.ma";
+export function jsonLdScript(obj) {
+  return `<script type="application/ld+json">${JSON.stringify(obj).replace(/</g, "\\u003c")}</script>`;
+}
+
+// كيان المنظّمة التعليمية + الموقع (مع صندوق بحث Sitelinks) — يُحقن في الصفحة الرئيسية
+export function orgAndWebsiteJsonLd() {
+  return (
+    jsonLdScript({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      name: "Nova SVT",
+      url: SITE_URL,
+      logo: `${SITE_URL}/assets/images/favicons/icon-512.png`,
+      description: "منصة تعليمية مجانية وثنائية اللغة لعلوم الحياة والأرض بالمغرب.",
+      inLanguage: ["ar", "fr"],
+      areaServed: "MA",
+    }) +
+    jsonLdScript({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Nova SVT",
+      url: SITE_URL,
+      inLanguage: ["ar", "fr"],
+      potentialAction: {
+        "@type": "SearchAction",
+        target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/?q={search_term_string}` },
+        "query-input": "required name=search_term_string",
+      },
+    })
+  );
+}
+
+// مورد تعليمي/درس أو مقال — يُحقن في صفحات التفاصيل
+export function learningResourceJsonLd({ type = "LearningResource", titleAr, description, url, image, datePublished }) {
+  const obj = {
+    "@context": "https://schema.org",
+    "@type": type,
+    name: titleAr,
+    description: description || titleAr,
+    url: `${SITE_URL}${url}`,
+    inLanguage: ["ar", "fr"],
+    isAccessibleForFree: true,
+    provider: { "@type": "EducationalOrganization", name: "Nova SVT", url: SITE_URL },
+  };
+  if (image) obj.image = image.startsWith("http") ? image : `${SITE_URL}${image}`;
+  if (datePublished) obj.datePublished = datePublished;
+  if (type === "LearningResource") obj.learningResourceType = "Leçon";
+  return jsonLdScript(obj);
+}
+
 export function renderHead({ title, description, ogImage = "/assets/images/hero/og-default.webp", ogType = "website", url = "", extraHead = "" }) {
   const fullUrl = url ? `https://novasvt.ma${url}` : "";
   return `

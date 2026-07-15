@@ -1,4 +1,4 @@
-import { fetchManifest, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
 
 function card(a) {
   return `<a class="card card-link" href="/encyclopedie/articles/${a.id}/">
@@ -14,8 +14,8 @@ async function init() {
   if (!grid) return;
   showSkeleton(grid, 6);
   try {
-    const manifest = await fetchManifest();
-    grid.innerHTML = manifest.encyclopedia.articles.map(card).join("") || `<p class="state-empty">—</p>`;
+    const encyclopedia = await fetchSection("encyclopedia");
+    grid.innerHTML = encyclopedia.articles.map(card).join("") || `<p class="state-empty">—</p>`;
   } catch (e) {
     showError(grid, init);
   }

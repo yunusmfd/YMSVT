@@ -1,4 +1,4 @@
-import { fetchManifest, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
 import { initFilters } from "../filters.js";
 
 const TYPE_BADGE = {
@@ -21,8 +21,8 @@ async function init() {
   if (!grid) return;
   showSkeleton(grid, 6);
   try {
-    const manifest = await fetchManifest();
-    grid.innerHTML = manifest.virtualLab.map(card).join("");
+    const virtualLab = await fetchSection("virtual-lab");
+    grid.innerHTML = virtualLab.map(card).join("");
     initFilters();
   } catch (e) {
     showError(grid, init);

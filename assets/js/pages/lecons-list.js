@@ -1,4 +1,4 @@
-import { fetchManifest, showSkeleton, showError, showEmpty, escapeHtml } from "../list-page.js";
+import { fetchSection, showSkeleton, showError, showEmpty, escapeHtml } from "../list-page.js";
 import { t } from "../i18n.js";
 
 function card(l) {
@@ -49,8 +49,7 @@ async function init() {
   if (!grid) return;
   showSkeleton(grid, 6);
   try {
-    const manifest = await fetchManifest();
-    const all = manifest.lecons;
+    const all = await fetchSection("lecons");
 
     const niveauSelect = document.querySelector('[data-filter-key="niveau"]');
     const filiereSelect = document.querySelector('[data-filter-key="filiere"]');

@@ -1,4 +1,4 @@
-import { fetchManifest, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
 
 const REGNE_LABEL = { animal: { ar: "حيوان", fr: "Animal" }, vegetal: { ar: "نبات", fr: "Végétal" } };
 
@@ -17,8 +17,8 @@ async function init() {
   if (!grid) return;
   showSkeleton(grid, 4);
   try {
-    const manifest = await fetchManifest();
-    grid.innerHTML = manifest.encyclopedia.organismes.map(card).join("") || `<p class="state-empty">—</p>`;
+    const encyclopedia = await fetchSection("encyclopedia");
+    grid.innerHTML = encyclopedia.organismes.map(card).join("") || `<p class="state-empty">—</p>`;
   } catch (e) {
     showError(grid, init);
   }

@@ -1,4 +1,4 @@
-import { fetchManifest, showError, escapeHtml } from "../list-page.js";
+import { fetchSection, showError, escapeHtml } from "../list-page.js";
 
 const SOUS_TYPE_LABEL = {
   mahali: { ar: "امتحان محلي", fr: "Examen local" },
@@ -129,10 +129,10 @@ async function init() {
   const root = document.querySelector("[data-exams-section]");
   if (!root) return;
   try {
-    const manifest = await fetchManifest();
+    const exams = await fetchSection("exams");
     initSectionTabs();
-    initFardSection(manifest.exams);
-    initImtihanSection(manifest.exams);
+    initFardSection(exams);
+    initImtihanSection(exams);
   } catch (e) {
     showError(document.querySelector("[data-exams-fard-grid]"), init);
   }

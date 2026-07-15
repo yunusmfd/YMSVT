@@ -22,13 +22,16 @@ export function showEmpty(container, messageAr, messageFr) {
   </div>`;
 }
 
-let manifestCache = null;
-export async function fetchManifest() {
-  if (manifestCache) return manifestCache;
-  const res = await fetch("/manifest.json");
-  if (!res.ok) throw new Error("manifest fetch failed");
-  manifestCache = await res.json();
-  return manifestCache;
+// manifest مقسّم: كل صفحة تجلب قسمها فقط (/manifest/<name>.json) بدل ملف واحد ضخم — القسم 11.2
+// الأقسام المتاحة: lecons | exams | virtual-lab | encyclopedia | revision | blog | home
+const sectionCache = new Map();
+export async function fetchSection(name) {
+  if (sectionCache.has(name)) return sectionCache.get(name);
+  const res = await fetch(`/manifest/${name}.json`);
+  if (!res.ok) throw new Error(`manifest section "${name}" fetch failed`);
+  const data = await res.json();
+  sectionCache.set(name, data);
+  return data;
 }
 
 export function renderGrid(container, items, cardFn) {

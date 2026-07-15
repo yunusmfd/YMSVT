@@ -1,4 +1,4 @@
-import { fetchManifest, showSkeleton, showError, escapeHtml } from "../list-page.js";
+import { fetchSection, showSkeleton, showError, escapeHtml } from "../list-page.js";
 
 function card(r) {
   return `<a class="card card-link" href="/encyclopedie/roches-mineraux/${r.id}/">
@@ -13,8 +13,8 @@ async function init() {
   if (!grid) return;
   showSkeleton(grid, 4);
   try {
-    const manifest = await fetchManifest();
-    grid.innerHTML = manifest.encyclopedia.rochesMineraux.map(card).join("") || `<p class="state-empty">—</p>`;
+    const encyclopedia = await fetchSection("encyclopedia");
+    grid.innerHTML = encyclopedia.rochesMineraux.map(card).join("") || `<p class="state-empty">—</p>`;
   } catch (e) {
     showError(grid, init);
   }
