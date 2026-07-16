@@ -18,7 +18,7 @@ const DOMAINE_LABEL = {
 function leconCard(l) {
   const spec = l.domaine_specialite;
   const badge = spec && DOMAINE_LABEL[spec] ? DOMAINE_LABEL[spec] : null;
-  return `<a class="card card-link" href="${l.url}" data-item>
+  return `<a class="card card-link lesson-card" href="${l.url}" data-item>
     ${
       l.vignette
         ? `<span class="lesson-card-img-wrap">
@@ -27,16 +27,18 @@ function leconCard(l) {
     </span>`
         : ""
     }
-    <div class="lesson-card-meta">
-      <span class="chip">${l.niveau.toUpperCase()}</span>
-      ${l.duree ? `<span class="chip"><span data-lang="ar">${l.duree} د</span><span data-lang="fr">${l.duree} min</span></span>` : ""}
+    <div class="lesson-card-body">
+      <div class="lesson-card-meta">
+        <span>${l.niveau.toUpperCase()}</span>
+        ${l.duree ? `<span class="lesson-card-sep" aria-hidden="true">•</span><span><span data-lang="ar">${l.duree} د</span><span data-lang="fr">${l.duree} MIN</span></span>` : ""}
+      </div>
+      <h3 class="lesson-card-title"><span data-lang="ar">${escapeHtml(l.titre.ar)}</span><span data-lang="fr">${escapeHtml(l.titre.fr)}</span></h3>
+      ${
+        l.description && (l.description.ar || l.description.fr)
+          ? `<p class="lesson-card-desc"><span data-lang="ar">${escapeHtml(l.description.ar)}</span><span data-lang="fr">${escapeHtml(l.description.fr)}</span></p>`
+          : ""
+      }
     </div>
-    <h4><span data-lang="ar">${escapeHtml(l.titre.ar)}</span><span data-lang="fr">${escapeHtml(l.titre.fr)}</span></h4>
-    ${
-      l.description && (l.description.ar || l.description.fr)
-        ? `<p class="lesson-card-desc"><span data-lang="ar">${escapeHtml(l.description.ar)}</span><span data-lang="fr">${escapeHtml(l.description.fr)}</span></p>`
-        : ""
-    }
   </a>`;
 }
 

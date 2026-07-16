@@ -34,7 +34,7 @@ export function homeBody() {
     </p>
     <div class="hero-ctas">
       <a class="btn btn-primary btn-lg" href="/lecons/"><span data-lang="ar">ابدأ التعلّم</span><span data-lang="fr">Commencer l'apprentissage</span></a>
-      <a class="btn btn-glass btn-lg" href="/encyclopedie/"><span data-lang="ar">تصفح الموسوعة</span><span data-lang="fr">Explorer l'Encyclopédie</span></a>
+      <a class="btn btn-ghost btn-lg" href="/encyclopedie/"><span data-lang="ar">تصفح الموسوعة</span><span data-lang="fr">Explorer l'Encyclopédie</span></a>
     </div>
   </div>
 </section>
@@ -88,51 +88,71 @@ function filterDropdown(key, labelAr, labelFr, extraOptions = "") {
   </div>`;
 }
 
+// قائمة منسدلة أصلية (select) مُنسَّقة كصندوق القالب: أيقونة + القيمة المختارة + شيفرون — مع الحفاظ على منطق الفلترة القائم على data-filter-key
+function leconsDropdown(key, labelAr, labelFr, icon, options, groupAttrs = "") {
+  return `<div class="lecons-filter" ${groupAttrs}>
+    <label class="lecons-filter-label"><span data-lang="ar">${labelAr}</span><span data-lang="fr">${labelFr}</span></label>
+    <div class="lecons-filter-control">
+      <span class="lecons-filter-icon" aria-hidden="true">${uiIcon(icon)}</span>
+      <select class="lecons-filter-select" data-filter-key="${key}">
+        <option value="" data-i18n="filter_all"></option>
+        ${options}
+      </select>
+      <span class="lecons-filter-chevron" aria-hidden="true">${uiIcon("chevron")}</span>
+    </div>
+  </div>`;
+}
+
 export function leconsListBody() {
   return `
-<div class="container" style="padding-top:var(--sp-6)">
-  <div class="section-head">
-    <h1><span data-lang="ar">الدروس</span><span data-lang="fr">Leçons</span></h1>
-  </div>
-  <div class="layout-with-sidebar" data-filters data-filters-target="[data-lecons-grid]" data-filters-empty="[data-lecons-grid-empty]">
-    <aside class="filters-sidebar">
-      <div class="filters-sidebar-head">${uiIcon("filter")}<span data-lang="ar">تصفية النتائج</span><span data-lang="fr">Filtrer les résultats</span></div>
-      <div class="filter-group">
-        <h4><span data-lang="ar">المستوى</span><span data-lang="fr">Niveau</span></h4>
-        <select class="filter-select" data-filter-key="niveau">
-          <option value="" data-i18n="filter_all"></option>
-          ${NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
-        </select>
+<div class="container lecons-page" data-filters data-filters-target="[data-lecons-grid]" data-filters-empty="[data-lecons-grid-empty]">
+  <!-- الهيرو: مسار تنقّل + صندوق أيقونة + عنوان تحريري + وصف + زخرفة طبقية -->
+  <section class="lecons-hero">
+    <div class="lecons-hero-main">
+      <nav class="lecons-breadcrumb" aria-label="مسار التنقل">
+        <a href="/"><span data-lang="ar">الرئيسية</span><span data-lang="fr">Accueil</span></a>
+        <span class="lecons-breadcrumb-sep flip-rtl" aria-hidden="true">${ICON_ARROW}</span>
+        <span class="lecons-breadcrumb-current"><span data-lang="ar">الدروس</span><span data-lang="fr">Leçons</span></span>
+      </nav>
+      <div class="lecons-hero-titlerow">
+        <span class="lecons-hero-icon" aria-hidden="true">${uiIcon("lecons")}</span>
+        <h1><span data-lang="ar">الدروس</span><span data-lang="fr">Leçons</span></h1>
       </div>
-      <div class="filter-group" data-filter-key="filiere-group" hidden>
-        <h4><span data-lang="ar">المسلك</span><span data-lang="fr">Filière</span></h4>
-        <select class="filter-select" data-filter-key="filiere">
-          <option value="" data-i18n="filter_all"></option>
-          ${FILIERE_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join("")}
-        </select>
-      </div>
-      <div class="filter-group">
-        <h4><span data-lang="ar">الدورة</span><span data-lang="fr">Semestre</span></h4>
-        <select class="filter-select" data-filter-key="dorra">
-          <option value="" data-i18n="filter_all"></option>
-          <option value="1" data-i18n="semester_1"></option>
-          <option value="2" data-i18n="semester_2"></option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <h4><span data-lang="ar">الوحدة</span><span data-lang="fr">Unité</span></h4>
-        <select class="filter-select" data-filter-key="unite">
-          <option value="" data-i18n="filter_all"></option>
-        </select>
-      </div>
-    </aside>
-    <div>
-      <div data-lecons-grid></div>
-      <div class="state-empty" data-lecons-grid-empty hidden>
-        <span class="icon">${uiIcon("empty")}</span>
-        <p><span data-lang="ar">لا توجد دروس بعد لهذا الاختيار، جرّب مستوى آخر.</span><span data-lang="fr">Aucune leçon pour ce choix, essayez un autre niveau.</span></p>
-      </div>
+      <p class="lecons-hero-lead">
+        <span data-lang="ar">تصفّح دروس علوم الحياة والأرض وفق المستوى والمسلك والدورة والوحدة.</span>
+        <span data-lang="fr">Parcourez les leçons de SVT par niveau, filière, semestre et unité.</span>
+      </p>
     </div>
+    <div class="lecons-hero-deco" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="90" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"/>
+        <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="2"/>
+        <path d="M100 20V180" stroke="currentColor" stroke-width="1"/>
+        <path d="M20 100H180" stroke="currentColor" stroke-width="1"/>
+        <circle cx="100" cy="100" r="10" fill="currentColor"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- بطاقة الفلاتر الأفقية: 4 قوائم منسدلة + زر إعادة التعيين -->
+  <section class="lecons-filters">
+    <div class="lecons-filters-grid">
+      ${leconsDropdown("niveau", "المستوى", "Niveau", "curriculum", NIVEAU_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join(""))}
+      ${leconsDropdown("filiere", "المسلك", "Filière", "groups", FILIERE_CHIPS.map((c) => `<option value="${c.v}">${c.l}</option>`).join(""), 'data-filter-key="filiere-group" hidden')}
+      ${leconsDropdown("dorra", "الدورة", "Semestre", "calendar", `<option value="1" data-i18n="semester_1"></option><option value="2" data-i18n="semester_2"></option>`)}
+      ${leconsDropdown("unite", "الوحدة", "Unité", "lecons", "")}
+    </div>
+    <button class="lecons-filters-reset" type="button" data-filters-reset>
+      ${uiIcon("reset")}<span data-lang="ar">إعادة تعيين الفلاتر</span><span data-lang="fr">Réinitialiser</span>
+    </button>
+  </section>
+
+  <!-- الوحدات والدروس: أكورديون -->
+  <h2 class="lecons-units-title"><span data-lang="ar">الوحدات والدروس</span><span data-lang="fr">Unités et leçons</span></h2>
+  <div data-lecons-grid></div>
+  <div class="state-empty" data-lecons-grid-empty hidden>
+    <span class="icon">${uiIcon("empty")}</span>
+    <p><span data-lang="ar">لا توجد دروس بعد لهذا الاختيار، جرّب مستوى آخر.</span><span data-lang="fr">Aucune leçon pour ce choix, essayez un autre niveau.</span></p>
   </div>
 </div>`;
 }

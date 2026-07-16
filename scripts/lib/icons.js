@@ -1,12 +1,18 @@
-// أيقونات SVG أصلية بسيطة — stroke="currentColor" لتتكيف مع الوضع الليلي تلقائيا (القسم 4.1.1)
-export const ICON_SEARCH = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`;
-export const ICON_BELL = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>`;
-export const ICON_MOON = `<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
-export const ICON_SUN = `<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>`;
-export const ICON_HAMBURGER = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`;
-export const ICON_CLOSE = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
-export const ICON_ARROW = `<svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`;
-export const ICON_USER = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>`;
+// أيقونات الشريط العلوي — طقم موحّد بأسلوب Material Symbols Outlined: شبكة 24، سُمك خط 2، أطراف وزوايا مستديرة،
+// وتناسب بصري متّسق بين كل الرموز. stroke="currentColor" ليتكيّف مع الوضع الليلي والسياق اللوني تلقائيا (القسم 4.1.1)
+const NAV = (paths) =>
+  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths}</svg>`;
+
+export const ICON_SEARCH = NAV(`<circle cx="11" cy="11" r="7"/><line x1="16.8" y1="16.8" x2="21" y2="21"/>`);
+export const ICON_BELL = NAV(`<path d="M6 10a6 6 0 0 1 12 0c0 3.8 1 5.4 1.8 6.3a.6.6 0 0 1-.45 1H4.65a.6.6 0 0 1-.45-1C5 15.4 6 13.8 6 10Z"/><path d="M9.8 20a2.2 2.2 0 0 0 4.4 0"/>`);
+export const ICON_MOON = `<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13.6A7.6 7.6 0 1 1 10.4 4 6 6 0 0 0 20 13.6Z"/></svg>`;
+export const ICON_SUN = `<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.6v2.3M12 19.1v2.3M4.7 4.7l1.6 1.6M17.7 17.7l1.6 1.6M2.6 12h2.3M19.1 12h2.3M4.7 19.3l1.6-1.6M17.7 6.3l1.6-1.6"/></svg>`;
+export const ICON_HAMBURGER = NAV(`<line x1="3.5" y1="7" x2="20.5" y2="7"/><line x1="3.5" y1="12" x2="20.5" y2="12"/><line x1="3.5" y1="17" x2="20.5" y2="17"/>`);
+export const ICON_CLOSE = NAV(`<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>`);
+export const ICON_ARROW = `<svg class="flip-rtl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="12.5 5.5 19 12 12.5 18.5"/></svg>`;
+export const ICON_USER = NAV(`<circle cx="12" cy="8.5" r="3.5"/><path d="M5.8 19.6a6.2 6.2 0 0 1 12.4 0"/>`);
+// كرة أرضية بخطوط الطول والعرض — لزر تبديل اللغة، بنفس سُمك الطقم العلوي (بديل عن bilingual ذي السُمك 1.6)
+export const ICON_GLOBE = NAV(`<circle cx="12" cy="12" r="8.5"/><line x1="3.5" y1="12" x2="20.5" y2="12"/><path d="M12 3.5c2.3 2.4 3.5 5.4 3.5 8.5S14.3 18.1 12 20.5c-2.3-2.4-3.5-5.4-3.5-8.5S9.7 5.9 12 3.5Z"/>`);
 
 /*
   أيقونات الواجهة المخصّصة (خطّية موحّدة: 24×24، stroke-width 1.6، أطراف مدوّرة) —
@@ -81,6 +87,18 @@ export const UI_ICONS = {
   pin: I(`<path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/>`),
   // رسوم متحركة — شريط لقطات
   animation: I(`<rect x="3" y="6" width="18" height="12" rx="2"/><line x1="8.5" y1="6" x2="8.5" y2="18"/><line x1="15.5" y1="6" x2="15.5" y2="18"/>`),
+  // بريد إلكتروني — ظرف
+  mail: I(`<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/>`),
+  // مجموعة/مسلك — شخصان
+  groups: I(`<circle cx="9" cy="8" r="3"/><path d="M3.5 20c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5"/><path d="M16 5.2a3 3 0 0 1 0 5.6"/><path d="M17.5 14.7c2 .8 3.5 2.6 3.5 5.3"/>`),
+  // إعادة تعيين — سهم دائري
+  reset: I(`<path d="M4.5 12a7.5 7.5 0 1 1 2.2 5.3"/><polyline points="3 12 6.7 12 6.7 8.3"/>`),
+  // شيفرون للأسفل
+  chevron: I(`<polyline points="6 9 12 15 18 9"/>`),
+  // زر تشغيل دائري
+  play: I(`<circle cx="12" cy="12" r="9"/><path d="M10 8.5l5 3.5-5 3.5z"/>`),
+  // ساعة/مدة
+  clock: I(`<circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/>`),
 };
 
 export function uiIcon(name) {

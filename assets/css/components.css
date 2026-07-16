@@ -15,11 +15,9 @@
 }
 .navbar.is-scrolled { box-shadow: var(--shadow-sm); }
 
-/* مجموعتان تتباعدان بالكامل: الشعار+التنقّل ملتصقان في جهة، أزرار الإجراءات+البحث في الجهة المقابلة —
-   بدل شبكة ثلاثية تُوسّط التنقّل في منتصف الشريط. */
-.navbar-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); width: 100%; max-width: var(--container-max); margin-inline: auto; }
-.navbar-start { display: flex; align-items: center; gap: var(--sp-7); }
-.nav-center { display: flex; align-items: center; gap: var(--sp-5); }
+/* ثلاث مناطق (كما بالقالب): الشعار في البداية، التنقّل مُوسَّط فعليا في المنتصف، الأزرار في النهاية */
+.navbar-inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--sp-4); width: 100%; max-width: var(--container-max); margin-inline: auto; }
+.nav-center { display: flex; align-items: center; justify-content: center; gap: var(--sp-5); }
 .nav-links { display: flex; align-items: center; gap: var(--sp-5); list-style: none; margin: 0; padding: 0; }
 
 /* روابط التنقّل: وزن أوضح + مؤشّر نشط بخط سفلي ملوّن (لا خط بلون النص الباهت) */
@@ -29,42 +27,28 @@
   transition: color var(--motion-fast);
 }
 .nav-link::after {
-  content: ""; position: absolute; inset-inline: 0; bottom: 2px; height: 2px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  border-radius: 2px; transform: scaleX(0); transform-origin: center;
+  content: ""; position: absolute; inset-inline: 0; bottom: 0; height: 2px;
+  background: var(--primary);
+  transform: scaleX(0); transform-origin: center;
   transition: transform var(--motion-fast);
 }
-.nav-link:hover { color: var(--ink); text-decoration: none; }
-.nav-link[aria-current="page"] { color: var(--ink); font-weight: 600; }
+.nav-link:hover { color: var(--primary); text-decoration: none; }
+.nav-link[aria-current="page"] { color: var(--primary); font-weight: 600; }
 .nav-link:hover::after, .nav-link[aria-current="page"]::after { transform: scaleX(1); }
 
 .nav-actions { display: flex; align-items: center; gap: var(--sp-2); }
 .nav-divider-bar { display: none; }
 
-.nova-logo { display: flex; align-items: center; gap: 9px; }
+.nova-logo { display: flex; align-items: center; gap: var(--sp-2); }
 .nova-logo:hover { text-decoration: none; }
-.nova-logo-img { display: block; height: 34px; width: auto; }
-/* شعار نصّي مكدَّس بسطرين (Nova فوق SVT) بدل سطر أفقي واحد */
-.nova-logo-text-stack { display: flex; flex-direction: column; line-height: 1.05; gap: 1px; }
-.nova-logo-line { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-14); color: var(--primary); letter-spacing: .01em; }
-.nova-logo-line-accent { font-weight: 700; font-size: var(--fs-16); }
-.site-footer .nova-logo-line { color: #fff; }
+.nova-logo-img { display: block; height: 40px; width: 40px; border-radius: 50%; object-fit: contain; flex: none; }
+/* "Nova SVT" بسطر واحد بخط عرض Serif أخضر (font-h3 من القالب) */
+.nova-logo-text { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-24); color: var(--primary); line-height: 1; }
+.site-footer .nova-logo-text { color: var(--on-surface-dark); }
+@media (max-width: 519px) { .nova-logo-text { display: none; } }
 
-/* صندوق البحث المضمّن في الشريط العلوي — زر بمظهر حقل بحث، يفتح Overlay البحث الكامل عند النقر */
-.nav-search-trigger {
-  display: inline-flex; align-items: center; gap: 8px;
-  min-width: 190px; padding: 8px 16px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--line); background: var(--bg-alt);
-  color: var(--ink-soft); font: inherit; font-size: var(--fs-14);
-  cursor: pointer; transition: border-color var(--motion-fast), background-color var(--motion-fast);
-}
-.nav-search-trigger:hover { border-color: color-mix(in srgb, var(--primary) 35%, var(--line)); background: var(--card-bg); }
-.nav-search-trigger svg { width: 16px; height: 16px; flex: none; }
-.nav-search-trigger span { text-align: start; }
+/* البحث في الشريط العلوي أصبح زر أيقونة (icon-btn) يفتح Overlay البحث الكامل عند النقر */
 @media (max-width: 679px) {
-  .nav-search-trigger { min-width: auto; padding: 8px; }
-  .nav-search-trigger span { display: none; }
   /* تضييق زر اللغة إلى أيقونة فقط على الجوال — نص "FR/AR" الإضافي كان يدفع الشعار للالتفاف */
   .lang-toggle-btn { width: 40px; padding-inline: 0; justify-content: center; }
   .lang-toggle-btn [data-lang-code] { display: none; }
@@ -186,13 +170,12 @@
   position: relative;
   width: 40px; height: 40px; min-height: 40px;
   border-radius: 50%;
-  border: 1px solid var(--line);
+  border: none;
   background: transparent;
   color: inherit;
   cursor: pointer;
   display: inline-flex; align-items: center; justify-content: center;
 }
-.icon-btn { border-color: var(--line); }
 .icon-btn:hover { background: var(--bg-alt); }
 .icon-btn svg { stroke: currentColor; width: 18px; height: 18px; }
 
@@ -336,14 +319,28 @@
 .breadcrumb .current { color: var(--ink); font-weight: 500; }
 
 /* ============ 14. الفوتر ============ */
-.site-footer { background: var(--surface-dark); color: #E9ECE2; margin-top: var(--sp-9); padding: var(--sp-8) 0 var(--sp-5); }
-.site-footer a { color: #cfd8d0; }
-.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-6); margin-bottom: var(--sp-6); }
-.footer-grid h5 { color: #fff; font-size: var(--fs-15); margin-bottom: var(--sp-3); }
-.footer-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-2); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,.12); padding-top: var(--sp-4); font-size: var(--fs-14); color: #9fb0a4; display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-2); }
-@media (max-width: 899px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 679px) { .footer-grid { grid-template-columns: 1fr; } }
+/* الفوتر: أخضر متوسّط في الفاتح، شبه أسود في الداكن (--surface-dark متكيّف)، ونصوصه من رموز متكيّفة */
+.site-footer { background: var(--surface-dark); color: var(--on-surface-dark); margin-top: var(--sp-9); padding: var(--sp-8) 0 var(--sp-5); }
+.site-footer a { color: var(--on-surface-dark-soft); }
+.site-footer a:hover { color: var(--on-surface-dark); }
+/* شبكة الفوتر كما في القالب: عمود العلامة أعرض + 3 أعمدة روابط */
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--sp-7); margin-bottom: var(--sp-7); }
+.footer-brand { max-width: 420px; }
+.footer-blurb { margin-top: var(--sp-4); color: var(--on-surface-dark-soft); font-size: var(--fs-14); line-height: 1.6; }
+.footer-social { display: flex; gap: var(--sp-3); margin-top: var(--sp-5); }
+.footer-social a {
+  width: 40px; height: 40px; border-radius: 50%; flex: none;
+  border: 1px solid rgba(255,255,255,.22);
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--on-surface-dark-soft); transition: background-color var(--motion-fast), color var(--motion-fast);
+}
+.footer-social a:hover { background: rgba(255,255,255,.1); color: var(--on-surface-dark); }
+.footer-social svg { width: 18px; height: 18px; }
+.footer-grid h5 { color: var(--on-surface-dark); font-family: var(--font-body); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; font-size: var(--fs-14); margin-bottom: var(--sp-4); }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--sp-3); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.14); padding-top: var(--sp-4); font-size: var(--fs-14); color: var(--on-surface-dark-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: var(--sp-2); }
+@media (max-width: 899px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; max-width: none; } }
+@media (max-width: 519px) { .footer-grid { grid-template-columns: 1fr; } }
 
 /* ============ 15. حالات الواجهة (5.2): تحميل/فراغ/خطأ ============ */
 .skeleton-card { border-radius: var(--radius); background: var(--bg-alt); overflow: hidden; height: 260px; position: relative; }
@@ -396,63 +393,63 @@
 .pagination { display: flex; justify-content: center; gap: var(--sp-2); margin-top: var(--sp-6); }
 .load-more-wrap { display: flex; justify-content: center; margin-top: var(--sp-6); }
 
-/* ============ 18. الرئيسية: الهيرو والعناصر المصاحبة ============ */
+/* ============ 18. الرئيسية: الهيرو والعناصر المصاحبة ============
+   هيرو متكيّف مع الثيم: في الوضع الفاتح يجلس على خلفية الصفحة الفاتحة بعنوان أخضر (كما بالقالب المرجعي)،
+   وفي الوضع الداكن يصير كتلة خضراء عميقة بعنوان كريمي. */
 .hero {
   position: relative;
-  color: #fff;
-  padding: calc(var(--sp-9) + 90px) var(--sp-5) calc(var(--sp-9) + 30px);
+  color: var(--ink);
+  padding: calc(var(--sp-9) + 40px) var(--sp-5) var(--sp-9);
   text-align: center;
   overflow: hidden;
-  background: radial-gradient(120% 90% at 50% 0%, #123420 0%, #0c1c13 60%, #081109 100%);
+  background: var(--bg);
 }
-/* حبيبات خفيفة جدا فوق التدرّج لكسر المسطّحية */
-.hero::before {
-  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image: var(--grain); background-size: 160px; opacity: .06; mix-blend-mode: overlay;
+/* في الوضع الداكن فقط: تدرّج أخضر عميق يمنح الهيرو عمقا (بدل خلفية مسطّحة) */
+:root[data-theme="dark"] .hero { background: radial-gradient(120% 90% at 50% 0%, #16301f 0%, #0f2016 58%, #0a170f 100%); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) .hero { background: radial-gradient(120% 90% at 50% 0%, #16301f 0%, #0f2016 58%, #0a170f 100%); }
 }
-/* تلاشٍ ناعم يمنع أي خط قاطع بين الهيرو والقسم التالي */
-.hero::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; z-index: 1; pointer-events: none;
-  background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--bg) 92%, transparent));
-}
-.hero-content { position: relative; z-index: 2; max-width: 760px; margin-inline: auto; }
+.hero-content { position: relative; z-index: 2; max-width: 800px; margin-inline: auto; }
 
-/* هيرو مبسّط: بدون شارة/طبقات/إحصاءات — نص مركزي بعمود واحد فقط */
-.hero-simple { padding: calc(var(--sp-9) + 40px) var(--sp-5) calc(var(--sp-9) + 10px); }
+/* هيرو مبسّط: نص مركزي بعمود واحد فقط */
+.hero-simple { padding: calc(var(--sp-9) + 20px) var(--sp-5) var(--sp-9); }
 .hero-eyebrow {
   display: block; font-family: var(--font-mono); font-size: var(--fs-13);
-  letter-spacing: .08em; text-transform: uppercase;
-  color: color-mix(in srgb, var(--secondary) 70%, #fff);
+  letter-spacing: .1em; text-transform: uppercase; font-weight: 700;
+  color: var(--primary);
   margin-bottom: var(--sp-4);
 }
 
-.hero h1 { color: #fff; font-size: var(--fs-hero); line-height: 1.12; margin-bottom: var(--sp-5); letter-spacing: -0.01em; }
-.hero h1 em { font-style: normal; color: color-mix(in srgb, var(--secondary) 62%, #fff); }
+.hero h1 { color: var(--heading-accent); font-size: var(--fs-hero); line-height: 1.12; margin-bottom: var(--sp-5); letter-spacing: -0.01em; }
 [lang="fr"] .hero h1 { letter-spacing: -0.02em; }
-.hero p.lead { color: rgba(233,240,234,.82); font-size: var(--fs-18); max-width: 560px; margin-inline: auto; margin-bottom: var(--sp-7); }
+.hero p.lead { color: var(--ink-soft); font-size: var(--fs-20); max-width: 620px; margin-inline: auto; margin-bottom: var(--sp-7); line-height: 1.6; }
 .hero-ctas { display: flex; gap: var(--sp-3); justify-content: center; flex-wrap: wrap; }
+/* زر الدعوة الثانوي في الهيرو: مُحاط بلون العلامة (أخضر فاتح/نعناعي داكن) */
+.hero-ctas .btn-ghost { color: var(--primary); border-color: var(--primary); }
+.hero-ctas .btn-ghost:hover { background: color-mix(in srgb, var(--primary) 8%, transparent); }
 
 /* ---- عنوان القسم (eyebrow + عنوان + رابط) ---- */
 .section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--sp-7); flex-wrap: wrap; gap: var(--sp-3); }
 .section-head-titles { display: flex; flex-direction: column; gap: var(--sp-2); }
 .section-eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--secondary); }
 .eyebrow-tick { width: 18px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
-.section-head h2 { margin: 0; font-size: var(--fs-28); letter-spacing: -0.01em; }
+.section-head h2 { margin: 0; font-size: var(--fs-28); letter-spacing: -0.01em; color: var(--heading-accent); }
 .section-head-link { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; font-size: var(--fs-15); color: var(--primary); white-space: nowrap; }
 .section-head-link:hover { text-decoration: none; gap: 10px; }
 .section-head-link svg { width: 15px; height: 15px; }
 
 /* ---- الرئيسية: "كل ما تحتاجه للنجاح" — شبكة مزايا 4 أعمدة (بطاقات محاذاة للبداية كما في التصميم المرجعي) ---- */
 .benefits-head { text-align: center; max-width: 640px; margin: 0 auto var(--sp-7); }
-.benefits-head h2 { margin: 0; }
+.benefits-head h2 { margin: 0; color: var(--heading-accent); }
 .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-4); }
-.benefit-card { text-align: start; padding: var(--sp-6) var(--sp-5); border-radius: var(--radius); border: 1px solid var(--line); background: var(--card-bg); transition: box-shadow var(--motion-fast), transform var(--motion-fast), border-color var(--motion-fast); }
-.benefit-card:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); border-color: color-mix(in srgb, var(--primary) 28%, var(--line)); }
+/* بطاقات المزايا بخلفية نعناعية خفيفة (surface-container) لتتمايز عن بطاقات الدروس البيضاء — كما بالقالب */
+.benefit-card { text-align: start; padding: var(--sp-6) var(--sp-5); border-radius: var(--radius); border: 1px solid var(--line); background: var(--bg-alt); transition: box-shadow var(--motion-fast), transform var(--motion-fast), border-color var(--motion-fast), background-color var(--motion-fast); }
+.benefit-card:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--primary) 28%, var(--line)); background: color-mix(in srgb, var(--primary) 8%, var(--bg-alt)); }
 .benefit-icon {
   display: inline-flex; align-items: center; justify-content: center;
   width: 48px; height: 48px; border-radius: 12px; margin-bottom: var(--sp-4);
   color: var(--spec-color, var(--primary));
-  background: color-mix(in srgb, var(--spec-color, var(--primary)) 16%, transparent);
+  background: color-mix(in srgb, var(--spec-color, var(--primary)) 15%, var(--card-bg));
 }
 .benefit-icon svg { width: 24px; height: 24px; }
 .benefit-icon[data-spec="genetique"] { --spec-color: var(--spec-genetique); }
@@ -460,7 +457,7 @@
 .benefit-icon[data-spec="microbiologie"] { --spec-color: var(--spec-microbiologie); }
 .benefit-icon[data-spec="ecologie"] { --spec-color: var(--spec-ecologie); }
 .benefit-icon[data-spec="geologie"] { --spec-color: var(--spec-geologie); }
-.benefit-card h4 { margin-bottom: 6px; font-size: var(--fs-18); }
+.benefit-card h4 { margin-bottom: 6px; font-size: var(--fs-18); color: var(--heading-accent); }
 .benefit-card p { margin: 0; font-size: var(--fs-14); color: var(--ink-soft); line-height: 1.55; }
 @media (max-width: 899px) { .benefits-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 479px) { .benefits-grid { grid-template-columns: 1fr; } }
@@ -468,15 +465,18 @@
 .section-alt { background: var(--bg-alt); }
 .section { padding: var(--sp-8) 0; }
 
-/* ---- الرئيسية: بطاقات "أحدث الدروس" — صورة + شارة تخصّص في الزاوية ---- */
-.lesson-card-img-wrap { position: relative; margin-bottom: var(--sp-3); }
-.lesson-card-img-wrap img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: calc(var(--radius) - 6px); }
-/* خلفية الشارة تُغمَّق (لون التخصّص + 40% أسود) لضمان تباين AA للنص الأبيض فوقها في الوضعين
-   الفاتح والداكن — لأن قيَم --spec-* تنعكس بين الثيمين (تفتحّ في الداكن) وتسقط بدونها. */
+/* ---- بطاقات الدروس — صورة كاملة العرض + شارة تخصّص + جسم مبطّن (كما بالقالب المرجعي) ---- */
+.card.lesson-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.lesson-card-img-wrap { position: relative; margin: 0; }
+.lesson-card-img-wrap img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 0; filter: brightness(.94); transition: transform var(--motion-fast); }
+.card.lesson-card:hover .lesson-card-img-wrap img { transform: scale(1.04); }
+.lesson-card-body { padding: var(--sp-5); display: flex; flex-direction: column; }
+/* الشارة: مستطيل صغير الزوايا بأحرف كبيرة (كما بالقالب)، خلفيتها مغمَّقة لضمان تباين AA للنص الأبيض في الوضعين */
 .lesson-card-badge {
-  position: absolute; top: var(--sp-3); inset-inline-end: var(--sp-3);
-  font-size: var(--fs-12); font-weight: 600; color: #fff;
-  padding: 4px 12px; border-radius: var(--radius-pill);
+  position: absolute; top: var(--sp-3); inset-inline-start: var(--sp-3);
+  font-size: var(--fs-12); font-weight: 700; color: #fff;
+  letter-spacing: .04em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: var(--radius-sm);
   background: color-mix(in srgb, var(--spec-color, var(--primary)) 60%, #000);
 }
 .lesson-card-badge[data-spec="genetique"] { --spec-color: var(--spec-genetique); }
@@ -489,8 +489,103 @@
 .lesson-card-badge[data-spec="botanique"] { --spec-color: var(--spec-botanique); }
 .lesson-card-badge[data-spec="zoologie"] { --spec-color: var(--spec-zoologie); }
 .lesson-card-badge[data-spec="taxonomie"] { --spec-color: var(--spec-taxonomie); }
-.lesson-card-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: var(--sp-2); }
-.lesson-card-desc { font-size: var(--fs-14); color: var(--ink-soft); margin: var(--sp-2) 0 0; }
+.lesson-card-meta { display: flex; align-items: center; gap: 8px; margin-bottom: var(--sp-2); font-family: var(--font-mono); font-size: var(--fs-12); letter-spacing: .04em; text-transform: uppercase; color: var(--ink-soft); }
+.lesson-card-sep { opacity: .6; }
+.lesson-card-title { font-family: var(--font-display); font-size: var(--fs-20); font-weight: 600; color: var(--heading-accent); margin: 0 0 var(--sp-2); line-height: 1.25; transition: color var(--motion-fast); }
+.card.lesson-card:hover .lesson-card-title { color: var(--primary); }
+.lesson-card-desc { font-size: var(--fs-14); color: var(--ink-soft); margin: 0; line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ============ صفحة الدروس: هيرو + بطاقة فلاتر أفقية + أكورديون الوحدات (القالب المرجعي) ============ */
+.lecons-page { padding-top: var(--sp-7); padding-bottom: var(--sp-5); }
+
+/* -- الهيرو: مسار تنقّل + صندوق أيقونة + عنوان تحريري + وصف + زخرفة طبقية -- */
+.lecons-hero { display: flex; justify-content: space-between; align-items: center; gap: var(--sp-7); margin-bottom: var(--sp-8); }
+.lecons-hero-main { flex: 1; min-width: 0; }
+.lecons-breadcrumb { display: flex; align-items: center; gap: var(--sp-2); font-family: var(--font-mono); font-size: var(--fs-12); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); margin-bottom: var(--sp-4); }
+.lecons-breadcrumb a { color: var(--ink-soft); }
+.lecons-breadcrumb a:hover { color: var(--primary); text-decoration: none; }
+.lecons-breadcrumb-sep { display: inline-flex; color: var(--ink-soft); opacity: .7; }
+.lecons-breadcrumb-sep svg { width: 13px; height: 13px; }
+.lecons-breadcrumb-current { color: var(--primary); font-weight: 600; }
+.lecons-hero-titlerow { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-3); }
+.lecons-hero-icon { display: inline-flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: var(--radius-lg); background: color-mix(in srgb, var(--primary) 14%, var(--card-bg)); color: var(--primary); flex: none; }
+.lecons-hero-icon svg { width: 30px; height: 30px; }
+.lecons-hero-titlerow h1 { margin: 0; font-family: var(--font-display); font-size: var(--fs-hero); line-height: 1.05; color: var(--heading-accent); letter-spacing: -0.01em; }
+.lecons-hero-lead { font-size: var(--fs-18); color: var(--ink-soft); margin: 0; max-width: 44ch; line-height: 1.6; }
+.lecons-hero-deco { flex: none; width: 172px; height: 172px; color: var(--primary); opacity: .16; }
+.lecons-hero-deco svg { width: 100%; height: 100%; }
+
+/* -- بطاقة الفلاتر الأفقية -- */
+.lecons-filters { display: flex; flex-wrap: wrap; align-items: flex-end; gap: var(--sp-5); background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: var(--sp-5); margin-bottom: var(--sp-8); }
+.lecons-filters-grid { flex: 1; min-width: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-4); }
+.lecons-filter { display: flex; flex-direction: column; gap: var(--sp-2); min-width: 0; }
+.lecons-filter-label { font-family: var(--font-mono); font-size: var(--fs-12); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); padding-inline-start: 2px; }
+.lecons-filter-control { position: relative; display: flex; align-items: center; background: var(--card-bg); border: 1px solid var(--line); border-radius: var(--radius); height: 48px; transition: border-color var(--motion-fast), box-shadow var(--motion-fast); }
+.lecons-filter-control:focus-within { border-color: var(--primary); box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 18%, transparent); }
+.lecons-filter-icon { position: absolute; inset-inline-start: 12px; display: inline-flex; color: var(--primary); pointer-events: none; }
+.lecons-filter-icon svg { width: 20px; height: 20px; }
+.lecons-filter-chevron { position: absolute; inset-inline-end: 12px; display: inline-flex; color: var(--ink-soft); pointer-events: none; }
+.lecons-filter-chevron svg { width: 18px; height: 18px; }
+.lecons-filter-select { width: 100%; appearance: none; -webkit-appearance: none; font: inherit; font-size: var(--fs-15); color: var(--ink); background: transparent; border: none; outline: none; cursor: pointer; height: 100%; padding-inline: 40px; }
+.lecons-filters-reset { display: inline-flex; align-items: center; gap: var(--sp-2); height: 48px; padding: 0 var(--sp-5); background: var(--card-bg); border: 1px solid var(--line); border-radius: var(--radius); color: var(--primary); font-weight: 600; font-size: var(--fs-15); white-space: nowrap; cursor: pointer; transition: background var(--motion-fast), border-color var(--motion-fast); }
+.lecons-filters-reset:hover { background: var(--bg); border-color: color-mix(in srgb, var(--primary) 40%, var(--line)); }
+.lecons-filters-reset svg { width: 18px; height: 18px; }
+
+/* -- عنوان "الوحدات والدروس" -- */
+.lecons-units-title { font-family: var(--font-display); font-size: var(--fs-28); color: var(--heading-accent); margin: 0 0 var(--sp-6); }
+
+/* -- أكورديون الوحدة -- */
+.lecons-unit { background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; }
+.lecons-unit + .lecons-unit { margin-top: var(--sp-5); }
+.lecons-unit-head { display: flex; align-items: center; gap: var(--sp-4); width: 100%; padding: var(--sp-5); background: none; border: none; text-align: start; cursor: pointer; transition: background var(--motion-fast); }
+.lecons-unit-head:hover { background: color-mix(in srgb, var(--primary) 5%, transparent); }
+.lecons-unit-icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: var(--radius); flex: none; color: var(--spec-color, var(--primary)); background: color-mix(in srgb, var(--spec-color, var(--primary)) 16%, var(--card-bg)); }
+.lecons-unit-icon svg { width: 24px; height: 24px; }
+.lecons-unit-icon[data-spec="genetique"] { --spec-color: var(--spec-genetique); }
+.lecons-unit-icon[data-spec="cytologie"] { --spec-color: var(--spec-cytologie); }
+.lecons-unit-icon[data-spec="physiologie"] { --spec-color: var(--spec-physiologie); }
+.lecons-unit-icon[data-spec="ecologie"] { --spec-color: var(--spec-ecologie); }
+.lecons-unit-icon[data-spec="biomol"] { --spec-color: var(--spec-biomol); }
+.lecons-unit-icon[data-spec="geologie"] { --spec-color: var(--spec-geologie); }
+.lecons-unit-icon[data-spec="microbiologie"] { --spec-color: var(--spec-microbiologie); }
+.lecons-unit-icon[data-spec="botanique"] { --spec-color: var(--spec-botanique); }
+.lecons-unit-icon[data-spec="zoologie"] { --spec-color: var(--spec-zoologie); }
+.lecons-unit-icon[data-spec="taxonomie"] { --spec-color: var(--spec-taxonomie); }
+.lecons-unit-titles { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.lecons-unit-title { margin: 0; font-family: var(--font-display); font-size: var(--fs-24); color: var(--heading-accent); line-height: 1.25; }
+.lecons-unit-meta { display: flex; align-items: center; gap: var(--sp-5); font-family: var(--font-mono); font-size: var(--fs-12); color: var(--ink-soft); }
+.lecons-unit-meta-item { display: inline-flex; align-items: center; gap: 5px; }
+.lecons-unit-meta-item svg { width: 14px; height: 14px; }
+.lecons-unit-chevron { display: inline-flex; color: var(--primary); flex: none; transition: transform var(--motion-dropdown); }
+.lecons-unit-chevron svg { width: 22px; height: 22px; }
+.lecons-unit.is-open .lecons-unit-chevron { transform: rotate(180deg); }
+.lecons-unit-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--motion-dropdown); }
+.lecons-unit.is-open .lecons-unit-content { grid-template-rows: 1fr; }
+.lecons-unit-content > .lecons-unit-grid { overflow: hidden; }
+.lecons-unit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: var(--sp-5); padding: 0 var(--sp-5) var(--sp-5); }
+
+/* -- بطاقة الدرس داخل الأكورديون -- */
+.lecons-card { display: flex; flex-direction: column; background: var(--card-bg); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: box-shadow var(--motion-fast), transform var(--motion-fast), border-color var(--motion-fast); }
+.lecons-card:hover { box-shadow: var(--shadow-md); border-color: color-mix(in srgb, var(--primary) 30%, var(--line)); text-decoration: none; }
+.lecons-card-media { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+.lecons-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; filter: brightness(.95); transition: transform var(--motion-fast); }
+.lecons-card:hover .lecons-card-media img { transform: scale(1.04); }
+.lecons-card-duration { position: absolute; bottom: var(--sp-2); inset-inline-start: var(--sp-2); display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: var(--radius-sm); font-size: var(--fs-12); color: #fff; background: rgba(0,0,0,.6); backdrop-filter: blur(4px); }
+.lecons-card-duration svg { width: 13px; height: 13px; }
+.lecons-card-body { padding: var(--sp-4); }
+.lecons-card-caption { display: block; font-family: var(--font-mono); font-size: var(--fs-12); color: var(--ink-soft); margin-bottom: 4px; }
+.lecons-card-title { margin: 0; font-family: var(--font-display); font-size: var(--fs-18); font-weight: 600; color: var(--heading-accent); line-height: 1.3; transition: color var(--motion-fast); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.lecons-card:hover .lecons-card-title { color: var(--secondary); }
+
+@media (max-width: 767px) {
+  .lecons-hero { flex-direction: column; align-items: flex-start; gap: var(--sp-5); }
+  .lecons-hero-deco { display: none; }
+  .lecons-filters-grid { grid-template-columns: 1fr 1fr; }
+  .lecons-filters-reset { width: 100%; justify-content: center; }
+}
+@media (max-width: 479px) {
+  .lecons-filters-grid { grid-template-columns: 1fr; }
+}
 
 /* ---- الرئيسية: بطاقة "هل تعلم؟" المميّزة — سطح أخضر غابيّ ممتلئ بنص كريمي (Material primary-container) ---- */
 .saviez-featured {

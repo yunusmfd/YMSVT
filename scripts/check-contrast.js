@@ -26,9 +26,9 @@ const PALETTES = {
     rust: "#B0472E", "card-bg": "#FFFFFF",
   },
   dark: {
-    bg: "#0F1F18", "bg-alt": "#14261D", ink: "#E9F3EB", "ink-soft": "#A6C0B0",
-    primary: "#9FD3BC", "primary-light": "#B9E4CE", "on-primary": "#05271C", secondary: "#F0B15C", accent: "#8FBEDF",
-    rust: "#E58368", "card-bg": "#16281F",
+    bg: "#0A1F1A", "bg-alt": "#143129", ink: "#F2FCF4", "ink-soft": "#C0C8C3",
+    primary: "#BBEDD7", "primary-light": "#D4F5E6", "on-primary": "#002117", secondary: "#F0B15C", accent: "#8FBEDF",
+    rust: "#E58368", "card-bg": "#0D2620",
   },
 };
 

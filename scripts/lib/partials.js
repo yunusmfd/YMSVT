@@ -3,10 +3,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { ROOT } from "./content-loader.js";
-import { ICON_SEARCH, ICON_BELL, ICON_MOON, ICON_SUN, ICON_HAMBURGER, ICON_CLOSE, ICON_ARROW, ICON_USER, uiIcon } from "./icons.js";
+import { ICON_SEARCH, ICON_BELL, ICON_MOON, ICON_SUN, ICON_HAMBURGER, ICON_CLOSE, ICON_ARROW, ICON_USER, ICON_GLOBE, uiIcon } from "./icons.js";
 
-// شعار نصّي مكدَّس بسطرين (Nova / SVT) بدل سطر واحد — القسم الجديد لتصميم النافبار
-const NOVA_LOGO_IMG = `<img src="/assets/images/logo/nova-svt-icon.png" alt="" class="nova-logo-img" width="40" height="39" /><span class="nova-logo-text-stack"><span class="nova-logo-line">Nova</span><span class="nova-logo-line nova-logo-line-accent">SVT</span></span>`;
+// شعار: أيقونة دائرية + "Nova SVT" بسطر واحد بخط Serif أخضر (كما في القالب المرجعي)
+const NOVA_LOGO_IMG = `<img src="/assets/images/logo/nova-svt-icon.png" alt="" class="nova-logo-img" width="44" height="44" /><span class="nova-logo-text">Nova SVT</span>`;
 
 const INLINE_INIT = fs.readFileSync(path.join(ROOT, "assets/js/inline-init.js"), "utf-8");
 
@@ -40,25 +40,23 @@ export function renderNavbar({ activeNav = "", latestBlogPost = null } = {}) {
 <a href="#main" class="skip-link" data-i18n="skip_to_content">تخطَّ إلى المحتوى</a>
 <header class="navbar" data-navbar>
   <div class="navbar-inner">
-    <div class="navbar-start">
-      <a href="/" class="nova-logo">${NOVA_LOGO_IMG}</a>
-      <nav class="nav-center" aria-label="التنقل الرئيسي">
-        <ul class="nav-links">
-          <li><a class="nav-link" href="/" data-i18n="nav_home"${activeNav === "home" ? ' aria-current="page"' : ""}></a></li>
-          ${navLinks}
-        </ul>
-        <div class="nav-more" data-nav-more>
-          <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false">
-            <span data-i18n="nav_more"></span>
-            <span class="arrow" aria-hidden="true">▾</span>
-          </button>
-          <div class="nav-more-menu" data-nav-more-menu hidden>${moreLinks}</div>
-        </div>
-      </nav>
-    </div>
+    <a href="/" class="nova-logo">${NOVA_LOGO_IMG}</a>
+    <nav class="nav-center" aria-label="التنقل الرئيسي">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="/" data-i18n="nav_home"${activeNav === "home" ? ' aria-current="page"' : ""}></a></li>
+        ${navLinks}
+      </ul>
+      <div class="nav-more" data-nav-more>
+        <button class="nav-more-trigger" data-nav-more-trigger aria-expanded="false">
+          <span data-i18n="nav_more"></span>
+          <span class="arrow" aria-hidden="true">▾</span>
+        </button>
+        <div class="nav-more-menu" data-nav-more-menu hidden>${moreLinks}</div>
+      </div>
+    </nav>
     <div class="nav-actions">
-      <button class="nav-search-trigger" data-search-open data-i18n-aria="search_title">${ICON_SEARCH}<span data-i18n="search_placeholder"></span></button>
-      <button class="icon-btn lang-toggle-btn" data-lang-toggle data-i18n-aria="lang_toggle">${uiIcon("bilingual")}<span data-lang-code>FR</span></button>
+      <button class="icon-btn" data-search-open data-i18n-aria="search_title">${ICON_SEARCH}</button>
+      <button class="icon-btn lang-toggle-btn" data-lang-toggle data-i18n-aria="lang_toggle">${ICON_GLOBE}<span data-lang-code>FR</span></button>
       <button class="icon-btn theme-toggle" data-theme-toggle data-i18n-aria="theme_toggle">${ICON_MOON}${ICON_SUN}</button>
       <div class="nav-more" data-nav-more>
         <button class="icon-btn" data-nav-more-trigger="bell" aria-expanded="false" data-i18n-aria="blog_menu">${ICON_BELL}<span class="bell-dot"></span></button>
@@ -111,32 +109,37 @@ export function renderFooter() {
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <span class="nova-logo">${NOVA_LOGO_IMG}</span>
-        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="ar">المرجع الرقمي لعلوم الحياة والأرض بالمغرب — بالعربية والفرنسية.</p>
-        <p style="margin-top:var(--sp-3);color:#9fb0a4" data-lang="fr">La référence numérique des SVT au Maroc — en arabe et en français.</p>
+        <p class="footer-blurb" data-lang="ar">منصة مخصّصة لمرافقة التلاميذ نحو التميّز الأكاديمي في علوم الحياة والأرض، بموارد مطابقة للمعايير التربوية.</p>
+        <p class="footer-blurb" data-lang="fr">Plateforme dédiée à l'accompagnement des élèves vers l'excellence académique en Sciences de la Vie et de la Terre, avec des ressources conformes aux standards pédagogiques.</p>
+        <div class="footer-social">
+          <a href="/" aria-label="Nova SVT">${uiIcon("bilingual")}</a>
+          <a href="/lecons/" aria-label="${"الدروس"}">${uiIcon("curriculum")}</a>
+          <a href="/contact/" data-i18n-aria="nav_contact">${uiIcon("mail")}</a>
+        </div>
       </div>
-      <div>
-        <h5 data-i18n="nav_lecons"></h5>
+      <div class="footer-col">
+        <h5><span data-lang="ar">المنصة</span><span data-lang="fr">Plateforme</span></h5>
         <ul>
-          <li><a href="/lecons/">1AC · 2AC · 3AC</a></li>
-          <li><a href="/lecons/">TC · 1BAC · 2BAC</a></li>
+          <li><a href="/lecons/" data-i18n="nav_lecons"></a></li>
           <li><a href="/devoirs-examens/" data-i18n="nav_exams"></a></li>
-        </ul>
-      </div>
-      <div>
-        <h5 data-i18n="nav_encyclopedie"></h5>
-        <ul>
-          <li><a href="/encyclopedie/">Glossaire / معجم</a></li>
           <li><a href="/labo-virtuel/" data-i18n="nav_labo"></a></li>
-          <li><a href="/revision/" data-i18n="nav_revision"></a></li>
+          <li><a href="/encyclopedie/" data-i18n="nav_encyclopedie"></a></li>
         </ul>
       </div>
-      <div>
-        <h5 data-i18n="nav_apropos"></h5>
+      <div class="footer-col">
+        <h5><span data-lang="ar">الدعم</span><span data-lang="fr">Support</span></h5>
         <ul>
           <li><a href="/a-propos/" data-i18n="nav_apropos"></a></li>
           <li><a href="/contact/" data-i18n="nav_contact"></a></li>
+          <li><a href="/revision/" data-i18n="nav_revision"></a></li>
+          <li><a href="/blog/" data-i18n="nav_blog"></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span data-lang="ar">قانوني</span><span data-lang="fr">Légal</span></h5>
+        <ul>
           <li><a href="/confidentialite/" data-i18n="footer_privacy"></a></li>
         </ul>
       </div>

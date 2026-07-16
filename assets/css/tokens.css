@@ -20,8 +20,12 @@
   --rust: #B0472E;
   --line: #C9D6CC;
   --card-bg: #FFFFFF;
-  /* سطح داكن ثابت لا يتبدّل مع الوضع الليلي (الفوتر مصمّم داكنا دوما، بخلاف --ink التي تنعكس) */
-  --surface-dark: #08130E;
+  /* لون عناوين الأقسام في الرئيسية: أخضر في الفاتح، كريمي في الداكن (كما بالقالب المرجعي بوضعيه) */
+  --heading-accent: #204F3F;
+  /* سطح "الحبر الداكن" للفوتر/تلميح المعجم: أخضر متوسّط في الفاتح، شبه أسود أخضر في الداكن */
+  --surface-dark: #204F3F;
+  --on-surface-dark: #EAF3EC;
+  --on-surface-dark-soft: #B6C8BC;
 
   /* --- 4.1.2 بليتة ألوان التخصصات (فاتح) --- */
   --spec-genetique: #3D6FA8;
@@ -102,20 +106,25 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #0F1F18;
-  --bg-alt: #14261D;
-  --ink: #E9F3EB;
-  --ink-soft: #A6C0B0;
-  /* الوضع الداكن يقلب الأساسي إلى نعناع فاتح (Material primary-fixed): يعمل لونَ تمييز فوق الخلفية الداكنة،
+  /* قيَم الوضع الداكن مطابقة لقالب Nova SVT المرجعي (surface #0a1f1a، on-surface #f2fcf4، primary #bbedd7) */
+  --bg: #0A1F1A;
+  --bg-alt: #143129;
+  --ink: #F2FCF4;
+  --ink-soft: #C0C8C3;
+  /* الوضع الداكن يقلب الأساسي إلى نعناع فاتح (Material primary): لونَ تمييز فوق الخلفية الداكنة،
      وتعبئةً صلبة بنص داكن (--on-primary) — كما في زر "ابدأ التعلّم" النعناعي بالتصميم المرجعي */
-  --primary: #9FD3BC;
-  --primary-light: #B9E4CE;
-  --on-primary: #05271C;
+  --primary: #BBEDD7;
+  --primary-light: #D4F5E6;
+  --on-primary: #002117;
   --secondary: #F0B15C;
   --accent: #8FBEDF;
   --rust: #E58368;
-  --line: #26382F;
-  --card-bg: #16281F;
+  --line: #2A3D35;
+  --card-bg: #0D2620;
+  --heading-accent: #F2FCF4;
+  --surface-dark: #05110E;
+  --on-surface-dark: #EAF3EC;
+  --on-surface-dark-soft: #9FB3A5;
 
   --spec-genetique: #6D93C8;
   --spec-cytologie: #AC87CE;
@@ -134,18 +143,22 @@
 /* دعم تفضيل نظام التشغيل قبل أي اختيار يدوي محفوظ (يُطبَّق فقط إن لم يوجد nova-svt:theme محفوظ، القسم 4.1.1) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]):not([data-theme="dark"]) {
-    --bg: #0F1F18;
-    --bg-alt: #14261D;
-    --ink: #E9F3EB;
-    --ink-soft: #A6C0B0;
-    --primary: #9FD3BC;
-    --primary-light: #B9E4CE;
-    --on-primary: #05271C;
+    --bg: #0A1F1A;
+    --bg-alt: #143129;
+    --ink: #F2FCF4;
+    --ink-soft: #C0C8C3;
+    --primary: #BBEDD7;
+    --primary-light: #D4F5E6;
+    --on-primary: #002117;
     --secondary: #F0B15C;
     --accent: #8FBEDF;
     --rust: #E58368;
-    --line: #26382F;
-    --card-bg: #16281F;
+    --line: #2A3D35;
+    --card-bg: #0D2620;
+    --heading-accent: #F2FCF4;
+    --surface-dark: #05110E;
+    --on-surface-dark: #EAF3EC;
+    --on-surface-dark-soft: #9FB3A5;
 
     --spec-genetique: #6D93C8;
     --spec-cytologie: #AC87CE;
